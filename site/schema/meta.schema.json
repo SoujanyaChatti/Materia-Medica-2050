@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dioscorides-plants.local/schema/meta.schema.json",
+  "title": "meta.json — build info, scenarios and study-wide numbers",
+  "type": "object",
+  "required": ["sample", "build_date", "gbif_doi", "versions", "n_species", "scenarios", "gcms", "risk_weights", "cell_km", "headline_slug", "summary", "sensitivity"],
+  "properties": {
+    "sample": {"type": "boolean", "description": "true = illustrative placeholder data; the site shows a banner."},
+    "build_date": {"type": "string"},
+    "gbif_doi": {"type": ["string", "null"]},
+    "versions": {"type": "object", "additionalProperties": {"type": "string"}},
+    "n_species": {"type": "integer", "minimum": 0},
+    "scenarios": {
+      "type": "object",
+      "required": ["now", "ssp245", "ssp585"],
+      "additionalProperties": {
+        "type": "object",
+        "required": ["label", "title", "description"],
+        "properties": {"label": {"type": "string"}, "title": {"type": "string"}, "description": {"type": "string"}}
+      }
+    },
+    "gcms": {"type": "array", "items": {"type": "string"}},
+    "risk_weights": {
+      "type": "object",
+      "required": ["range_loss", "endemism", "status", "harvest"],
+      "additionalProperties": {"type": "number"}
+    },
+    "cell_km": {"type": "number"},
+    "headline_slug": {"type": "string"},
+    "summary": {
+      "type": "object",
+      "properties": {
+        "median_range_change_ssp245": {"$ref": "https://dioscorides-plants.local/schema/species.schema.json#/$defs/interval"}
+      }
+    },
+    "sensitivity": {
+      "type": "object",
+      "required": ["draws", "one_at_a_time", "top_k", "top_k_unchanged"],
+      "properties": {
+        "draws": {"type": "integer"},
+        "perturbation": {"type": "number"},
+        "top_k": {"type": "integer"},
+        "top_k_unchanged": {"$ref": "https://dioscorides-plants.local/schema/species.schema.json#/$defs/interval"},
+        "top10_overlap_without_disputed": {"type": "number"},
+        "one_at_a_time": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["tau_median", "tau_lo", "tau_hi"],
+            "properties": {"tau_median": {"type": "number"}, "tau_lo": {"type": "number"}, "tau_hi": {"type": "number"}}
+          }
+        }
+      }
+    }
+  }
+}

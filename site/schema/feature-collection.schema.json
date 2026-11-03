@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dioscorides-plants.local/schema/feature-collection.schema.json",
+  "title": "Map layer — GeoJSON FeatureCollection of ~10 km cells (never exact points)",
+  "description": "Range layers: properties.change in {kept, lost, gained} for 2050 layers, {present} for range_now. Occurrences: properties.n_records. Risk grid: id, natura, class_<s>, risk_<s>, sp_<s> (comma-separated indices into species.json), cult_<s> for s in now, ssp245, ssp585. natura2000_outline.geojson: one MultiLineString of the outer edges of Natura 2000 cells.",
+  "type": "object",
+  "required": ["type", "features"],
+  "properties": {
+    "type": {"const": "FeatureCollection"},
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "geometry", "properties"],
+        "properties": {
+          "type": {"const": "Feature"},
+          "geometry": {
+            "type": "object",
+            "required": ["type", "coordinates"],
+            "properties": {"type": {"enum": ["Polygon", "MultiPolygon", "MultiLineString"]}}
+          },
+          "properties": {"type": "object"}
+        }
+      }
+    }
+  }
+}

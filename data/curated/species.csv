@@ -1,0 +1,9 @@
+slug,greek_name,greek_translit,dmm_book,dmm_chapter,accepted_name,common_name_en,family,identification_confidence,identification_source,alternative_names,endemic_greece,endemic_region,conservation_category,conservation_source,ema_monograph,ema_use,ema_url,wild_harvest_flag,notes
+origanum-dictamnus,δίκταμνον,diktamnon,3,,Origanum dictamnus L.,Cretan dittany,Lamiaceae,certain,[TODO: citation],,true,Crete,[verify],[verify],,,,true,Chapter number to be confirmed against Wellmann
+paeonia-clusii,γλυκυσίδη,glykysidē,3,,Paeonia clusii F.C.Stern,Cretan peony,Paeoniaceae,probable,[TODO: citation],,true,"Crete, Karpathos",[verify],[verify],,,,false,Dioscorides' glykysidē is usually referred to Paeonia generically; species choice to be justified
+sideritis-syriaca,σιδηρῖτις,sidēritis,4,,Sideritis syriaca L.,Greek mountain tea,Lamiaceae,probable,[TODO: citation],,false,,[verify],[verify],[verify],[verify: EMA Sideritis herba wording],,true,Several Sideritis species fit the description
+mandragora-officinarum,μανδραγόρας,mandragoras,4,,Mandragora officinarum L.,Mandrake,Solanaceae,probable,[TODO: citation],,false,,[verify],[verify],,,,false,Few Greek records expected; likely low-confidence model
+hyssopus-officinalis,ὕσσωπος,hyssōpos,3,,Hyssopus officinalis L.,Hyssopos,Lamiaceae,disputed,[TODO: citation],Origanum syriacum L.,false,,[verify],[verify],,,,false,Biblical/Dioscoridean hyssopos often referred to Origanum syriacum
+salvia-fruticosa,ἐλελίσφακον,elelisphakon,3,,Salvia fruticosa Mill.,Greek sage,Lamiaceae,probable,[TODO: citation],,false,,[verify],[verify],[verify],[verify: EMA Salviae trilobae folium wording],,true,
+thymbra-capitata,θύμος,thymos,3,,Thymbra capitata (L.) Cav.,Capitate thyme,Lamiaceae,probable,[TODO: citation],,false,,[verify],[verify],,,,true,
+glaucium-flavum,μήκων κερατῖτις,mēkōn keratitis,4,,Glaucium flavum Crantz,Yellow horned poppy,Papaveraceae,probable,[TODO: citation],,false,,[verify],[verify],,,,false,

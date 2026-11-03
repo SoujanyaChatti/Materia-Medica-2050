@@ -1,0 +1,99 @@
+---
+import '@fontsource/eb-garamond/400.css';
+import '@fontsource/eb-garamond/400-italic.css';
+import '@fontsource/eb-garamond/500.css';
+import '@fontsource/source-sans-3/400.css';
+import '@fontsource/source-sans-3/600.css';
+import '@fontsource/source-sans-3/700.css';
+import '../styles/global.css';
+import { getMeta } from '../lib/data';
+import { href } from '../lib/url';
+
+interface Props { title: string; description?: string; current?: 'home' | 'plants' | 'map' | 'methods'; sampleNote?: string }
+const { title, description = "Which of the medicinal plants Dioscorides described are most at risk in Greece by 2050, and where they could be cultivated instead.", current, sampleNote } = Astro.props;
+const meta = getMeta();
+const nav = [
+  { key: 'home', label: 'Home', path: '' },
+  { key: 'plants', label: 'Plants', path: 'plants/' },
+  { key: 'map', label: 'Map explorer', path: 'map/' },
+  { key: 'methods', label: 'Methods', path: 'methods/' },
+];
+const fullTitle = current === 'home' ? "Dioscorides' Plants, Then and Now" : `${title} · Dioscorides' Plants`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{fullTitle}</title>
+    <link rel="icon" href={href('favicon.svg')} type="image/svg+xml" />
+    <script is:inline>
+      (() => {
+        let t = null;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="border-b border-rule">
+      <div class="page flex flex-wrap items-center justify-between gap-x-8 gap-y-2.5 py-3">
+        <a href={href()} class="flex min-h-11 items-center gap-2.5 text-ink no-underline">
+          <span aria-hidden="true" class="flex h-[34px] w-[34px] items-center justify-center rounded-full border-[1.5px] border-ochre font-serif text-[20px] text-ochre">Δ</span>
+          <span class="font-serif text-[20px] leading-tight">Dioscorides' Plants, <em>Then and Now</em></span>
+        </a>
+        <nav aria-label="Main" class="flex flex-wrap items-center gap-1">
+          {nav.map((n) => (
+            <a href={href(n.path)} aria-current={n.key === current ? 'page' : undefined}
+              class:list={['inline-flex min-h-11 items-center px-3 text-ink', n.key === current
+                ? 'font-semibold underline decoration-ochre decoration-2 underline-offset-8'
+                : 'no-underline hover:underline']}>{n.label}</a>
+          ))}
+          <button id="theme-toggle" type="button" aria-label="Switch to dark mode"
+            class="ml-1 inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-md border border-rule bg-transparent text-ink">
+            <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M14.5 11.2A6.2 6.2 0 0 1 6.8 3.5a6.2 6.2 0 1 0 7.7 7.7Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+    {meta.sample && (
+      <div class="border-b border-rule bg-sunk">
+        <div class="page py-1.5 text-[13px] text-muted"><strong class="text-ink">Sample data.</strong> {sampleNote ?? 'Values on this prototype are placeholders for design review, not results.'}</div>
+      </div>
+    )}
+
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-rule bg-surface">
+      <div class="page flex flex-wrap justify-between gap-x-10 gap-y-4 pb-9 pt-7 text-[14px] text-muted">
+        <p class="m-0 font-semibold text-ink">Research prototype. Not medical advice. Results are model-based hypotheses.</p>
+        <div class="flex flex-wrap gap-x-5 gap-y-1">
+          <span>EthnoHack 2026</span>
+          <span>Built {meta.build_date}</span>
+          <a href="https://github.com/">Code on GitHub [repo]</a>
+          <a href={href('methods/#sources')}>Data sources &amp; licences</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById('theme-toggle')!;
+      const sync = () => {
+        const dark = document.documentElement.dataset.theme === 'dark';
+        btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      };
+      sync();
+      btn.addEventListener('click', () => {
+        const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        sync();
+      });
+    </script>
+  </body>
+</html>

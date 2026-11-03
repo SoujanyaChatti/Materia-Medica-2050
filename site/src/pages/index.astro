@@ -1,0 +1,130 @@
+---
+import Base from '../layouts/Base.astro';
+import { getMeta, getSpecies, getSpeciesList } from '../lib/data';
+import { href, plantHref } from '../lib/url';
+import { changeText, riskLabel } from '../lib/format';
+import { PlantFlags, RiskTag } from '../components/Badges';
+import { HerbIllustration } from '../components/HerbIllustration';
+import { MapLegend } from '../components/MapLegend';
+import { RangeMap } from '../components/RangeMap';
+import { Whisker } from '../components/UncertainValue';
+import { IconArrow } from '../components/icons';
+
+const meta = getMeta();
+const list = getSpeciesList();
+const top = list.slice(0, 5);
+const head = getSpecies(meta.headline_slug);
+const headChange = changeText(head.range_change_pct.ssp245);
+const med = meta.summary.median_range_change_ssp245;
+const medText = med ? changeText(med) : null;
+const n = meta.n_species;
+const words = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
+const nWord = n <= 10 ? words[n] : n === 32 ? 'Thirty-two' : String(n);
+const latin = (s: string) => s.split(' ').slice(0, 2).join(' ');
+---
+<Base title="Home" current="home">
+  <section class="page grid items-center gap-12 pb-[clamp(32px,4vw,56px)] pt-[clamp(40px,6vw,88px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))]">
+    <div class="flex flex-col gap-5">
+      <div class="eyebrow text-ochre">EthnoHack 2026 · Ethnopharmacology research prototype</div>
+      <h1 class="h-display m-0 text-[clamp(36px,4.6vw,60px)]">The plants that founded Western pharmacy, mapped then and now</h1>
+      <p class="latin m-0 text-[clamp(20px,2vw,24px)] text-muted">What we stand to lose, and where to save it.</p>
+      <p class="m-0 max-w-[560px] text-[17px]">Dioscorides compiled <em>De Materia Medica</em> in the 1st century CE; it shaped European pharmacy for more than 1,500 years. Many of its plants still grow wild in Greece. We model where {n} of them live today, where they could survive in 2050, and where they could be cultivated instead.</p>
+      <div class="flex flex-wrap gap-3 pt-1">
+        <a href={href('plants/')} class="btn-primary">Explore the plants <IconArrow /></a>
+        <a href={href('methods/')} class="btn-secondary">How we model it</a>
+      </div>
+    </div>
+    <figure class="m-0 grid grid-cols-2 overflow-hidden rounded-md border border-rule bg-data">
+      <div class="flex flex-col items-center gap-2.5 border-r border-rule bg-sunk px-4 py-5">
+        <div class="eyebrow self-start text-[11px] tracking-[0.14em] text-ochre">Then</div>
+        <HerbIllustration alt="Line-art placeholder of a herb in the style of a manuscript illustration" className="h-auto w-[78%] max-w-[200px]" />
+        <div lang="grc" class="font-serif text-[24px]">{head.dioscorides.greek_name}</div>
+        <div class="text-[12px] text-muted">Book {['', 'I', 'II', 'III', 'IV', 'V'][head.dioscorides.book]} · illustration placeholder</div>
+      </div>
+      <div class="flex flex-col gap-2.5 px-4 py-5">
+        <div class="eyebrow text-[11px] tracking-[0.14em] text-sage">Now · 2050</div>
+        <RangeMap client:visible mode="range" slug={head.slug} scenario="ssp245" layers={{ range: true, labels: false }}
+          controls={false} chip="2050 · moderate" ariaLabel={`Map of Greece: modelled range of ${head.common_name_en} under 2050 moderate emissions.`} />
+        <figcaption class="text-[13px] text-muted">{head.common_name_en}, modelled range under 2050 moderate emissions.</figcaption>
+      </div>
+    </figure>
+  </section>
+
+  <section aria-label="Project at a glance" class="border-y border-rule bg-surface">
+    <dl class="page my-0 grid gap-x-8 gap-y-5 py-6 [grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))]">
+      <div><dt class="text-[13px] text-muted">Species modelled</dt><dd class="m-0 text-[28px] font-semibold">{n}</dd></div>
+      <div><dt class="text-[13px] text-muted">Climate futures</dt><dd class="m-0 text-[28px] font-semibold">2 <span class="text-[15px] font-normal text-muted">scenarios × {meta.gcms.length} climate models</span></dd></div>
+      {medText && <div><dt class="text-[13px] text-muted">Median range change across species, 2050 moderate</dt><dd class="m-0 text-[28px] font-semibold">{medText.med} <span class="text-[15px] font-normal text-muted">(IQR {medText.lo} to {medText.hi})</span></dd></div>}
+      <div><dt class="text-[13px] text-muted">Spatial resolution</dt><dd class="m-0 text-[28px] font-semibold">~{meta.cell_km} km <span class="text-[15px] font-normal text-muted">grid cells</span></dd></div>
+    </dl>
+  </section>
+
+  <section class="page flex flex-col gap-6 pb-6 pt-14">
+    <div class="flex flex-wrap items-end justify-between gap-3">
+      <div>
+        <h2 class="h-section">Most at risk</h2>
+        <p class="m-0 mt-1 text-muted">Top {top.length} of {n} by combined risk score. Ranks are uncertain too; the interval comes from 1,000 random weightings.</p>
+      </div>
+      <a href={href('plants/')} class="inline-flex min-h-11 items-center font-semibold">All {n} plants</a>
+    </div>
+    <ol class="m-0 grid list-none gap-4 p-0 [grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))]">
+      {top.map((p) => {
+        const c = changeText(p.range_change_pct.ssp245);
+        return (
+          <li class="card-surface flex flex-col gap-2.5 p-4.5">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[13px] text-muted">No. <strong class="text-[15px] text-ink">{p.risk.rank}</strong>{p.risk.rank_lo !== undefined && <span> ({p.risk.rank_lo}–{p.risk.rank_hi})</span>}</span>
+              <RiskTag cls={p.risk.class} />
+            </div>
+            <div lang="grc" class="font-serif text-[24px] leading-[1.1] text-ochre">{p.greek_name}</div>
+            <div>
+              <div class="text-[17px] font-semibold">{p.common_name_en}</div>
+              <div class="latin text-[16px] text-muted">{latin(p.accepted_name)}</div>
+            </div>
+            <PlantFlags confidence={p.identification_confidence} endemic={p.endemic_greece} lowConfidence={p.low_confidence_model} />
+            <dl class="m-0 flex flex-col gap-2 border-t border-rule pt-2.5 text-[14px]">
+              <div><dt class="text-[13px] text-muted">Risk score</dt><dd class="m-0"><strong class="text-[18px]">{p.risk.score.toFixed(2)}</strong>{p.risk.score_lo !== undefined && <span class="text-muted"> ({p.risk.score_lo.toFixed(2)}–{p.risk.score_hi!.toFixed(2)})</span>}</dd></div>
+              <div><dt class="text-[13px] text-muted">Range change, 2050 moderate</dt>
+                <dd class="m-0 flex flex-wrap items-center gap-x-2.5 gap-y-1"><span><strong class="text-[18px]">{c.med}</strong> <span class="text-muted">({c.lo} to {c.hi})</span></span><Whisker interval={p.range_change_pct.ssp245} width={100} fill="var(--surface)" /></dd></div>
+            </dl>
+            <a href={plantHref(p.slug)} class="mt-auto inline-flex min-h-11 items-center font-semibold">View {p.common_name_en}<span class="sr-only">, risk {riskLabel(p.risk.class)}</span></a>
+          </li>
+        );
+      })}
+    </ol>
+  </section>
+
+  <section class="page flex flex-col gap-5 pb-6 pt-12">
+    <div class="flex flex-wrap items-end justify-between gap-3">
+      <div>
+        <div class="eyebrow text-sage">Headline plant</div>
+        <h2 class="h-section mt-0.5">{head.common_name_en}, now and in 2050</h2>
+        <p class="m-0 mt-1 text-muted"><em class="latin text-[18px]">{latin(head.accepted_name)}</em> · projected range change under moderate emissions <strong class="text-ink">{headChange.med}</strong> ({headChange.lo} to {headChange.hi})</p>
+      </div>
+      <a href={plantHref(head.slug)} class="inline-flex min-h-11 items-center font-semibold">Open the plant page</a>
+    </div>
+    <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))]">
+      <figure class="m-0 flex flex-col gap-2">
+        <RangeMap client:visible mode="range" slug={head.slug} scenario="now" layers={{ range: true, labels: true }}
+          chip={meta.scenarios.now.title} ariaLabel={`Map of Greece: modelled current range of ${head.common_name_en}.`} tableHref={plantHref(head.slug) + '#range-table'} />
+        <figcaption class="text-[14px] text-muted"><strong class="text-ink">Now.</strong> {meta.scenarios.now.description}</figcaption>
+      </figure>
+      <figure class="m-0 flex flex-col gap-2">
+        <RangeMap client:visible mode="range" slug={head.slug} scenario="ssp245" layers={{ range: true, cult: true, labels: true }}
+          chip={meta.scenarios.ssp245.title} ariaLabel={`Map of Greece: ${head.common_name_en} habitat kept, lost and gained by 2050 under moderate emissions, with candidate cultivation zones.`} tableHref={plantHref(head.slug) + '#range-table'} />
+        <figcaption class="text-[14px] text-muted"><strong class="text-ink">2050, moderate emissions.</strong> Kept, lost and gained habitat, with candidate cultivation zones.</figcaption>
+      </figure>
+    </div>
+    <MapLegend items={['kept', 'lost', 'gained', 'cult']} note="Occurrences aggregated to ~10 km cells; exact locations are withheld to protect wild populations." />
+  </section>
+
+  <section class="page pb-18 pt-12">
+    <div class="flex flex-wrap items-center justify-between gap-6 rounded-md border border-rule bg-sunk p-[clamp(28px,4vw,48px)]">
+      <div class="max-w-[640px]">
+        <h2 class="m-0 font-serif text-[clamp(26px,2.8vw,34px)] font-medium">{nWord} plants, from Dioscorides' text to a 2050 map</h2>
+        <p class="m-0 mt-1.5 text-muted">Sort by risk, filter by endemism or identification confidence, and open any plant for its source chapter, model and caveats.</p>
+      </div>
+      <a href={href('plants/')} class="btn-primary">Explore the plants</a>
+    </div>
+  </section>
+</Base>

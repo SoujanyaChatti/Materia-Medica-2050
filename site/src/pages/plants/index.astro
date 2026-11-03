@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import PlantExplorer from '../../components/PlantExplorer';
+import { getMeta, getSpeciesList } from '../../lib/data';
+
+const meta = getMeta();
+const rows = getSpeciesList();
+---
+<Base title="Plants" current="plants" sampleNote={`${rows.length} illustrative species; values are placeholders for design review.`}>
+  <div class="page flex flex-col gap-6 pb-16 pt-10">
+    <div class="flex flex-col gap-1.5">
+      <h1 class="h-display m-0 text-[clamp(34px,4vw,48px)]">The plants</h1>
+      <p class="m-0 max-w-[720px] text-muted">Every species from <em>De Materia Medica</em> we could match to a modern taxon that grows wild in Greece, ranked by combined risk. Range changes are medians with the spread across {meta.gcms.length} climate models.</p>
+    </div>
+    <PlantExplorer client:load rows={rows} total={meta.n_species} />
+  </div>
+</Base>

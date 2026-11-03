@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import MapExplorer from '../components/MapExplorer';
+import { getMeta, getSpeciesList } from '../lib/data';
+
+const meta = getMeta();
+const species = getSpeciesList();
+---
+<Base title="Map explorer" current="map" sampleNote="Risk surface, areas and Natura 2000 outlines are illustrative placeholders.">
+  <div class="page pb-16 pt-8">
+    <MapExplorer client:load species={species} scenarios={meta.scenarios} nSpecies={meta.n_species} />
+  </div>
+</Base>

@@ -1,0 +1,160 @@
+---
+import Base from '../layouts/Base.astro';
+import { getMeta, getSpeciesList } from '../lib/data';
+import { COMPONENT_LABELS } from '../lib/format';
+import { plantHref } from '../lib/url';
+import type { RiskComponents } from '../lib/types';
+
+const meta = getMeta();
+const species = getSpeciesList();
+const steps: ['h' | 'm', string, string][] = [
+  ['h', 'Read the source', "De Materia Medica chapters and Greek plant names (Wellmann ed.)"],
+  ['h', 'Identify modern taxa', 'Literature-based match, rated Certain · Probable · Disputed'],
+  ['m', 'Gather occurrences', 'GBIF records, cleaned, thinned to ~1 km, published only as ~10 km cells'],
+  ['m', 'Climate layers', `Baseline and 2041–2060 under SSP2-4.5 and SSP5-8.5, ${meta.gcms.length} climate models`],
+  ['m', 'Model habitat', 'MaxEnt + random-forest ensemble, target-group background'],
+  ['m', 'Score risk', 'Range loss, endemism, conservation status, harvest pressure'],
+  ['m', 'Find cultivation zones', 'Suitable in 2050, on farmland, outside Natura 2000, away from wild populations'],
+];
+const sources = [
+  ['De Materia Medica, Wellmann ed. (1906–14)', 'Greek names, book and chapter', 'Public domain', '—'],
+  ['Identification literature', 'Ancient-to-modern taxon matches', 'Cited; not redistributed', '[bibliography]'],
+  ['GBIF occurrence download', 'Occurrence cells', 'CC0 / CC BY 4.0 / CC BY-NC per dataset', meta.gbif_doi ? `DOI ${meta.gbif_doi}` : 'DOI [ ]'],
+  ['GBIF Backbone · POWO', 'Accepted names', 'CC BY', '—'],
+  ['WorldClim 2.1 (CMIP6)', 'Baseline and 2050 climate', 'Free for research; cite [verify]', meta.versions.climate ?? '[ ]'],
+  ['Copernicus DEM GLO-90', 'Elevation, slope', 'Free; attribution', meta.versions.dem ?? '[ ]'],
+  ['Vascular Plants of Greece checklist', 'Endemism, fallback threat category', 'Cite', '[year]'],
+  ['IUCN Red List API', 'Conservation status', 'IUCN terms of use (non-commercial)', '[version]'],
+  ['Natura 2000 (EEA)', 'Protected-area boundaries', 'EEA re-use policy, attribution', meta.versions.natura2000 ?? '[ ]'],
+  ['CORINE Land Cover (Copernicus)', 'Agricultural and transitional land', 'Free and open; attribution', meta.versions.corine ?? '[ ]'],
+  ['OpenStreetMap (Geofabrik)', 'Roads and settlements for harvest proxy', 'ODbL', '[extract date]'],
+  ['EMA herbal monographs', 'Regulatory status only', 'EMA re-use with acknowledgement', '—'],
+  ['Natural Earth', 'Basemap outlines', 'Public domain', '1:50m'],
+];
+const weights = meta.risk_weights;
+const order: (keyof RiskComponents)[] = ['range_loss', 'harvest', 'status', 'endemism'];
+const sens = order.filter((k) => meta.sensitivity.one_at_a_time[k]).map((k) => ({ k, ...meta.sensitivity.one_at_a_time[k]! }));
+const pos = (v: number) => `${Math.max(0, Math.min(100, ((v - 0.5) / 0.5) * 100))}%`;
+const topK = meta.sensitivity.top_k_unchanged;
+---
+<Base title="Methods and limitations" current="methods" sampleNote="Metrics, versions and licences marked [ ] must be confirmed before release.">
+  <div class="page flex flex-col gap-14 pb-16 pt-10">
+    <div class="flex max-w-[780px] flex-col gap-2">
+      <h1 class="h-display m-0 text-[clamp(34px,4vw,48px)]">Methods and limitations</h1>
+      <p class="m-0 text-[17px] text-muted">From a 1st-century text to a 2050 habitat map in seven steps. Each step names its sources and its main uncertainty.</p>
+      <nav aria-label="On this page" class="flex flex-wrap gap-x-4.5 gap-y-1 pt-2 text-[15px]">
+        <a href="#pipeline">Pipeline</a><a href="#sources">Data &amp; licences</a><a href="#validation">Validation</a><a href="#sensitivity">Sensitivity</a><a href="#limits">Limitations</a><a href="#reproduce">Reproduce</a><a href="#team">Team</a>
+      </nav>
+    </div>
+
+    <section id="pipeline" aria-labelledby="h-pipe" class="flex flex-col gap-4.5">
+      <h2 id="h-pipe" class="h-section">Pipeline</h2>
+      <ol class="m-0 flex list-none flex-wrap items-stretch gap-3 p-0">
+        {steps.map(([k, title, detail], i) => (
+          <li class="flex flex-[1_1_150px] flex-col gap-1.5 rounded-md border border-rule p-3.5"
+            style={`background: var(${k === 'h' ? '--sunk' : '--surface'}); border-top: 3px solid var(${k === 'h' ? '--ochre' : '--sage'})`}>
+            <div class="flex items-center justify-between"><span class="text-[12px] font-bold tracking-[0.08em]" style={`color: var(${k === 'h' ? '--ochre' : '--sage'})`}>STEP {i + 1}</span><span aria-hidden="true" class="text-muted">{i < steps.length - 1 ? '▸' : ''}</span></div>
+            <div class="font-semibold leading-tight">{title}</div>
+            <div class="text-[13px] text-muted">{detail}</div>
+          </li>
+        ))}
+      </ol>
+      <p class="m-0 text-[14px] text-muted"><span aria-hidden="true" class="mr-1.5 inline-block h-2.5 w-2.5 bg-ochre"></span>Historical sources <span aria-hidden="true" class="ml-4 mr-1.5 inline-block h-2.5 w-2.5 bg-sage"></span>Modern data and models. Steps run left to right; the arrow ▸ marks the flow. Each step is a script in <code class="font-mono">pipeline/</code> with cached, seeded outputs.</p>
+    </section>
+
+    <section id="sources" aria-labelledby="h-src" class="flex flex-col gap-3.5">
+      <h2 id="h-src" class="h-section">Data sources and licences</h2>
+      <div class="card-data overflow-x-auto">
+        <table class="w-full min-w-[760px] border-collapse text-[15px]">
+          <thead><tr class="border-b-2 border-ink text-left"><th scope="col" class="px-4 py-3 text-[13px]">Source</th><th scope="col" class="px-2 py-3 text-[13px]">Used for</th><th scope="col" class="px-2 py-3 text-[13px]">Licence / terms</th><th scope="col" class="py-3 pl-2 pr-4 text-[13px]">Version</th></tr></thead>
+          <tbody>
+            {sources.map(([s, u, l, v]) => <tr class="border-b border-data-rule align-top"><td class="px-4 py-3 font-semibold">{s}</td><td class="px-2 py-3">{u}</td><td class="px-2 py-3">{l}</td><td class="py-3 pl-2 pr-4 text-muted">{v}</td></tr>)}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="grid items-start gap-8 [grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr))]">
+      <section id="validation" aria-labelledby="h-val" class="flex flex-col gap-3.5">
+        <h2 id="h-val" class="h-section">Validation</h2>
+        <p class="m-0 text-[15px] text-muted">5-fold spatial block cross-validation (blocks ≈ 25 km). Values are mean ± SD across folds. Models below AUC 0.75 or 30 records are flagged low-confidence; every model is compared against a null model of random points.</p>
+        <div class="card-data overflow-x-auto">
+          <table class="w-full min-w-[440px] border-collapse text-[15px]">
+            <thead><tr class="border-b-2 border-ink text-left"><th scope="col" class="px-4 py-2.5 text-[13px]">Species</th><th scope="col" class="px-2 py-2.5 text-right text-[13px]">AUC</th><th scope="col" class="px-2 py-2.5 text-right text-[13px]">Boyce</th><th scope="col" class="px-2 py-2.5 text-right text-[13px]">Records</th><th scope="col" class="py-2.5 pl-2 pr-4 text-[13px]">Model</th></tr></thead>
+            <tbody>
+              {species.map((s) => {
+                const ok = !!s.model && s.model.auc_mean >= 0.75 && !s.low_confidence_model;
+                return (
+                  <tr class="border-b border-data-rule">
+                    <td class="px-4 py-2.5"><a href={plantHref(s.slug)} class="text-ink"><em class="font-serif text-[17px]">{s.accepted_name.split(' ').slice(0, 2).join(' ')}</em></a></td>
+                    <td class="px-2 py-2.5 text-right">{s.model ? `${s.model.auc_mean.toFixed(2)} ± ${s.model.auc_sd.toFixed(2)}` : '—'}</td>
+                    <td class="px-2 py-2.5 text-right">{s.model ? s.model.boyce_mean.toFixed(2) : '—'}</td>
+                    <td class="px-2 py-2.5 text-right">{s.records_clean ?? '—'}</td>
+                    <td class="py-2.5 pl-2 pr-4">{ok
+                      ? <span class="rounded-full border border-sage px-2 text-[13px] font-semibold text-sage">Adequate</span>
+                      : <span class="rounded-full border border-warn-border px-2 text-[13px] font-semibold text-warn">Low confidence</span>}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="sensitivity" aria-labelledby="h-sens" class="flex flex-col gap-3.5">
+        <h2 id="h-sens" class="h-section">Sensitivity of the risk ranking</h2>
+        <p class="m-0 text-[15px] text-muted">Weights: {order.map((k) => `${COMPONENT_LABELS[k].toLowerCase()} ${weights[k].toFixed(2)}`).join(' · ')}. Each weight was varied ±{Math.round((meta.sensitivity.perturbation ?? 0.5) * 100)}% while the others rescale. Bars show the 5–95% range of rank agreement (Kendall's τ) with the baseline ranking; the dot is the median over {meta.sensitivity.draws.toLocaleString('en-GB')} draws.</p>
+        <figure class="card-data m-0 flex flex-col gap-3.5 px-5 pb-3.5 pt-5">
+          {sens.map((r) => (
+            <div class="grid grid-cols-[minmax(110px,160px)_minmax(0,1fr)] items-center gap-3">
+              <div class="text-[14px] font-semibold leading-tight">{COMPONENT_LABELS[r.k]} weight<div class="text-[13px] font-normal text-muted">τ {r.tau_median.toFixed(2)} ({r.tau_lo.toFixed(2)}–{r.tau_hi.toFixed(2)})</div></div>
+              <div role="img" aria-label={`Kendall tau median ${r.tau_median.toFixed(2)}, range ${r.tau_lo.toFixed(2)} to ${r.tau_hi.toFixed(2)}`} class="relative h-5 rounded-sm bg-sunk">
+                <div class="absolute top-1.5 h-2 rounded-[1px] bg-ink" style={`left: ${pos(r.tau_lo)}; width: calc(${pos(r.tau_hi)} - ${pos(r.tau_lo)})`}></div>
+                <div class="absolute top-[3px] -ml-1.5 box-border h-3 w-3 rounded-full border-2 border-ink bg-data" style={`left: ${pos(r.tau_median)}`}></div>
+              </div>
+            </div>
+          ))}
+          <div class="grid grid-cols-[minmax(110px,160px)_minmax(0,1fr)] gap-3"><span></span><div class="flex justify-between text-[12px] text-muted"><span>τ 0.50</span><span>0.75</span><span>1.00 (identical)</span></div></div>
+          <figcaption class="border-t border-data-rule pt-2.5 text-[14px] text-muted">The top-{meta.sensitivity.top_k} species are unchanged in {topK.median}% ({topK.min}–{topK.max}%) of draws.{meta.sensitivity.top10_overlap_without_disputed !== undefined && ` Top-10 overlap with disputed identifications removed: ${Math.round(meta.sensitivity.top10_overlap_without_disputed * 100)}%.`}</figcaption>
+        </figure>
+      </section>
+    </div>
+
+    <section id="limits" aria-labelledby="h-lim" class="grid gap-x-10 gap-y-4 border-t-2 border-ochre pt-5 [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">
+      <h2 id="h-lim" class="h-section col-span-full">Limitations</h2>
+      <div><h3 class="m-0 mb-1 text-[17px]">Identification is interpretation</h3><p class="m-0 text-muted">Matching an ancient name to a modern species is a scholarly judgement. "Disputed" plants may describe the wrong taxon entirely.</p></div>
+      <div><h3 class="m-0 mb-1 text-[17px]">Suitability is not presence</h3><p class="m-0 text-muted">Correlative models assume equilibrium with climate and ignore dispersal, soils, grazing and land use. A suitable cell in 2050 may never be colonised.</p></div>
+      <div><h3 class="m-0 mb-1 text-[17px]">Sampling bias</h3><p class="m-0 text-muted">Occurrence records cluster near roads and well-known mountains. Target-group background and thinning reduce but do not remove this.</p></div>
+      <div><h3 class="m-0 mb-1 text-[17px]">Harvest pressure is a proxy</h3><p class="m-0 text-muted">Estimated from accessibility (range within 2 km of roads or villages) plus a documented wild-harvest flag, not measured collection.</p></div>
+      <div><h3 class="m-0 mb-1 text-[17px]">Coarse grid</h3><p class="m-0 text-muted">~{meta.cell_km} km cells protect rare plants from collectors but hide microrefugia such as gorges and north slopes.</p></div>
+      <div><h3 class="m-0 mb-1 text-[17px]">No health claims</h3><p class="m-0 text-muted">This project maps plants. It makes no statement about the safety or effect of any plant or preparation. Results are hypotheses for conservation planning, not prescriptions.</p></div>
+    </section>
+
+    <div class="grid items-start gap-8 [grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr))]">
+      <section id="reproduce" aria-labelledby="h-rep" class="flex flex-col gap-3">
+        <h2 id="h-rep" class="h-section">How to reproduce</h2>
+        <pre class="m-0 overflow-x-auto whitespace-pre rounded-md px-5 py-4.5 font-mono text-[13.5px] leading-[1.7]" style="background:#1D231F;color:#ECE6D7">git clone https://github.com/[org]/[repo].git
+cd [repo]
+make env        # conda env from environment.yml
+make data       # species list, GBIF, WorldClim, DEM
+make models     # SDMs + spatially blocked CV
+make risk       # risk score, sensitivity, cultivation
+make web        # export + JSON Schema validation
+make site       # builds the Astro site
+# or simply: make all</pre>
+        <p class="m-0 text-[14px] text-muted">Fixed random seeds; GBIF download DOI and all versions recorded in <code class="font-mono">data/manifest.yml</code>. Build {meta.build_date}{meta.gbif_doi ? ` · GBIF DOI ${meta.gbif_doi}` : ''}.</p>
+        <a href="https://github.com/" class="btn-primary w-fit">View the code on GitHub</a>
+      </section>
+
+      <section id="team" aria-labelledby="h-team" class="flex flex-col gap-3">
+        <h2 id="h-team" class="h-section">Team</h2>
+        <ul class="m-0 grid list-none gap-3 p-0 [grid-template-columns:repeat(auto-fill,minmax(200px,1fr))]">
+          {[['Pharmacognosy · plant identification'], ['History of medicine · Greek text'], ['Species distribution modelling'], ['Web and map development']].map(([role]) => (
+            <li class="card-surface p-3.5"><div class="font-semibold">[Name]</div><div class="text-[14px] text-muted">{role}</div></li>
+          ))}
+        </ul>
+        <p class="m-0 text-[14px] text-muted">Cite as: [Team] (2026). Dioscorides' Plants, Then and Now. EthnoHack 2026. [DOI]</p>
+      </section>
+    </div>
+  </div>
+</Base>

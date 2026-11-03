@@ -1,0 +1,187 @@
+---
+import Base from '../../layouts/Base.astro';
+import PlantMapPanel from '../../components/PlantMapPanel';
+import { ConfidenceBadge, RiskTag } from '../../components/Badges';
+import { DioscoridesCard } from '../../components/DioscoridesCard';
+import { RiskBreakdown } from '../../components/RiskBreakdown';
+import { Whisker } from '../../components/UncertainValue';
+import { IconCertain, IconDisputed, IconNone } from '../../components/icons';
+import { getMeta, getSpecies, getSpeciesList } from '../../lib/data';
+import { STATUS_NAMES, changeText, riskClassOf, thousands } from '../../lib/format';
+import { href } from '../../lib/url';
+import type { FutureKey } from '../../lib/types';
+
+export function getStaticPaths() {
+  return getSpeciesList().map((s) => ({ params: { slug: s.slug } }));
+}
+
+const { slug } = Astro.params;
+const meta = getMeta();
+const sp = getSpecies(slug!);
+const [genus, epithet, ...author] = sp.accepted_name.split(' ');
+const cls = sp.risk.class ?? riskClassOf(sp.risk.score);
+const status = sp.conservation_status;
+const disputed = sp.identification.confidence === 'disputed';
+const low = sp.records.low_confidence_model;
+const adequate = !!sp.model && sp.model.auc_mean >= 0.75 && !low;
+const fut: FutureKey[] = ['ssp245', 'ssp585'];
+const longName: Record<FutureKey, string> = { ssp245: '2050 · moderate (SSP2-4.5)', ssp585: '2050 · high (SSP5-8.5)' };
+const iv = (i?: { median: number; min: number; max: number }, unit = '') =>
+  i ? `${thousands(i.median)}${unit} (${thousands(Math.min(i.min, i.max))}–${thousands(Math.max(i.min, i.max))}${unit})` : '—';
+const ema = sp.ema_monograph;
+---
+<Base title={sp.common_name_en} sampleNote="Every value on this page is an illustrative placeholder.">
+  <div class="page flex flex-col gap-10 pb-16 pt-7">
+    <div class="flex flex-col gap-3">
+      <nav aria-label="Breadcrumb" class="text-[14px] text-muted"><a href={href('plants/')}>Plants</a> <span aria-hidden="true">/</span> {sp.common_name_en}</nav>
+      <div class="flex flex-wrap items-end justify-between gap-x-10 gap-y-4">
+        <div class="flex flex-col gap-1">
+          <div lang="grc" class="font-serif text-[clamp(26px,2.6vw,32px)] leading-[1.1] text-ochre">{sp.dioscorides.greek_name}</div>
+          <h1 class="h-display m-0 text-[clamp(36px,4.4vw,54px)] leading-[1.05]">{sp.common_name_en}</h1>
+          <div class="latin text-[22px] text-muted">{genus} {epithet} <span class="font-sans text-[15px] not-italic">{author.join(' ')}{sp.family ? ` · ${sp.family}` : ''}</span></div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <ConfidenceBadge level={sp.identification.confidence} prefix="Identification: " />
+            <span class="rounded-full border border-rule px-2.5 py-0.5 text-[13px]">{sp.endemic_greece ? `Endemic to Greece${sp.endemic_region ? ` · ${sp.endemic_region}` : ''}` : 'Not endemic to Greece'}</span>
+            {status
+              ? <span class="rounded-full border border-rule px-2.5 py-0.5 text-[13px]"><strong>{status.category}</strong> {STATUS_NAMES[status.category] ?? ''}</span>
+              : <span class="rounded-full border border-rule px-2.5 py-0.5 text-[13px] text-muted">Conservation status not assessed</span>}
+            {low && <span class="rounded-full border border-warn-border px-2.5 py-0.5 text-[13px] font-semibold text-warn">Low-confidence model</span>}
+          </div>
+        </div>
+        <dl class="m-0 flex flex-wrap gap-x-8 gap-y-3">
+          <div><dt class="text-[13px] text-muted">Risk rank</dt><dd class="m-0"><strong class="text-[32px] font-semibold">{sp.risk.rank}</strong> <span class="text-muted">of {meta.n_species}{sp.risk.rank_lo !== undefined && ` (${sp.risk.rank_lo}–${sp.risk.rank_hi})`}</span></dd></div>
+          <div><dt class="text-[13px] text-muted">Risk score</dt><dd class="m-0 flex flex-wrap items-baseline gap-2"><strong class="text-[32px] font-semibold">{sp.risk.score.toFixed(2)}</strong>{sp.risk.score_lo !== undefined && <span class="text-muted">({sp.risk.score_lo.toFixed(2)}–{sp.risk.score_hi!.toFixed(2)})</span>}<RiskTag cls={cls} showClassNumber /></dd></div>
+        </dl>
+      </div>
+
+      {disputed && (
+        <div class="card-surface mt-2 flex flex-col gap-3 p-5">
+          <div role="note" class="rounded-md bg-ochre-tint px-3.5 py-3 text-[14px] text-ochre-ink">
+            <strong>Identification disputed.</strong> Scholars propose more than one modern species. We model the most cited candidate and show the alternative for comparison.{sp.risk.rank_without_disputed === null ? ' Rankings are also reported without disputed plants on the Methods page.' : ''}
+          </div>
+          <div class="grid gap-2.5 text-[14px] sm:grid-cols-2">
+            <div class="rounded-md border border-sage px-3 py-2.5"><div class="eyebrow text-sage">Modelled</div><em class="font-serif text-[18px]">{genus} {epithet}</em><div class="text-muted">{sp.identification.source}</div></div>
+            {(sp.identification.alternatives ?? []).map((a) => (
+              <div class="rounded-md border border-dashed border-muted px-3 py-2.5"><div class="eyebrow text-muted">Alternative</div><em class="font-serif text-[18px]">{a.name}</em><div class="text-muted">{a.source}</div></div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {low && (
+        <div role="note" class="mt-2 flex gap-3 rounded-md border border-warn-border bg-warn-bg px-4 py-3.5">
+          <span class="flex-none text-warn"><IconDisputed size={20} /></span>
+          <div class="flex flex-col gap-0.5">
+            <strong class="text-warn">Low-confidence model</strong>
+            <span class="text-[14px] text-warn-ink">{sp.common_name_en} (<em>{genus} {epithet}</em>) has {sp.records.thinned ?? sp.records.clean} occurrence records after cleaning; we require 30 for a reliable model. Maps are exploratory outlines only, and its rank carries a wide interval{sp.risk.rank_lo !== undefined ? ` (${sp.risk.rank_lo}–${sp.risk.rank_hi})` : ''}.</span>
+          </div>
+        </div>
+      )}
+    </div>
+
+    <PlantMapPanel client:visible slug={sp.slug} commonName={sp.common_name_en} translit={sp.dioscorides.greek_translit ?? sp.dioscorides.greek_name} scenarios={meta.scenarios} lowConfidence={low} />
+
+    <section class="grid items-start gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))]">
+      <DioscoridesCard sp={sp} />
+      <div class="flex flex-col gap-6">
+        {ema?.exists ? (
+          <section aria-labelledby="h-ema" class="card-surface flex flex-col gap-2 px-6 py-5.5">
+            <div class="eyebrow text-muted">Modern official status</div>
+            <h3 id="h-ema" class="m-0 text-[18px] font-semibold">European Medicines Agency herbal monograph</h3>
+            <p class="m-0 text-[15px]"><strong>{ema.name ?? '[Monograph name]'}</strong>{ema.use && <> · category: {ema.use}</>}{ema.reference && <> · {ema.reference}</>}</p>
+            <p class="m-0 text-[14px] text-muted">We report regulatory status only and make no claim about effects. Read the monograph for its exact wording.</p>
+            {ema.url && <a href={ema.url} class="inline-flex min-h-11 w-fit items-center font-semibold">Open the monograph on ema.europa.eu</a>}
+          </section>
+        ) : (
+          <div class="card-surface flex items-center gap-2 px-6 py-4 text-[14px] text-muted">
+            <IconNone />{ema?.exists === false ? 'No European Medicines Agency herbal monograph for this species.' : 'No European Medicines Agency herbal monograph recorded for this species.'}
+          </div>
+        )}
+
+        <section aria-labelledby="h-change" class="card-data flex flex-col gap-3.5 px-6 py-5.5">
+          <h3 id="h-change" class="m-0 text-[18px] font-semibold">Projected range change by 2050</h3>
+          {fut.map((s) => {
+            const t = changeText(sp.range_change_pct[s]);
+            return (
+              <div class="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-1 rounded-md border border-data-rule px-3 py-2.5">
+                <span class="text-[14px] text-muted">{longName[s]}</span>
+                <span class="row-span-2"><Whisker interval={sp.range_change_pct[s]} label={longName[s]} /></span>
+                <span><strong class="text-[24px] font-semibold">{t.med}</strong> <span class="text-muted">({t.lo} to {t.hi})</span></span>
+              </div>
+            );
+          })}
+          <p class="m-0 text-[13px] text-muted">Median and spread across {meta.gcms.length} climate models. Whisker axis −80% to +20%, dashed tick at 0.</p>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 border-t border-data-rule pt-1 text-[14px]">
+            <span class="text-muted">Suitable cultivation area, 2050 moderate</span>
+            {sp.cultivation_area_km2 !== null
+              ? <span><strong>{thousands(sp.cultivation_area_km2)} km²</strong>{sp.cultivation_area_km2_range && <span class="text-muted"> ({thousands(sp.cultivation_area_km2_range.min)}–{thousands(sp.cultivation_area_km2_range.max)} km²)</span>}</span>
+              : <span class="text-muted">Not computed</span>}
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="grid items-start gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))]">
+      <section aria-labelledby="h-risk" class="card-data flex flex-col gap-3.5 px-6 py-5.5">
+        <h3 id="h-risk" class="m-0 text-[18px] font-semibold">Risk score breakdown</h3>
+        <RiskBreakdown score={sp.risk.score} lo={sp.risk.score_lo} hi={sp.risk.score_hi} components={sp.risk.components}
+          weights={meta.risk_weights} ci={sp.risk.components_ci} endemic={sp.endemic_greece} statusCategory={status?.category} />
+        <p class="m-0 text-[14px] text-muted">Stays in the top 10 in {Math.round(sp.risk.top10_stability * 100)}% of {meta.sensitivity.draws.toLocaleString('en-GB')} random weightings.</p>
+        <a href={href('methods/#sensitivity')} class="text-[14px] font-semibold">How the score is built, and how sensitive it is to weights</a>
+      </section>
+
+      <section aria-labelledby="h-model" class="card-data flex flex-col gap-3.5 px-6 py-5.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h3 id="h-model" class="m-0 text-[18px] font-semibold">Model quality</h3>
+          {sp.model && (adequate
+            ? <span class="inline-flex items-center gap-1.5 rounded-full border border-sage bg-sage-tint px-2.5 py-0.5 text-[13px] font-semibold text-sage"><IconCertain size={13} />Adequate</span>
+            : <span class="inline-flex items-center gap-1.5 rounded-full border border-warn-border px-2.5 py-0.5 text-[13px] font-semibold text-warn"><IconDisputed size={13} />Low confidence</span>)}
+        </div>
+        {sp.model ? (
+          <dl class="m-0 grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(140px,1fr))]">
+            <div><dt class="text-[13px] text-muted">AUC (spatial block CV)</dt><dd class="m-0"><strong class="text-[24px]">{sp.model.auc_mean.toFixed(2)}</strong> <span class="text-muted">± {sp.model.auc_sd.toFixed(2)}</span></dd></div>
+            <div><dt class="text-[13px] text-muted">Boyce index</dt><dd class="m-0"><strong class="text-[24px]">{sp.model.boyce_mean.toFixed(2)}</strong>{sp.model.boyce_sd !== undefined && <span class="text-muted"> ± {sp.model.boyce_sd.toFixed(2)}</span>}</dd></div>
+            {sp.model.tss_mean !== undefined && <div><dt class="text-[13px] text-muted">TSS</dt><dd class="m-0"><strong class="text-[24px]">{sp.model.tss_mean.toFixed(2)}</strong> <span class="text-muted">± {sp.model.tss_sd?.toFixed(2)}</span></dd></div>}
+            <div><dt class="text-[13px] text-muted">Occurrence records</dt><dd class="m-0"><strong class="text-[24px]">{thousands(sp.records.thinned ?? sp.records.clean)}</strong> <span class="text-muted">after cleaning (of {thousands(sp.records.raw)})</span></dd></div>
+          </dl>
+        ) : <p class="m-0 text-muted">No model was fitted for this species (too few usable records).</p>}
+        <p class="m-0 text-[14px] text-muted">5-fold spatial block cross-validation (~25 km blocks); ± is one standard deviation across folds.{sp.model?.null_auc_mean !== undefined && ` Null model AUC ${sp.model.null_auc_mean.toFixed(2)}.`} "Adequate" means AUC ≥ 0.75 and ≥ 30 records.</p>
+      </section>
+    </section>
+
+    <section aria-labelledby="h-caveats" class="flex max-w-[860px] flex-col gap-2.5 border-t-2 border-ochre pt-5">
+      <h2 id="h-caveats" class="m-0 font-serif text-[28px] font-medium">Caveats</h2>
+      <ul class="m-0 flex flex-col gap-1.5 pl-5">
+        {sp.caveats.map((c) => <li>{c}</li>)}
+      </ul>
+    </section>
+
+    <section id="range-table" aria-labelledby="h-table" class="flex flex-col gap-2.5">
+      <h2 id="h-table" class="m-0 text-[18px] font-semibold">Range data (map alternative)</h2>
+      <div class="card-data overflow-x-auto">
+        <table class="w-full min-w-[560px] border-collapse text-[15px]">
+          <thead><tr class="border-b-2 border-ink text-left">
+            <th scope="col" class="px-4 py-2.5 text-[13px]">Scenario</th>
+            <th scope="col" class="px-2 py-2.5 text-[13px]">Suitable ~{meta.cell_km} km cells</th>
+            <th scope="col" class="px-2 py-2.5 text-[13px]">Change</th>
+            <th scope="col" class="py-2.5 pl-2 pr-4 text-[13px]">Share in Natura 2000</th>
+          </tr></thead>
+          <tbody>
+            <tr class="border-b border-data-rule">
+              <td class="px-4 py-2.5">Now</td><td class="px-2 py-2.5">{sp.range_cells?.now ?? '—'}</td><td class="px-2 py-2.5">—</td>
+              <td class="py-2.5 pl-2 pr-4">{sp.natura_share_pct?.now !== undefined ? `${sp.natura_share_pct.now}%` : '—'}</td>
+            </tr>
+            {fut.map((s) => (
+              <tr class="border-b border-data-rule last:border-0">
+                <td class="px-4 py-2.5">{meta.scenarios[s].label}</td>
+                <td class="px-2 py-2.5">{iv(sp.range_cells?.[s])}</td>
+                <td class="px-2 py-2.5">{changeText(sp.range_change_pct[s]).full}</td>
+                <td class="py-2.5 pl-2 pr-4">{iv(sp.natura_share_pct?.[s], '%')}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</Base>

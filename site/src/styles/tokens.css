@@ -1,0 +1,51 @@
+/* Design tokens from Claude Design — "Dioscorides' Plants, Then and Now" design system v0.1.
+   Two registers: manuscript (parchment, ink, red-ochre, serif) for history; atlas (neutral, sans,
+   tabular figures) for data. No drop shadows: surfaces separate with 1px rules. */
+:root {
+  --bg: #F6F1E6; --surface: #FFFDF8; --sunk: #EEE7D7;
+  --data: #FFFFFF; --data-rule: #E4E1D9;
+  --ink: #1D231F; --muted: #535A54; --rule: #D8CFBB; --rule-soft: #E4DCCA;
+  --ochre: #973A22; --ochre-tint: #F3E2D7; --ochre-ink: #3B1F14;
+  --sage: #48653F; --sage-tint: #DFE8D5;
+  --focus: #1D5A96; --link: #1D5A96;
+  --btn: #1D231F; --on-btn: #FFFDF8;
+  --warn: #7A5A0F; --warn-bg: #FBF3DF; --warn-border: #B98A1E; --warn-ink: #3D3A2E;
+  --skeleton: #EEEBE4;
+
+  /* Risk · sequential (ColorBrewer Reds-5). Same in both themes; text colour per step. */
+  --risk-1: #FEE5D9; --risk-2: #FCAE91; --risk-3: #FB6A4A; --risk-4: #DE2D26; --risk-5: #A50F15;
+  --on-risk-1: #1D231F; --on-risk-2: #1D231F; --on-risk-3: #1D231F; --on-risk-4: #FFFFFF; --on-risk-5: #FFFFFF;
+
+  /* Range change · diverging (PuOr-5): orange = loss, purple = gain, never red/green. */
+  --chg-loss-2: #B35806; --chg-loss-1: #F1A340; --chg-0: #F7F7F7; --chg-gain-1: #998EC3; --chg-gain-2: #542788;
+
+  /* Map layer encodings (colour + pattern + line) */
+  --map-sea: #E3EAE6; --map-land: #FBF8F1; --map-neighbour: #EFEBE2; --map-coast: #B9B09C;
+  --map-kept: #7A9C6A; --map-lost: #C2650A; --map-lost-bg: #FBE3C2; --map-gain: #6E5EA8;
+  --map-cult: #3E5A36; --map-natura: #24507E; --map-occ: #1D231F; --map-chip: rgba(255, 253, 248, 0.9);
+
+  /* Risk breakdown segments: one hue, stepped in lightness, separated by gaps */
+  --rb-range-loss: #7F2704; --rb-endemism: #C04A0B; --rb-status: #EE8A3C; --rb-harvest: #FDC895;
+
+  --ff-serif: "EB Garamond", "GFS Didot", Georgia, serif;
+  --ff-sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  --ff-mono: "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #0F1713; --surface: #16201B; --sunk: #241F17;
+  --data: #131C17; --data-rule: #2B3832;
+  --ink: #ECE6D7; --muted: #A9B1A6; --rule: #33413A; --rule-soft: #2B3832;
+  --ochre: #E39A7E; --ochre-tint: #3B271F; --ochre-ink: #F3E2D7;
+  --sage: #A1C192; --sage-tint: #22311E;
+  --focus: #8FBDEB; --link: #8FBDEB;
+  --btn: #ECE6D7; --on-btn: #0F1713;
+  --warn: #E3C171; --warn-bg: #2E2614; --warn-border: #B98A1E; --warn-ink: #F0E3C0;
+  --skeleton: #22302A;
+
+  --map-sea: #0B1310; --map-land: #17221D; --map-neighbour: #121B17; --map-coast: #3E4D45;
+  --map-kept: #86A877; --map-lost: #F1A340; --map-lost-bg: #3A2A14; --map-gain: #A99BD6;
+  --map-cult: #A1C192; --map-natura: #9DBEE0; --map-occ: #ECE6D7; --map-chip: rgba(15, 23, 19, 0.88);
+  color-scheme: dark;
+}

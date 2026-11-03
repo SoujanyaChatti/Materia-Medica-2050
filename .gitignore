@@ -1,0 +1,24 @@
+# Raw and processed data are fetched/rebuilt by the pipeline, never committed
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+outputs/rasters/
+outputs/models/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Secrets
+.env
+
+# Site
+site/node_modules/
+site/dist/
+site/.astro/
+
+.DS_Store

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dioscorides-plants.local/schema/species-list.schema.json",
+  "title": "species.json — summary rows for /plants and the home page",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["slug", "accepted_name", "common_name_en", "greek_name", "dmm_book", "identification_confidence", "endemic_greece", "low_confidence_model", "risk", "range_change_pct"],
+    "properties": {
+      "slug": {"type": "string"},
+      "accepted_name": {"type": "string"},
+      "common_name_en": {"type": "string"},
+      "greek_name": {"type": "string"},
+      "dmm_book": {"type": "integer", "minimum": 1, "maximum": 5},
+      "identification_confidence": {"enum": ["certain", "probable", "disputed"]},
+      "endemic_greece": {"type": "boolean"},
+      "endemic_region": {"type": ["string", "null"]},
+      "conservation_category": {"type": ["string", "null"]},
+      "low_confidence_model": {"type": "boolean"},
+      "risk": {
+        "type": "object",
+        "required": ["score", "rank", "class"],
+        "properties": {
+          "score": {"type": "number"}, "score_lo": {"type": "number"}, "score_hi": {"type": "number"},
+          "rank": {"type": "integer"}, "rank_lo": {"type": "integer"}, "rank_hi": {"type": "integer"},
+          "class": {"type": "integer", "minimum": 1, "maximum": 5}
+        }
+      },
+      "range_change_pct": {
+        "$ref": "https://dioscorides-plants.local/schema/species.schema.json#/properties/range_change_pct"
+      },
+      "model": {"type": ["object", "null"]},
+      "records_clean": {"type": "integer"}
+    }
+  }
+}

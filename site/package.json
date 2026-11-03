@@ -1,0 +1,32 @@
+{
+  "name": "dioscorides-plants-site",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Dioscorides' Plants, Then and Now — static website (Astro + React islands + MapLibre)",
+  "scripts": {
+    "data:basemap": "node scripts/basemap.mjs",
+    "data:sample": "node scripts/basemap.mjs && node scripts/sample-data.mjs",
+    "dev": "astro dev",
+    "build": "node scripts/basemap.mjs && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/react": "7.1.2",
+    "@fontsource/eb-garamond": "5.3.0",
+    "@fontsource/source-sans-3": "5.3.1",
+    "@tailwindcss/vite": "4.3.4",
+    "astro": "7.4.1",
+    "maplibre-gl": "6.16.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "tailwindcss": "4.3.4"
+  },
+  "devDependencies": {
+    "@types/geojson": "7946.0.16",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  }
+}

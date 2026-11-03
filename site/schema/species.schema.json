@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dioscorides-plants.local/schema/species.schema.json",
+  "title": "species/<slug>.json — one plant page",
+  "description": "Field names from the PRD data contract are fixed. Fields marked optional in the PRD (ema_monograph, conservation_status) may be null or absent; the extra optional fields here carry uncertainty the design shows. Range-change min/max are the two ends of the climate-model spread and may come in either order; the site sorts them.",
+  "type": "object",
+  "required": ["slug", "accepted_name", "common_name_en", "dioscorides", "identification", "endemic_greece", "records", "model", "range_change_pct", "risk", "cultivation_area_km2", "caveats"],
+  "$defs": {
+    "interval": {
+      "type": "object",
+      "required": ["median", "min", "max"],
+      "properties": {"median": {"type": "number"}, "min": {"type": "number"}, "max": {"type": "number"}}
+    },
+    "unit": {"type": "number", "minimum": 0, "maximum": 1},
+    "confidence": {"enum": ["certain", "probable", "disputed"]}
+  },
+  "properties": {
+    "slug": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+    "accepted_name": {"type": "string"},
+    "common_name_en": {"type": "string"},
+    "family": {"type": ["string", "null"]},
+    "dioscorides": {
+      "type": "object",
+      "required": ["book", "chapter", "greek_name", "excerpt", "edition"],
+      "properties": {
+        "book": {"type": "integer", "minimum": 1, "maximum": 5},
+        "chapter": {"type": ["integer", "null"], "minimum": 1},
+        "greek_name": {"type": "string"},
+        "greek_translit": {"type": ["string", "null"]},
+        "excerpt": {"type": ["string", "null"], "description": "Short public-domain Greek excerpt (Wellmann)."},
+        "paraphrase": {"type": ["string", "null"], "description": "English paraphrase. AI-assisted text must be reviewed and labelled."},
+        "paraphrase_ai_assisted": {"type": "boolean"},
+        "edition": {"type": "string"}
+      }
+    },
+    "identification": {
+      "type": "object",
+      "required": ["confidence", "source"],
+      "properties": {
+        "confidence": {"$ref": "#/$defs/confidence"},
+        "source": {"type": "string"},
+        "note": {"type": ["string", "null"]},
+        "reviewed_by": {"type": ["string", "null"]},
+        "alternatives": {
+          "type": "array",
+          "items": {"type": "object", "required": ["name", "source"], "properties": {"name": {"type": "string"}, "source": {"type": "string"}}}
+        }
+      }
+    },
+    "endemic_greece": {"type": "boolean"},
+    "endemic_region": {"type": ["string", "null"]},
+    "conservation_status": {
+      "type": ["object", "null"],
+      "required": ["category", "source"],
+      "properties": {"category": {"enum": ["LC", "NT", "VU", "EN", "CR", "DD", "NE"]}, "source": {"type": "string"}}
+    },
+    "ema_monograph": {
+      "type": ["object", "null"],
+      "required": ["exists"],
+      "properties": {
+        "exists": {"type": "boolean"},
+        "use": {"type": ["string", "null"], "description": "Regulatory category quoted from EMA, e.g. 'traditional use'. Never an efficacy claim."},
+        "name": {"type": ["string", "null"]},
+        "reference": {"type": ["string", "null"]},
+        "url": {"type": ["string", "null"]}
+      }
+    },
+    "records": {
+      "type": "object",
+      "required": ["raw", "clean", "low_confidence_model"],
+      "properties": {
+        "raw": {"type": "integer", "minimum": 0},
+        "clean": {"type": "integer", "minimum": 0},
+        "thinned": {"type": "integer", "minimum": 0},
+        "public_cells": {"type": "integer", "minimum": 0},
+        "low_confidence_model": {"type": "boolean"}
+      }
+    },
+    "model": {
+      "type": ["object", "null"],
+      "required": ["auc_mean", "auc_sd", "boyce_mean"],
+      "properties": {
+        "auc_mean": {"type": "number"}, "auc_sd": {"type": "number"},
+        "boyce_mean": {"type": "number"}, "boyce_sd": {"type": "number"},
+        "tss_mean": {"type": "number"}, "tss_sd": {"type": "number"},
+        "null_auc_mean": {"type": "number"},
+        "variables": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "range_change_pct": {
+      "type": "object",
+      "required": ["ssp245", "ssp585"],
+      "properties": {"ssp245": {"$ref": "#/$defs/interval"}, "ssp585": {"$ref": "#/$defs/interval"}}
+    },
+    "range_cells": {
+      "type": "object",
+      "properties": {"now": {"type": "integer"}, "ssp245": {"$ref": "#/$defs/interval"}, "ssp585": {"$ref": "#/$defs/interval"}}
+    },
+    "natura_share_pct": {
+      "type": "object",
+      "properties": {"now": {"type": "number"}, "ssp245": {"$ref": "#/$defs/interval"}, "ssp585": {"$ref": "#/$defs/interval"}}
+    },
+    "risk": {
+      "type": "object",
+      "required": ["score", "rank", "top10_stability", "components"],
+      "properties": {
+        "score": {"$ref": "#/$defs/unit"},
+        "score_lo": {"$ref": "#/$defs/unit"},
+        "score_hi": {"$ref": "#/$defs/unit"},
+        "rank": {"type": "integer", "minimum": 1},
+        "rank_lo": {"type": "integer", "minimum": 1},
+        "rank_hi": {"type": "integer", "minimum": 1},
+        "rank_without_disputed": {"type": ["integer", "null"]},
+        "class": {"type": "integer", "minimum": 1, "maximum": 5},
+        "top10_stability": {"$ref": "#/$defs/unit"},
+        "components": {
+          "type": "object",
+          "required": ["range_loss", "endemism", "status", "harvest"],
+          "properties": {
+            "range_loss": {"$ref": "#/$defs/unit"}, "endemism": {"$ref": "#/$defs/unit"},
+            "status": {"$ref": "#/$defs/unit"}, "harvest": {"$ref": "#/$defs/unit"}
+          }
+        },
+        "components_ci": {
+          "type": "object",
+          "additionalProperties": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2}
+        }
+      }
+    },
+    "cultivation_area_km2": {"type": ["number", "null"], "minimum": 0},
+    "cultivation_area_km2_range": {"type": ["object", "null"], "properties": {"min": {"type": "number"}, "max": {"type": "number"}}},
+    "caveats": {"type": "array", "items": {"type": "string"}}
+  }
+}
