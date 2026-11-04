@@ -30,7 +30,7 @@ export interface Species {
   family?: string | null;
   dioscorides: {
     book: number; chapter: number | null; greek_name: string; greek_translit?: string | null;
-    excerpt: string | null; paraphrase?: string | null; paraphrase_ai_assisted?: boolean; edition: string;
+    excerpt: string | null; paraphrase?: string | null; paraphrase_ai_assisted?: boolean; edition: string; excerpt_url?: string | null;
   };
   identification: {
     confidence: Confidence; source: string; note?: string | null; reviewed_by?: string | null;

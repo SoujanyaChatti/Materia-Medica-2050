@@ -1,1 +1,128 @@
-{"slug":"glaucium-flavum","accepted_name":"Glaucium flavum Crantz","common_name_en":"Yellow horned poppy","family":"Papaveraceae","dioscorides":{"book":4,"chapter":null,"greek_name":"μήκων κερατῖτις","greek_translit":"mēkōn keratitis","excerpt":null,"paraphrase":null,"paraphrase_ai_assisted":false,"edition":"Wellmann 1906–1914"},"identification":{"confidence":"probable","source":"[Author, year, page]","note":null,"reviewed_by":"[historian, initials]","alternatives":[]},"endemic_greece":false,"endemic_region":null,"conservation_status":{"category":"LC","source":"IUCN Red List [sample]"},"ema_monograph":null,"records":{"raw":540,"clean":150,"thinned":150,"public_cells":202,"low_confidence_model":false},"model":{"auc_mean":0.79,"auc_sd":0.05,"boyce_mean":0.58,"boyce_sd":0.08,"tss_mean":0.5,"tss_sd":0.07,"null_auc_mean":0.5,"variables":["bio1","bio12","bio5","bio15","elevation","slope"]},"range_change_pct":{"ssp245":{"median":6,"min":-5,"max":17},"ssp585":{"median":8,"min":-6,"max":22}},"range_cells":{"now":456,"ssp245":{"median":483,"min":433,"max":534},"ssp585":{"median":492,"min":429,"max":556}},"natura_share_pct":{"now":8.8,"ssp245":{"median":14.8,"min":6.8,"max":22.8},"ssp585":{"median":14.8,"min":6.8,"max":22.8}},"risk":{"score":0.02,"score_lo":0.02,"score_hi":0.04,"rank":8,"rank_lo":8,"rank_hi":8,"class":1,"rank_without_disputed":7,"top10_stability":1,"components":{"range_loss":0,"endemism":0,"status":0,"harvest":0.1},"components_ci":{"range_loss":[0,0.05],"harvest":[0,0.2]}},"cultivation_area_km2":18360,"cultivation_area_km2_range":{"min":14320,"max":22400},"caveats":["The identification is probable, not certain; results describe Glaucium flavum, which may not be the plant Dioscorides meant.","Wild and cultivated records are hard to separate in occurrence databases; some cells may reflect cultivation.","Habitat suitability is not presence. The model omits dispersal limits, soils and grazing.","Harvest pressure is estimated from accessibility (distance to roads and villages), not field surveys."]}
+{
+  "slug": "glaucium-flavum",
+  "accepted_name": "Glaucium flavum Crantz",
+  "common_name_en": "Yellow horned poppy",
+  "family": "Papaveraceae",
+  "dioscorides": {
+    "book": 4,
+    "chapter": 65,
+    "greek_name": "μήκων κερατῖτις",
+    "greek_translit": "mekon keratitis",
+    "excerpt": "μήκων κερατῖτις, ἣν ἔνιοι παράλιον καλοῦσιν, οἱ δὲ ἀγρίαν μήκωνα· φύλλα ἔχει λευκά, δασέα, ὅμοια φλόμῳ",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), p. 222",
+    "excerpt_url": "https://archive.org/details/BIUSante_65865x02/page/n249/mode/1up"
+  },
+  "identification": {
+    "confidence": "certain",
+    "source": "Sprengel 1830, vol. 2, p. 601 (Comm. IV cap. LXVI, μήκων κερατῖτις): 'Esse autem Glaucium luteum Scop., bene iam Tragus probavit.' Glaucium luteum Scop. is a synonym of G. flavum Crantz (synonymy is ours). No competitor named. | Fraas 1845, p. 127: 'Glaucium flavum Cr., gelber Hornmohn' = ἡ μήκων (κερατῖτις) Theophr. 9,13 and μήκων κερατῖτις Diosc. 4,66 ('folia hirsuta' fits particularly). Osbaldeston 2000, ch. 4-66: SUGGESTED Papaver corniculatum [Fuchs, Brunfels], Chelidonium glaucium [Linnaeus], Glaucium flavum, Glaucium luteum. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n602/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n172/mode/1up)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Glaucium corniculatum (L.) Rudolph",
+        "source": "unverified; congener native in Greece (Dimopoulos 2013)"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 3105,
+    "clean": 2967,
+    "thinned": 1306,
+    "public_cells": 371,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.873,
+    "auc_sd": 0.021,
+    "boyce_mean": 0.976,
+    "boyce_sd": 0.018,
+    "tss_mean": 0.606,
+    "tss_sd": 0.045,
+    "null_auc_mean": 0.505,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 9.0,
+      "min": 2.5,
+      "max": 10.3
+    },
+    "ssp585": {
+      "median": 15.8,
+      "min": 1.5,
+      "max": 18.3
+    }
+  },
+  "range_cells": {
+    "now": 795,
+    "ssp245": {
+      "median": 796.0,
+      "min": 782.0,
+      "max": 816.0
+    },
+    "ssp585": {
+      "median": 826.0,
+      "min": 772.0,
+      "max": 833.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 23.4,
+    "ssp245": {
+      "median": 23.7,
+      "min": 23.7,
+      "max": 23.8
+    },
+    "ssp585": {
+      "median": 23.0,
+      "min": 23.0,
+      "max": 23.6
+    }
+  },
+  "risk": {
+    "score": 0.277,
+    "score_lo": 0.277,
+    "score_hi": 0.277,
+    "rank": 26,
+    "rank_lo": 22,
+    "rank_hi": 29,
+    "class": 2,
+    "rank_without_disputed": 17,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.887
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": []
+}

@@ -1,15 +1,17 @@
 """Stage 03 — environmental layers.
 
-Downloads WorldClim 2.1 bioclim (baseline + CMIP6 2041-2060 for each GCM x SSP) and Copernicus
-DEM GLO-90 tiles, crops everything to the study box on the climate grid, adds elevation and
-slope, and keeps a low-collinearity subset of bioclim variables (|r| < 0.7).
+WorldClim 2.1 bioclim at 2.5 arc-minutes: baseline (1970-2000) plus CMIP6 2041-2060 for 3 GCMs x
+SSP2-4.5/SSP5-8.5, and Copernicus DEM GLO-90 elevation/slope. Nothing global is ever stored: every
+layer is read straight from the provider over HTTP (GDAL /vsicurl/ range requests) using a window
+cropped to the study box, so only the Greece window is transferred. The baseline needs all 19
+variables (to choose a low-collinearity subset, |r| < 0.7); futures fetch only the chosen variables.
 Outputs: data/processed/env/current.tif, data/processed/env/<gcm>_<ssp>.tif, env/meta.json
 """
 from __future__ import annotations
 
 import json
 import sys
-import zipfile
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -20,19 +22,23 @@ from pipeline.lib import config, io  # noqa: E402
 
 ENV = config.PROCESSED / "env"
 META = ENV / "meta.json"
-WC_BASE = "https://geodata.ucdavis.edu/climate/worldclim/2_1/base/wc2.1_{res}_bio.zip"
-WC_FUT = "https://geodata.ucdavis.edu/cmip6/{res}/{gcm}/{ssp}/wc2.1_{res}_bioc_{gcm}_{ssp}_{period}.tif"
-DEM_TILE = ("https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N{lat:02d}_00_E{lon:03d}_00_DEM/"
+WC_BASE = "/vsizip//vsicurl/https://geodata.ucdavis.edu/climate/worldclim/2_1/base/wc2.1_{res}_bio.zip/wc2.1_{res}_bio_{i}.tif"
+WC_FUT = "/vsicurl/https://geodata.ucdavis.edu/cmip6/{res}/{gcm}/{ssp}/wc2.1_{res}_bioc_{gcm}_{ssp}_{period}.tif"
+DEM_TILE = ("/vsicurl/https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N{lat:02d}_00_E{lon:03d}_00_DEM/"
             "Copernicus_DSM_COG_30_N{lat:02d}_00_E{lon:03d}_00_DEM.tif")
+DEM_PX_PER_DEG = 300   # read GLO-90 COG overviews at ~360 m, enough for 4.6 km cell means
+GDAL_ENV = dict(GDAL_DISABLE_READDIR_ON_OPEN="EMPTY_DIR", CPL_VSIL_CURL_ALLOWED_EXTENSIONS=".tif,.zip",
+                GDAL_HTTP_MAX_RETRY="5", GDAL_HTTP_RETRY_DELAY="3", VSI_CACHE="TRUE")
 # Preference order when two variables are collinear: keep the more interpretable one.
 PRIORITY = [1, 12, 5, 6, 15, 4, 7, 2, 3, 8, 9, 10, 11, 13, 14, 16, 17, 18, 19]
 
 
-def crop(src_path: Path, bands=None):
+def crop(src_path: str, bands=None):
+    """Read only the study-box window of a (remote) raster."""
     import rasterio
     from rasterio.windows import from_bounds
 
-    with rasterio.open(src_path) as src:
+    with rasterio.Env(**GDAL_ENV), rasterio.open(src_path) as src:
         win = from_bounds(*config.STUDY_BBOX, transform=src.transform).round_offsets().round_lengths()
         arr = src.read(bands, window=win, masked=True).astype("float32")
         transform = src.window_transform(win)
@@ -42,16 +48,13 @@ def crop(src_path: Path, bands=None):
 
 def baseline() -> tuple[np.ndarray, object, object]:
     res = config.WORLDCLIM_RES
-    z = io.download(WC_BASE.format(res=res), config.RAW / "worldclim" / f"wc2.1_{res}_bio.zip")
-    out_dir = config.RAW / "worldclim" / f"base_{res}"
-    if not out_dir.exists():
-        with zipfile.ZipFile(z) as f:
-            f.extractall(out_dir)
     layers = []
     transform = crs = None
     for i in range(1, 20):
-        a, transform, crs = crop(out_dir / f"wc2.1_{res}_bio_{i}.tif", 1)
+        t = time.time()
+        a, transform, crs = crop(WC_BASE.format(res=res, i=i), 1)
         layers.append(a)
+        print(f"baseline bio{i}: {a.shape} in {time.time() - t:.1f}s")
     return np.stack(layers), transform, crs
 
 
@@ -68,32 +71,39 @@ def select_variables(stack: np.ndarray) -> list[int]:
 
 
 def terrain(transform, shape, crs) -> tuple[np.ndarray, np.ndarray]:
-    """Mean elevation and mean slope (degrees) per climate cell from Copernicus GLO-90."""
+    """Mean elevation and mean slope (degrees) per climate cell from Copernicus GLO-90 COG overviews."""
     import rasterio
-    from rasterio.merge import merge
+    from rasterio.enums import Resampling as R
+    from rasterio.transform import from_origin
     from rasterio.warp import Resampling, reproject
 
     x0, y0, x1, y1 = config.STUDY_BBOX
-    tiles = []
+    n = DEM_PX_PER_DEG
+    W, H = int(round((x1 - x0) * n)), int(round((y1 - y0) * n))
+    dem = np.full((H, W), np.nan, dtype="float32")
+    mtrans = from_origin(x0, y1, 1 / n, 1 / n)
+    got = 0
     for lat in range(int(np.floor(y0)), int(np.ceil(y1))):
         for lon in range(int(np.floor(x0)), int(np.ceil(x1))):
-            dest = config.RAW / "dem" / f"N{lat:02d}_E{lon:03d}.tif"
             try:
-                io.download(DEM_TILE.format(lat=lat, lon=lon), dest)
-                tiles.append(dest)
+                with rasterio.Env(**GDAL_ENV), rasterio.open(DEM_TILE.format(lat=lat, lon=lon)) as src:
+                    a = src.read(1, out_shape=(n, n), resampling=R.average, masked=True).astype("float32")
             except Exception:  # sea-only tiles do not exist
                 continue
-    srcs = [rasterio.open(t) for t in tiles]
-    mosaic, mtrans = merge(srcs, bounds=config.STUDY_BBOX, nodata=np.nan)
-    for s in srcs:
-        s.close()
-    dem = mosaic[0].astype("float32")
-    # slope on the 90 m grid (metres per degree varies with latitude)
+            r0 = int(round((y1 - (lat + 1)) * n)); c0 = int(round((lon - x0) * n))
+            rs, cs = max(r0, 0), max(c0, 0)
+            re, ce = min(r0 + n, H), min(c0 + n, W)
+            if re > rs and ce > cs:
+                dem[rs:re, cs:ce] = np.ma.filled(a, np.nan)[rs - r0:re - r0, cs - c0:ce - c0]
+                got += 1
+    print(f"DEM: {got} GLO-90 tiles read at {1 / n * 3600:.0f} arc-seconds")
+    # slope (metres per degree varies with latitude)
     lat_c = np.deg2rad((y0 + y1) / 2)
-    dx = abs(mtrans.a) * 111_320 * np.cos(lat_c)
-    dy = abs(mtrans.e) * 110_574
-    gy, gx = np.gradient(dem, dy, dx)
+    dx = (1 / n) * 111_320 * np.cos(lat_c)
+    dy = (1 / n) * 110_574
+    gy, gx = np.gradient(np.nan_to_num(dem, nan=0.0), dy, dx)
     slope = np.degrees(np.arctan(np.hypot(gx, gy))).astype("float32")
+    slope[~np.isfinite(dem)] = np.nan
     out = []
     for a in (dem, slope):
         dst = np.full(shape, np.nan, dtype="float32")
@@ -133,14 +143,18 @@ def main() -> None:
     futures = []
     for ssp in config.SCENARIOS:
         for gcm in config.GCMS:
+            out = ENV / f"{gcm}_{ssp}.tif"
+            if out.exists() and not config.force():
+                futures.append({"gcm": gcm, "ssp": ssp, "file": out.name}); print(f"cached: {out.name}")
+                continue
+            t = time.time()
             url = WC_FUT.format(res=config.WORLDCLIM_RES, gcm=gcm, ssp=ssp, period=config.FUTURE_PERIOD)
-            src = io.download(url, config.RAW / "worldclim" / Path(url).name)
-            fut, _, _ = crop(src, [v for v in keep])
+            fut, _, _ = crop(url, [v for v in keep])
             write_stack(ENV / f"{gcm}_{ssp}.tif", np.concatenate([fut, elev[None], slope[None]]), transform, crs, names)
             futures.append({"gcm": gcm, "ssp": ssp, "file": f"{gcm}_{ssp}.tif"})
-            print(f"wrote {gcm} {ssp}")
+            print(f"wrote {gcm} {ssp} in {time.time() - t:.1f}s")
 
-    meta = {"variables": names, "source": config.CLIMATE_SOURCE, "resolution": config.WORLDCLIM_RES,
+    meta = {"variables": names, "gcms": config.GCMS, "scenarios": list(config.SCENARIOS), "source": config.CLIMATE_SOURCE, "resolution": config.WORLDCLIM_RES,
             "baseline_period": config.BASELINE_PERIOD, "future_period": config.FUTURE_PERIOD,
             "futures": futures}
     io.write_json(META, meta)

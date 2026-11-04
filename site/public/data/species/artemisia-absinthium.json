@@ -1,0 +1,134 @@
+{
+  "slug": "artemisia-absinthium",
+  "accepted_name": "Artemisia absinthium L.",
+  "common_name_en": "Wormwood",
+  "family": "Asteraceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 23,
+    "greek_name": "ἀψίνθιον",
+    "greek_translit": "apsinthion",
+    "excerpt": "ἀψίνθιον· γνώριμος ἡ πόα. ἐστι δὲ αὐτοῦ βέλτιον τὸ ἐν Πόντῳ καὶ Καππαδοκίᾳ γεννώμενον ἐν ὄρει τῳ καλουμένῳ Ταύρῳ.",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Wellmann (ed.) 1906, DMM III 23 (\"ἀψίνθιον· γνώριμος ἡ πόα\"; RV: Ῥωμαῖοι ἀψίνθιουμ ῥούστικουμ); Osbaldeston 2000, ch. 3-26: \"Artemisia absinthium [Linnaeus] — Wormwood\".",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Artemisia pontica L. (Dioscorides says the best grows in Pontus/Cappadocia)",
+        "source": "not verified in any opened source; inference flagged"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": true,
+    "use": "traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/absinthii-herba",
+    "name": "Absinthii herba",
+    "reference": null
+  },
+  "records": {
+    "raw": 47,
+    "clean": 43,
+    "thinned": 41,
+    "public_cells": 24,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.777,
+    "auc_sd": 0.128,
+    "boyce_mean": 0.221,
+    "boyce_sd": 0.309,
+    "tss_mean": 0.621,
+    "tss_sd": 0.184,
+    "null_auc_mean": 0.494,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 150.7,
+      "min": 30.9,
+      "max": 157.6
+    },
+    "ssp585": {
+      "median": 330.1,
+      "min": 72.9,
+      "max": 339.6
+    }
+  },
+  "range_cells": {
+    "now": 236,
+    "ssp245": {
+      "median": 528.0,
+      "min": 327.0,
+      "max": 571.0
+    },
+    "ssp585": {
+      "median": 837.0,
+      "min": 427.0,
+      "max": 917.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 36.4,
+    "ssp245": {
+      "median": 32.1,
+      "min": 31.6,
+      "max": 33.3
+    },
+    "ssp585": {
+      "median": 26.1,
+      "min": 26.0,
+      "max": 31.1
+    }
+  },
+  "risk": {
+    "score": 0.294,
+    "score_lo": 0.294,
+    "score_hi": 0.294,
+    "rank": 18,
+    "rank_lo": 14,
+    "rank_hi": 18,
+    "class": 2,
+    "rank_without_disputed": 10,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.97
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 3665,
+  "cultivation_area_km2_range": {
+    "min": 1055,
+    "max": 6208
+  },
+  "caveats": [
+    "Identification is probable; results describe Artemisia absinthium L., which may not be the plant Dioscorides meant."
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "records": {
+    "raw": 395,
+    "missing_coords": 0,
+    "zero_coords": 0,
+    "invalid_coords": 0,
+    "country_centroid": 0,
+    "institution": 3,
+    "duplicate": 31,
+    "before_min_year": 60,
+    "coord_uncertainty": 31,
+    "clean": 270,
+    "thinned": 163,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.8218221548400203,
+    "auc_sd": 0.060061353312716524,
+    "tss_mean": 0.5576575728086789,
+    "tss_sd": 0.10580301468585182,
+    "boyce_mean": 0.49535898761280117,
+    "boyce_sd": 0.19618529578460264,
+    "null_auc_mean": 0.5253798925136923,
+    "threshold": 0.08888459014800383,
+    "folds_used": 5,
+    "cv": "5-fold spatial blocks ~25 km",
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ],
+    "algorithms": [
+      "maxent (elapid)",
+      "random forest"
+    ],
+    "n_presence": 144,
+    "n_background": 8926,
+    "current_cells": 2716,
+    "range_area": "suitable ~4.6 km cells within Greece",
+    "beats_null": true
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": -23.85861561119293,
+      "min": -40.61119293078056,
+      "max": -17.341678939617083,
+      "per_gcm": [
+        -23.85861561119293,
+        -40.61119293078056,
+        -17.341678939617083
+      ]
+    },
+    "ssp585": {
+      "median": -28.718703976435936,
+      "min": -52.76141384388807,
+      "max": -14.985272459499264,
+      "per_gcm": [
+        -14.985272459499264,
+        -52.76141384388807,
+        -28.718703976435936
+      ]
+    }
+  }
+}

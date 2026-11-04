@@ -1,0 +1,138 @@
+{
+  "slug": "sambucus-nigra",
+  "accepted_name": "Sambucus nigra L.",
+  "common_name_en": "Elder",
+  "family": "Viburnaceae",
+  "dioscorides": {
+    "book": 4,
+    "chapter": 173,
+    "greek_name": "ἀκτῆ",
+    "greek_translit": "aktē",
+    "excerpt": "ἀκτῆ· δισσή· ἡ μὲν γάρ τίς ἐστι δενδρώδης, κλάδους καλαμοειδεῖς ἔχουσα, στρογγύλους, ὑπολεύκους, εὐμήκεις",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Wellmann (ed.) 1906, DMM IV 173 (tree-like ἀκτῆ; RV: Ῥωμαῖοι σαμβούκουμ; second kind χαμαιάκτη = ἔβουλουμ); Osbaldeston 2000, ch. 4-174: \"Sambucus nigra [Linnaeus]\".",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Sambucus ebulus L. (the χαμαιάκτη treated in the same chapter)",
+        "source": "Wellmann IV 173 RV; Osbaldeston 2000 ch. 4-175"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": {
+    "category": "LC",
+    "source": "IUCN Red List 2020"
+  },
+  "ema_monograph": {
+    "exists": true,
+    "use": "traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/sambuci-flos",
+    "name": "Sambuci flos",
+    "reference": null
+  },
+  "records": {
+    "raw": 266,
+    "clean": 257,
+    "thinned": 213,
+    "public_cells": 119,
+    "low_confidence_model": true
+  },
+  "model": {
+    "auc_mean": 0.734,
+    "auc_sd": 0.018,
+    "boyce_mean": 0.117,
+    "boyce_sd": 0.224,
+    "tss_mean": 0.417,
+    "tss_sd": 0.029,
+    "null_auc_mean": 0.47,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": -47.9,
+      "min": -51.6,
+      "max": -42.4
+    },
+    "ssp585": {
+      "median": -55.8,
+      "min": -59.8,
+      "max": -54.9
+    }
+  },
+  "range_cells": {
+    "now": 1027,
+    "ssp245": {
+      "median": 614.0,
+      "min": 601.0,
+      "max": 690.0
+    },
+    "ssp585": {
+      "median": 546.0,
+      "min": 523.0,
+      "max": 556.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 26.0,
+    "ssp245": {
+      "median": 32.7,
+      "min": 31.0,
+      "max": 33.3
+    },
+    "ssp585": {
+      "median": 34.2,
+      "min": 33.6,
+      "max": 35.4
+    }
+  },
+  "risk": {
+    "score": 0.389,
+    "score_lo": 0.367,
+    "score_hi": 0.404,
+    "rank": 7,
+    "rank_lo": 5,
+    "rank_hi": 25,
+    "class": 2,
+    "rank_without_disputed": 4,
+    "top10_stability": 0.494,
+    "components": {
+      "range_loss": 0.479,
+      "endemism": 0.0,
+      "status": 0.0,
+      "harvest": 0.988
+    },
+    "components_ci": {
+      "range_loss": [
+        0.424,
+        0.516
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Identification is probable; results describe Sambucus nigra L., which may not be the plant Dioscorides meant.",
+    "Low-confidence model: 213 thinned records (we require 30) or AUC below 0.75."
+  ]
+}

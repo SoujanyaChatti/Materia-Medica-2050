@@ -1,0 +1,453 @@
+[
+ {
+  "plant": "Origanum dictamnus",
+  "chapter": "III 32",
+  "identification_confidence": "certain",
+  "identification_source": "Sprengel 1830, vol. 2, p. 510 (Comm. III cap. XXXIV): 'De dictamno Dioscoridis cretico nunquam exstitit controversia ... Est Origanum Dictamnus L., cuius iconem fere primam Dodonaeus exhibuit.' Same chapter: ψευδοδίκταμνον = Marrubium pseudodictamnus L.; third dictamnon conjectured as Thymus mastichina L. (these are the chapter's other kinds, not rivals to δίκταμνον). | Fraas 1845, Synopsis plantarum florae classicae, pp. 181-182: 'Orig. Dictamnus L., ächter Diptam' = δίκταμνος Hippocr., Theophr. 9,16, Diosc. 3,37; modern name στοματόχορτον; 'Nur auf Kreta bis jetzt.' Osbaldeston 2000, ch. 3-37 DIKTAMNON: 'SUGGESTED' list gives both Dictamnus albus / D. fraxinella (White Dittany) and Origanum dictamnus / Dictamnus creticus / Amaracus dictamnus (Dittany of Crete).",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n511/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n226/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n227/mode/1up ; https://archive.org/details/dioscorides-de-materia-medica-2000-english",
+  "alternatives": [
+   {
+    "name": "Dictamnus albus L. (D. fraxinella)",
+    "source": "Osbaldeston 2000, ch. 3-37 'SUGGESTED' list (editor's candidate list; no argument given)"
+   }
+  ],
+  "ema_monograph": "Origani dictamni herba (Origanum dictamnus L., herba) - Community/EU herbal monograph EMA/HMPC/200429/2012 Corr.",
+  "ema_use": "traditional",
+  "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/origani-dictamni-herba",
+  "ema_searched": "EMA herbal medicines report (https://www.ema.europa.eu/en/documents/report/medicines-output-herbal_medicines-report_en.xlsx, 251 rows) searched for 'dictamn'; EMA page opened: outcome 'European Union herbal monograph', HMPC conclusions based on 'traditional use'; monograph PDF indications only in the traditional-use column",
+  "wild_harvest_flag": true,
+  "wild_harvest_source": "EMA/HMPC Final assessment report on Origanum dictamnus L., herba (EMA/HMPC/200431/2012, 9 July 2013), PDF p. 6-7: 'wild dittany is collected while in full bloom (Fragaki 1969)'; 'In the past, the demand for plant material was covered only by the collection of wild populations, a fact which led to their rapid decrease and extinction from several areas of the island. The collectors of wild dittany were organised groups of local people called Erontades...'; cultivation since c. 1920; 'Nowadays, the cultivated plants maybe the main source'; wild populations protected (Bern Convention App. I). Flag = historical/documented wild collection in Crete; current supply mainly cultivated. URL: https://www.ema.europa.eu/en/documents/herbal-report/final-assessment-report-origanum-dictamnus-l-herba-first-version_en.pdf",
+  "unverified": [
+   "Osbaldeston 2000 read from the archive.org full-text (OCR) layer, not page scans; page/leaf number not located"
+  ]
+ },
+ {
+  "plant": "Paeonia (Greek wild peonies)",
+  "chapter": "III 140",
+  "identification_confidence": "disputed",
+  "identification_source": "Sprengel 1830, vol. 2, pp. 561-562 (Comm. III cap. CXLVII): 'Duas Dioscorides enumerat species, marem iuglandis, et feminam smyrnii foliis. Illam habeo Paeoniam nostram officinalem, vel arietinam Anders. et peregrinam Mill., foliis subtus pubescentibus a priore distinctam: feminam vero P. corallinam Retz. Qui contrarium proferunt, haud sedulo comparasse foliorum formas videntur. Folia enim Smyrnii multo magis ad P. corallinae formam accedunt. Plures autem species et in Creta et in reliqua Graecia proveniunt.' Thus: MALE (walnut-like leaves) = P. officinalis / P. arietina Anders. / P. peregrina Mill.; FEMALE (Smyrnium-like leaves) = P. corallina Retz. Others assigned them the other way round (contrary opinion noted). Also notes γλυκυσίδη as a name reported by Theophrastus. | Fraas 1845, pp. 134-135 gives the REVERSE assignment: MALE παιωνία ἄρρην (Diosc. 3,147 'mas, foliis juglandis') = Paeonia corallina Retz. ('Daher zieht Sprengel - comment. in Dioscor. pag. 561 mit Unrecht die folgende hieher'); the commonest in Greece, on Delphi (Euboea), Parnassus, Oeta in the fir zone; FEMALE παιωνία ἡ γλυκυσίδη θήλεια = P. officinalis L., much rarer, mostly W Greece (Cyllene, Kalavryta). Osbaldeston 2000, ch. 3-157 PAIONIA ARREN, PAIONIA THELEIA: SUGGESTED Paeonia foemina [Fuchs], P. communis [Bauhin], P. officinalis var. foemina [Linnaeus].",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n562/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n179/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n180/mode/1up",
+  "alternatives": [
+   {
+    "name": "male peony = Paeonia officinalis / P. arietina Anders. / P. peregrina Mill.",
+    "source": "Sprengel 1830, vol. 2, p. 561"
+   },
+   {
+    "name": "female peony = Paeonia corallina Retz.",
+    "source": "Sprengel 1830, vol. 2, p. 562"
+   },
+   {
+    "name": "reverse assignment of male/female (authors not named)",
+    "source": "Sprengel 1830, vol. 2, p. 562 ('Qui contrarium proferunt...')"
+   },
+   {
+    "name": "male = Paeonia corallina Retz.; female (γλυκυσίδη) = P. officinalis L.",
+    "source": "Fraas 1845, pp. 134-135 (explicitly contradicts Sprengel)"
+   },
+   {
+    "name": "Paeonia officinalis var. foemina",
+    "source": "Osbaldeston 2000, ch. 3-157"
+   }
+  ],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "EMA herbal medicines report xlsx searched for 'Paeoni': only Paeoniae radix rubra (P. lactiflora, P. veitchii) and Paeoniae radix alba (P. lactiflora) - both outcome 'Public statement' (no monograph), and neither concerns a Greek wild peony. None found for P. mascula / P. officinalis / Greek species.",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": [
+   "Modern synonymy (P. corallina Retz. = P. mascula (L.) Mill.) not verified from an opened source in this pass; Sprengel names no modern Greek species such as P. mascula subsp. hellenica, P. clusii, P. parnassica"
+  ]
+ },
+ {
+  "plant": "Sideritis syriaca",
+  "chapter": "IV 33",
+  "identification_confidence": "disputed",
+  "identification_source": "Sprengel 1830, vol. 2, pp. 588-589 (Comm. IV cap. XXXIII, Sideritis prima): Matthiolus 'hallucinatus est' proposing Lycopus europaeus; 'Magis placet Fuchsii sententia, qui Stachyos rectae effigiem huc collocat'; Fab. Columna proposed Stachys heraclea All., Clusius Sideritis scordioides. Sprengel does NOT name Sideritis syriaca or any Sideritis as Dioscorides' plant. | Fraas 1845, p. 175: Sideritis syriaca L. is assigned NOT to σιδηρῖτις but to κέστρον Diosc. 4,1 (betony; Sibthorp put Betonica alopecurus there); Fraas notes Aegineta distinguishes the 'Greek betony' (Sid. syriaca) from κέστρον. Fraas assigns Sideritis romana / S. elegans tentatively to φλομίδες ('?'). Osbaldeston 2000, ch. 4-33 SIDERITIS: SUGGESTED Sideritis prima [Fuchs], Sideritis vulgaris hirsuta erecta [Bauhin], Betonica annua var hirsuta, Stachys recta [Linnaeus], Stachys procumbens, Stachys sideritis.",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n590/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n220/mode/1up",
+  "alternatives": [
+   {
+    "name": "Stachys recta L.",
+    "source": "Fuchs, preferred by Sprengel 1830, vol. 2, p. 589"
+   },
+   {
+    "name": "Lycopus europaeus L.",
+    "source": "Matthiolus, rejected by Sprengel 1830, vol. 2, p. 588"
+   },
+   {
+    "name": "Stachys heraclea All.",
+    "source": "Fab. Columna, cited by Sprengel 1830, vol. 2, p. 589"
+   },
+   {
+    "name": "Sideritis scordioides L.",
+    "source": "Clusius, cited by Sprengel 1830, vol. 2, p. 589"
+   },
+   {
+    "name": "Sideritis syriaca L. = κέστρον / Greek betony (a different Dioscorides chapter, Diosc. 4,1 Sprengel numbering)",
+    "source": "Fraas 1845, p. 175"
+   },
+   {
+    "name": "Stachys recta L.",
+    "source": "Osbaldeston 2000, ch. 4-33"
+   }
+  ],
+  "ema_monograph": "Sideritis herba (Sideritis scardica Griseb.; S. clandestina (Bory & Chaub.) Hayek; S. raeseri Boiss. & Heldr.; S. syriaca L., herba) - EU herbal monograph EMA/HMPC/39453/2015 and EU list entry (adopted 02/02/2016)",
+  "ema_use": "traditional",
+  "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/sideritis-herba",
+  "ema_searched": "EMA herbal medicines report xlsx searched for 'Siderit'; EMA page opened (S. syriaca L. listed among botanical names; HMPC conclusions based on 'traditional use'); monograph PDF indications only in the traditional-use column",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": [
+   "No opened source in this pass links σιδηρῖτις to Sideritis syriaca",
+   "Identification of σιδηρῖτις (IV 33) with Sideritis syriaca is NOT supported by any source opened in this pass",
+   "wild_harvest null: EMA Sideritis assessment report (EMA/HMPC/39455/2015) says only some species incl. S. syriaca are cultivated in Greece and Bulgaria and 'the other species are mainly harvested from the wild'; S. syriaca 'growing wild and also cultivated in the island of Crete' - occurrence, not documented wild collection of S. syriaca",
+   "Fraas 1845 p. 175-176: 'Sid. syriaca' leaves and young shoots dried and drunk as infusion, found only in the subalpine zone (Velouchi, Parnon) - implies wild gathering but Fraas' 'S. syriaca' of mainland Greece likely corresponds to other modern taxa (mapping not verified)"
+  ]
+ },
+ {
+  "plant": "Mandragora officinarum",
+  "chapter": "IV 75",
+  "identification_confidence": "certain",
+  "identification_source": "Sprengel 1830, vol. 2, pp. 604-605 (Comm. IV cap. LXXVI): three kinds; the first two 'bene, ut ab αὐτόπτῃ, descripta'. Female (black, narrower leaves, sorb/pear-shaped fruit) = Mandragora autumnalis Bertol.; male (white, large beet-like leaves, larger saffron-coloured fragrant fruit) = Mandragora vernalis Bertol.; 'Utraque species et in Italia et in Graecia, speciatim circa Athenas occurrit.' Third kind (μώριον) either the same as the male or Theophrastus' plant suspected by Anguillara (with Dodonaeus) to be Belladonna. Genus certain; mapping of Bertoloni's names to M. officinarum L. s.l. is ours. | Fraas 1845, p. 167: 'At[ropa] Mandragora L., Alraunwurzel' = μανδραγόρας μέλας, ἀντίμηλον, κιρκαία etc. Diosc. 3,134 [sic], who 'mentions the 2 varieties distinguished by flowering time - vernalis and autumnalis; of the third he speaks only from hearsay'; modern name μανδραγόρας. Osbaldeston 2000, ch. 4-76: SUGGESTED Mandragora mas [Fuchs], M. fructu rotundo [Bauhin], Mandragora officinarum [Linnaeus], Atropa mandragora.",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n606/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n212/mode/1up",
+  "alternatives": [
+   {
+    "name": "Mandragora autumnalis Bertol. (female)",
+    "source": "Sprengel 1830, vol. 2, p. 605"
+   },
+   {
+    "name": "Mandragora vernalis Bertol. (male)",
+    "source": "Sprengel 1830, vol. 2, p. 605"
+   },
+   {
+    "name": "Atropa belladonna (third kind, μώριον)",
+    "source": "Anguillara and Dodonaeus, cited by Sprengel 1830, vol. 2, p. 605"
+   }
+  ],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "none found: EMA herbal medicines report xlsx (all columns) searched for 'Mandrag'",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": [
+   "Fraas' chapter citation printed as 'Diosc. 3, 134' (Wellmann IV 75) - reproduced as printed"
+  ]
+ },
+ {
+  "plant": "Hyssopus officinalis",
+  "chapter": "III 25",
+  "identification_confidence": "disputed",
+  "identification_source": "Sprengel 1830, vol. 2, pp. 506-507 (Comm. III cap. XXVII): Dioscorides gives no diagnostic indication; Sprengel conjectures Origanum aegyptiacum / O. syriacum / O. smyrnaeum and states that 'our' hyssop (H. officinalis), spontaneous in S France and Italy, is 'neque in Graecia, Syria, aut Aegypto obvii' and was given the name by medieval writers (first figured by Tragus). He does NOT identify ὕσσωπος with Hyssopus officinalis. | Fraas 1845, p. 182: ὕσσωπος Diosc. 3,27 = 'Orig. smyrnaeum vel syriacum L.'; 'Bei Mangel aller weiteren Beschreibung des Yssop im Diosc. folge ich Sprengel'; 'Es wächst hysoppus off. nicht in Griechenland, noch in Kleinasien oder Syrien!'; Thymbra spicata 'passt nicht wohl'. Also p. 174: 'Hyssopus officinalis ist eine unserer Flora ganz fremde Pflanze'. Osbaldeston 2000, ch. 3-30 USSOPOS: SUGGESTED Hyssopus hortensis [Fuchs], Hyssopus officinalis [Linnaeus], Origanum syriacum - Hyssop of the Bible [Mabberley].",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n508/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n227/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n219/mode/1up",
+  "alternatives": [
+   {
+    "name": "Origanum syriacum / O. aegyptiacum / O. smyrnaeum",
+    "source": "Sprengel 1830, vol. 2, p. 507 (Sprengel's own conjecture)"
+   },
+   {
+    "name": "Thymbra spicata L.",
+    "source": "Sibthorp, cited and rejected by Sprengel 1830, vol. 2, p. 507"
+   },
+   {
+    "name": "Thymbra verticillata L.",
+    "source": "Dalechamp, cited by Sprengel 1830, vol. 2, p. 507"
+   },
+   {
+    "name": "Teucrium pseudhyssopus Schreb.",
+    "source": "Fabius Columna, cited by Sprengel 1830, vol. 2, p. 507"
+   },
+   {
+    "name": "Satureja graeca / S. juliana (modern Greek name ὕσσωπος)",
+    "source": "Sibthorp, cited by Sprengel 1830, vol. 2, p. 507 ('nullo modo cum Hyssopo Dioscoridis congruunt')"
+   },
+   {
+    "name": "Origanum smyrnaeum vel syriacum L.",
+    "source": "Fraas 1845, p. 182"
+   },
+   {
+    "name": "Hyssopus officinalis L. and Origanum syriacum (both listed)",
+    "source": "Osbaldeston 2000, ch. 3-30"
+   }
+  ],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "none found: EMA herbal medicines report xlsx (all columns) searched for 'Hyssop'",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": [
+   "p. 506 (start of cap. XXVII) read from OCR only; p. 507 read from page scan",
+   "Both Sprengel and Fraas state H. officinalis does not grow in Greece; H. officinalis as Dioscorides' plant is not supported by these sources"
+  ]
+ },
+ {
+  "plant": "Salvia fruticosa",
+  "chapter": "III 33",
+  "identification_confidence": "disputed",
+  "identification_source": "Sprengel 1830, vol. 2, p. 510 (Comm. III cap. XXXV, ἐλελίσφακον): 'Quaenam salviae species intelligatur, potest omnino ambigi. Vero tamen est haud absimile, Salviam nostram officinalem, quae in asperis omnis Graeciae locis provenit, hac appellatione comprehendi.' Sprengel names Salvia officinalis (tentatively), NOT S. fruticosa; the species is explicitly said to be open to doubt. | Fraas 1845, p. 184: '20. Salvia pomifera L., breitblättriger Salbey (triloba und baccifera sind synonym). Ist die bei weitem häufigste in Griechenland' = σφάκος Theophr., ἐλελίσφακον Diosc. 3,35; also S. calycina L. = ἐλελίσφακον Theophr.; S. officinalis 'Sehr selten!' in Greece. Fraas treats S. triloba (= S. fruticosa) as a synonym within his S. pomifera, so his identification covers S. fruticosa only in that lumped sense. Osbaldeston 2000, ch. 3-40 ELELISPHAKON: SUGGESTED Salvia maior, Salvia minor [Fuchs, Bauhin], Salvia officinalis [Linnaeus].",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n511/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n229/mode/1up",
+  "alternatives": [
+   {
+    "name": "Salvia officinalis L.",
+    "source": "Sprengel 1830, vol. 2, p. 510"
+   },
+   {
+    "name": "Salvia pomifera L. (incl. S. triloba = S. fruticosa, as synonyms)",
+    "source": "Fraas 1845, p. 184"
+   },
+   {
+    "name": "Salvia calycina L. (for Theophrastus' ἐλελίσφακον)",
+    "source": "Fraas 1845, p. 184"
+   },
+   {
+    "name": "Salvia officinalis L.",
+    "source": "Osbaldeston 2000, ch. 3-40"
+   }
+  ],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/salviae-trilobae-folium",
+  "ema_searched": "No monograph. EMA herbal list entry 'Salviae trilobae folium' (Salvia fructicosa Mill., syn. S. triloba L.f.) has outcome 'Public statement' only: HMPC public statement EMA/HMPC/599993/2014 (adopted 31 May 2016) concludes 'a European Union herbal monograph on Salvia fruticosa Mill., folium cannot be established at present, unless new data are provided' (neither well-established-use nor traditional-use requirements fulfilled). Searched the EMA herbal medicines report xlsx for 'Salvi'; page and public-statement PDF opened. (Salviae officinalis folium is a separate monograph for S. officinalis, not S. fruticosa.)",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": [
+   "No opened source in this pass identifies ἐλελίσφακον with Salvia fruticosa (S. triloba)",
+   "wild_harvest null: Kleftoyanni & Kokkini 2003, Bocconea 16(2):1117-1121 (https://herbmedit.org/storage/2455/16-1117.pdf) lists Salvia fruticosa in the Thessaloniki herbal market and says 'A large number of the plants are collected from the wild', but gives the wild/cultivated split only in aggregate (Fig. 2), not per species - insufficient to set the flag",
+   "Fraas 1845 p. 184 says S. pomifera (incl. triloba) is the commonest sage, on all xirobouna, generally used, Tinos material most prized, stems with leaves and flowers drunk as tea - implies use of wild plants but does not explicitly document collection"
+  ]
+ },
+ {
+  "plant": "Thymbra capitata",
+  "chapter": "III 36",
+  "identification_confidence": "probable",
+  "identification_source": "Sprengel 1830, vol. 2, pp. 511-512 (Comm. III cap. XXXVIII): 'Thymum Dioscoridis legitimum, quem Brunfelsius, Tragus ac Fuchsius pro Thymo vulgari habuerant, Matthiolus primus in Thymo cretico Brot. (Satureia capitata L.) recognovisse videtur'; describes the plant, abundant on Hymettus. Satureia capitata L. is the basionym-era name of Thymbra capitata. 'probable' because Sprengel records the earlier rival identification (Thymus vulgaris) and says 'videtur'. | Fraas 1845, p. 174: 'Sat. capitata L., Satureystrauch' = θύμος Hippocr., λευκὸς θύμος Theophr. 6,1,2, θύμος Diosc. 3,38; modern θυμάρι 'frequentiss. appellatio'; very common scrub on dry plains, hills and foothills to 2500 ft throughout. Osbaldeston 2000, ch. 3-44 THUMOS: SUGGESTED Thymus angustifolius, Thymus glaber (Wild Thyme) - a competing candidate.",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n512/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n219/mode/1up",
+  "alternatives": [
+   {
+    "name": "Thymus vulgaris L.",
+    "source": "Brunfels, Tragus, Fuchs, cited (superseded) by Sprengel 1830, vol. 2, p. 511"
+   },
+   {
+    "name": "Thymus angustifolius / Thymus glaber",
+    "source": "Osbaldeston 2000, ch. 3-44"
+   }
+  ],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "none found: xlsx searched for 'Thymbra|Corido|Satureja|Thymi|Thymus' - only Thymi herba / Thymi aetheroleum (Thymus vulgaris L., T. zygis L.), which do not cover Thymbra capitata",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": [
+   "wild_harvest null: Kleftoyanni & Kokkini 2003, Bocconea 16(2):1117-1121 (https://herbmedit.org/storage/2455/16-1117.pdf) lists Thymus capitatus in the Thessaloniki herbal market and says 'A large number of the plants are collected from the wild', but gives the wild/cultivated split only in aggregate (Fig. 2), not per species - insufficient to set the flag"
+  ]
+ },
+ {
+  "plant": "Glaucium flavum",
+  "chapter": "IV 65",
+  "identification_confidence": "certain",
+  "identification_source": "Sprengel 1830, vol. 2, p. 601 (Comm. IV cap. LXVI, μήκων κερατῖτις): 'Esse autem Glaucium luteum Scop., bene iam Tragus probavit.' Glaucium luteum Scop. is a synonym of G. flavum Crantz (synonymy is ours). No competitor named. | Fraas 1845, p. 127: 'Glaucium flavum Cr., gelber Hornmohn' = ἡ μήκων (κερατῖτις) Theophr. 9,13 and μήκων κερατῖτις Diosc. 4,66 ('folia hirsuta' fits particularly). Osbaldeston 2000, ch. 4-66: SUGGESTED Papaver corniculatum [Fuchs, Brunfels], Chelidonium glaucium [Linnaeus], Glaucium flavum, Glaucium luteum.",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n602/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n172/mode/1up",
+  "alternatives": [],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "none found: EMA herbal medicines report xlsx (all columns) searched for 'Glauci'",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": []
+ },
+ {
+  "plant": "Teucrium capitatum (T. polium auct.)",
+  "chapter": "III 110",
+  "identification_confidence": "certain",
+  "identification_source": "Sprengel 1830, vol. 2, p. 544 (Comm. III cap. CXIV): 'Teucrium Polium πολίου nomine intelligi, in confesso est, Matthiolo, ni fallor, id primo probante.' The second, more shrubby and less strong-smelling kind is disputed: Matthiolus Teucrium montanum (rejected), Sprengel 'Teucrium potius creticum L., s. rosmarinifolium Lam.' Note: Sprengel's 'Teucrium polium' is the broad Linnaean sense; the Greek populations are now T. capitatum L. (nomenclatural mapping is ours, not Sprengel's). 'certain' applies to the first (mountain) kind only. | Fraas 1845, p. 173: 'T. Polium L., grauer Gamander. Ist wohlriechend!' = πόλιον Hippocr., Theophr. 1,16, Diosc. 3,114; 'T. capitatum. Ist höher und riecht nicht.' = πόλιον τὸ θαμνωδέστερον καὶ ἀδρανέστερον Diosc. l.c. (i.e. Fraas names T. capitatum for Dioscorides' SECOND, shrubbier, weaker kind); both common on dry plains and hills to 3000 ft (p. 173-174). Osbaldeston 2000, ch. 3-124 POLION: SUGGESTED Teucrium polium.",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n545/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n218/mode/1up",
+  "alternatives": [
+   {
+    "name": "Teucrium creticum L. (T. rosmarinifolium Lam.) - for the second kind",
+    "source": "Sprengel 1830, vol. 2, p. 544"
+   },
+   {
+    "name": "Teucrium montanum L. - for the second kind",
+    "source": "Matthiolus, cited and rejected by Sprengel 1830, vol. 2, p. 544"
+   },
+   {
+    "name": "Teucrium capitatum L. - for the second (shrubbier, weaker) kind",
+    "source": "Fraas 1845, p. 173"
+   }
+  ],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "none found: EMA herbal medicines report xlsx (all columns) searched for 'Teucri'",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": [
+   "Fraas' T. polium vs T. capitatum split predates the modern view that Greek 'T. polium' is T. capitatum; the mapping to the modern name is ours",
+   "wild_harvest null: Kleftoyanni & Kokkini 2003, Bocconea 16(2):1117-1121 (https://herbmedit.org/storage/2455/16-1117.pdf) lists Teucrium polium (sold as 'ὕσσωπος') in the Thessaloniki herbal market and says 'A large number of the plants are collected from the wild', but gives the wild/cultivated split only in aggregate (Fig. 2), not per species - insufficient to set the flag"
+  ]
+ },
+ {
+  "plant": "Teucrium chamaedrys",
+  "chapter": "III 98",
+  "identification_confidence": "disputed",
+  "identification_source": "Sprengel 1830, vol. 2, pp. 539-540 (Comm. III cap. CII): χαμαίδρυς named for the oak-like leaves; Tragus called it Teucrium chamaedrys, Brunfels Veronica chamaedrys (rejected by C. Gesner and Bauhin); 'accedente et Sibthorpio, subsistamus in Teucrio Chamaedry, in Graecia, ut per totam fere Europam, satis vulgari.' | Fraas 1845, p. 173 DISAGREES: χαμαίδρυς Diosc. 3,102 = Teucrium lucidum L. (Gamanderstrauch), because Dioscorides' 'in asperis et rupestribus' habitat is where T. chamaedrys never grows 'contra Sibthorp', 'Est fruticulus' cannot apply to herbaceous T. chamaedrys, and Theophrastus' 'fragrant and sweet' fits T. lucidum or T. flavum; notes the modern name χαμανδρυά is used for both. Osbaldeston 2000, ch. 3-112 CHAMAIDRUS: SUGGESTED Teucrium chamaedrys [Linnaeus]; also Teucrium botrys; Veronica teucrium / V. chamaedrys. Confidence changed to 'disputed' because Fraas names a competing candidate.",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n541/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n218/mode/1up",
+  "alternatives": [
+   {
+    "name": "Veronica chamaedrys L.",
+    "source": "Brunfels, cited by Sprengel 1830, vol. 2, p. 540 (called false/spurious by Gesner and Bauhin)"
+   },
+   {
+    "name": "Teucrium lucidum L.",
+    "source": "Fraas 1845, p. 173"
+   },
+   {
+    "name": "Teucrium flavum L. (fits Theophrastus' description)",
+    "source": "Fraas 1845, p. 173"
+   },
+   {
+    "name": "Teucrium botrys; Veronica chamaedrys",
+    "source": "Osbaldeston 2000, ch. 3-112"
+   }
+  ],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "none found: EMA herbal medicines report xlsx (all columns) searched for 'Teucri'",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": [
+   "p. 539 start of cap. CII read from OCR only; p. 540 read from page scan",
+   "wild_harvest null: Kleftoyanni & Kokkini 2003, Bocconea 16(2):1117-1121 (https://herbmedit.org/storage/2455/16-1117.pdf) lists Teucrium chamaedrys in the Thessaloniki herbal market and says 'A large number of the plants are collected from the wild', but gives the wild/cultivated split only in aggregate (Fig. 2), not per species - insufficient to set the flag"
+  ]
+ },
+ {
+  "plant": "Origanum vulgare subsp. hirtum",
+  "chapter": "III 27",
+  "identification_confidence": "probable",
+  "identification_source": "Sprengel 1830, vol. 2, p. 508 (Comm. III cap. XXIX): ὀρίγανος Ἡρακλεωτική = 'Origanum heracleoticum' (Linnaeus' name, following Matthiolus who first recognised it); Sibthorp agrees and saw it 'in Graeciae montosis siccis haud rarum'. Sprengel names Origanum heracleoticum L., not O. vulgare subsp. hirtum; equating O. heracleoticum L. with O. vulgare subsp. hirtum is a later taxonomic synonymy NOT stated in this source. Confidence 'probable' because the source gives no competing candidate but the modern name mapping is ours. | Fraas 1845, p. 181: '15. Origanum heracleoticum L., scharfer Organ' = ὀρίγανος ἡρακλεωτική Diosc. 3,29; Cunila gallinacea Plin.; modern ῥίγανι ('Alle Arten!'); not rare on rocky hills of E Greece (Nauplia, Astros), to 1500 ft. (Fraas assigns Orig. vulgare v. album to ἀγριορίγανος, Diosc. 3,31 - a different chapter.) Osbaldeston 2000, ch. 3-32 ORIGANOS ERAKLEOTIKE: SUGGESTED Origanum heracleoticum [Loudon].",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n509/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n226/mode/1up",
+  "alternatives": [],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "none found: xlsx searched for 'Origan' - only Origani majoranae herba (O. majorana) and Origani dictamni herba (O. dictamnus); nothing for O. vulgare / O. heracleoticum / subsp. hirtum",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": [
+   "Synonymy Origanum heracleoticum L. = O. vulgare subsp. hirtum not verified from an opened source in this pass",
+   "wild_harvest null: Kleftoyanni & Kokkini 2003, Bocconea 16(2):1117-1121 (https://herbmedit.org/storage/2455/16-1117.pdf) lists Origanum vulgare subsp. hirtum in the Thessaloniki herbal market and says 'A large number of the plants are collected from the wild', but gives the wild/cultivated split only in aggregate (Fig. 2), not per species - insufficient to set the flag"
+  ]
+ },
+ {
+  "plant": "Mentha pulegium",
+  "chapter": "III 31",
+  "identification_confidence": "certain",
+  "identification_source": "Sprengel 1830, vol. 2, p. 510 (Comm. III cap. XXXIII): 'Pulegium est vulgaris notitiae, Mentha Pulegium, per omnem Europam temperatam vulgaris.' No competing candidate. | Fraas 1845, p. 177: 'M. Pulegium L., stinkender Poley' = γλήχων Hippocr., γλήχων Diosc. 3,36, Plin. 20,14; modern γλυφόνι / βρομηδυόσμο; very common in damp lowlands (Attica, Argolis). Osbaldeston 2000, ch. 3-36 GLECHON: SUGGESTED Pulegium [Fuchs] ... Mentha pulegium [Linnaeus].",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n511/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n222/mode/1up",
+  "alternatives": [],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "none found: xlsx searched for 'Mentha|Pulegi' - only Menthae piperitae folium / aetheroleum (Mentha x piperita)",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": [
+   "wild_harvest null: Kleftoyanni & Kokkini 2003, Bocconea 16(2):1117-1121 (https://herbmedit.org/storage/2455/16-1117.pdf) lists Mentha pulegium in the Thessaloniki herbal market and says 'A large number of the plants are collected from the wild', but gives the wild/cultivated split only in aggregate (Fig. 2), not per species - insufficient to set the flag"
+  ]
+ },
+ {
+  "plant": "Capparis spinosa / C. orientalis",
+  "chapter": "II 173",
+  "identification_confidence": "certain",
+  "identification_source": "Sprengel 1830, vol. 2, p. 483 (Comm. II cap. CCIV): discusses names; 'Ceterum descriptio optima'; the very acrid caper from the Red Sea coast and Africa = perhaps Forsskål's Capparis redif s. oblongifolia. The species name for the main plant is given only in Index V, p. 702: 'Capparis spinosa L. 483' (and 'Capparis oblongifolia Forsk. 483'). Sprengel does not distinguish C. spinosa from C. orientalis (Linnaean C. spinosa s.l.). | Fraas 1845, p. 116: '1. Capparis spinosa L. var. ovata W., rundblättrige, gemeine Kapper' = κάππαρις Theophr., κάππαρις Diosc. 2,204 'der noch einige andere ausländische Arten anführt'; very common in plains, among stones and on rocks (C. rupestris on sea cliffs), Attica, Boeotia, Corinth, Argos; 'folia ovalia apice mucronulato - retusa'. Osbaldeston 2000, ch. 2-204 KAPPARIS: SUGGESTED Capparis spinosa. Confidence raised to 'certain' for C. spinosa L. in the broad (pre-segregate) sense; no source opened distinguishes C. spinosa s.str. from C. orientalis (Fraas' 'var. ovata' and 'C. rupestris' are not mapped to modern names here).",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n484/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n161/mode/1up",
+  "alternatives": [
+   {
+    "name": "Capparis oblongifolia Forsk. (C. redif) - only for the acrid African/Red Sea caper",
+    "source": "Sprengel 1830, vol. 2, p. 483"
+   },
+   {
+    "name": "Capparis rupestris (on sea cliffs)",
+    "source": "Fraas 1845, p. 116 (mentioned as a form, not as an alternative identification)"
+   }
+  ],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "none found: EMA herbal medicines report xlsx (all columns) searched for 'Cappar'",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": [
+   "Text of cap. CCIV does not itself print 'Capparis spinosa'; identification taken from Sprengel's Index V p. 702 (https://archive.org/details/BIUSante_dioscsprengelx02/page/n703/mode/1up)",
+   "Modern mapping of Fraas' 'C. spinosa var. ovata' / 'C. rupestris' to C. orientalis Veill. vs C. spinosa s.str. not verified"
+  ]
+ },
+ {
+  "plant": "Lavandula stoechas",
+  "chapter": "III 26",
+  "identification_confidence": "certain",
+  "identification_source": "Sprengel 1830, vol. 2, pp. 507-508 (Comm. III cap. XXVIII): name from the Stoechades islands off Massilia (Hyères); 'Planta, de qua sermo est, Lavandula Stoechas nobis dicitur, a Fuchsio, ni fallor, primo illustrata.' No competing candidate named. | Fraas 1845, pp. 174-175: '4. Lavandula Stoechas' = στιχάς, στοιχάς Diosc. 3,31, Plin.; modern χαμολίβανο (μαυροκέφαλο sec. Sibthorp); on xirobouna (Hymettus to 1000 ft) and damper lowlands. Osbaldeston 2000, ch. 3-31 STOICHAS: SUGGESTED Stichas, Stichas arabica [Fuchs], Stoechas purpurea [Bauhin], Lavandula stoechas.",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n509/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n219/mode/1up",
+  "alternatives": [],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "none found for L. stoechas: xlsx searched for 'Lavand' - only Lavandulae flos and Lavandulae aetheroleum (Lavandula angustifolia Mill.), which do not cover L. stoechas",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": []
+ },
+ {
+  "plant": "Ecballium elaterium",
+  "chapter": "IV 150",
+  "identification_confidence": "certain",
+  "identification_source": "Sprengel 1830, vol. 2, p. 636 (Comm. IV cap. CLII, σίκυς ἄγριος): 'Est vero Momordica Elaterium, in Graecia satis vulgaris planta, cuius succus amarissimus et hodie purgante vi insignis celebratur'; describes the explosive fruit. Momordica elaterium L. = Ecballium elaterium (synonymy ours). | Fraas 1845, p. 102: '1. Ecbalium Elaterium Rich., Springgurke' = ὁ ἄγριος σίκυος Theophr. 9,15, σίκυς ἄγριος Diosc. 4,152, source of Elaterium; modern ἀγριαγγουριά; very common on poor fields of the lowlands (Attica). Osbaldeston 2000, ch. 4-154 SIKUS AGRIOS: SUGGESTED ... Ecballium elaterium, Momordica elaterium [Linnaeus].",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n637/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n147/mode/1up",
+  "alternatives": [],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "none found: EMA herbal medicines report xlsx (all columns) searched for 'Ecball|Elater'",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": []
+ },
+ {
+  "plant": "Cyclamen (graecum vs hederifolium)",
+  "chapter": "II 164",
+  "identification_confidence": "probable",
+  "identification_source": "Sprengel 1830, vol. 2, pp. 478-479 (Comm. II cap. CXCIII): discusses only names (sowbread etc.) and uses (Gerard on childbirth); no species is named in the text. Index V, p. 704: 'Cyclamen europaeum L. 478'. Sprengel does not distinguish C. graecum from C. hederifolium; neither name appears. Second κυκλάμινος (cap. CXCIV) he takes as Lonicera periclymenum (after C. Gesner). | Fraas 1845, p. 192: '1. Cyclamen graecum Lk., griechisches Schweinsbrod' - 'Ist die häufigste in Griechenland, nebst persicum vorkommende Art, welche gewiss das κυκλάμινος ... Diosc. 2,193 ... ist'; only 'nascitur in umbrosis' is a difficulty. Fraas rejects Billerbeck's referral of Cyclamen hederaefolium to κυκλάμινος ἑτέρα (which he, like Sprengel, takes as Lonicera periclymenum). Modern τρικλαμινός; dry hills, rocks, to 2000 ft (Argolis, Attica). Osbaldeston 2000, ch. 2-194 KUKLAMINOS: SUGGESTED Cyclamen europaeum [Linnaeus] ... and Cyclamen graecum. ANSWER: Fraas names C. graecum; no opened source names C. hederifolium for κυκλάμινος (II 164).",
+  "source_url": "https://archive.org/details/BIUSante_dioscsprengelx02/page/n479/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n237/mode/1up",
+  "alternatives": [
+   {
+    "name": "Cyclamen europaeum L. (Linnaean sense)",
+    "source": "Sprengel 1830, vol. 2, Index V p. 704, https://archive.org/details/BIUSante_dioscsprengelx02/page/n705/mode/1up"
+   },
+   {
+    "name": "Cyclamen graecum Link",
+    "source": "Fraas 1845, p. 192"
+   },
+   {
+    "name": "Cyclamen europaeum L. and Cyclamen graecum (both listed)",
+    "source": "Osbaldeston 2000, ch. 2-194"
+   },
+   {
+    "name": "Cyclamen hederifolium - proposed by Billerbeck only for κυκλάμινος ἑτέρα (rejected)",
+    "source": "Fraas 1845, p. 192"
+   }
+  ],
+  "ema_monograph": null,
+  "ema_use": null,
+  "ema_url": null,
+  "ema_searched": "none found: EMA herbal medicines report xlsx (all columns) searched for 'Cyclam'",
+  "wild_harvest_flag": null,
+  "wild_harvest_source": null,
+  "unverified": [
+   "Which Greek Cyclamen species (graecum vs hederifolium) - not resolved by any opened source"
+  ]
+ }
+]

@@ -1,0 +1,137 @@
+{
+  "slug": "pistacia-lentiscus",
+  "accepted_name": "Pistacia lentiscus L.",
+  "common_name_en": "Mastic tree, lentisk",
+  "family": "Anacardiaceae",
+  "dioscorides": {
+    "book": 1,
+    "chapter": 70,
+    "greek_name": "σχῖνος",
+    "greek_translit": "schinos",
+    "excerpt": "σχῖνος δένδρον γνώριμον, στυπτικὸν ὅλον· καὶ γὰρ ὁ καρπὸς αὐτῆς καὶ τὸ φύλλον καὶ ὁ φλοιὸς τῶν κλάδων",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Wellmann (ed.) 1907, DMM I 70 (\"σχῖνος δένδρον γνώριμον, στυπτικὸν ὅλον\"); Osbaldeston 2000, ch. 1-89 lists Pistacia lentiscus among suggestions (with Mastic Tree).",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Schinus molle (listed by Osbaldeston; New World species, anachronistic)",
+        "source": "Osbaldeston 2000, ch. 1-89"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": {
+    "category": "LC",
+    "source": "IUCN Red List 2016"
+  },
+  "ema_monograph": {
+    "exists": true,
+    "use": null,
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/mastic",
+    "name": "Mastic (Pistaciae lentisci resina)",
+    "reference": null
+  },
+  "records": {
+    "raw": 5790,
+    "clean": 5537,
+    "thinned": 3202,
+    "public_cells": 589,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.833,
+    "auc_sd": 0.01,
+    "boyce_mean": 0.968,
+    "boyce_sd": 0.013,
+    "tss_mean": 0.554,
+    "tss_sd": 0.015,
+    "null_auc_mean": 0.499,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 0.8,
+      "min": -1.0,
+      "max": 7.2
+    },
+    "ssp585": {
+      "median": 0.6,
+      "min": -2.2,
+      "max": 0.6
+    }
+  },
+  "range_cells": {
+    "now": 801,
+    "ssp245": {
+      "median": 797.0,
+      "min": 780.0,
+      "max": 824.0
+    },
+    "ssp585": {
+      "median": 781.0,
+      "min": 778.0,
+      "max": 783.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 19.7,
+    "ssp245": {
+      "median": 22.3,
+      "min": 22.2,
+      "max": 22.4
+    },
+    "ssp585": {
+      "median": 22.0,
+      "min": 21.9,
+      "max": 22.3
+    }
+  },
+  "risk": {
+    "score": 0.183,
+    "score_lo": 0.183,
+    "score_hi": 0.187,
+    "rank": 30,
+    "rank_lo": 29,
+    "rank_hi": 30,
+    "class": 1,
+    "rank_without_disputed": 21,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.0,
+      "harvest": 0.915
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.01
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Identification is probable; results describe Pistacia lentiscus L., which may not be the plant Dioscorides meant."
+  ]
+}

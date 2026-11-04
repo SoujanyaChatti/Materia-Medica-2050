@@ -16,20 +16,21 @@ const steps: ['h' | 'm', string, string][] = [
   ['m', 'Score risk', 'Range loss, endemism, conservation status, harvest pressure'],
   ['m', 'Find cultivation zones', 'Suitable in 2050, on farmland, outside Natura 2000, away from wild populations'],
 ];
-const sources = [
-  ['De Materia Medica, Wellmann ed. (1906–14)', 'Greek names, book and chapter', 'Public domain', '—'],
-  ['Identification literature', 'Ancient-to-modern taxon matches', 'Cited; not redistributed', '[bibliography]'],
-  ['GBIF occurrence download', 'Occurrence cells', 'CC0 / CC BY 4.0 / CC BY-NC per dataset', meta.gbif_doi ? `DOI ${meta.gbif_doi}` : 'DOI [ ]'],
-  ['GBIF Backbone · POWO', 'Accepted names', 'CC BY', '—'],
-  ['WorldClim 2.1 (CMIP6)', 'Baseline and 2050 climate', 'Free for research; cite [verify]', meta.versions.climate ?? '[ ]'],
-  ['Copernicus DEM GLO-90', 'Elevation, slope', 'Free; attribution', meta.versions.dem ?? '[ ]'],
-  ['Vascular Plants of Greece checklist', 'Endemism, fallback threat category', 'Cite', '[year]'],
-  ['IUCN Red List API', 'Conservation status', 'IUCN terms of use (non-commercial)', '[version]'],
-  ['Natura 2000 (EEA)', 'Protected-area boundaries', 'EEA re-use policy, attribution', meta.versions.natura2000 ?? '[ ]'],
-  ['CORINE Land Cover (Copernicus)', 'Agricultural and transitional land', 'Free and open; attribution', meta.versions.corine ?? '[ ]'],
-  ['OpenStreetMap (Geofabrik)', 'Roads and settlements for harvest proxy', 'ODbL', '[extract date]'],
-  ['EMA herbal monographs', 'Regulatory status only', 'EMA re-use with acknowledgement', '—'],
-  ['Natural Earth', 'Basemap outlines', 'Public domain', '1:50m'],
+const v = meta.versions;
+const sources: [string, string, string, string][] = [
+  ['De Materia Medica, Wellmann ed. (1906–14)', 'Greek names, book, chapter, opening words', 'Public domain (Wellmann d. 1933); First1KGreek digitisation CC BY-SA 4.0 for some excerpts', 'archive.org scans'],
+  ['Sprengel 1830 commentary; Osbaldeston 2000', 'Ancient-to-modern taxon matches', 'Cited per plant; not redistributed', 'see each plant'],
+  ['GBIF occurrence download', 'Occurrence cells', 'Cite the download DOI; per-record CC0 / CC BY / CC BY-NC', meta.gbif_doi ? `DOI ${meta.gbif_doi}` : '—'],
+  ['GBIF Backbone · Catalogue of Life · WCVP (Kew)', 'Accepted names', 'CC BY 4.0', '2026'],
+  ['WorldClim 2.1 + CMIP6 (2041–2060)', 'Baseline and 2050 climate', 'Academic, non-commercial use; no redistribution of the data', `${v.climate ?? 'WorldClim 2.1'} · ${meta.gcms.join(', ')}`],
+  ['Copernicus DEM GLO-90', 'Elevation, slope', 'Free licence; mandatory notice below', v.dem ?? 'GLO-90'],
+  ['Vascular Plants of Greece checklist', 'Native status, endemism', 'Cited as facts', 'Dimopoulos et al. 2013, 2016'],
+  ['IUCN Red List API v4', 'Conservation status', 'IUCN terms of use (non-commercial)', v.iucn ?? '2026'],
+  ['Natura 2000 (EEA / DG ENV)', 'Protected-area boundaries', 'CC BY 4.0', v.natura2000 ?? 'end-2024'],
+  ['CORINE Land Cover 2018 (Copernicus)', 'Agricultural and transitional land', 'Full, free and open (Reg. 1159/2013)', v.corine ?? 'CLC2018 100 m'],
+  ['OpenStreetMap (Geofabrik)', 'Roads and settlements for the harvest proxy', 'ODbL 1.0', v.osm ?? 'Greece extract'],
+  ['EMA herbal monographs (HMPC)', 'Regulatory status only', '© EMA; reuse with acknowledgement', 'accessed Nov 2026'],
+  ['Natural Earth via world-atlas', 'Basemap outlines', 'Public domain; world-atlas ISC © Michael Bostock', '1:50m'],
 ];
 const weights = meta.risk_weights;
 const order: (keyof RiskComponents)[] = ['range_loss', 'harvest', 'status', 'endemism'];
@@ -37,7 +38,7 @@ const sens = order.filter((k) => meta.sensitivity.one_at_a_time[k]).map((k) => (
 const pos = (v: number) => `${Math.max(0, Math.min(100, ((v - 0.5) / 0.5) * 100))}%`;
 const topK = meta.sensitivity.top_k_unchanged;
 ---
-<Base title="Methods and limitations" current="methods" sampleNote="Metrics, versions and licences marked [ ] must be confirmed before release.">
+<Base title="Methods and limitations" current="methods">
   <div class="page flex flex-col gap-14 pb-16 pt-10">
     <div class="flex max-w-[780px] flex-col gap-2">
       <h1 class="h-display m-0 text-[clamp(34px,4vw,48px)]">Methods and limitations</h1>
@@ -71,6 +72,14 @@ const topK = meta.sensitivity.top_k_unchanged;
             {sources.map(([s, u, l, v]) => <tr class="border-b border-data-rule align-top"><td class="px-4 py-3 font-semibold">{s}</td><td class="px-2 py-3">{u}</td><td class="px-2 py-3">{l}</td><td class="py-3 pl-2 pr-4 text-muted">{v}</td></tr>)}
           </tbody>
         </table>
+      </div>
+      <div class="flex max-w-[900px] flex-col gap-1.5 text-[13px] text-muted">
+        <p class="m-0"><strong class="text-ink">Climate.</strong> Fick S.E. &amp; Hijmans R.J. 2017. WorldClim 2: new 1 km spatial resolution climate surfaces for global land areas. <em>Int. J. Climatol.</em> 37: 4302–4315. Future climate is CMIP6 output from {meta.gcms.join(', ')}, downscaled by WorldClim. We acknowledge the World Climate Research Programme, which coordinated CMIP6, the modelling groups that produced and made available their output, and the Earth System Grid Federation and its funding agencies. No WorldClim raster is redistributed here.</p>
+        <p class="m-0"><strong class="text-ink">Elevation.</strong> Produced using Copernicus WorldDEM-90 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.</p>
+        <p class="m-0"><strong class="text-ink">Land cover.</strong> Generated using European Union's Copernicus Land Monitoring Service information; <a href="https://doi.org/10.2909/960998c1-1870-4e82-8051-6485205ebbac">doi:10.2909/960998c1</a>. Modified: reclassified and averaged to the climate grid.</p>
+        <p class="m-0"><strong class="text-ink">Roads and settlements.</strong> Contains information from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, available under the Open Database Licence. The derived accessibility layer is not published; the code that makes it is.</p>
+        <p class="m-0"><strong class="text-ink">Protected areas.</strong> Natura 2000 (vector), end-2024 release © European Environment Agency / DG ENV, CC BY 4.0, rasterised to the climate grid.</p>
+        <p class="m-0">Full licence notes, with the terms pages we read: <a href="https://github.com/SoujanyaChatti/Materia-Medica-2050/blob/main/DATA_LICENSES.md">DATA_LICENSES.md</a>.</p>
       </div>
     </section>
 
@@ -123,7 +132,7 @@ const topK = meta.sensitivity.top_k_unchanged;
     <section id="limits" aria-labelledby="h-lim" class="grid gap-x-10 gap-y-4 border-t-2 border-ochre pt-5 [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">
       <h2 id="h-lim" class="h-section col-span-full">Limitations</h2>
       <div><h3 class="m-0 mb-1 text-[17px]">Identification is interpretation</h3><p class="m-0 text-muted">Matching an ancient name to a modern species is a scholarly judgement. "Disputed" plants may describe the wrong taxon entirely.</p></div>
-      <div><h3 class="m-0 mb-1 text-[17px]">Suitability is not presence</h3><p class="m-0 text-muted">Correlative models assume equilibrium with climate and ignore dispersal, soils, grazing and land use. A suitable cell in 2050 may never be colonised.</p></div>
+      <div><h3 class="m-0 mb-1 text-[17px]">Suitability is not presence</h3><p class="m-0 text-muted">Correlative models assume equilibrium with climate and ignore dispersal, soils, grazing and land use. Range change assumes plants can reach every newly suitable cell in Greece, so gains are optimistic; a suitable cell in 2050 may never be colonised.</p></div>
       <div><h3 class="m-0 mb-1 text-[17px]">Sampling bias</h3><p class="m-0 text-muted">Occurrence records cluster near roads and well-known mountains. Target-group background and thinning reduce but do not remove this.</p></div>
       <div><h3 class="m-0 mb-1 text-[17px]">Harvest pressure is a proxy</h3><p class="m-0 text-muted">Estimated from accessibility (range within 2 km of roads or villages) plus a documented wild-harvest flag, not measured collection.</p></div>
       <div><h3 class="m-0 mb-1 text-[17px]">Coarse grid</h3><p class="m-0 text-muted">~{meta.cell_km} km cells protect rare plants from collectors but hide microrefugia such as gorges and north slopes.</p></div>
@@ -133,8 +142,8 @@ const topK = meta.sensitivity.top_k_unchanged;
     <div class="grid items-start gap-8 [grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr))]">
       <section id="reproduce" aria-labelledby="h-rep" class="flex flex-col gap-3">
         <h2 id="h-rep" class="h-section">How to reproduce</h2>
-        <pre class="m-0 overflow-x-auto whitespace-pre rounded-md px-5 py-4.5 font-mono text-[13.5px] leading-[1.7]" style="background:#1D231F;color:#ECE6D7">git clone https://github.com/[org]/[repo].git
-cd [repo]
+        <pre class="m-0 overflow-x-auto whitespace-pre rounded-md px-5 py-4.5 font-mono text-[13.5px] leading-[1.7]" style="background:#1D231F;color:#ECE6D7">git clone https://github.com/SoujanyaChatti/Materia-Medica-2050.git
+cd Materia-Medica-2050
 make env        # conda env from environment.yml
 make data       # species list, GBIF, WorldClim, DEM
 make models     # SDMs + spatially blocked CV
@@ -143,17 +152,15 @@ make web        # export + JSON Schema validation
 make site       # builds the Astro site
 # or simply: make all</pre>
         <p class="m-0 text-[14px] text-muted">Fixed random seeds; GBIF download DOI and all versions recorded in <code class="font-mono">data/manifest.yml</code>. Build {meta.build_date}{meta.gbif_doi ? ` · GBIF DOI ${meta.gbif_doi}` : ''}.</p>
-        <a href="https://github.com/" class="btn-primary w-fit">View the code on GitHub</a>
+        <a href="https://github.com/SoujanyaChatti/Materia-Medica-2050" class="btn-primary w-fit">View the code on GitHub</a>
       </section>
 
       <section id="team" aria-labelledby="h-team" class="flex flex-col gap-3">
         <h2 id="h-team" class="h-section">Team</h2>
         <ul class="m-0 grid list-none gap-3 p-0 [grid-template-columns:repeat(auto-fill,minmax(200px,1fr))]">
-          {[['Pharmacognosy · plant identification'], ['History of medicine · Greek text'], ['Species distribution modelling'], ['Web and map development']].map(([role]) => (
-            <li class="card-surface p-3.5"><div class="font-semibold">[Name]</div><div class="text-[14px] text-muted">{role}</div></li>
-          ))}
+          <li class="card-surface p-3.5"><div class="font-semibold">Soujanya Chatti</div><div class="text-[14px] text-muted">Research, modelling and web</div></li>
         </ul>
-        <p class="m-0 text-[14px] text-muted">Cite as: [Team] (2026). Dioscorides' Plants, Then and Now. EthnoHack 2026. [DOI]</p>
+        <p class="m-0 text-[14px] text-muted">Cite as: Chatti, S. (2026). <em>Dioscorides' Plants, Then and Now</em>. EthnoHack 2026. <a href="https://github.com/SoujanyaChatti/Materia-Medica-2050">github.com/SoujanyaChatti/Materia-Medica-2050</a>{meta.gbif_doi ? `. Occurrence data: GBIF.org GBIF Occurrence Download https://doi.org/${meta.gbif_doi}` : ''}.</p>
       </section>
     </div>
   </div>

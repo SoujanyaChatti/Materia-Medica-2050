@@ -6,9 +6,10 @@ A cell is a candidate cultivation zone for a species and scenario when it is:
   * mostly outside Natura 2000,
   * at least 5 km from current wild occurrences (avoid genetic contamination).
 
-Inputs placed by hand (both need a free login/licence acceptance, see README):
-  data/raw/corine/U2018_CLC2018_V2020_20u1.tif   (CORINE 100 m raster, EPSG:3035)
-  data/raw/natura2000/Natura2000_end2021.gpkg    (EEA Natura 2000 sites)
+Inputs:
+  data/raw/corine/*.tif        CORINE Land Cover 2018 raster 100 m (EPSG:3035); free Copernicus login,
+                               downloaded by hand (see README). Any file name; only the Greece window is read.
+  data/raw/natura2000/**.gpkg  EEA Natura 2000 (end-2023) GeoPackage, public download (see README).
 Outputs: outputs/rasters/<slug>/cult_<ssp>.tif, outputs/rasters/natura_frac.tif,
          outputs/cultivation.csv (area km^2, median and range across thresholds)
 """
@@ -24,8 +25,13 @@ import pandas as pd  # noqa: E402
 
 from pipeline.lib import config, io  # noqa: E402
 
-CORINE = config.RAW / "corine" / "U2018_CLC2018_V2020_20u1.tif"
-NATURA = config.RAW / "natura2000" / "Natura2000_end2021.gpkg"
+CORINE_DIR = config.RAW / "corine"
+NATURA_DIR = config.RAW / "natura2000"
+
+
+def _find(folder: Path, pattern: str) -> Path | None:
+    hits = sorted(folder.rglob(pattern)) if folder.exists() else []
+    return max(hits, key=lambda h: h.stat().st_size) if hits else None
 OUT = config.OUTPUTS / "cultivation.csv"
 
 
@@ -36,31 +42,43 @@ def grid():
         return src.profile, src.transform, (src.height, src.width), src.crs, src.read(1)
 
 
-def corine_cultivable_fraction(profile, transform, shape, crs) -> np.ndarray:
+def corine_cultivable_fraction(path: Path, transform, shape, crs) -> np.ndarray:
+    """Share of each climate cell that is CORINE agricultural/transitional land (config.CORINE_CULTIVABLE)."""
     import rasterio
-    from rasterio.warp import Resampling, reproject
+    from rasterio.warp import Resampling, reproject, transform_bounds
+    from rasterio.windows import from_bounds
 
-    with rasterio.open(CORINE) as src:
-        clc = src.read(1)
-        # CORINE raster stores class index 1..44 with a legend; codes via the colour table description.
-        # Index -> CLC code mapping for the standard 44-class legend:
-        codes = np.array([0, 111, 112, 121, 122, 123, 124, 131, 132, 133, 141, 142, 211, 212, 213, 221, 222, 223, 231,
-                          241, 242, 243, 244, 311, 312, 313, 321, 322, 323, 324, 331, 332, 333, 334, 335, 411, 412,
-                          421, 422, 423, 511, 512, 521, 522, 523], dtype=np.int32)
-        clc_code = codes[np.clip(clc, 0, len(codes) - 1)]
-        ok = np.isin(clc_code, list(config.CORINE_CULTIVABLE)).astype("float32")
-        dst = np.zeros(shape, dtype="float32")
-        reproject(ok, dst, src_transform=src.transform, src_crs=src.crs, dst_transform=transform, dst_crs=crs,
-                  resampling=Resampling.average)
-    return dst
+    # The 100 m raster stores the class index 1..44 of the standard legend (48 = no data);
+    # some distributions store the 3-digit CLC code directly. Handle both.
+    codes = np.array([0, 111, 112, 121, 122, 123, 124, 131, 132, 133, 141, 142, 211, 212, 213, 221, 222, 223, 231,
+                      241, 242, 243, 244, 311, 312, 313, 321, 322, 323, 324, 331, 332, 333, 334, 335, 411, 412,
+                      421, 422, 423, 511, 512, 521, 522, 523], dtype=np.int32)
+    with rasterio.open(path) as src:
+        b = transform_bounds("EPSG:4326", src.crs, *config.STUDY_BBOX)
+        win = from_bounds(*b, transform=src.transform).round_offsets().round_lengths()
+        win = win.intersection(rasterio.windows.Window(0, 0, src.width, src.height))
+        clc = src.read(1, window=win).astype(np.int32)
+        wtrans = src.window_transform(win)
+        is_code = clc.max() > 100
+        clc_code = clc if is_code else np.where(clc < len(codes), codes[np.clip(clc, 0, len(codes) - 1)], 0)
+        valid = clc_code > 0
+        ok = np.where(valid, np.isin(clc_code, list(config.CORINE_CULTIVABLE)), np.nan).astype("float32")
+        dst = np.full(shape, np.nan, dtype="float32")
+        reproject(ok, dst, src_transform=wtrans, src_crs=src.crs, dst_transform=transform, dst_crs=crs,
+                  resampling=Resampling.average, src_nodata=np.nan, dst_nodata=np.nan)
+    return np.nan_to_num(dst, nan=0.0)
 
 
-def natura_fraction(profile, transform, shape, crs) -> np.ndarray:
+def natura_fraction(path: Path, transform, shape, crs) -> np.ndarray:
     import geopandas as gpd
     from rasterio.features import rasterize
 
     # Supersample 10x then average for a fractional cover.
-    n = gpd.read_file(NATURA, bbox=config.STUDY_BBOX)
+    import pyogrio
+
+    layers = [l for l, g in pyogrio.list_layers(path) if g and "POLYGON" in str(g).upper()]
+    layer = layers[0] if layers else None
+    n = gpd.read_file(path, layer=layer)
     if "MS" in n.columns:  # member-state column in the EEA dataset
         n = n[n["MS"] == "GR"]
     n = n.to_crs(crs)
@@ -100,13 +118,20 @@ def main() -> None:
     if io.done(OUT):
         print(f"cached: {OUT}")
         return
-    for p in (CORINE, NATURA):
-        if not p.exists():
-            raise SystemExit(f"missing {p.relative_to(config.ROOT)} — see README 'Manual downloads'")
+    corine, natura_path = _find(CORINE_DIR, "*.tif"), _find(NATURA_DIR, "*.gpkg")
+    if corine is None or natura_path is None:
+        raise SystemExit("missing CORINE raster in data/raw/corine/ or Natura 2000 GeoPackage in "
+                         "data/raw/natura2000/ — see README 'Manual downloads'")
     profile, transform, shape, crs, first = grid()
-    land = np.isfinite(first)
-    cult_land = corine_cultivable_fraction(profile, transform, shape, crs) >= 0.5
-    natura = natura_fraction(profile, transform, shape, crs)
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("s04", Path(__file__).with_name("04_models.py"))
+    s04 = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(s04)
+    land = np.isfinite(first) & s04.greece_mask(profile)   # candidate zones are inside Greece only
+    cult_land = corine_cultivable_fraction(corine, transform, shape, crs) >= 0.5
+    natura = natura_fraction(natura_path, transform, shape, crs)
+    print(f"land cells {int(land.sum())}, CORINE cultivable cells {int((cult_land & land).sum())}, "
+          f"cells mostly in Natura 2000 {int(((natura >= 0.5) & land).sum())}")
     p = profile.copy()
     p.update(count=1, dtype="float32", nodata=np.nan)
     with rasterio.open(config.RASTERS / "natura_frac.tif", "w", **p) as dst:
@@ -115,7 +140,8 @@ def main() -> None:
     occ = pd.read_parquet(config.PROCESSED / "occurrences_clean.parquet")
 
     rows = []
-    for slug_dir in sorted(d for d in config.RASTERS.iterdir() if d.is_dir()):
+    slugs = set(occ["species_slug"].unique()) & (config.only_species() or set(occ["species_slug"].unique()))
+    for slug_dir in sorted(d for d in config.RASTERS.iterdir() if d.is_dir() and d.name in slugs):
         slug = slug_dir.name
         wild = wild_buffer_mask(occ[occ["species_slug"] == slug], transform, shape)
         row = {"slug": slug}

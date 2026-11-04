@@ -1,0 +1,129 @@
+{
+  "slug": "foeniculum-vulgare",
+  "accepted_name": "Foeniculum vulgare Mill.",
+  "common_name_en": "Fennel",
+  "family": "Apiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 70,
+    "greek_name": "μάραθον",
+    "greek_translit": "marathon (MSS also marathron)",
+    "excerpt": "μάραθον· τούτου ἐσθιομένη ἡ πόα δύναται γάλα κατασπᾶν, καὶ τὸ σπέρμα δὲ πινόμενον ἢ συνεψόμενον πτισάνῃ.",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/81"
+  },
+  "identification": {
+    "confidence": "certain",
+    "source": "Wellmann 1906, vol. II p. 81, III 70 RV synonym: Romans call it φενούκλουμ (feniculum); Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. LXXIV, p. 524 (fennel; index: 'Meum Foeniculum Spr.')",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": []
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": true,
+    "use": "traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/foeniculi-amari-fructus",
+    "name": "Foeniculi amari fructus; Foeniculi dulcis fructus; Foeniculi amari fructus aetheroleum",
+    "reference": null
+  },
+  "records": {
+    "raw": 1030,
+    "clean": 971,
+    "thinned": 819,
+    "public_cells": 378,
+    "low_confidence_model": true
+  },
+  "model": {
+    "auc_mean": 0.729,
+    "auc_sd": 0.022,
+    "boyce_mean": 0.887,
+    "boyce_sd": 0.054,
+    "tss_mean": 0.375,
+    "tss_sd": 0.03,
+    "null_auc_mean": 0.495,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 75.7,
+      "min": 61.4,
+      "max": 79.1
+    },
+    "ssp585": {
+      "median": 98.4,
+      "min": 76.4,
+      "max": 100.0
+    }
+  },
+  "range_cells": {
+    "now": 1045,
+    "ssp245": {
+      "median": 1430.0,
+      "min": 1318.0,
+      "max": 1454.0
+    },
+    "ssp585": {
+      "median": 1572.0,
+      "min": 1415.0,
+      "max": 1582.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 20.8,
+    "ssp245": {
+      "median": 22.9,
+      "min": 22.3,
+      "max": 22.9
+    },
+    "ssp585": {
+      "median": 23.2,
+      "min": 22.6,
+      "max": 23.3
+    }
+  },
+  "risk": {
+    "score": 0.287,
+    "score_lo": 0.287,
+    "score_hi": 0.287,
+    "rank": 21,
+    "rank_lo": 17,
+    "rank_hi": 23,
+    "class": 2,
+    "rank_without_disputed": 13,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.936
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Low-confidence model: 819 thinned records (we require 30) or AUC below 0.75."
+  ]
+}

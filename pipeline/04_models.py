@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import json
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -69,6 +70,18 @@ def predict_stack(models, stack: np.ndarray) -> np.ndarray:
     return out.reshape(h, w)
 
 
+def greece_mask(profile) -> np.ndarray:
+    """True for climate cells touching Greece (Natural Earth 1:50m outline, site basemap)."""
+    import json as _json
+    from rasterio.features import rasterize
+    from shapely.geometry import shape
+
+    fc = _json.loads((config.SITE_DATA / "basemap" / "greece.geojson").read_text())
+    geoms = [shape(f["geometry"]) for f in fc["features"]]
+    return rasterize(((g, 1) for g in geoms), out_shape=(profile["height"], profile["width"]),
+                     transform=profile["transform"], fill=0, dtype="uint8", all_touched=True).astype(bool)
+
+
 def cross_validate(X, y, lon, lat, seed) -> dict:
     folds = validation.spatial_blocks(lon, lat, config.CV_BLOCK_KM, config.CV_FOLDS, seed)
     aucs, tsss, boyces, thrs, null_aucs = [], [], [], [], []
@@ -112,16 +125,22 @@ def main() -> None:
     occ = pd.read_parquet(config.PROCESSED / "occurrences_clean.parquet")
     env_meta = json.loads((ENV / "meta.json").read_text())
     current, profile = read_stack(ENV / "current.tif")
+    greece = greece_mask(profile)   # models are fitted on the whole study box; range change is counted in Greece
 
-    # Target-group background: thinned records of all species (same sampling bias), topped up with
-    # random land cells if the group is small.
-    tg = occ[["decimalLongitude", "decimalLatitude"]].drop_duplicates()
+    # Target-group background: thinned records of ALL vascular plants in the GBIF download (stage 02),
+    # i.e. the same sampling bias as the presences. Falls back to the curated species' records.
+    bg_path = config.PROCESSED / "background.parquet"
+    tg = (pd.read_parquet(bg_path) if bg_path.exists() else occ)[["decimalLongitude", "decimalLatitude"]].drop_duplicates()
     bg = tg.sample(n=min(config.N_BACKGROUND, len(tg)), random_state=config.SEED)
     bg_X = sample_raster(ENV / "current.tif", bg["decimalLongitude"], bg["decimalLatitude"])
     bg_ok = np.all(np.isfinite(bg_X), axis=1)
     bg, bg_X = bg[bg_ok], bg_X[bg_ok]
 
+    only = config.only_species()
     for slug, g in occ.groupby("species_slug"):
+        if only and slug not in only:
+            continue
+        t0 = time.time()
         out_dir = config.RASTERS / slug
         metrics_path = config.METRICS / f"{slug}.json"
         metrics = json.loads(metrics_path.read_text()) if metrics_path.exists() else {}
@@ -149,7 +168,7 @@ def main() -> None:
         cur_bin = np.where(np.isfinite(cur), (cur >= thr).astype("uint8"), 255)
         write_raster(out_dir / "current.tif", cur, profile)
         write_raster(out_dir / "current_bin.tif", cur_bin, profile, "uint8")
-        n_now = int((cur_bin == 1).sum())
+        n_now = int(((cur_bin == 1) & greece).sum())
 
         change: dict[str, list[float]] = {s: [] for s in config.SCENARIOS}
         for fut in env_meta["futures"]:
@@ -157,17 +176,17 @@ def main() -> None:
             p = predict_stack(models, stack)
             b = np.where(np.isfinite(p), (p >= thr).astype("uint8"), 255)
             write_raster(out_dir / f"{fut['gcm']}_{fut['ssp']}_bin.tif", b, profile, "uint8")
-            n_fut = int((b == 1).sum())
+            n_fut = int(((b == 1) & greece).sum())
             change[fut["ssp"]].append(100.0 * (n_fut - n_now) / n_now if n_now else float("nan"))
 
         metrics["model"] = {**cv, "variables": env_meta["variables"], "algorithms": ["maxent (elapid)", "random forest"],
-                            "n_presence": int(len(pr)), "n_background": int(len(bg)), "current_cells": n_now,
+                            "n_presence": int(len(pr)), "n_background": int(len(bg)), "current_cells": n_now, "range_area": "suitable ~4.6 km cells within Greece",
                             "beats_null": bool(cv["auc_mean"] > cv["null_auc_mean"])}
         metrics["range_change_pct"] = {s: {"median": float(np.nanmedian(v)), "min": float(np.nanmin(v)),
                                            "max": float(np.nanmax(v)), "per_gcm": v}
                                        for s, v in change.items() if v}
         io.write_json(metrics_path, metrics)
-        print(f"{slug}: AUC {cv['auc_mean']:.2f}±{cv['auc_sd']:.2f}, Boyce {cv['boyce_mean']:.2f}, "
+        print(f"{slug} ({time.time() - t0:.0f}s, {len(pr)} presences): AUC {cv['auc_mean']:.2f}±{cv['auc_sd']:.2f}, Boyce {cv['boyce_mean']:.2f}, "
               f"change ssp245 {metrics['range_change_pct'].get('ssp245', {}).get('median', float('nan')):.0f}%")
     _ = rng
 

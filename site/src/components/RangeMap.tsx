@@ -7,7 +7,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 // MapLibre resolves its worker relative to its own module URL, which bundling breaks; ship it explicitly.
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url';
 import type { FutureKey, ScenarioKey } from '../lib/types';
-import { dataUrl } from '../lib/url';
+import { dataUrl, loadRiskGrid } from '../lib/url';
 import { IconAlert, IconReset } from './icons';
 
 export type MapMode = 'range' | 'risk';
@@ -87,9 +87,13 @@ export function RangeMap({ mode, slug, scenario, layers, chip, ariaLabel, tableH
         const data: Record<string, GeoJSON.FeatureCollection> = {};
         await Promise.all(keys.map(async (k) => {
           try {
-            const r = await fetch(dataUrl(files[k]));
-            if (!r.ok) throw new Error(`${files[k]}: ${r.status}`);
-            data[k] = await r.json();
+            if (k === 'grid') {
+              data[k] = await loadRiskGrid();
+            } else {
+              const r = await fetch(dataUrl(files[k]));
+              if (!r.ok) throw new Error(`${files[k]}: ${r.status}`);
+              data[k] = await r.json();
+            }
           } catch (e) {
             if (!optional.has(k)) throw e;
             data[k] = { type: 'FeatureCollection', features: [] };

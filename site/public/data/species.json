@@ -1,1 +1,1698 @@
-[{"slug":"origanum-dictamnus","accepted_name":"Origanum dictamnus L.","common_name_en":"Cretan dittany","greek_name":"δίκταμνον","dmm_book":3,"identification_confidence":"certain","endemic_greece":true,"endemic_region":"Crete","conservation_category":"NT","low_confidence_model":false,"risk":{"score":0.626,"score_lo":0.558,"score_hi":0.702,"rank":1,"rank_lo":1,"rank_hi":1,"class":4},"range_change_pct":{"ssp245":{"median":-44,"min":-27,"max":-63},"ssp585":{"median":-57,"min":-35,"max":-82}},"model":{"auc_mean":0.91,"auc_sd":0.03,"boyce_mean":0.78,"tss_mean":0.7,"tss_sd":0.06},"records_clean":58},{"slug":"paeonia-clusii","accepted_name":"Paeonia clusii F.C.Stern","common_name_en":"Cretan peony","greek_name":"γλυκυσίδη","dmm_book":3,"identification_confidence":"probable","endemic_greece":true,"endemic_region":"Crete, Karpathos","conservation_category":"LC","low_confidence_model":false,"risk":{"score":0.444,"score_lo":0.38,"score_hi":0.516,"rank":2,"rank_lo":2,"rank_hi":4,"class":3},"range_change_pct":{"ssp245":{"median":-41,"min":-25,"max":-59},"ssp585":{"median":-53,"min":-32,"max":-77}},"model":{"auc_mean":0.88,"auc_sd":0.04,"boyce_mean":0.74,"tss_mean":0.64,"tss_sd":0.08},"records_clean":44},{"slug":"sideritis-syriaca","accepted_name":"Sideritis syriaca L.","common_name_en":"Greek mountain tea","greek_name":"σιδηρῖτις","dmm_book":4,"identification_confidence":"probable","endemic_greece":false,"endemic_region":null,"conservation_category":"NT","low_confidence_model":false,"risk":{"score":0.382,"score_lo":0.318,"score_hi":0.45,"rank":3,"rank_lo":2,"rank_hi":4,"class":2},"range_change_pct":{"ssp245":{"median":-38,"min":-22,"max":-55},"ssp585":{"median":-51,"min":-34,"max":-70}},"model":{"auc_mean":0.86,"auc_sd":0.04,"boyce_mean":0.71,"tss_mean":0.61,"tss_sd":0.07},"records_clean":214},{"slug":"mandragora-officinarum","accepted_name":"Mandragora officinarum L.","common_name_en":"Mandrake","greek_name":"μανδραγόρας","dmm_book":4,"identification_confidence":"probable","endemic_greece":false,"endemic_region":null,"conservation_category":"DD","low_confidence_model":true,"risk":{"score":0.276,"score_lo":0.18,"score_hi":0.4,"rank":4,"rank_lo":2,"rank_hi":6,"class":2},"range_change_pct":{"ssp245":{"median":-29,"min":-5,"max":-60},"ssp585":{"median":-38,"min":-6,"max":-78}},"model":{"auc_mean":0.71,"auc_sd":0.12,"boyce_mean":0.42,"tss_mean":0.38,"tss_sd":0.15},"records_clean":11},{"slug":"hyssopus-officinalis","accepted_name":"Hyssopus officinalis L.","common_name_en":"Hyssopos","greek_name":"ὕσσωπος","dmm_book":3,"identification_confidence":"disputed","endemic_greece":false,"endemic_region":null,"conservation_category":"LC","low_confidence_model":false,"risk":{"score":0.192,"score_lo":0.132,"score_hi":0.256,"rank":5,"rank_lo":4,"rank_hi":7,"class":1},"range_change_pct":{"ssp245":{"median":-33,"min":-18,"max":-49},"ssp585":{"median":-43,"min":-23,"max":-64}},"model":{"auc_mean":0.83,"auc_sd":0.05,"boyce_mean":0.69,"tss_mean":0.57,"tss_sd":0.08},"records_clean":96},{"slug":"salvia-fruticosa","accepted_name":"Salvia fruticosa Mill.","common_name_en":"Greek sage","greek_name":"ἐλελίσφακον","dmm_book":3,"identification_confidence":"probable","endemic_greece":false,"endemic_region":null,"conservation_category":"LC","low_confidence_model":false,"risk":{"score":0.168,"score_lo":0.136,"score_hi":0.212,"rank":6,"rank_lo":4,"rank_hi":6,"class":1},"range_change_pct":{"ssp245":{"median":-12,"min":-4,"max":-23},"ssp585":{"median":-16,"min":-5,"max":-30}},"model":{"auc_mean":0.8,"auc_sd":0.03,"boyce_mean":0.66,"tss_mean":0.52,"tss_sd":0.05},"records_clean":612},{"slug":"thymbra-capitata","accepted_name":"Thymbra capitata (L.) Cav.","common_name_en":"Capitate thyme","greek_name":"θύμος","dmm_book":3,"identification_confidence":"probable","endemic_greece":false,"endemic_region":null,"conservation_category":"LC","low_confidence_model":false,"risk":{"score":0.132,"score_lo":0.1,"score_hi":0.176,"rank":7,"rank_lo":5,"rank_hi":7,"class":1},"range_change_pct":{"ssp245":{"median":-8,"min":3,"max":-19},"ssp585":{"median":-10,"min":4,"max":-25}},"model":{"auc_mean":0.82,"auc_sd":0.04,"boyce_mean":0.6,"tss_mean":0.55,"tss_sd":0.06},"records_clean":380},{"slug":"glaucium-flavum","accepted_name":"Glaucium flavum Crantz","common_name_en":"Yellow horned poppy","greek_name":"μήκων κερατῖτις","dmm_book":4,"identification_confidence":"probable","endemic_greece":false,"endemic_region":null,"conservation_category":"LC","low_confidence_model":false,"risk":{"score":0.02,"score_lo":0.02,"score_hi":0.04,"rank":8,"rank_lo":8,"rank_hi":8,"class":1},"range_change_pct":{"ssp245":{"median":6,"min":-5,"max":17},"ssp585":{"median":8,"min":-6,"max":22}},"model":{"auc_mean":0.79,"auc_sd":0.05,"boyce_mean":0.58,"tss_mean":0.5,"tss_sd":0.07},"records_clean":150}]
+[
+  {
+    "slug": "origanum-dictamnus",
+    "accepted_name": "Origanum dictamnus L.",
+    "common_name_en": "Cretan dittany",
+    "greek_name": "δίκταμνον",
+    "dmm_book": 3,
+    "identification_confidence": "certain",
+    "endemic_greece": true,
+    "endemic_region": "Kriti (KK floristic region); range-restricted",
+    "conservation_category": "LC",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.619,
+      "score_lo": 0.484,
+      "score_hi": 0.71,
+      "rank": 1,
+      "rank_lo": 1,
+      "rank_hi": 23,
+      "class": 4
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": -57.8,
+        "min": -80.7,
+        "max": -24.0
+      },
+      "ssp585": {
+        "median": -64.8,
+        "min": -93.4,
+        "max": -50.7
+      }
+    },
+    "model": {
+      "auc_mean": 0.961,
+      "auc_sd": 0.019,
+      "boyce_mean": 0.633,
+      "boyce_sd": 0.182,
+      "tss_mean": 0.886,
+      "tss_sd": 0.058,
+      "null_auc_mean": 0.494,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 123
+  },
+  {
+    "slug": "hyssopus-officinalis",
+    "accepted_name": "Hyssopus officinalis L.",
+    "common_name_en": "Hyssop",
+    "greek_name": "ὕσσωπος",
+    "dmm_book": 3,
+    "identification_confidence": "disputed",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": true,
+    "risk": {
+      "score": 0.569,
+      "score_lo": 0.524,
+      "score_hi": 0.592,
+      "rank": 2,
+      "rank_lo": 1,
+      "rank_hi": 3,
+      "class": 3
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": -68.5,
+        "min": -74.4,
+        "max": -57.4
+      },
+      "ssp585": {
+        "median": -81.1,
+        "min": -85.5,
+        "max": -76.6
+      }
+    },
+    "model": {
+      "auc_mean": 0.631,
+      "auc_sd": 0.0,
+      "boyce_mean": -0.033,
+      "boyce_sd": 0.0,
+      "tss_mean": 0.44,
+      "tss_sd": 0.0,
+      "null_auc_mean": 0.539,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 20
+  },
+  {
+    "slug": "althaea-officinalis",
+    "accepted_name": "Althaea officinalis L.",
+    "common_name_en": "Marsh mallow",
+    "greek_name": "ἀλθαία",
+    "dmm_book": 3,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.535,
+      "score_lo": 0.509,
+      "score_hi": 0.56,
+      "rank": 3,
+      "rank_lo": 2,
+      "rank_hi": 10,
+      "class": 3
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": -61.6,
+        "min": -67.7,
+        "max": -55.0
+      },
+      "ssp585": {
+        "median": -72.5,
+        "min": -80.1,
+        "max": -63.0
+      }
+    },
+    "model": {
+      "auc_mean": 0.869,
+      "auc_sd": 0.07,
+      "boyce_mean": 0.201,
+      "boyce_sd": 0.315,
+      "tss_mean": 0.753,
+      "tss_sd": 0.135,
+      "null_auc_mean": 0.548,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 55
+  },
+  {
+    "slug": "sideritis-syriaca",
+    "accepted_name": "Sideritis syriaca L.",
+    "common_name_en": "Cretan mountain tea / ironwort",
+    "greek_name": "σιδηρῖτις",
+    "dmm_book": 4,
+    "identification_confidence": "disputed",
+    "endemic_greece": false,
+    "endemic_region": "In Greece only Kriti (subsp. syriaca, which is a Greek endemic); species also Lebanon-Syria and Turkey",
+    "conservation_category": "NE",
+    "low_confidence_model": true,
+    "risk": {
+      "score": 0.491,
+      "score_lo": 0.42,
+      "score_hi": 0.501,
+      "rank": 4,
+      "rank_lo": 3,
+      "rank_hi": 7,
+      "class": 3
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": -49.8,
+        "min": -52.3,
+        "max": -32.0
+      },
+      "ssp585": {
+        "median": -63.4,
+        "min": -67.2,
+        "max": -28.3
+      }
+    },
+    "model": {
+      "auc_mean": 0.876,
+      "auc_sd": 0.102,
+      "boyce_mean": -0.036,
+      "boyce_sd": 0.392,
+      "tss_mean": 0.788,
+      "tss_sd": 0.08,
+      "null_auc_mean": 0.565,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 23
+  },
+  {
+    "slug": "paeonia-greece",
+    "accepted_name": "Paeonia L. (wild Greek species pooled)",
+    "common_name_en": "Wild peonies of Greece",
+    "greek_name": "γλυκυσίδη",
+    "dmm_book": 3,
+    "identification_confidence": "disputed",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "EN",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.442,
+      "score_lo": 0.415,
+      "score_hi": 0.509,
+      "rank": 5,
+      "rank_lo": 1,
+      "rank_hi": 7,
+      "class": 3
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": -23.9,
+        "min": -40.6,
+        "max": -17.3
+      },
+      "ssp585": {
+        "median": -28.7,
+        "min": -52.8,
+        "max": -15.0
+      }
+    },
+    "model": {
+      "auc_mean": 0.822,
+      "auc_sd": 0.06,
+      "boyce_mean": 0.495,
+      "boyce_sd": 0.196,
+      "tss_mean": 0.558,
+      "tss_sd": 0.106,
+      "null_auc_mean": 0.525,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 270
+  },
+  {
+    "slug": "glycyrrhiza-glabra",
+    "accepted_name": "Glycyrrhiza glabra L.",
+    "common_name_en": "Liquorice",
+    "greek_name": "γλυκύρριζα",
+    "dmm_book": 3,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "LC",
+    "low_confidence_model": true,
+    "risk": {
+      "score": 0.396,
+      "score_lo": 0.243,
+      "score_hi": 0.417,
+      "rank": 6,
+      "rank_lo": 5,
+      "rank_hi": 32,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": -56.0,
+        "min": -61.3,
+        "max": -17.7
+      },
+      "ssp585": {
+        "median": -92.8,
+        "min": -94.6,
+        "max": -48.1
+      }
+    },
+    "model": {
+      "auc_mean": 0.939,
+      "auc_sd": 0.039,
+      "boyce_mean": 0.094,
+      "boyce_sd": 0.352,
+      "tss_mean": 0.824,
+      "tss_sd": 0.129,
+      "null_auc_mean": 0.546,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 31
+  },
+  {
+    "slug": "sambucus-nigra",
+    "accepted_name": "Sambucus nigra L.",
+    "common_name_en": "Elder",
+    "greek_name": "ἀκτῆ",
+    "dmm_book": 4,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "LC",
+    "low_confidence_model": true,
+    "risk": {
+      "score": 0.389,
+      "score_lo": 0.367,
+      "score_hi": 0.404,
+      "rank": 7,
+      "rank_lo": 5,
+      "rank_hi": 25,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": -47.9,
+        "min": -51.6,
+        "max": -42.4
+      },
+      "ssp585": {
+        "median": -55.8,
+        "min": -59.8,
+        "max": -54.9
+      }
+    },
+    "model": {
+      "auc_mean": 0.734,
+      "auc_sd": 0.018,
+      "boyce_mean": 0.117,
+      "boyce_sd": 0.224,
+      "tss_mean": 0.417,
+      "tss_sd": 0.029,
+      "null_auc_mean": 0.47,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 257
+  },
+  {
+    "slug": "juniperus-deltoides",
+    "accepted_name": "Juniperus deltoides R.P.Adams",
+    "common_name_en": "Prickly juniper (eastern)",
+    "greek_name": "ἄρκευθος",
+    "dmm_book": 1,
+    "identification_confidence": "disputed",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.384,
+      "score_lo": 0.358,
+      "score_hi": 0.392,
+      "rank": 8,
+      "rank_lo": 5,
+      "rank_hi": 9,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": -22.5,
+        "min": -24.5,
+        "max": -15.8
+      },
+      "ssp585": {
+        "median": -27.2,
+        "min": -34.9,
+        "max": 5.5
+      }
+    },
+    "model": {
+      "auc_mean": 0.769,
+      "auc_sd": 0.032,
+      "boyce_mean": 0.235,
+      "boyce_sd": 0.324,
+      "tss_mean": 0.476,
+      "tss_sd": 0.057,
+      "null_auc_mean": 0.501,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 322
+  },
+  {
+    "slug": "origanum-vulgare",
+    "accepted_name": "Origanum vulgare L.",
+    "common_name_en": "Greek oregano",
+    "greek_name": "ὀρίγανος Ἡρακλεωτική",
+    "dmm_book": 3,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.37,
+      "score_lo": 0.354,
+      "score_hi": 0.375,
+      "rank": 9,
+      "rank_lo": 4,
+      "rank_hi": 10,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": -18.0,
+        "min": -19.4,
+        "max": -14.2
+      },
+      "ssp585": {
+        "median": -24.0,
+        "min": -28.7,
+        "max": -18.2
+      }
+    },
+    "model": {
+      "auc_mean": 0.761,
+      "auc_sd": 0.05,
+      "boyce_mean": 0.763,
+      "boyce_sd": 0.282,
+      "tss_mean": 0.443,
+      "tss_sd": 0.053,
+      "null_auc_mean": 0.512,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 365
+  },
+  {
+    "slug": "hypericum-perforatum",
+    "accepted_name": "Hypericum perforatum L.",
+    "common_name_en": "St John's wort",
+    "greek_name": "ὑπερικόν",
+    "dmm_book": 3,
+    "identification_confidence": "disputed",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.335,
+      "score_lo": 0.318,
+      "score_hi": 0.337,
+      "rank": 10,
+      "rank_lo": 5,
+      "rank_hi": 11,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": -9.3,
+        "min": -9.9,
+        "max": -5.0
+      },
+      "ssp585": {
+        "median": -12.6,
+        "min": -14.0,
+        "max": -10.1
+      }
+    },
+    "model": {
+      "auc_mean": 0.772,
+      "auc_sd": 0.026,
+      "boyce_mean": 0.899,
+      "boyce_sd": 0.108,
+      "tss_mean": 0.446,
+      "tss_sd": 0.061,
+      "null_auc_mean": 0.495,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 849
+  },
+  {
+    "slug": "urtica-dioica",
+    "accepted_name": "Urtica dioica L.",
+    "common_name_en": "Stinging nettle",
+    "greek_name": "ἀκαλήφη",
+    "dmm_book": 4,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "LC",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.314,
+      "score_lo": 0.313,
+      "score_hi": 0.34,
+      "rank": 11,
+      "rank_lo": 7,
+      "rank_hi": 26,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": -29.3,
+        "min": -35.9,
+        "max": -29.1
+      },
+      "ssp585": {
+        "median": -41.0,
+        "min": -44.8,
+        "max": -33.9
+      }
+    },
+    "model": {
+      "auc_mean": 0.76,
+      "auc_sd": 0.02,
+      "boyce_mean": 0.875,
+      "boyce_sd": 0.135,
+      "tss_mean": 0.431,
+      "tss_sd": 0.057,
+      "null_auc_mean": 0.515,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 563
+  },
+  {
+    "slug": "plantago-lanceolata",
+    "accepted_name": "Plantago lanceolata L.",
+    "common_name_en": "Ribwort plantain",
+    "greek_name": "ἀρνόγλωσσον",
+    "dmm_book": 2,
+    "identification_confidence": "disputed",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.298,
+      "score_lo": 0.298,
+      "score_hi": 0.298,
+      "rank": 12,
+      "rank_lo": 6,
+      "rank_hi": 12,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 69.3,
+        "min": 54.7,
+        "max": 74.5
+      },
+      "ssp585": {
+        "median": 80.1,
+        "min": 55.3,
+        "max": 90.6
+      }
+    },
+    "model": {
+      "auc_mean": 0.753,
+      "auc_sd": 0.032,
+      "boyce_mean": 0.959,
+      "boyce_sd": 0.026,
+      "tss_mean": 0.406,
+      "tss_sd": 0.046,
+      "null_auc_mean": 0.508,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 1135
+  },
+  {
+    "slug": "teucrium-chamaedrys",
+    "accepted_name": "Teucrium chamaedrys L.",
+    "common_name_en": "Wall germander",
+    "greek_name": "χαμαίδρυς",
+    "dmm_book": 3,
+    "identification_confidence": "disputed",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.297,
+      "score_lo": 0.297,
+      "score_hi": 0.297,
+      "rank": 13,
+      "rank_lo": 8,
+      "rank_hi": 13,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 14.3,
+        "min": 9.1,
+        "max": 14.9
+      },
+      "ssp585": {
+        "median": 15.3,
+        "min": 14.6,
+        "max": 18.1
+      }
+    },
+    "model": {
+      "auc_mean": 0.781,
+      "auc_sd": 0.006,
+      "boyce_mean": 0.885,
+      "boyce_sd": 0.056,
+      "tss_mean": 0.483,
+      "tss_sd": 0.018,
+      "null_auc_mean": 0.497,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 577
+  },
+  {
+    "slug": "melissa-officinalis",
+    "accepted_name": "Melissa officinalis L.",
+    "common_name_en": "Lemon balm",
+    "greek_name": "μελισσόφυλλον",
+    "dmm_book": 3,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": true,
+    "risk": {
+      "score": 0.296,
+      "score_lo": 0.296,
+      "score_hi": 0.296,
+      "rank": 14,
+      "rank_lo": 10,
+      "rank_hi": 14,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 50.3,
+        "min": 36.1,
+        "max": 52.7
+      },
+      "ssp585": {
+        "median": 60.4,
+        "min": 55.8,
+        "max": 63.9
+      }
+    },
+    "model": {
+      "auc_mean": 0.649,
+      "auc_sd": 0.026,
+      "boyce_mean": 0.53,
+      "boyce_sd": 0.368,
+      "tss_mean": 0.256,
+      "tss_sd": 0.049,
+      "null_auc_mean": 0.49,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 452
+  },
+  {
+    "slug": "teucrium-capitatum",
+    "accepted_name": "Teucrium capitatum L.",
+    "common_name_en": "Felty germander",
+    "greek_name": "πόλιον",
+    "dmm_book": 3,
+    "identification_confidence": "certain",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": true,
+    "risk": {
+      "score": 0.296,
+      "score_lo": 0.296,
+      "score_hi": 0.296,
+      "rank": 15,
+      "rank_lo": 11,
+      "rank_hi": 15,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 96.5,
+        "min": 85.1,
+        "max": 103.1
+      },
+      "ssp585": {
+        "median": 112.6,
+        "min": 93.6,
+        "max": 121.7
+      }
+    },
+    "model": {
+      "auc_mean": 0.748,
+      "auc_sd": 0.025,
+      "boyce_mean": 0.925,
+      "boyce_sd": 0.025,
+      "tss_mean": 0.388,
+      "tss_sd": 0.047,
+      "null_auc_mean": 0.475,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 737
+  },
+  {
+    "slug": "matricaria-chamomilla",
+    "accepted_name": "Matricaria chamomilla L.",
+    "common_name_en": "German chamomile",
+    "greek_name": "ἀνθεμίς",
+    "dmm_book": 3,
+    "identification_confidence": "disputed",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.296,
+      "score_lo": 0.296,
+      "score_hi": 0.296,
+      "rank": 16,
+      "rank_lo": 12,
+      "rank_hi": 16,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 65.3,
+        "min": 60.9,
+        "max": 70.5
+      },
+      "ssp585": {
+        "median": 75.4,
+        "min": 68.7,
+        "max": 79.3
+      }
+    },
+    "model": {
+      "auc_mean": 0.784,
+      "auc_sd": 0.016,
+      "boyce_mean": 0.981,
+      "boyce_sd": 0.008,
+      "tss_mean": 0.457,
+      "tss_sd": 0.021,
+      "null_auc_mean": 0.496,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 1296
+  },
+  {
+    "slug": "marrubium-vulgare",
+    "accepted_name": "Marrubium vulgare L.",
+    "common_name_en": "White horehound",
+    "greek_name": "πράσιον",
+    "dmm_book": 3,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": true,
+    "risk": {
+      "score": 0.295,
+      "score_lo": 0.295,
+      "score_hi": 0.295,
+      "rank": 17,
+      "rank_lo": 13,
+      "rank_hi": 17,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 191.1,
+        "min": 177.6,
+        "max": 195.5
+      },
+      "ssp585": {
+        "median": 219.2,
+        "min": 192.0,
+        "max": 221.5
+      }
+    },
+    "model": {
+      "auc_mean": 0.664,
+      "auc_sd": 0.04,
+      "boyce_mean": 0.672,
+      "boyce_sd": 0.233,
+      "tss_mean": 0.304,
+      "tss_sd": 0.07,
+      "null_auc_mean": 0.514,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 261
+  },
+  {
+    "slug": "artemisia-absinthium",
+    "accepted_name": "Artemisia absinthium L.",
+    "common_name_en": "Wormwood",
+    "greek_name": "ἀψίνθιον",
+    "dmm_book": 3,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.294,
+      "score_lo": 0.294,
+      "score_hi": 0.294,
+      "rank": 18,
+      "rank_lo": 14,
+      "rank_hi": 18,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 150.7,
+        "min": 30.9,
+        "max": 157.6
+      },
+      "ssp585": {
+        "median": 330.1,
+        "min": 72.9,
+        "max": 339.6
+      }
+    },
+    "model": {
+      "auc_mean": 0.777,
+      "auc_sd": 0.128,
+      "boyce_mean": 0.221,
+      "boyce_sd": 0.309,
+      "tss_mean": 0.621,
+      "tss_sd": 0.184,
+      "null_auc_mean": 0.494,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 43
+  },
+  {
+    "slug": "malva-sylvestris",
+    "accepted_name": "Malva sylvestris L.",
+    "common_name_en": "Common mallow",
+    "greek_name": "μολόχη",
+    "dmm_book": 2,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": true,
+    "risk": {
+      "score": 0.293,
+      "score_lo": 0.293,
+      "score_hi": 0.293,
+      "rank": 19,
+      "rank_lo": 15,
+      "rank_hi": 19,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 77.2,
+        "min": 72.6,
+        "max": 78.2
+      },
+      "ssp585": {
+        "median": 81.1,
+        "min": 77.2,
+        "max": 81.4
+      }
+    },
+    "model": {
+      "auc_mean": 0.668,
+      "auc_sd": 0.026,
+      "boyce_mean": 0.869,
+      "boyce_sd": 0.063,
+      "tss_mean": 0.267,
+      "tss_sd": 0.049,
+      "null_auc_mean": 0.496,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 2217
+  },
+  {
+    "slug": "salvia-rosmarinus",
+    "accepted_name": "Salvia rosmarinus Spenn.",
+    "common_name_en": "Rosemary",
+    "greek_name": "λιβανωτίς",
+    "dmm_book": 3,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": true,
+    "risk": {
+      "score": 0.287,
+      "score_lo": 0.287,
+      "score_hi": 0.287,
+      "rank": 20,
+      "rank_lo": 16,
+      "rank_hi": 22,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 37.5,
+        "min": 28.6,
+        "max": 47.4
+      },
+      "ssp585": {
+        "median": 55.4,
+        "min": 42.4,
+        "max": 63.8
+      }
+    },
+    "model": {
+      "auc_mean": 0.693,
+      "auc_sd": 0.031,
+      "boyce_mean": 0.477,
+      "boyce_sd": 0.294,
+      "tss_mean": 0.347,
+      "tss_sd": 0.055,
+      "null_auc_mean": 0.505,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 457
+  },
+  {
+    "slug": "foeniculum-vulgare",
+    "accepted_name": "Foeniculum vulgare Mill.",
+    "common_name_en": "Fennel",
+    "greek_name": "μάραθον",
+    "dmm_book": 3,
+    "identification_confidence": "certain",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": true,
+    "risk": {
+      "score": 0.287,
+      "score_lo": 0.287,
+      "score_hi": 0.287,
+      "rank": 21,
+      "rank_lo": 17,
+      "rank_hi": 23,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 75.7,
+        "min": 61.4,
+        "max": 79.1
+      },
+      "ssp585": {
+        "median": 98.4,
+        "min": 76.4,
+        "max": 100.0
+      }
+    },
+    "model": {
+      "auc_mean": 0.729,
+      "auc_sd": 0.022,
+      "boyce_mean": 0.887,
+      "boyce_sd": 0.054,
+      "tss_mean": 0.375,
+      "tss_sd": 0.03,
+      "null_auc_mean": 0.495,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 971
+  },
+  {
+    "slug": "salvia-fruticosa",
+    "accepted_name": "Salvia fruticosa Mill.",
+    "common_name_en": "Greek sage",
+    "greek_name": "ἐλελίσφακον",
+    "dmm_book": 3,
+    "identification_confidence": "disputed",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.287,
+      "score_lo": 0.287,
+      "score_hi": 0.287,
+      "rank": 22,
+      "rank_lo": 18,
+      "rank_hi": 24,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 27.9,
+        "min": 23.1,
+        "max": 46.7
+      },
+      "ssp585": {
+        "median": 81.8,
+        "min": 45.7,
+        "max": 89.3
+      }
+    },
+    "model": {
+      "auc_mean": 0.855,
+      "auc_sd": 0.02,
+      "boyce_mean": 0.926,
+      "boyce_sd": 0.039,
+      "tss_mean": 0.61,
+      "tss_sd": 0.049,
+      "null_auc_mean": 0.513,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 1188
+  },
+  {
+    "slug": "lavandula-stoechas",
+    "accepted_name": "Lavandula stoechas L.",
+    "common_name_en": "French / topped lavender",
+    "greek_name": "στοιχάς",
+    "dmm_book": 3,
+    "identification_confidence": "certain",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.284,
+      "score_lo": 0.284,
+      "score_hi": 0.284,
+      "rank": 23,
+      "rank_lo": 19,
+      "rank_hi": 26,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 44.5,
+        "min": 36.1,
+        "max": 46.5
+      },
+      "ssp585": {
+        "median": 52.5,
+        "min": 40.1,
+        "max": 60.4
+      }
+    },
+    "model": {
+      "auc_mean": 0.856,
+      "auc_sd": 0.025,
+      "boyce_mean": 0.874,
+      "boyce_sd": 0.065,
+      "tss_mean": 0.598,
+      "tss_sd": 0.048,
+      "null_auc_mean": 0.487,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 745
+  },
+  {
+    "slug": "thymbra-capitata",
+    "accepted_name": "Thymbra capitata (L.) Cav.",
+    "common_name_en": "Conehead thyme",
+    "greek_name": "θύμος",
+    "dmm_book": 3,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.283,
+      "score_lo": 0.283,
+      "score_hi": 0.283,
+      "rank": 24,
+      "rank_lo": 20,
+      "rank_hi": 27,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 7.5,
+        "min": 3.1,
+        "max": 9.1
+      },
+      "ssp585": {
+        "median": 18.8,
+        "min": 13.2,
+        "max": 26.6
+      }
+    },
+    "model": {
+      "auc_mean": 0.848,
+      "auc_sd": 0.022,
+      "boyce_mean": 0.951,
+      "boyce_sd": 0.027,
+      "tss_mean": 0.569,
+      "tss_sd": 0.045,
+      "null_auc_mean": 0.504,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 1859
+  },
+  {
+    "slug": "ecballium-elaterium",
+    "accepted_name": "Ecballium elaterium (L.) A.Rich.",
+    "common_name_en": "squirting cucumber",
+    "greek_name": "σίκυς ἄγριος",
+    "dmm_book": 4,
+    "identification_confidence": "certain",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.282,
+      "score_lo": 0.282,
+      "score_hi": 0.282,
+      "rank": 25,
+      "rank_lo": 21,
+      "rank_hi": 28,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 63.0,
+        "min": 62.5,
+        "max": 74.4
+      },
+      "ssp585": {
+        "median": 86.4,
+        "min": 70.8,
+        "max": 90.6
+      }
+    },
+    "model": {
+      "auc_mean": 0.752,
+      "auc_sd": 0.009,
+      "boyce_mean": 0.967,
+      "boyce_sd": 0.037,
+      "tss_mean": 0.393,
+      "tss_sd": 0.022,
+      "null_auc_mean": 0.495,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 4900
+  },
+  {
+    "slug": "glaucium-flavum",
+    "accepted_name": "Glaucium flavum Crantz",
+    "common_name_en": "Yellow horned poppy",
+    "greek_name": "μήκων κερατῖτις",
+    "dmm_book": 4,
+    "identification_confidence": "certain",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "NE",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.277,
+      "score_lo": 0.277,
+      "score_hi": 0.277,
+      "rank": 26,
+      "rank_lo": 22,
+      "rank_hi": 29,
+      "class": 2
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 9.0,
+        "min": 2.5,
+        "max": 10.3
+      },
+      "ssp585": {
+        "median": 15.8,
+        "min": 1.5,
+        "max": 18.3
+      }
+    },
+    "model": {
+      "auc_mean": 0.873,
+      "auc_sd": 0.021,
+      "boyce_mean": 0.976,
+      "boyce_sd": 0.018,
+      "tss_mean": 0.606,
+      "tss_sd": 0.045,
+      "null_auc_mean": 0.505,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 2967
+  },
+  {
+    "slug": "centaurium-erythraea",
+    "accepted_name": "Centaurium erythraea Rafn",
+    "common_name_en": "Common centaury",
+    "greek_name": "κενταύρειον τὸ λεπτὸν ἢ μικρόν",
+    "dmm_book": 3,
+    "identification_confidence": "certain",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "LC",
+    "low_confidence_model": true,
+    "risk": {
+      "score": 0.195,
+      "score_lo": 0.195,
+      "score_hi": 0.195,
+      "rank": 27,
+      "rank_lo": 20,
+      "rank_hi": 27,
+      "class": 1
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 16.6,
+        "min": 7.7,
+        "max": 28.2
+      },
+      "ssp585": {
+        "median": 28.0,
+        "min": 8.8,
+        "max": 37.8
+      }
+    },
+    "model": {
+      "auc_mean": 0.712,
+      "auc_sd": 0.048,
+      "boyce_mean": 0.897,
+      "boyce_sd": 0.035,
+      "tss_mean": 0.342,
+      "tss_sd": 0.088,
+      "null_auc_mean": 0.501,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 532
+  },
+  {
+    "slug": "mentha-pulegium",
+    "accepted_name": "Mentha pulegium L.",
+    "common_name_en": "pennyroyal",
+    "greek_name": "γλήχων",
+    "dmm_book": 3,
+    "identification_confidence": "certain",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "LC",
+    "low_confidence_model": true,
+    "risk": {
+      "score": 0.194,
+      "score_lo": 0.194,
+      "score_hi": 0.194,
+      "rank": 28,
+      "rank_lo": 21,
+      "rank_hi": 28,
+      "class": 1
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 18.3,
+        "min": 6.2,
+        "max": 29.8
+      },
+      "ssp585": {
+        "median": 30.8,
+        "min": 16.4,
+        "max": 49.0
+      }
+    },
+    "model": {
+      "auc_mean": 0.673,
+      "auc_sd": 0.048,
+      "boyce_mean": 0.404,
+      "boyce_sd": 0.122,
+      "tss_mean": 0.309,
+      "tss_sd": 0.092,
+      "null_auc_mean": 0.491,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 298
+  },
+  {
+    "slug": "cyclamen-graecum",
+    "accepted_name": "Cyclamen graecum Link",
+    "common_name_en": "Greek cyclamen",
+    "greek_name": "κυκλάμινος",
+    "dmm_book": 2,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "LC",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.192,
+      "score_lo": 0.192,
+      "score_hi": 0.212,
+      "rank": 29,
+      "rank_lo": 24,
+      "rank_hi": 29,
+      "class": 1
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 11.0,
+        "min": -5.2,
+        "max": 12.4
+      },
+      "ssp585": {
+        "median": 11.0,
+        "min": 5.3,
+        "max": 30.4
+      }
+    },
+    "model": {
+      "auc_mean": 0.835,
+      "auc_sd": 0.026,
+      "boyce_mean": 0.859,
+      "boyce_sd": 0.057,
+      "tss_mean": 0.555,
+      "tss_sd": 0.062,
+      "null_auc_mean": 0.501,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 918
+  },
+  {
+    "slug": "pistacia-lentiscus",
+    "accepted_name": "Pistacia lentiscus L.",
+    "common_name_en": "Mastic tree, lentisk",
+    "greek_name": "σχῖνος",
+    "dmm_book": 1,
+    "identification_confidence": "probable",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "LC",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.183,
+      "score_lo": 0.183,
+      "score_hi": 0.187,
+      "rank": 30,
+      "rank_lo": 29,
+      "rank_hi": 30,
+      "class": 1
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 0.8,
+        "min": -1.0,
+        "max": 7.2
+      },
+      "ssp585": {
+        "median": 0.6,
+        "min": -2.2,
+        "max": 0.6
+      }
+    },
+    "model": {
+      "auc_mean": 0.833,
+      "auc_sd": 0.01,
+      "boyce_mean": 0.968,
+      "boyce_sd": 0.013,
+      "tss_mean": 0.554,
+      "tss_sd": 0.015,
+      "null_auc_mean": 0.499,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 5537
+  },
+  {
+    "slug": "capparis-spinosa",
+    "accepted_name": "Capparis spinosa L.",
+    "common_name_en": "caper",
+    "greek_name": "κάππαρις",
+    "dmm_book": 2,
+    "identification_confidence": "certain",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "LC",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.18,
+      "score_lo": 0.18,
+      "score_hi": 0.18,
+      "rank": 31,
+      "rank_lo": 30,
+      "rank_hi": 31,
+      "class": 1
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 160.6,
+        "min": 147.2,
+        "max": 176.5
+      },
+      "ssp585": {
+        "median": 191.0,
+        "min": 183.6,
+        "max": 208.3
+      }
+    },
+    "model": {
+      "auc_mean": 0.849,
+      "auc_sd": 0.019,
+      "boyce_mean": 0.953,
+      "boyce_sd": 0.033,
+      "tss_mean": 0.568,
+      "tss_sd": 0.032,
+      "null_auc_mean": 0.505,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 1720
+  },
+  {
+    "slug": "mandragora-officinarum",
+    "accepted_name": "Mandragora officinarum L.",
+    "common_name_en": "Mandrake",
+    "greek_name": "μανδραγόρας",
+    "dmm_book": 4,
+    "identification_confidence": "certain",
+    "endemic_greece": false,
+    "endemic_region": null,
+    "conservation_category": "LC",
+    "low_confidence_model": false,
+    "risk": {
+      "score": 0.18,
+      "score_lo": 0.18,
+      "score_hi": 0.18,
+      "rank": 32,
+      "rank_lo": 31,
+      "rank_hi": 32,
+      "class": 1
+    },
+    "range_change_pct": {
+      "ssp245": {
+        "median": 55.3,
+        "min": 48.8,
+        "max": 68.3
+      },
+      "ssp585": {
+        "median": 76.5,
+        "min": 57.7,
+        "max": 85.3
+      }
+    },
+    "model": {
+      "auc_mean": 0.904,
+      "auc_sd": 0.019,
+      "boyce_mean": 0.46,
+      "boyce_sd": 0.298,
+      "tss_mean": 0.766,
+      "tss_sd": 0.049,
+      "null_auc_mean": 0.484,
+      "variables": [
+        "bio1",
+        "bio12",
+        "bio15",
+        "bio4",
+        "bio2",
+        "bio8",
+        "elevation",
+        "slope"
+      ]
+    },
+    "records_clean": 280
+  }
+]

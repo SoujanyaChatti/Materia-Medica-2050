@@ -1,0 +1,138 @@
+{
+  "slug": "glycyrrhiza-glabra",
+  "accepted_name": "Glycyrrhiza glabra L.",
+  "common_name_en": "Liquorice",
+  "family": "Fabaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 5,
+    "greek_name": "γλυκύρριζα",
+    "greek_translit": "glykyrrhiza",
+    "excerpt": "γλυκύρριζα· οἱ δὲ Ποντικὴν ῥίζαν, οἱ δὲ γεντιανήν,",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Wellmann (ed.) 1906, DMM III 5; Osbaldeston 2000, ch. 3-7: \"Glycyrrhiza glabra [Linnaeus] — Liquorice Plant\".",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Glycyrrhiza echinata L. (also native in Greece)",
+        "source": "Dimopoulos et al. 2013 p.94 lists it; no source opened links it to DMM III 5"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": {
+    "category": "LC",
+    "source": "IUCN Red List 2021"
+  },
+  "ema_monograph": {
+    "exists": true,
+    "use": null,
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/liquiritiae-radix",
+    "name": "Liquiritiae radix (G. glabra, G. inflata, G. uralensis)",
+    "reference": null
+  },
+  "records": {
+    "raw": 44,
+    "clean": 31,
+    "thinned": 29,
+    "public_cells": 14,
+    "low_confidence_model": true
+  },
+  "model": {
+    "auc_mean": 0.939,
+    "auc_sd": 0.039,
+    "boyce_mean": 0.094,
+    "boyce_sd": 0.352,
+    "tss_mean": 0.824,
+    "tss_sd": 0.129,
+    "null_auc_mean": 0.546,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": -56.0,
+      "min": -61.3,
+      "max": -17.7
+    },
+    "ssp585": {
+      "median": -92.8,
+      "min": -94.6,
+      "max": -48.1
+    }
+  },
+  "range_cells": {
+    "now": 293,
+    "ssp245": {
+      "median": 126.0,
+      "min": 118.0,
+      "max": 196.0
+    },
+    "ssp585": {
+      "median": 34.0,
+      "min": 20.0,
+      "max": 143.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 16.4,
+    "ssp245": {
+      "median": 16.7,
+      "min": 16.3,
+      "max": 16.9
+    },
+    "ssp585": {
+      "median": 11.8,
+      "min": 10.0,
+      "max": 16.1
+    }
+  },
+  "risk": {
+    "score": 0.396,
+    "score_lo": 0.243,
+    "score_hi": 0.417,
+    "rank": 6,
+    "rank_lo": 5,
+    "rank_hi": 32,
+    "class": 2,
+    "rank_without_disputed": 3,
+    "top10_stability": 0.414,
+    "components": {
+      "range_loss": 0.56,
+      "endemism": 0.0,
+      "status": 0.0,
+      "harvest": 0.861
+    },
+    "components_ci": {
+      "range_loss": [
+        0.177,
+        0.613
+      ]
+    }
+  },
+  "cultivation_area_km2": 2231,
+  "cultivation_area_km2_range": {
+    "min": 1748,
+    "max": 3956
+  },
+  "caveats": [
+    "Identification is probable; results describe Glycyrrhiza glabra L., which may not be the plant Dioscorides meant.",
+    "Low-confidence model: 29 thinned records (we require 30) or AUC below 0.75."
+  ]
+}

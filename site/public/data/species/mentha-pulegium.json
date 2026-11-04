@@ -1,0 +1,128 @@
+{
+  "slug": "mentha-pulegium",
+  "accepted_name": "Mentha pulegium L.",
+  "common_name_en": "pennyroyal",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 31,
+    "greek_name": "γλήχων",
+    "greek_translit": "glēchōn",
+    "excerpt": "γλήχων· πόα γνώριμος, θερμαντική, λεπτυντική, πεπτική. ποθεῖσα δὲ ἔμμηνα καὶ δεύτερα καὶ ἔμβρυα ἄγει·",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. II (Berlin 1906), p. 40; read off the archive.org page image (item b21459162_0002) and cross-checked against two OCR layers; ϑ printed as θ",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/n71/mode/1up"
+  },
+  "identification": {
+    "confidence": "certain",
+    "source": "Sprengel 1830, vol. 2, p. 510 (Comm. III cap. XXXIII): 'Pulegium est vulgaris notitiae, Mentha Pulegium, per omnem Europam temperatam vulgaris.' No competing candidate. | Fraas 1845, p. 177: 'M. Pulegium L., stinkender Poley' = γλήχων Hippocr., γλήχων Diosc. 3,36, Plin. 20,14; modern γλυφόνι / βρομηδυόσμο; very common in damp lowlands (Attica, Argolis). Osbaldeston 2000, ch. 3-36 GLECHON: SUGGESTED Pulegium [Fuchs] ... Mentha pulegium [Linnaeus]. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n511/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n222/mode/1up)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": []
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": {
+    "category": "LC",
+    "source": "IUCN Red List 2014"
+  },
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 397,
+    "clean": 298,
+    "thinned": 266,
+    "public_cells": 131,
+    "low_confidence_model": true
+  },
+  "model": {
+    "auc_mean": 0.673,
+    "auc_sd": 0.048,
+    "boyce_mean": 0.404,
+    "boyce_sd": 0.122,
+    "tss_mean": 0.309,
+    "tss_sd": 0.092,
+    "null_auc_mean": 0.491,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 18.3,
+      "min": 6.2,
+      "max": 29.8
+    },
+    "ssp585": {
+      "median": 30.8,
+      "min": 16.4,
+      "max": 49.0
+    }
+  },
+  "range_cells": {
+    "now": 508,
+    "ssp245": {
+      "median": 501.0,
+      "min": 472.0,
+      "max": 576.0
+    },
+    "ssp585": {
+      "median": 581.0,
+      "min": 486.0,
+      "max": 627.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 24.2,
+    "ssp245": {
+      "median": 26.2,
+      "min": 24.8,
+      "max": 26.9
+    },
+    "ssp585": {
+      "median": 25.0,
+      "min": 24.6,
+      "max": 25.1
+    }
+  },
+  "risk": {
+    "score": 0.194,
+    "score_lo": 0.194,
+    "score_hi": 0.194,
+    "rank": 28,
+    "rank_lo": 21,
+    "rank_hi": 28,
+    "class": 1,
+    "rank_without_disputed": 19,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.0,
+      "harvest": 0.971
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 4861,
+  "cultivation_area_km2_range": {
+    "min": 3060,
+    "max": 7445
+  },
+  "caveats": [
+    "Low-confidence model: 266 thinned records (we require 30) or AUC below 0.75."
+  ]
+}

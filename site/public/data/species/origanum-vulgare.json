@@ -1,0 +1,126 @@
+{
+  "slug": "origanum-vulgare",
+  "accepted_name": "Origanum vulgare L.",
+  "common_name_en": "Greek oregano",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 27,
+    "greek_name": "ὀρίγανος Ἡρακλεωτική",
+    "greek_translit": "origanos herakleōtikē",
+    "excerpt": "ὀρίγανος Ἡρακλεωτική· οἱ δὲ κονίλην καλοῦσι. φύλλον ἔχει ἐμφερὲς ὑσσώπῳ, σκιάδιον δὲ οὐ τροχοειδές, ἀλλ' ὥσπερ διῃρημένον",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. II (Berlin 1906), p. 37; read off the archive.org page image (item b21459162_0002) and cross-checked against two OCR layers; ϑ printed as θ",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/n68/mode/1up"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Sprengel 1830, vol. 2, p. 508 (Comm. III cap. XXIX): ὀρίγανος Ἡρακλεωτική = 'Origanum heracleoticum' (Linnaeus' name, following Matthiolus who first recognised it); Sibthorp agrees and saw it 'in Graeciae montosis siccis haud rarum'. Sprengel names Origanum heracleoticum L., not O. vulgare subsp. hirtum; equating O. heracleoticum L. with O. vulgare subsp. hirtum is a later taxonomic synonymy NOT stated in this source. Confidence 'probable' because the source gives no competing candidate but the modern name mapping is ours. | Fraas 1845, p. 181: '15. Origanum heracleoticum L., scharfer Organ' = ὀρίγανος ἡρακλεωτική Diosc. 3,29; Cunila gallinacea Plin.; modern ῥίγανι ('Alle Arten!'); not rare on rocky hills of E Greece (Nauplia, Astros), to 1500 ft. (Fraas assigns Orig. vulgare v. album to ἀγριορίγανος, Diosc. 3,31 - a different chapter.) Osbaldeston 2000, ch. 3-32 ORIGANOS ERAKLEOTIKE: SUGGESTED Origanum heracleoticum [Loudon]. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n509/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n226/mode/1up)",
+    "note": "The Greek plant is subsp. hirtum; modelled at species level.",
+    "reviewed_by": "",
+    "alternatives": []
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 446,
+    "clean": 365,
+    "thinned": 350,
+    "public_cells": 180,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.761,
+    "auc_sd": 0.05,
+    "boyce_mean": 0.763,
+    "boyce_sd": 0.282,
+    "tss_mean": 0.443,
+    "tss_sd": 0.053,
+    "null_auc_mean": 0.512,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": -18.0,
+      "min": -19.4,
+      "max": -14.2
+    },
+    "ssp585": {
+      "median": -24.0,
+      "min": -28.7,
+      "max": -18.2
+    }
+  },
+  "range_cells": {
+    "now": 901,
+    "ssp245": {
+      "median": 746.0,
+      "min": 719.0,
+      "max": 751.0
+    },
+    "ssp585": {
+      "median": 674.0,
+      "min": 655.0,
+      "max": 734.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 27.5,
+    "ssp245": {
+      "median": 28.8,
+      "min": 28.1,
+      "max": 29.9
+    },
+    "ssp585": {
+      "median": 29.4,
+      "min": 29.3,
+      "max": 29.6
+    }
+  },
+  "risk": {
+    "score": 0.37,
+    "score_lo": 0.354,
+    "score_hi": 0.375,
+    "rank": 9,
+    "rank_lo": 4,
+    "rank_hi": 10,
+    "class": 2,
+    "rank_without_disputed": 5,
+    "top10_stability": 1.0,
+    "components": {
+      "range_loss": 0.18,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.988
+    },
+    "components_ci": {
+      "range_loss": [
+        0.142,
+        0.194
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Identification is probable; results describe Origanum vulgare L., which may not be the plant Dioscorides meant.",
+    "The Greek plant is subsp. hirtum; modelled at species level."
+  ]
+}

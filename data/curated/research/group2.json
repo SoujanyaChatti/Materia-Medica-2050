@@ -1,0 +1,561 @@
+[
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "slug": "hypericum-perforatum",
+    "greek_name": "ὑπερικόν",
+    "greek_translit": "hyperikon",
+    "dmm_book": 3,
+    "dmm_chapter": 154,
+    "accepted_name": "Hypericum perforatum L.",
+    "common_name_en": "St John's wort",
+    "family": "Hypericaceae",
+    "identification_confidence": "disputed",
+    "identification_source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CLXI, pp. 566-567 (finds no Hypericum matching ὑπερικόν exactly except H. barbatum Jacq.; Sibthorp's H. crispum 'less pertinent'; assigns H. perforatum to ἄσκυρον, cap. CLXII)",
+    "alternative_names": [
+      {
+        "name": "Hypericum barbatum Jacq.",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 567"
+      },
+      {
+        "name": "Hypericum crispum L. (= H. triquetrifolium Turra) (Sibthorp, as reported by Sprengel)",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 567"
+      }
+    ],
+    "conservation_category": "NE",
+    "conservation_source": "GBIF mirror of the IUCN Red List dataset (published 2026-07-28): NOT_EVALUATED for GBIF key 3189486",
+    "ema_monograph": "Hyperici herba",
+    "ema_use": "well-established; traditional",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/hyperici-herba-0",
+    "excerpt": "ὑπερικόν· οἱ δὲ ἀνδρόσαιμον, οἱ δὲ κόριον, οἱ δὲ χαμαίπιτυν διὰ τὸ τὴν περὶ τὸ σπέρμα ὀσμὴν ἐοικέναι ῥητίνῃ πιτυΐνῃ.",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/161",
+    "notes": "Wellmann vol. II p. 161, III 154. Sprengel equates H. perforatum with Dioscorides' ἄσκυρον (Wellmann III 155?, chapter number not verified), not with ὑπερικόν, so modelling H. perforatum for 'hyperikon' needs a caveat. H. perforatum subspecies (e.g. subsp. veronense) not checked for Greece. EMA: single-substance page lists document titles for Revision 1 covering 'well-established use and traditional use'; a separate EMA page covers a Hyperici herba + Cimicifugae rhizoma combination.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 154 lemma ὑπερικόν, page 161",
+        "url": "https://archive.org/details/b21459162_0002/page/161"
+      },
+      {
+        "claim": "Sprengel: no Hypericum matches except H. barbatum; H. perforatum = askyron",
+        "url": "https://archive.org/details/BIUSante_dioscsprengelx02"
+      },
+      {
+        "claim": "POWO accepted Hypericum perforatum L.",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:433719-1"
+      },
+      {
+        "claim": "WCVP: native in Greece and East Aegean Is.",
+        "url": "https://api.gbif.org/v1/species/207168025/distributions?limit=400"
+      },
+      {
+        "claim": "IUCN Not Evaluated",
+        "url": "https://api.gbif.org/v1/species/3189486/iucnRedListCategory"
+      },
+      {
+        "claim": "EMA Hyperici herba monograph, Hypericum perforatum L.",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/hyperici-herba-0"
+      }
+    ],
+    "unverified": [
+      "Beck 2005 translation not consulted (not openly accessible); identifications rest on Sprengel 1830 and on the Wellmann text itself",
+      "Staub, Casu & Leonti 2016 (Phytomedicine 23:1043-1052) supplementary identifications not accessible (paywalled; IRIS repository returned 403)",
+      "Flora of Greece web (portal.cybertaxonomy.org/flora-greece) blocked automated access (Anubis bot protection, 403 on API); nativeness/endemism taken from WCVP via GBIF instead, not from Dimopoulos et al. 2013",
+      "POWO pages could not be fetched directly (403); POWO URL, name, author and family were confirmed via search-result titles/snippets and cross-checked against WCVP on GBIF",
+      "No source found documenting wild harvesting of this species in Greece; wild_harvest_flag left false",
+      "Exact Wellmann chapter of ἄσκυρον not checked",
+      "Modern (post-1900) scholarly opinion on hyperikon not verified"
+    ]
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "slug": "matricaria-chamomilla",
+    "greek_name": "ἀνθεμίς",
+    "greek_translit": "anthemis (syn. chamaimēlon)",
+    "dmm_book": 3,
+    "dmm_chapter": 137,
+    "accepted_name": "Matricaria chamomilla L.",
+    "common_name_en": "German chamomile",
+    "family": "Asteraceae",
+    "identification_confidence": "disputed",
+    "identification_source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CXLIV, p. 559 (anthemis = three species by ray colour; Sibthorp: Anthemis chia, A. tinctoria, A. rosea; Lobel: Matricaria chamomilla / Anthemis nobilis for the white-rayed kind) and cap. CXLV, p. 560 (Sprengel himself identifies παρθένιον, Wellmann III 138, as Matricaria chamomilla)",
+    "alternative_names": [
+      {
+        "name": "Anthemis chia L.",
+        "source": "Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+      },
+      {
+        "name": "Anthemis tinctoria L. (= Cota tinctoria)",
+        "source": "Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+      },
+      {
+        "name": "Anthemis rosea Sibth. & Sm.",
+        "source": "Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+      },
+      {
+        "name": "Anthemis nobilis L. (= Chamaemelum nobile)",
+        "source": "Lobel per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+      },
+      {
+        "name": "Anacyclus aureus (yellow kind)",
+        "source": "Lobel per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+      }
+    ],
+    "conservation_category": "NE",
+    "conservation_source": "GBIF mirror of the IUCN Red List dataset (published 2026-07-28): NOT_EVALUATED for GBIF key 8370958",
+    "ema_monograph": "Matricariae flos; Matricariae aetheroleum",
+    "ema_use": "traditional",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/matricariae-flos",
+    "excerpt": "ἀνθεμίς· οἱ δὲ λευκάνθεμον, οἱ δὲ ἠράνθεμον, ἐπεὶ ἔαρος ἀνθεῖ, οἱ δὲ χαμαίμηλον διὰ τὴν πρὸς τὰ μῆλα ὁμοιότητα τῆς ὀσμῆς",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/145",
+    "notes": "Dioscoridean lemma is ἀνθεμίς (Wellmann III 137, pp. 145-146); χαμαίμηλον is given as a synonym 'because of its apple-like smell'. The chapter describes three kinds differing only in ray colour (white, yellow, purple), so a single-species mapping is weak. Sprengel instead identifies Matricaria chamomilla with παρθένιον (III 138), whose RV synonyms also include χαμαίμηλον and ἀνθεμίς. EMA lists the botanical name as Matricaria recutita L. (synonym of M. chamomilla per POWO).",
+    "evidence": [
+      {
+        "claim": "Wellmann III 137 lemma ἀνθεμίς, synonym χαμαίμηλον, three kinds",
+        "url": "https://archive.org/details/b21459162_0002/page/146"
+      },
+      {
+        "claim": "Sprengel commentary on anthemis and parthenion",
+        "url": "https://archive.org/details/BIUSante_dioscsprengelx02"
+      },
+      {
+        "claim": "POWO accepted Matricaria chamomilla L.; M. recutita synonym",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:154715-2"
+      },
+      {
+        "claim": "WCVP: native in Greece, Kriti, East Aegean Is.",
+        "url": "https://api.gbif.org/v1/species/206753115/distributions?limit=400"
+      },
+      {
+        "claim": "IUCN Not Evaluated",
+        "url": "https://api.gbif.org/v1/species/8370958/iucnRedListCategory"
+      },
+      {
+        "claim": "EMA Matricariae flos, traditional use",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/matricariae-flos"
+      }
+    ],
+    "unverified": [
+      "Beck 2005 translation not consulted (not openly accessible); identifications rest on Sprengel 1830 and on the Wellmann text itself",
+      "Staub, Casu & Leonti 2016 (Phytomedicine 23:1043-1052) supplementary identifications not accessible (paywalled; IRIS repository returned 403)",
+      "Flora of Greece web (portal.cybertaxonomy.org/flora-greece) blocked automated access (Anubis bot protection, 403 on API); nativeness/endemism taken from WCVP via GBIF instead, not from Dimopoulos et al. 2013",
+      "POWO pages could not be fetched directly (403); POWO URL, name, author and family were confirmed via search-result titles/snippets and cross-checked against WCVP on GBIF",
+      "No source found documenting wild harvesting of this species in Greece; wild_harvest_flag left false",
+      "Whether the project should map M. chamomilla to παρθένιον (III 138) instead is a judgement call, not resolved here"
+    ]
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "slug": "melissa-officinalis",
+    "greek_name": "μελισσόφυλλον",
+    "greek_translit": "melissophyllon",
+    "dmm_book": 3,
+    "dmm_chapter": 104,
+    "accepted_name": "Melissa officinalis L.",
+    "common_name_en": "Lemon balm",
+    "family": "Lamiaceae",
+    "identification_confidence": "probable",
+    "identification_source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CVIII, pp. 541-542 (index lists Melissa officinalis L. at p. 541; text cites Nicander, Virgil's melisphyllum and Varro's apiastrum)",
+    "alternative_names": [
+      {
+        "name": "Melissa altissima Sibth. (= M. officinalis subsp. altissima)",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, index p. 511 (context not read; listed only as a lead)"
+      }
+    ],
+    "conservation_category": "NE",
+    "conservation_source": "GBIF mirror of the IUCN Red List dataset (published 2026-07-28): NOT_EVALUATED for GBIF key 5341501",
+    "ema_monograph": "Melissae folium",
+    "ema_use": "traditional",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/melissae-folium",
+    "excerpt": "μελισσόφυλλον, ὃ ἔνιοι μελίτταιναν καλοῦσι διὰ τὸ ἥδεσθαι τῇ πόᾳ τὰς μελίσσας.",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/115",
+    "notes": "Wellmann III 104, p. 115. RV gives the Roman name apiastrum (ἀπιάστρουμ), consistent with Varro's apiastrum. Leaves said to smell of citron (κιτρομήλων). POWO accepts subsp. officinalis and subsp. inodora; Greek material is often referred to subsp. altissima (not verified here).",
+    "evidence": [
+      {
+        "claim": "Wellmann III 104 lemma μελισσόφυλλον, p. 115",
+        "url": "https://archive.org/details/b21459162_0002/page/115"
+      },
+      {
+        "claim": "Sprengel commentary cap. CVIII",
+        "url": "https://archive.org/details/BIUSante_dioscsprengelx02"
+      },
+      {
+        "claim": "POWO accepted Melissa officinalis L.",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:450084-1"
+      },
+      {
+        "claim": "WCVP: native in Greece, Kriti, East Aegean Is.",
+        "url": "https://api.gbif.org/v1/species/207237545/distributions?limit=400"
+      },
+      {
+        "claim": "IUCN Not Evaluated",
+        "url": "https://api.gbif.org/v1/species/5341501/iucnRedListCategory"
+      },
+      {
+        "claim": "EMA Melissae folium, traditional use",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/melissae-folium"
+      }
+    ],
+    "unverified": [
+      "Beck 2005 translation not consulted (not openly accessible); identifications rest on Sprengel 1830 and on the Wellmann text itself",
+      "Staub, Casu & Leonti 2016 (Phytomedicine 23:1043-1052) supplementary identifications not accessible (paywalled; IRIS repository returned 403)",
+      "Flora of Greece web (portal.cybertaxonomy.org/flora-greece) blocked automated access (Anubis bot protection, 403 on API); nativeness/endemism taken from WCVP via GBIF instead, not from Dimopoulos et al. 2013",
+      "POWO pages could not be fetched directly (403); POWO URL, name, author and family were confirmed via search-result titles/snippets and cross-checked against WCVP on GBIF",
+      "No source found documenting wild harvesting of this species in Greece; wild_harvest_flag left false",
+      "Sprengel's p. 541 OCR does not show the binomial in the running text; the attribution rests on his index entry"
+    ]
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "slug": "foeniculum-vulgare",
+    "greek_name": "μάραθον",
+    "greek_translit": "marathon (MSS also marathron)",
+    "dmm_book": 3,
+    "dmm_chapter": 70,
+    "accepted_name": "Foeniculum vulgare Mill.",
+    "common_name_en": "Fennel",
+    "family": "Apiaceae",
+    "identification_confidence": "certain",
+    "identification_source": "Wellmann 1906, vol. II p. 81, III 70 RV synonym: Romans call it φενούκλουμ (feniculum); Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. LXXIV, p. 524 (fennel; index: 'Meum Foeniculum Spr.')",
+    "alternative_names": [],
+    "conservation_category": "NE",
+    "conservation_source": "GBIF mirror of the IUCN Red List dataset (published 2026-07-28): NOT_EVALUATED for GBIF key 3034922",
+    "ema_monograph": "Foeniculi amari fructus; Foeniculi dulcis fructus; Foeniculi amari fructus aetheroleum",
+    "ema_use": "traditional",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/foeniculi-amari-fructus",
+    "excerpt": "μάραθον· τούτου ἐσθιομένη ἡ πόα δύναται γάλα κατασπᾶν, καὶ τὸ σπέρμα δὲ πινόμενον ἢ συνεψόμενον πτισάνῃ.",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/81",
+    "notes": "Wellmann prints μάραθον ('scripsi; nomen est antiquioris aetatis'); manuscripts' title has μαράθρου. EMA monographs are on bitter fennel (F. vulgare subsp. vulgare var. vulgare) and sweet fennel (var. dulce); wild Greek fennel is the bitter type (not verified). Hippomarathon is a separate chapter.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 70 lemma μάραθον, RV Roman name φενούκλουμ",
+        "url": "https://archive.org/details/b21459162_0002/page/81"
+      },
+      {
+        "claim": "Sprengel commentary cap. LXXIV, fennel",
+        "url": "https://archive.org/details/BIUSante_dioscsprengelx02"
+      },
+      {
+        "claim": "POWO accepted Foeniculum vulgare Mill.",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:842680-1"
+      },
+      {
+        "claim": "WCVP: native in Greece, Kriti, East Aegean Is.",
+        "url": "https://api.gbif.org/v1/species/206520674/distributions?limit=400"
+      },
+      {
+        "claim": "IUCN Not Evaluated",
+        "url": "https://api.gbif.org/v1/species/3034922/iucnRedListCategory"
+      },
+      {
+        "claim": "EMA sweet fennel: traditional use",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/foeniculi-dulcis-fructus"
+      }
+    ],
+    "unverified": [
+      "Beck 2005 translation not consulted (not openly accessible); identifications rest on Sprengel 1830 and on the Wellmann text itself",
+      "Staub, Casu & Leonti 2016 (Phytomedicine 23:1043-1052) supplementary identifications not accessible (paywalled; IRIS repository returned 403)",
+      "Flora of Greece web (portal.cybertaxonomy.org/flora-greece) blocked automated access (Anubis bot protection, 403 on API); nativeness/endemism taken from WCVP via GBIF instead, not from Dimopoulos et al. 2013",
+      "POWO pages could not be fetched directly (403); POWO URL, name, author and family were confirmed via search-result titles/snippets and cross-checked against WCVP on GBIF",
+      "No source found documenting wild harvesting of this species in Greece; wild_harvest_flag left false",
+      "ema_use 'traditional' confirmed in the sweet-fennel page text; bitter-fennel page use category not extracted"
+    ]
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "slug": "urtica-dioica",
+    "greek_name": "ἀκαλήφη",
+    "greek_translit": "akalēphē (syn. knidē)",
+    "dmm_book": 4,
+    "dmm_chapter": 93,
+    "accepted_name": "Urtica dioica L.",
+    "common_name_en": "Stinging nettle",
+    "family": "Urticaceae",
+    "identification_confidence": "probable",
+    "identification_source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. IV cap. XCII, p. 615 (the two kinds of ἀκαλήφη were recognised as Urtica urens and U. dioica by Brunfels and Tragus; Sprengel sees nothing to change)",
+    "alternative_names": [
+      {
+        "name": "Urtica urens L.",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 615"
+      }
+    ],
+    "conservation_category": "LC",
+    "conservation_source": "Maiz-Tome, L. 2016. Urtica dioica. The IUCN Red List of Threatened Species 2016 (global), doi:10.2305/IUCN.UK.2016-1.RLTS.T167815A78457212.en (via GBIF IUCN dataset)",
+    "ema_monograph": "Urticae folium; Urticae herba; Urticae radix",
+    "ema_use": "",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/urticae-folium",
+    "excerpt": "ἀκαλήφη· οἱ δὲ κνίδην. δισσὸν εἶδος ταύτης· ἡ μὲν γάρ ἐστιν ἀγριωτέρα, τραχυτέρα καὶ πλατυτέρα καὶ μελαντέρα τοῖς φύλλοις",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/251",
+    "notes": "Wellmann IV 93, p. 251. Dioscorides describes two kinds (a wilder, rougher, broader, darker-leaved one with flax-like seed, and a finer-seeded, less rough one), so the chapter covers more than one Urtica species. EMA monographs name both Urtica dioica L. and Urtica urens L.",
+    "evidence": [
+      {
+        "claim": "Wellmann IV 93 lemma ἀκαλήφη, two kinds",
+        "url": "https://archive.org/details/b21459162_0002/page/251"
+      },
+      {
+        "claim": "Sprengel: two kinds = U. urens and U. dioica",
+        "url": "https://archive.org/details/BIUSante_dioscsprengelx02"
+      },
+      {
+        "claim": "POWO accepted Urtica dioica L.",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:260630-2"
+      },
+      {
+        "claim": "WCVP: native in Greece, Kriti, East Aegean Is.",
+        "url": "https://api.gbif.org/v1/species/207861338/distributions?limit=400"
+      },
+      {
+        "claim": "IUCN LC 2016",
+        "url": "https://api.gbif.org/v1/species/176781543/distributions"
+      },
+      {
+        "claim": "EMA Urticae folium/herba/radix monographs (U. dioica, U. urens)",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/urticae-herba"
+      }
+    ],
+    "unverified": [
+      "Beck 2005 translation not consulted (not openly accessible); identifications rest on Sprengel 1830 and on the Wellmann text itself",
+      "Staub, Casu & Leonti 2016 (Phytomedicine 23:1043-1052) supplementary identifications not accessible (paywalled; IRIS repository returned 403)",
+      "Flora of Greece web (portal.cybertaxonomy.org/flora-greece) blocked automated access (Anubis bot protection, 403 on API); nativeness/endemism taken from WCVP via GBIF instead, not from Dimopoulos et al. 2013",
+      "POWO pages could not be fetched directly (403); POWO URL, name, author and family were confirmed via search-result titles/snippets and cross-checked against WCVP on GBIF",
+      "No source found documenting wild harvesting of this species in Greece; wild_harvest_flag left false",
+      "EMA use category (well-established vs traditional) for the three Urtica monographs not extracted",
+      "Modern proposals that the 'wilder' kind is Urtica pilulifera L. were not verified in any source opened here"
+    ]
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "slug": "marrubium-vulgare",
+    "greek_name": "πράσιον",
+    "greek_translit": "prasion",
+    "dmm_book": 3,
+    "dmm_chapter": 105,
+    "accepted_name": "Marrubium vulgare L.",
+    "common_name_en": "White horehound",
+    "family": "Lamiaceae",
+    "identification_confidence": "probable",
+    "identification_source": "Wellmann 1906, vol. II p. 116, III 105 RV: Romans call it μαρρούβιουμ (marrubium); Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CIX, p. 542 (Theophrastus' two kinds = Marrubium catariifolium Desr. and M. vulgare L.)",
+    "alternative_names": [
+      {
+        "name": "Marrubium catariifolium Desr. (= M. peregrinum?)",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 542 (for one of Theophrastus' two kinds)"
+      }
+    ],
+    "conservation_category": "NE",
+    "conservation_source": "GBIF mirror of the IUCN Red List dataset (published 2026-07-28): NOT_EVALUATED for GBIF key 2927069",
+    "ema_monograph": "Marrubii herba",
+    "ema_use": "traditional",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/marrubii-herba",
+    "excerpt": "πράσιον, οἱ δὲ φιλοφαρές· θάμνος ἐστὶν ἀπὸ μιᾶς",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/116",
+    "notes": "Wellmann III 105 begins at foot of p. 116; only the opening line was read from the scan. Sprengel's p. 542 discussion of the two kinds is about Theophrastus; he does not explicitly state which kind Dioscorides meant.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 105 lemma πράσιον, RV Roman name μαρρούβιουμ",
+        "url": "https://archive.org/details/b21459162_0002/page/116"
+      },
+      {
+        "claim": "Sprengel cap. CIX on marrubium",
+        "url": "https://archive.org/details/BIUSante_dioscsprengelx02"
+      },
+      {
+        "claim": "POWO accepted Marrubium vulgare L.",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:449990-1"
+      },
+      {
+        "claim": "WCVP: native in Greece, Kriti, East Aegean Is.",
+        "url": "https://api.gbif.org/v1/species/207237753/distributions?limit=400"
+      },
+      {
+        "claim": "IUCN Not Evaluated",
+        "url": "https://api.gbif.org/v1/species/2927069/iucnRedListCategory"
+      },
+      {
+        "claim": "EMA Marrubii herba, traditional use",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/marrubii-herba"
+      }
+    ],
+    "unverified": [
+      "Beck 2005 translation not consulted (not openly accessible); identifications rest on Sprengel 1830 and on the Wellmann text itself",
+      "Staub, Casu & Leonti 2016 (Phytomedicine 23:1043-1052) supplementary identifications not accessible (paywalled; IRIS repository returned 403)",
+      "Flora of Greece web (portal.cybertaxonomy.org/flora-greece) blocked automated access (Anubis bot protection, 403 on API); nativeness/endemism taken from WCVP via GBIF instead, not from Dimopoulos et al. 2013",
+      "POWO pages could not be fetched directly (403); POWO URL, name, author and family were confirmed via search-result titles/snippets and cross-checked against WCVP on GBIF",
+      "No source found documenting wild harvesting of this species in Greece; wild_harvest_flag left false",
+      "Accepted name of Sprengel's 'Marrubium catariifolium Desr.' not checked in POWO"
+    ]
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "slug": "centaurium-erythraea",
+    "greek_name": "κενταύρειον τὸ λεπτὸν ἢ μικρόν",
+    "greek_translit": "kentaureion to lepton ē mikron",
+    "dmm_book": 3,
+    "dmm_chapter": 7,
+    "accepted_name": "Centaurium erythraea Rafn",
+    "common_name_en": "Common centaury",
+    "family": "Gentianaceae",
+    "identification_confidence": "certain",
+    "identification_source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. VII, pp. 494-495 ('De Centaurio minori, Erythraea scilicet Centaurio Pers., nulla exstitit unquam dubitatio'); Wellmann III 7 RV: Romans call it φεβριφούγιαμ (febrifugia)",
+    "alternative_names": [],
+    "conservation_category": "LC",
+    "conservation_source": "Lansdown, R.V. 2013. Centaurium erythraea. The IUCN Red List of Threatened Species 2013 (global), doi:10.2305/IUCN.UK.2013-1.RLTS.T202950A16703434.en (via GBIF IUCN dataset)",
+    "ema_monograph": "Centaurii herba",
+    "ema_use": "traditional",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/centaurii-herba",
+    "excerpt": "κενταύρειον τὸ λεπτὸν ἢ μικρόν, ὅ τινες λιμνήσιον καλοῦσιν, ἐπειδὴ ἐνίκμους φιλεῖ τόπους.",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/12",
+    "notes": "Wellmann spells the lemma κενταύρειον (not κενταύριον). Plant compared to hypericum and origanum, flowers 'red-purple like lychnis', bitter taste. EMA botanical name is Centaurium erythraea Rafn s.l.; Sprengel's Erythraea centaurium Pers. is a synonym. Subspecies (e.g. subsp. rhodense in Greece) not checked.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 7 lemma, p. 12",
+        "url": "https://archive.org/details/b21459162_0002/page/12"
+      },
+      {
+        "claim": "Sprengel: no doubt it is Erythraea centaurium",
+        "url": "https://archive.org/details/BIUSante_dioscsprengelx02"
+      },
+      {
+        "claim": "POWO accepted Centaurium erythraea Rafn",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:326619-2"
+      },
+      {
+        "claim": "WCVP: native in Greece, Kriti, East Aegean Is.",
+        "url": "https://api.gbif.org/v1/species/207132064/distributions?limit=400"
+      },
+      {
+        "claim": "IUCN LC 2013",
+        "url": "https://api.gbif.org/v1/species/176786131/distributions"
+      },
+      {
+        "claim": "EMA Centaurii herba, traditional use",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/centaurii-herba"
+      }
+    ],
+    "unverified": [
+      "Beck 2005 translation not consulted (not openly accessible); identifications rest on Sprengel 1830 and on the Wellmann text itself",
+      "Staub, Casu & Leonti 2016 (Phytomedicine 23:1043-1052) supplementary identifications not accessible (paywalled; IRIS repository returned 403)",
+      "Flora of Greece web (portal.cybertaxonomy.org/flora-greece) blocked automated access (Anubis bot protection, 403 on API); nativeness/endemism taken from WCVP via GBIF instead, not from Dimopoulos et al. 2013",
+      "POWO pages could not be fetched directly (403); POWO URL, name, author and family were confirmed via search-result titles/snippets and cross-checked against WCVP on GBIF",
+      "No source found documenting wild harvesting of this species in Greece; wild_harvest_flag left false"
+    ]
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "slug": "plantago-lanceolata",
+    "greek_name": "ἀρνόγλωσσον",
+    "greek_translit": "arnoglōsson",
+    "dmm_book": 2,
+    "dmm_chapter": 126,
+    "accepted_name": "Plantago lanceolata L.",
+    "common_name_en": "Ribwort plantain",
+    "family": "Plantaginaceae",
+    "identification_confidence": "disputed",
+    "identification_source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. II cap. CLII, p. 465 (the larger arnoglosson is usually taken as Plantago major, but Sprengel prefers P. asiatica or P. altissima Jacq.; the smaller was P. lagopus for Sibthorp, P. lanceolata for the 'fathers of botany', P. maritima for Sprengel)",
+    "alternative_names": [
+      {
+        "name": "Plantago major L. (larger kind, majority view)",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465"
+      },
+      {
+        "name": "Plantago lagopus L. (smaller kind)",
+        "source": "Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465"
+      },
+      {
+        "name": "Plantago maritima L. (smaller kind)",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465"
+      },
+      {
+        "name": "Plantago asiatica L. / P. altissima Jacq. (larger kind)",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465"
+      }
+    ],
+    "conservation_category": "NE",
+    "conservation_source": "GBIF mirror of the IUCN Red List dataset (published 2026-07-28): NOT_EVALUATED for GBIF key 8208358 (Plantago major, key 3189767, is LC: Maiz-Tome 2016)",
+    "ema_monograph": "Plantaginis lanceolatae folium",
+    "ema_use": "",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/plantaginis-lanceolatae-folium",
+    "excerpt": "ἀρνόγλωσσον, οἱ δὲ ἑπτάπλευρον, οἱ δὲ πολύπλευρον· διττόν ἐστι, τὸ μὲν μικρὸν τὸ δὲ μεῖζον.",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0001/page/198",
+    "notes": "Wellmann vol. I p. 198, II 126. Two kinds: the smaller with narrower, smaller, smoother leaves and the larger, broad-leaved and 'vegetable-like'. P. lanceolata fits only the smaller kind, and even that is disputed; P. major is the conventional reading of the larger kind. Both are native in Greece (WCVP).",
+    "evidence": [
+      {
+        "claim": "Wellmann II 126 lemma ἀρνόγλωσσον, two kinds",
+        "url": "https://archive.org/details/b21459162_0001/page/198"
+      },
+      {
+        "claim": "Sprengel commentary on arnoglosson",
+        "url": "https://archive.org/details/BIUSante_dioscsprengelx02"
+      },
+      {
+        "claim": "POWO accepted Plantago lanceolata L.",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:321285-2/general-information"
+      },
+      {
+        "claim": "WCVP: P. lanceolata native in Greece, Kriti, East Aegean Is.",
+        "url": "https://api.gbif.org/v1/species/207500436/distributions?limit=400"
+      },
+      {
+        "claim": "IUCN Not Evaluated (P. lanceolata)",
+        "url": "https://api.gbif.org/v1/species/8208358/iucnRedListCategory"
+      },
+      {
+        "claim": "EMA Plantaginis lanceolatae folium monograph",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/plantaginis-lanceolatae-folium"
+      }
+    ],
+    "unverified": [
+      "Beck 2005 translation not consulted (not openly accessible); identifications rest on Sprengel 1830 and on the Wellmann text itself",
+      "Staub, Casu & Leonti 2016 (Phytomedicine 23:1043-1052) supplementary identifications not accessible (paywalled; IRIS repository returned 403)",
+      "Flora of Greece web (portal.cybertaxonomy.org/flora-greece) blocked automated access (Anubis bot protection, 403 on API); nativeness/endemism taken from WCVP via GBIF instead, not from Dimopoulos et al. 2013",
+      "POWO pages could not be fetched directly (403); POWO URL, name, author and family were confirmed via search-result titles/snippets and cross-checked against WCVP on GBIF",
+      "No source found documenting wild harvesting of this species in Greece; wild_harvest_flag left false",
+      "EMA use category for Plantaginis lanceolatae folium not stated on the page"
+    ]
+  }
+]

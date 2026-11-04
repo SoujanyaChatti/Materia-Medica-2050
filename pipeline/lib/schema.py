@@ -56,5 +56,14 @@ def validate_export(data_dir: Path = config.SITE_DATA) -> list[str]:
             check("feature_collection", p)
             if p.exists() and p.stat().st_size > 300_000:
                 problems.append(f"{p.relative_to(data_dir)}: {p.stat().st_size} bytes exceeds 300 KB")
-    check("feature_collection", data_dir / "layers" / "greece_risk_grid.geojson")
+    grid = data_dir / "layers" / "greece_risk_grid.geojson"
+    check("feature_collection", grid)
+    cells = data_dir / "layers" / "greece_risk_cells.json"
+    if not cells.exists():
+        problems.append("layers/greece_risk_cells.json missing")
+    for f in (grid, cells):
+        if f.exists() and f.stat().st_size > 300_000:
+            problems.append(f"{f.relative_to(data_dir)}: {f.stat().st_size} bytes exceeds 300 KB")
+    if False:
+        problems.append(f"layers/greece_risk_grid.geojson: {grid.stat().st_size} bytes exceeds 300 KB")
     return problems

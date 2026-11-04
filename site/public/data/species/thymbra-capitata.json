@@ -1,1 +1,134 @@
-{"slug":"thymbra-capitata","accepted_name":"Thymbra capitata (L.) Cav.","common_name_en":"Capitate thyme","family":"Lamiaceae","dioscorides":{"book":3,"chapter":null,"greek_name":"θύμος","greek_translit":"thymos","excerpt":null,"paraphrase":null,"paraphrase_ai_assisted":false,"edition":"Wellmann 1906–1914"},"identification":{"confidence":"probable","source":"[Author, year, page]","note":null,"reviewed_by":"[historian, initials]","alternatives":[]},"endemic_greece":false,"endemic_region":null,"conservation_status":{"category":"LC","source":"IUCN Red List [sample]"},"ema_monograph":null,"records":{"raw":1368,"clean":380,"thinned":380,"public_cells":159,"low_confidence_model":false},"model":{"auc_mean":0.82,"auc_sd":0.04,"boyce_mean":0.6,"boyce_sd":0.08,"tss_mean":0.55,"tss_sd":0.06,"null_auc_mean":0.5,"variables":["bio1","bio12","bio5","bio15","elevation","slope"]},"range_change_pct":{"ssp245":{"median":-8,"min":3,"max":-19},"ssp585":{"median":-10,"min":4,"max":-25}},"range_cells":{"now":349,"ssp245":{"median":321,"min":359,"max":283},"ssp585":{"median":314,"min":363,"max":262}},"natura_share_pct":{"now":16.6,"ssp245":{"median":22.6,"min":14.6,"max":30.6},"ssp585":{"median":22.6,"min":14.6,"max":30.6}},"risk":{"score":0.132,"score_lo":0.1,"score_hi":0.176,"rank":7,"rank_lo":5,"rank_hi":7,"class":1,"rank_without_disputed":6,"top10_stability":1,"components":{"range_loss":0.08,"endemism":0,"status":0,"harvest":0.5},"components_ci":{"range_loss":[0,0.19],"harvest":[0.35,0.6]}},"cultivation_area_km2":19730,"cultivation_area_km2_range":{"min":15390,"max":24060},"caveats":["The identification is probable, not certain; results describe Thymbra capitata, which may not be the plant Dioscorides meant.","Wild and cultivated records are hard to separate in occurrence databases; some cells may reflect cultivation.","Habitat suitability is not presence. The model omits dispersal limits, soils and grazing.","Harvest pressure is estimated from accessibility (distance to roads and villages), not field surveys."]}
+{
+  "slug": "thymbra-capitata",
+  "accepted_name": "Thymbra capitata (L.) Cav.",
+  "common_name_en": "Conehead thyme",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 36,
+    "greek_name": "θύμος",
+    "greek_translit": "thymos",
+    "excerpt": "θύμος· γινώσκεται ὑπὸ πάντων. θαμνίσκιον φρυγανοειδές, φυλλαρίοις στενοῖς καὶ πολλοῖς περιειλημμένον, ἔχον ἐπ᾿ ἄκρου κεφάλια ἄνθους ⟨περίπλεα⟩, πορφυρίζοντα.",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), p. 48 (⟨περίπλεα⟩ is Wellmann's supplement)",
+    "excerpt_url": "https://archive.org/details/BIUSante_65865x02/page/n75/mode/1up"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Sprengel 1830, vol. 2, pp. 511-512 (Comm. III cap. XXXVIII): 'Thymum Dioscoridis legitimum, quem Brunfelsius, Tragus ac Fuchsius pro Thymo vulgari habuerant, Matthiolus primus in Thymo cretico Brot. (Satureia capitata L.) recognovisse videtur'; describes the plant, abundant on Hymettus. Satureia capitata L. is the basionym-era name of Thymbra capitata. 'probable' because Sprengel records the earlier rival identification (Thymus vulgaris) and says 'videtur'. | Fraas 1845, p. 174: 'Sat. capitata L., Satureystrauch' = θύμος Hippocr., λευκὸς θύμος Theophr. 6,1,2, θύμος Diosc. 3,38; modern θυμάρι 'frequentiss. appellatio'; very common scrub on dry plains, hills and foothills to 2500 ft throughout. Osbaldeston 2000, ch. 3-44 THUMOS: SUGGESTED Thymus angustifolius, Thymus glaber (Wild Thyme) - a competing candidate. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n512/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n219/mode/1up)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Thymus vulgaris L.",
+        "source": "Brunfels, Tragus, Fuchs, cited (superseded) by Sprengel 1830, vol. 2, p. 511"
+      },
+      {
+        "name": "Thymus angustifolius / Thymus glaber",
+        "source": "Osbaldeston 2000, ch. 3-44"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 1980,
+    "clean": 1859,
+    "thinned": 1291,
+    "public_cells": 442,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.848,
+    "auc_sd": 0.022,
+    "boyce_mean": 0.951,
+    "boyce_sd": 0.027,
+    "tss_mean": 0.569,
+    "tss_sd": 0.045,
+    "null_auc_mean": 0.504,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 7.5,
+      "min": 3.1,
+      "max": 9.1
+    },
+    "ssp585": {
+      "median": 18.8,
+      "min": 13.2,
+      "max": 26.6
+    }
+  },
+  "range_cells": {
+    "now": 765,
+    "ssp245": {
+      "median": 760.0,
+      "min": 717.0,
+      "max": 773.0
+    },
+    "ssp585": {
+      "median": 830.0,
+      "min": 766.0,
+      "max": 872.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 20.9,
+    "ssp245": {
+      "median": 23.3,
+      "min": 22.9,
+      "max": 23.4
+    },
+    "ssp585": {
+      "median": 23.8,
+      "min": 22.9,
+      "max": 24.1
+    }
+  },
+  "risk": {
+    "score": 0.283,
+    "score_lo": 0.283,
+    "score_hi": 0.283,
+    "rank": 24,
+    "rank_lo": 20,
+    "rank_hi": 27,
+    "class": 2,
+    "rank_without_disputed": 15,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.916
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 971,
+  "cultivation_area_km2_range": {
+    "min": 670,
+    "max": 1270
+  },
+  "caveats": [
+    "Identification is probable; results describe Thymbra capitata (L.) Cav., which may not be the plant Dioscorides meant."
+  ]
+}

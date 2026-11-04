@@ -1,0 +1,433 @@
+[
+  {
+    "slug": "teucrium-capitatum",
+    "greek_name": "πόλιον",
+    "greek_translit": "polion",
+    "dmm_book": 3,
+    "dmm_chapter": 110,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Teucrium capitatum L.",
+    "common_name_en": "",
+    "family": "Lamiaceae",
+    "identification_confidence": "",
+    "identification_source": "",
+    "alternative_names": [],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt": "πόλιον· τὸ μέν ἐστιν ὀρεινόν, ὃ καὶ τεύθριον καλεῖται, οὗ καὶ ἡ χρῆσις. θαμνίον δέ ἐστι λευκόν, λεπτόφυλλον, σπιθαμιαῖον, καρποῦ πλῆρες",
+    "excerpt_edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. II (Berlin 1906), p. 121; read off the archive.org page image (item b21459162_0002) and cross-checked against two OCR layers; ϑ printed as θ",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/n152/mode/1up",
+    "notes": "Wellmann III 110 (page header 'III 109, 2. 110', p. 121). The chapter covers two kinds: the mountain kind (ὀρεινόν, also called τεύθριον) and a second, more shrubby and weaker kind. In WCVP, Teucrium polium L. is restricted to the W Mediterranean (Spain, France, Corse, NW Africa), while T. capitatum L. is accepted and native to Greece, Kriti and the East Aegean. Dimopoulos et al. 2013, Appendix III: 'Teucrium polium s.str. is confined to the W Mediterranean area and in Greece is replaced by T. capitatum (Greuter & al. 1986: 376)'. Earlier Greek records of T. polium refer to T. capitatum. Model on GBIF speciesKey 7308670 (Teucrium capitatum), not 3887764 (T. polium). Checklist entry: 'Teucrium capitatum L.', present in all 13 Greek floristic regions, chorology Me, not endemic.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 110 lemma πόλιον (page image p.121)",
+        "url": "https://archive.org/details/b21459162_0002/page/n152/mode/1up"
+      },
+      {
+        "claim": "WCVP: T. capitatum L. accepted, Lamiaceae, native in Greece/Kriti/East Aegean",
+        "url": "https://api.gbif.org/v1/species/207204490"
+      },
+      {
+        "claim": "WCVP: T. polium L. distribution limited to W Mediterranean",
+        "url": "https://api.gbif.org/v1/species/207203082/distributions"
+      },
+      {
+        "claim": "Dimopoulos et al. 2013: T. polium auct. fl. graec. = T. capitatum; T. capitatum in all 13 regions, native, not endemic",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "POWO URL (IPNI 460297-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:460297-1"
+      }
+    ],
+    "unverified": [
+      "The POWO website (powo.science.kew.org) returned 403 / a Cloudflare challenge. The accepted name and family come from WCVP, the dataset behind POWO, read through the GBIF checklist API (dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, pubDate 2026-06-04). The POWO URL is built from the IPNI ID returned by the ipni.org API; the URL was not opened.",
+      "The Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) and its CDM API blocked automated access. Native, endemic and Greek-distribution status were taken from the Dimopoulos et al. 2013 checklist PDF (Englera 31), downloaded via doi 10.3372/en.31.",
+      "No identification source (Beck 2005, Staub et al. 2016, André, Hardy & Totelin) was opened in this session, so identification_confidence and identification_source are blank.",
+      "IUCN Red List: not checked in this session.",
+      "EMA/HMPC: one site:ema.europa.eu search surfaced monographs only for Origanum majorana and Origanum dictamnus (different species) and nothing for the other genera. That does not prove absence, so ema_* is left blank.",
+      "Wild harvesting in Greece: no source opened in this session."
+    ]
+  },
+  {
+    "slug": "teucrium-chamaedrys",
+    "greek_name": "χαμαίδρυς",
+    "greek_translit": "chamaidrys",
+    "dmm_book": 3,
+    "dmm_chapter": 98,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Teucrium chamaedrys L.",
+    "common_name_en": "",
+    "family": "Lamiaceae",
+    "identification_confidence": "",
+    "identification_source": "",
+    "alternative_names": [],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt": "χαμαίρωψ ἢ χαμαίδρυς ἢ λινόδρυς· οἱ δὲ καὶ ταύτην Τεύκριον καλοῦσι διὰ τὸ σῴζειν ἐμφέρειαν ποσὴν πρὸς Τεύκριον· φύεται ἐν τραχέσι καὶ πετρώδεσι χωρίοις.",
+    "excerpt_edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. II (Berlin 1906), p. 110; read off the archive.org page image (item b21459162_0002) and cross-checked against two OCR layers; ϑ printed as θ",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/n141/mode/1up",
+    "notes": "Wellmann III 98 (p. 110). Wellmann's lemma is 'χαμαίρωψ ἢ χαμαίδρυς ἢ λινόδρυς'. The RV synonym list starts 'χαμαίδρυς μικρὸς ἢ χαμαίρωψ'. Dimopoulos et al. 2013 lists Teucrium chamaedrys L. in 11 of 13 Greek regions (chorology Me) with subspecies; T. chamaedrys subsp. parviflorum is sunk into subsp. chamaedrys. WCVP accepts T. chamaedrys, native in Greece. GBIF speciesKey 6411747.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 98 lemma (page image p.110)",
+        "url": "https://archive.org/details/b21459162_0002/page/n141/mode/1up"
+      },
+      {
+        "claim": "WCVP accepted, native Greece",
+        "url": "https://api.gbif.org/v1/species/search?datasetKey=f382f0ce-323a-4091-bb9f-add557f3a9a2&q=Teucrium%20chamaedrys"
+      },
+      {
+        "claim": "Dimopoulos et al. 2013 Floristic catalogue entry",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "POWO URL (IPNI 460310-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:460310-1"
+      }
+    ],
+    "unverified": [
+      "The POWO website (powo.science.kew.org) returned 403 / a Cloudflare challenge. The accepted name and family come from WCVP, the dataset behind POWO, read through the GBIF checklist API (dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, pubDate 2026-06-04). The POWO URL is built from the IPNI ID returned by the ipni.org API; the URL was not opened.",
+      "The Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) and its CDM API blocked automated access. Native, endemic and Greek-distribution status were taken from the Dimopoulos et al. 2013 checklist PDF (Englera 31), downloaded via doi 10.3372/en.31.",
+      "No identification source (Beck 2005, Staub et al. 2016, André, Hardy & Totelin) was opened in this session, so identification_confidence and identification_source are blank.",
+      "IUCN Red List: not checked in this session.",
+      "EMA/HMPC: one site:ema.europa.eu search surfaced monographs only for Origanum majorana and Origanum dictamnus (different species) and nothing for the other genera. That does not prove absence, so ema_* is left blank.",
+      "Wild harvesting in Greece: no source opened in this session."
+    ]
+  },
+  {
+    "slug": "origanum-vulgare",
+    "greek_name": "ὀρίγανος Ἡρακλεωτική",
+    "greek_translit": "origanos herakleōtikē",
+    "dmm_book": 3,
+    "dmm_chapter": 27,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Origanum vulgare L.",
+    "common_name_en": "",
+    "family": "Lamiaceae",
+    "identification_confidence": "",
+    "identification_source": "",
+    "alternative_names": [],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt": "ὀρίγανος Ἡρακλεωτική· οἱ δὲ κονίλην καλοῦσι. φύλλον ἔχει ἐμφερὲς ὑσσώπῳ, σκιάδιον δὲ οὐ τροχοειδές, ἀλλ' ὥσπερ διῃρημένον",
+    "excerpt_edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. II (Berlin 1906), p. 37; read off the archive.org page image (item b21459162_0002) and cross-checked against two OCR layers; ϑ printed as θ",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/n68/mode/1up",
+    "notes": "Wellmann III 27 (p. 37). In Wellmann the lemma is feminine: ὀρίγανος Ἡρακλεωτική. The Greek plant is O. vulgare subsp. hirtum (Link) A.Terracc. (accepted in WCVP, native in Greece, Kriti and the East Aegean). In Dimopoulos et al. 2013, O. hirtum Link and O. smyrnaeum auct. are synonyms of subsp. hirtum, while Origanum heracleoticum L. is a synonym of O. vulgare subsp. viridulum. That Linnaean name is a nomenclatural echo of Dioscorides, not evidence for the identification. O. vulgare L. is listed in all 13 Greek regions (chorology EA). Model at species level: GBIF speciesKey 2926612.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 27 (page image p.37)",
+        "url": "https://archive.org/details/b21459162_0002/page/n68/mode/1up"
+      },
+      {
+        "claim": "WCVP: O. vulgare subsp. hirtum accepted, native Greece",
+        "url": "https://api.gbif.org/v1/species/207234296"
+      },
+      {
+        "claim": "Dimopoulos et al. 2013 entries for O. vulgare and synonyms",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "POWO URL (IPNI 453395-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:453395-1"
+      }
+    ],
+    "unverified": [
+      "The POWO website (powo.science.kew.org) returned 403 / a Cloudflare challenge. The accepted name and family come from WCVP, the dataset behind POWO, read through the GBIF checklist API (dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, pubDate 2026-06-04). The POWO URL is built from the IPNI ID returned by the ipni.org API; the URL was not opened.",
+      "The Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) and its CDM API blocked automated access. Native, endemic and Greek-distribution status were taken from the Dimopoulos et al. 2013 checklist PDF (Englera 31), downloaded via doi 10.3372/en.31.",
+      "No identification source (Beck 2005, Staub et al. 2016, André, Hardy & Totelin) was opened in this session, so identification_confidence and identification_source are blank.",
+      "IUCN Red List: not checked in this session.",
+      "EMA/HMPC: one site:ema.europa.eu search surfaced monographs only for Origanum majorana and Origanum dictamnus (different species) and nothing for the other genera. That does not prove absence, so ema_* is left blank.",
+      "Wild harvesting in Greece: no source opened in this session."
+    ]
+  },
+  {
+    "slug": "mentha-pulegium",
+    "greek_name": "γλήχων",
+    "greek_translit": "glēchōn",
+    "dmm_book": 3,
+    "dmm_chapter": 31,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Mentha pulegium L.",
+    "common_name_en": "pennyroyal",
+    "family": "Lamiaceae",
+    "identification_confidence": "",
+    "identification_source": "",
+    "alternative_names": [],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt": "γλήχων· πόα γνώριμος, θερμαντική, λεπτυντική, πεπτική. ποθεῖσα δὲ ἔμμηνα καὶ δεύτερα καὶ ἔμβρυα ἄγει·",
+    "excerpt_edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. II (Berlin 1906), p. 40; read off the archive.org page image (item b21459162_0002) and cross-checked against two OCR layers; ϑ printed as θ",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/n71/mode/1up",
+    "notes": "Wellmann III 31 (p. 40). Dimopoulos et al. 2013 lists M. pulegium in all 13 regions (chorology Me) and sinks subsp. cephalonia, erinoides, pulegioides and tomentosa into it. WCVP accepts it as native in Greece, Kriti and the East Aegean. GBIF speciesKey 2927189. IPNI has two records for 'Mentha pulegium L.' (451022-1 and 30038400-2). The POWO URL uses 451022-1, which was not verified on POWO.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 31 (page image p.40)",
+        "url": "https://archive.org/details/b21459162_0002/page/n71/mode/1up"
+      },
+      {
+        "claim": "Dimopoulos et al. 2013 entry",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "POWO URL (IPNI 451022-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:451022-1"
+      }
+    ],
+    "unverified": [
+      "The POWO website (powo.science.kew.org) returned 403 / a Cloudflare challenge. The accepted name and family come from WCVP, the dataset behind POWO, read through the GBIF checklist API (dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, pubDate 2026-06-04). The POWO URL is built from the IPNI ID returned by the ipni.org API; the URL was not opened.",
+      "The Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) and its CDM API blocked automated access. Native, endemic and Greek-distribution status were taken from the Dimopoulos et al. 2013 checklist PDF (Englera 31), downloaded via doi 10.3372/en.31.",
+      "No identification source (Beck 2005, Staub et al. 2016, André, Hardy & Totelin) was opened in this session, so identification_confidence and identification_source are blank.",
+      "IUCN Red List: not checked in this session.",
+      "EMA/HMPC: one site:ema.europa.eu search surfaced monographs only for Origanum majorana and Origanum dictamnus (different species) and nothing for the other genera. That does not prove absence, so ema_* is left blank.",
+      "Wild harvesting in Greece: no source opened in this session."
+    ]
+  },
+  {
+    "slug": "capparis-spinosa",
+    "greek_name": "κάππαρις",
+    "greek_translit": "kapparis",
+    "dmm_book": 2,
+    "dmm_chapter": 173,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Capparis spinosa L.",
+    "common_name_en": "caper",
+    "family": "Capparaceae",
+    "identification_confidence": "",
+    "identification_source": "",
+    "alternative_names": [],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt": "κάππαρις· οἱ δὲ κυνόσβατον, οἱ δὲ καπρίαν, οἱ δὲ κόρακος μῆλον, […] θάμνος ἐστὶν ἀκανθώδης, ἐπὶ γῆς γυροειδῶς ἐστρωμένος, ἀκάνθας ἀγκιστροειδεῖς ἔχων ὡς βάτος",
+    "excerpt_edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. I (Berlin 1907), p. 240; read off the archive.org page image (item b21459162_0001; the OCR of this volume is not usable Greek); ϑ printed as θ",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0001/page/n251/mode/1up",
+    "notes": "Wellmann II 173 (p. 240). Taxonomic caveat: Dimopoulos et al. 2013 splits Greek capers into C. orientalis Veill. (most regions), C. sicula Veill. and C. zoharyi Inocencio & al. It lists C. spinosa L. s.str. with '?' in most regions and comments that it is a hybridogenous nothotaxon, mainly cultivated or feral (Inocencio & al. 2006). WCVP (and therefore POWO) instead treats all of these within C. spinosa: C. orientalis is a synonym of C. spinosa subsp. rupestris, C. sicula of var. canescens and C. zoharyi of subsp. aegyptia. C. spinosa s.l. is native in Greece, Kriti and the East Aegean. GBIF caveat: the backbone treats C. sicula, C. zoharyi and C. rupestris as synonyms of C. spinosa (speciesKey 6370689), but C. orientalis Duhamel as a SEPARATE accepted species (speciesKey 5601705). Greek occurrence records may therefore be split, and the pipeline should consider merging key 5601705.",
+    "evidence": [
+      {
+        "claim": "Wellmann II 173 (page image p.240)",
+        "url": "https://archive.org/details/b21459162_0001/page/n251/mode/1up"
+      },
+      {
+        "claim": "Dimopoulos et al. 2013 Capparaceae entries and Appendix III comment on C. spinosa s.str.",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "GBIF backbone: Capparis orientalis accepted, key 5601705",
+        "url": "https://api.gbif.org/v1/species/match?name=Capparis%20orientalis&kingdom=Plantae"
+      },
+      {
+        "claim": "POWO URL (IPNI 146789-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:146789-1"
+      }
+    ],
+    "unverified": [
+      "The POWO website (powo.science.kew.org) returned 403 / a Cloudflare challenge. The accepted name and family come from WCVP, the dataset behind POWO, read through the GBIF checklist API (dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, pubDate 2026-06-04). The POWO URL is built from the IPNI ID returned by the ipni.org API; the URL was not opened.",
+      "The Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) and its CDM API blocked automated access. Native, endemic and Greek-distribution status were taken from the Dimopoulos et al. 2013 checklist PDF (Englera 31), downloaded via doi 10.3372/en.31.",
+      "No identification source (Beck 2005, Staub et al. 2016, André, Hardy & Totelin) was opened in this session, so identification_confidence and identification_source are blank.",
+      "IUCN Red List: not checked in this session.",
+      "EMA/HMPC: one site:ema.europa.eu search surfaced monographs only for Origanum majorana and Origanum dictamnus (different species) and nothing for the other genera. That does not prove absence, so ema_* is left blank.",
+      "Wild harvesting in Greece: no source opened in this session.",
+      "Native status of C. spinosa s.str. in Greece is doubtful per Dimopoulos 2013; native only in the broad (WCVP) sense."
+    ]
+  },
+  {
+    "slug": "lavandula-stoechas",
+    "greek_name": "στοιχάς",
+    "greek_translit": "stoichas",
+    "dmm_book": 3,
+    "dmm_chapter": 26,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Lavandula stoechas L.",
+    "common_name_en": "French / topped lavender",
+    "family": "Lamiaceae",
+    "identification_confidence": "",
+    "identification_source": "",
+    "alternative_names": [],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt": "στοιχάς· γεννᾶται μὲν ἐν ταῖς κατὰ Γαλατίαν νήσοις κατ' ἀντικρὺς Μασσαλίας, καλουμέναις Στοιχάσιν, ὅθεν καὶ τὴν ὀνομασίαν ἔσχεν·",
+    "excerpt_edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. II (Berlin 1906), p. 36; read off the archive.org page image (item b21459162_0002) and cross-checked against two OCR layers; ϑ printed as θ",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/n67/mode/1up",
+    "notes": "Wellmann III 26 (pp. 36–37). Dioscorides names the Stoechades islands off Massalia (the Îles d'Hyères) as the source. Dimopoulos et al. 2013 lists L. stoechas L. in 9 of 13 regions (chorology Me). L. stoechas subsp. cariensis is referred to L. pedunculata. WCVP: subsp. stoechas is native in Greece, Kriti and the East Aegean. GBIF speciesKey 2927303.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 26 (page image p.36)",
+        "url": "https://archive.org/details/b21459162_0002/page/n67/mode/1up"
+      },
+      {
+        "claim": "Dimopoulos et al. 2013 entry",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "POWO URL (IPNI 449089-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:449089-1"
+      }
+    ],
+    "unverified": [
+      "The POWO website (powo.science.kew.org) returned 403 / a Cloudflare challenge. The accepted name and family come from WCVP, the dataset behind POWO, read through the GBIF checklist API (dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, pubDate 2026-06-04). The POWO URL is built from the IPNI ID returned by the ipni.org API; the URL was not opened.",
+      "The Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) and its CDM API blocked automated access. Native, endemic and Greek-distribution status were taken from the Dimopoulos et al. 2013 checklist PDF (Englera 31), downloaded via doi 10.3372/en.31.",
+      "No identification source (Beck 2005, Staub et al. 2016, André, Hardy & Totelin) was opened in this session, so identification_confidence and identification_source are blank.",
+      "IUCN Red List: not checked in this session.",
+      "EMA/HMPC: one site:ema.europa.eu search surfaced monographs only for Origanum majorana and Origanum dictamnus (different species) and nothing for the other genera. That does not prove absence, so ema_* is left blank.",
+      "Wild harvesting in Greece: no source opened in this session."
+    ]
+  },
+  {
+    "slug": "ecballium-elaterium",
+    "greek_name": "σίκυς ἄγριος",
+    "greek_translit": "sikys agrios",
+    "dmm_book": 4,
+    "dmm_chapter": 150,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Ecballium elaterium (L.) A.Rich.",
+    "common_name_en": "squirting cucumber",
+    "family": "Cucurbitaceae",
+    "identification_confidence": "",
+    "identification_source": "",
+    "alternative_names": [],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt": "σίκυς ἄγριος, ὃν φέρομβρόν τινες καλοῦσι, τῷ καρπῷ μόνον διαφέρει τοῦ ἡμέρου, ἐλάσσονα πολλῷ καὶ βαλάνοις ἐπιμήκεσιν ἐοικότα ἔχων",
+    "excerpt_edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. II (Berlin 1906), p. 292; read off the archive.org page image (item b21459162_0002) and cross-checked against two OCR layers; ϑ printed as θ",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0002/page/n323/mode/1up",
+    "notes": "Wellmann IV 150 (p. 292). The same chapter describes the preparation of ἐλατήριον from the fruit. Dimopoulos et al. 2013 lists E. elaterium in all 13 regions (chorology MS). WCVP: accepted, native in Greece and the East Aegean; Kriti is not in the WCVP list but is in the Dimopoulos regions. GBIF speciesKey 2874680.",
+    "evidence": [
+      {
+        "claim": "Wellmann IV 150 (page image p.292)",
+        "url": "https://archive.org/details/b21459162_0002/page/n323/mode/1up"
+      },
+      {
+        "claim": "Dimopoulos et al. 2013 entry",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "POWO URL (IPNI 292573-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:292573-1"
+      }
+    ],
+    "unverified": [
+      "The POWO website (powo.science.kew.org) returned 403 / a Cloudflare challenge. The accepted name and family come from WCVP, the dataset behind POWO, read through the GBIF checklist API (dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, pubDate 2026-06-04). The POWO URL is built from the IPNI ID returned by the ipni.org API; the URL was not opened.",
+      "The Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) and its CDM API blocked automated access. Native, endemic and Greek-distribution status were taken from the Dimopoulos et al. 2013 checklist PDF (Englera 31), downloaded via doi 10.3372/en.31.",
+      "No identification source (Beck 2005, Staub et al. 2016, André, Hardy & Totelin) was opened in this session, so identification_confidence and identification_source are blank.",
+      "IUCN Red List: not checked in this session.",
+      "EMA/HMPC: one site:ema.europa.eu search surfaced monographs only for Origanum majorana and Origanum dictamnus (different species) and nothing for the other genera. That does not prove absence, so ema_* is left blank.",
+      "Wild harvesting in Greece: no source opened in this session."
+    ]
+  },
+  {
+    "slug": "cyclamen-graecum",
+    "greek_name": "κυκλάμινος",
+    "greek_translit": "kyklaminos",
+    "dmm_book": 2,
+    "dmm_chapter": 164,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Cyclamen graecum Link",
+    "common_name_en": "",
+    "family": "Primulaceae",
+    "identification_confidence": "",
+    "identification_source": "",
+    "alternative_names": [
+      {
+        "name": "Cyclamen hederifolium Aiton",
+        "source": "candidate named in the task brief; not verified from literature in this session"
+      }
+    ],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt": "κυκλάμινος· φύλλα ἔχει ὅμοια κισσῷ, ποικίλα δὲ κάτωθεν καὶ ἄνωθεν κηλῖσιν ὑπολεύκοις, καυλὸν δὲ τετραδάκτυλον, γυμνόν, ἐφ' οὗ ἄνθη ῥοδοειδῆ, πορφυρίζοντα",
+    "excerpt_edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. I (Berlin 1907), p. 228; read off the archive.org page image (item b21459162_0001; the OCR of this volume is not usable Greek); ϑ printed as θ",
+    "excerpt_source_url": "https://archive.org/details/b21459162_0001/page/n239/mode/1up",
+    "notes": "Wellmann II 164 (p. 228). Wellmann's II 165 is a second kyklaminos (κυκλάμινος ἑτέρα), not this species; Sprengel 1829 numbers that chapter II 194. The ivy-like, variegated leaves fit both C. hederifolium and C. graecum. Choosing C. graecum is provisional: no philological source was opened to support it over C. hederifolium. Both are native in Greece (Dimopoulos 2013): C. graecum in 11 regions (chorology EM) and C. hederifolium in all 13 (Me). Neither is a Greek endemic, though C. graecum subsp. candicum is range-restricted to Kriti. If the identification literature favours C. hederifolium (GBIF speciesKey 7127810), switch to it.",
+    "evidence": [
+      {
+        "claim": "Wellmann II 164 (page image p.228)",
+        "url": "https://archive.org/details/b21459162_0001/page/n239/mode/1up"
+      },
+      {
+        "claim": "Dimopoulos et al. 2013 Cyclamen entries",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "POWO URL C. graecum (IPNI 700725-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:700725-1"
+      },
+      {
+        "claim": "POWO URL C. hederifolium Aiton (IPNI 700730-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:700730-1"
+      }
+    ],
+    "unverified": [
+      "The POWO website (powo.science.kew.org) returned 403 / a Cloudflare challenge. The accepted name and family come from WCVP, the dataset behind POWO, read through the GBIF checklist API (dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, pubDate 2026-06-04). The POWO URL is built from the IPNI ID returned by the ipni.org API; the URL was not opened.",
+      "The Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) and its CDM API blocked automated access. Native, endemic and Greek-distribution status were taken from the Dimopoulos et al. 2013 checklist PDF (Englera 31), downloaded via doi 10.3372/en.31.",
+      "No identification source (Beck 2005, Staub et al. 2016, André, Hardy & Totelin) was opened in this session, so identification_confidence and identification_source are blank.",
+      "IUCN Red List: not checked in this session.",
+      "EMA/HMPC: one site:ema.europa.eu search surfaced monographs only for Origanum majorana and Origanum dictamnus (different species) and nothing for the other genera. That does not prove absence, so ema_* is left blank.",
+      "Wild harvesting in Greece: no source opened in this session.",
+      "Choice of C. graecum over C. hederifolium has no source support from this session."
+    ]
+  }
+]

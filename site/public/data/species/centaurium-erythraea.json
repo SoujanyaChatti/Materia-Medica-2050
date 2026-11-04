@@ -1,0 +1,132 @@
+{
+  "slug": "centaurium-erythraea",
+  "accepted_name": "Centaurium erythraea Rafn",
+  "common_name_en": "Common centaury",
+  "family": "Gentianaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 7,
+    "greek_name": "κενταύρειον τὸ λεπτὸν ἢ μικρόν",
+    "greek_translit": "kentaureion to lepton ē mikron",
+    "excerpt": "κενταύρειον τὸ λεπτὸν ἢ μικρόν, ὅ τινες λιμνήσιον καλοῦσιν, ἐπειδὴ ἐνίκμους φιλεῖ τόπους.",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/12"
+  },
+  "identification": {
+    "confidence": "certain",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. VII, pp. 494-495 ('De Centaurio minori, Erythraea scilicet Centaurio Pers., nulla exstitit unquam dubitatio'); Wellmann III 7 RV: Romans call it φεβριφούγιαμ (febrifugia)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": []
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": {
+    "category": "LC",
+    "source": "IUCN Red List 2013"
+  },
+  "ema_monograph": {
+    "exists": true,
+    "use": "traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/centaurii-herba",
+    "name": "Centaurii herba",
+    "reference": null
+  },
+  "records": {
+    "raw": 729,
+    "clean": 532,
+    "thinned": 492,
+    "public_cells": 268,
+    "low_confidence_model": true
+  },
+  "model": {
+    "auc_mean": 0.712,
+    "auc_sd": 0.048,
+    "boyce_mean": 0.897,
+    "boyce_sd": 0.035,
+    "tss_mean": 0.342,
+    "tss_sd": 0.088,
+    "null_auc_mean": 0.501,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 16.6,
+      "min": 7.7,
+      "max": 28.2
+    },
+    "ssp585": {
+      "median": 28.0,
+      "min": 8.8,
+      "max": 37.8
+    }
+  },
+  "range_cells": {
+    "now": 1053,
+    "ssp245": {
+      "median": 1118.0,
+      "min": 1068.0,
+      "max": 1221.0
+    },
+    "ssp585": {
+      "median": 1214.0,
+      "min": 1059.0,
+      "max": 1294.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 25.1,
+    "ssp245": {
+      "median": 26.1,
+      "min": 26.1,
+      "max": 26.7
+    },
+    "ssp585": {
+      "median": 26.1,
+      "min": 25.8,
+      "max": 26.3
+    }
+  },
+  "risk": {
+    "score": 0.195,
+    "score_lo": 0.195,
+    "score_hi": 0.195,
+    "rank": 27,
+    "rank_lo": 20,
+    "rank_hi": 27,
+    "class": 1,
+    "rank_without_disputed": 18,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.0,
+      "harvest": 0.975
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Low-confidence model: 492 thinned records (we require 30) or AUC below 0.75."
+  ]
+}

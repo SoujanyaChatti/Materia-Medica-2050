@@ -48,7 +48,8 @@ SCENARIOS = {
     "ssp245": {"label": "2050 moderate", "long": "SSP2-4.5"},
     "ssp585": {"label": "2050 high", "long": "SSP5-8.5"},
 }
-GCMS = ["ACCESS-CM2", "IPSL-CM6A-LR", "MPI-ESM1-2-HR", "MRI-ESM2-0", "UKESM1-0-LL"]
+# Three CMIP6 GCMs spanning climate sensitivity (low / mid / high).
+GCMS = ["MPI-ESM1-2-HR", "MRI-ESM2-0", "IPSL-CM6A-LR"]
 MAX_ABS_CORRELATION = 0.7
 
 # --- Models (stage 04) ----------------------------------------------------
@@ -78,6 +79,12 @@ def seed_everything(seed: int = SEED) -> np.random.Generator:
     np.random.seed(seed)
     os.environ["PYTHONHASHSEED"] = str(seed)
     return np.random.default_rng(seed)
+
+
+def only_species() -> set[str] | None:
+    """ONLY_SPECIES=slug1,slug2 limits stages 04-06 to those species (smoke tests)."""
+    v = os.environ.get("ONLY_SPECIES", "").strip()
+    return {x.strip() for x in v.split(",") if x.strip()} or None
 
 
 def force() -> bool:

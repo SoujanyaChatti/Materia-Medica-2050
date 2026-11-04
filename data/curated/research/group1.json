@@ -1,0 +1,525 @@
+[
+  {
+    "slug": "origanum-dictamnus",
+    "greek_name": "δίκταμνον",
+    "greek_translit": "diktamnon",
+    "dmm_book": "III",
+    "dmm_chapter": 32,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Origanum dictamnus L.",
+    "common_name_en": "Cretan dittany",
+    "family": "Lamiaceae",
+    "identification_confidence": null,
+    "identification_source": "",
+    "alternative_names": [],
+    "endemic_greece": true,
+    "endemic_region": "Kriti (KK floristic region); range-restricted",
+    "native_wild_in_greece": true,
+    "conservation_category": "LC",
+    "conservation_source": "IUCN Red List 2026 update (assessors Delipetrou & Bazos), per IUCN blog 31 Jul 2026 and GBIF IUCN sync (iucnTaxonID 162352); earlier VU (1997) then NT",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": true,
+    "wild_harvest_source": "IUCN blog 'Cretan dittany: the hairiest Greek legend' (31 Jul 2026): overharvesting drove local extinctions on Crete in the 20th c.; renewed overcollection from the wild a risk",
+    "excerpt": "δίκταμνον, ὃ καλοῦσί τινες γλήχωνα ἀγρίαν, οἱ δὲ βαίτιον. πόα ἐστὶ Κρητική, δριμεῖα λίαν, ὁμοία γλήχωνι",
+    "excerpt_edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), pp. 41-42",
+    "excerpt_source_url": "https://archive.org/details/BIUSante_65865x02/page/n68/mode/1up",
+    "notes": "Wellmann III 32 also contains ψευδοδίκταμνον and a second dittany in its synonym apparatus (32 RV lines). Text itself says the plant is Cretan ('πόα ἐστὶ Κρητική'). Habitats Directive Annex II/IV priority species per IUCN blog. Accent on ὃ read from scan; minor diacritic uncertainty.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 32 begins 'δίκταμνον' on p.41",
+        "url": "https://archive.org/details/BIUSante_65865x02/page/n68/mode/1up"
+      },
+      {
+        "claim": "Accepted Origanum dictamnus L., Lamiaceae (WCVP)",
+        "url": "https://api.gbif.org/v1/species/search?datasetKey=f382f0ce-323a-4091-bb9f-add557f3a9a2&q=Origanum%20dictamnus"
+      },
+      {
+        "claim": "POWO URL (IPNI 453239-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:453239-1"
+      },
+      {
+        "claim": "Greek endemic, Kriti only, range-restricted (Dimopoulos et al. 2013, Lamiaceae list p.~110)",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "IUCN LC, 2026; overharvesting history",
+        "url": "https://iucn.org/blog/202607/cretan-dittany-hairiest-greek-legend"
+      },
+      {
+        "claim": "IUCN LC via GBIF",
+        "url": "https://api.gbif.org/v1/species/3894972/iucnRedListCategory"
+      }
+    ],
+    "unverified": [
+      "identification_source: Beck 2005 / Staub et al. 2016 / Raven / André not opened this session; no scholarly identification citation verified",
+      "POWO page could not be opened (Cloudflare 403); accepted name/author/family taken from WCVP via GBIF dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, POWO URL built from IPNI ID returned by ipni.org API",
+      "Flora of Greece web portal blocked by bot-check; endemism/native status taken from Dimopoulos et al. 2013 checklist PDF instead",
+      "Greek Red Data Book (Phitos et al. 2009) not consulted",
+      "identification_confidence left null (no scholarly source opened)",
+      "EMA: no monograph found but not searched exhaustively"
+    ]
+  },
+  {
+    "slug": "paeonia-clusii",
+    "greek_name": "γλυκυσίδη",
+    "greek_translit": "glykyside",
+    "dmm_book": "III",
+    "dmm_chapter": 140,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Paeonia clusii Stern",
+    "common_name_en": "Cretan peony",
+    "family": "Paeoniaceae",
+    "identification_confidence": null,
+    "identification_source": "",
+    "alternative_names": [
+      {
+        "name": "Paeonia mascula (L.) Mill.",
+        "source": "unverified - commonly cited for the 'male' peony; not confirmed from a source this session"
+      }
+    ],
+    "endemic_greece": true,
+    "endemic_region": "Kriti & Karpathos (subsp. clusii) and Rodos (subsp. rhodia), i.e. KK and EAe regions",
+    "native_wild_in_greece": true,
+    "conservation_category": "NT",
+    "conservation_source": "IUCN Red List global, via GBIF IUCN sync (iucnTaxonID 162269); year not retrieved",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt": "γλυκυσίδη· οἱ δὲ πεντόροβον, οἱ δὲ Ἰδαίους δακτύλους, τὴν δὲ ῥίζαν παιωνίαν καλοῦσιν, ἄλλοι δὲ ἀγλαοφῶτιδα.",
+    "excerpt_edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), p. 149",
+    "excerpt_source_url": "https://archive.org/details/BIUSante_65865x02/page/n176/mode/1up",
+    "notes": "Wellmann lemma is γλυκυσίδη (root called παιωνία). Text distinguishes male (ἄρρην, leaves like walnut) and female (θήλεια, leaves divided like smyrnion). No source verified tying the chapter specifically to P. clusii; Greek wild peonies per Dimopoulos 2013: P. clusii, P. corsica, P. daurica, P. mascula (incl. subsp. hellenica), P. parnassica, P. peregrina. Which species is defensible remains UNVERIFIED. WCVP author 'Stern'; IPNI gives 'Stern & Stearn'.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 140 begins 'γλυκυσίδη' p.149",
+        "url": "https://archive.org/details/BIUSante_65865x02/page/n176/mode/1up"
+      },
+      {
+        "claim": "Accepted Paeonia clusii Stern (WCVP), native Kriti + E Aegean",
+        "url": "https://api.gbif.org/v1/species/search?datasetKey=f382f0ce-323a-4091-bb9f-add557f3a9a2&q=Paeonia%20clusii"
+      },
+      {
+        "claim": "POWO URL (IPNI 711756-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:711756-1"
+      },
+      {
+        "claim": "Greek endemic r/y in Dimopoulos et al. 2013 (Paeoniaceae, p.118-119)",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "IUCN NT via GBIF",
+        "url": "https://api.gbif.org/v1/species/7316513/iucnRedListCategory"
+      }
+    ],
+    "unverified": [
+      "identification_source: Beck 2005 / Staub et al. 2016 / Raven / André not opened this session; no scholarly identification citation verified",
+      "POWO page could not be opened (Cloudflare 403); accepted name/author/family taken from WCVP via GBIF dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, POWO URL built from IPNI ID returned by ipni.org API",
+      "Flora of Greece web portal blocked by bot-check; endemism/native status taken from Dimopoulos et al. 2013 checklist PDF instead",
+      "Greek Red Data Book (Phitos et al. 2009) not consulted",
+      "Scholarly basis for P. clusii as Dioscorides' peony NOT found; consider P. mascula as alternative (unverified)",
+      "identification_confidence null",
+      "EMA not checked",
+      "wild harvest not checked"
+    ]
+  },
+  {
+    "slug": "sideritis-syriaca",
+    "greek_name": "σιδηρῖτις",
+    "greek_translit": "sideritis",
+    "dmm_book": "IV",
+    "dmm_chapter": 33,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Sideritis syriaca L.",
+    "common_name_en": "Cretan mountain tea / ironwort",
+    "family": "Lamiaceae",
+    "identification_confidence": null,
+    "identification_source": "",
+    "alternative_names": [
+      {
+        "name": "Sideritis raeseri Boiss. & Heldr.",
+        "source": "listed as a separate Greek mainland species in Dimopoulos et al. 2013; covered by EMA Sideritis herba"
+      },
+      {
+        "name": "Sideritis scardica Griseb.",
+        "source": "EMA Sideritis herba species list"
+      },
+      {
+        "name": "Sideritis clandestina (Bory & Chaub.) Hayek",
+        "source": "EMA Sideritis herba species list"
+      }
+    ],
+    "endemic_greece": false,
+    "endemic_region": "In Greece only Kriti (subsp. syriaca, which is a Greek endemic); species also Lebanon-Syria and Turkey",
+    "native_wild_in_greece": true,
+    "conservation_category": "NE",
+    "conservation_source": "No IUCN global assessment per GBIF IUCN sync",
+    "ema_monograph": "Sideritis herba",
+    "ema_use": "traditional",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/sideritis-herba",
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt": "σιδηρῖτις, οἱ δὲ Ἡρακλείαν· πόα ἐστὶ φύλλα ἔχουσα ὅμοια πρασίῳ, ἐπιμηκέστερα δὲ πρὸς τὰ τοῦ ἐλελισφάκου ἢ δρυός",
+    "excerpt_edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), pp. 193-194",
+    "excerpt_source_url": "https://archive.org/details/BIUSante_65865x02/page/n220/mode/1up",
+    "notes": "Sideritis is in BOOK IV in Wellmann. Chapters: IV 33 σιδηρῖτις (main; p.193-194); IV 34 ἄλλη σιδηρῖτις (p.194); IV 35 ἑτέρα σιδηρῖτις = Ἡρακλεία of Crateuas, growing on walls and vineyards (p.195); IV 36 Ἀχίλλειος σιδηρῖτις (p.195-196, usually Achillea). Mainland Greek 'mountain tea' is mostly S. raeseri/S. scardica, separate species in Dimopoulos 2013 and WCVP; S. syriaca in Greece = Crete only. GBIF species key 7961270.",
+    "evidence": [
+      {
+        "claim": "IV 33 σιδηρῖτις begins at foot of p.193",
+        "url": "https://archive.org/details/BIUSante_65865x02/page/n220/mode/1up"
+      },
+      {
+        "claim": "IV 34 ἄλλη σιδηρῖτις on p.194",
+        "url": "https://archive.org/details/BIUSante_65865x02/page/n221/mode/1up"
+      },
+      {
+        "claim": "IV 35 ἑτέρα σιδηρῖτις and IV 36 Ἀχίλλειος σιδηρῖτις on p.195",
+        "url": "https://archive.org/details/BIUSante_65865x02/page/n222/mode/1up"
+      },
+      {
+        "claim": "Accepted Sideritis syriaca L. (WCVP), native KRI, LBS, TUR",
+        "url": "https://api.gbif.org/v1/species/search?datasetKey=f382f0ce-323a-4091-bb9f-add557f3a9a2&q=Sideritis%20syriaca"
+      },
+      {
+        "claim": "POWO URL (IPNI 459111-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:459111-1"
+      },
+      {
+        "claim": "S. syriaca KK only; subsp. syriaca Greek endemic (Dimopoulos 2013 p.~112)",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "EMA Sideritis herba, traditional use, covers S. syriaca",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/sideritis-herba"
+      },
+      {
+        "claim": "IUCN NE via GBIF",
+        "url": "https://api.gbif.org/v1/species/7961270/iucnRedListCategory"
+      }
+    ],
+    "unverified": [
+      "identification_source: Beck 2005 / Staub et al. 2016 / Raven / André not opened this session; no scholarly identification citation verified",
+      "POWO page could not be opened (Cloudflare 403); accepted name/author/family taken from WCVP via GBIF dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, POWO URL built from IPNI ID returned by ipni.org API",
+      "Flora of Greece web portal blocked by bot-check; endemism/native status taken from Dimopoulos et al. 2013 checklist PDF instead",
+      "Greek Red Data Book (Phitos et al. 2009) not consulted",
+      "identification_confidence null",
+      "wild harvest pressure not sourced"
+    ]
+  },
+  {
+    "slug": "mandragora-officinarum",
+    "greek_name": "μανδραγόρας",
+    "greek_translit": "mandragoras",
+    "dmm_book": "IV",
+    "dmm_chapter": 75,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Mandragora officinarum L.",
+    "common_name_en": "Mandrake",
+    "family": "Solanaceae",
+    "identification_confidence": null,
+    "identification_source": "",
+    "alternative_names": [
+      {
+        "name": "Mandragora autumnalis Bertol.",
+        "source": "accepted separately by WCVP (native GRC, KRI); treated as synonym of M. officinarum by Dimopoulos et al. 2013 and GBIF backbone"
+      }
+    ],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "LC",
+    "conservation_source": "IUCN Red List global, via GBIF IUCN sync: assessed under Mandragora autumnalis (iucnTaxonID 53785790), M. officinarum treated as synonym; year not retrieved",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt": "μανδραγόρας· οἱ δὲ ἀντίμιμον, οἱ δὲ βομβόχυλον, οἱ δὲ Κιρκαίαν[, οἱ δὲ Διρκαίαν] καλοῦσιν, ἐπειδὴ δοκεῖ ἡ ῥίζα φίλτρων εἶναι ποιητική.",
+    "excerpt_edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), p. 233",
+    "excerpt_source_url": "https://archive.org/details/BIUSante_65865x02/page/n260/mode/1up",
+    "notes": "TAXONOMIC CONFLICT: WCVP/POWO restricts M. officinarum to Italy, Lebanon-Syria, former Yugoslavia and treats Greek plants as M. autumnalis; Dimopoulos 2013 includes autumnalis in M. officinarum ('all European material referable to M. officinarum'; widespread in S Greece esp. Kriti). GBIF backbone also sinks autumnalis into officinarum (species key 5341748, ~447 GR records), so modelling on 5341748 captures Greek plants. Chapter text distinguishes female (θῆλυς, black, thridakias) and male forms.",
+    "evidence": [
+      {
+        "claim": "Wellmann IV 75 begins μανδραγόρας p.233",
+        "url": "https://archive.org/details/BIUSante_65865x02/page/n260/mode/1up"
+      },
+      {
+        "claim": "WCVP native range of M. officinarum excludes Greece",
+        "url": "https://api.gbif.org/v1/species/search?datasetKey=f382f0ce-323a-4091-bb9f-add557f3a9a2&q=Mandragora%20officinarum"
+      },
+      {
+        "claim": "POWO URL (IPNI 816733-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:816733-1"
+      },
+      {
+        "claim": "Dimopoulos 2013: M. officinarum native Pe, StE, EC, Kik, KK, EAe; autumnalis as synonym; annotation on spring/autumn populations",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "IUCN LC (as M. autumnalis) via GBIF",
+        "url": "https://api.gbif.org/v1/species/5341748/iucnRedListCategory"
+      }
+    ],
+    "unverified": [
+      "identification_source: Beck 2005 / Staub et al. 2016 / Raven / André not opened this session; no scholarly identification citation verified",
+      "POWO page could not be opened (Cloudflare 403); accepted name/author/family taken from WCVP via GBIF dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, POWO URL built from IPNI ID returned by ipni.org API",
+      "Flora of Greece web portal blocked by bot-check; endemism/native status taken from Dimopoulos et al. 2013 checklist PDF instead",
+      "Greek Red Data Book (Phitos et al. 2009) not consulted",
+      "identification_confidence null",
+      "EMA not checked",
+      "wild harvest not checked"
+    ]
+  },
+  {
+    "slug": "hyssopus-officinalis",
+    "greek_name": "ὕσσωπος",
+    "greek_translit": "hyssopos",
+    "dmm_book": "III",
+    "dmm_chapter": 25,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Hyssopus officinalis L. (WCVP now: Dracocephalum officinale (L.) Y.P.Chen & B.T.Drew)",
+    "common_name_en": "Hyssop",
+    "family": "Lamiaceae",
+    "identification_confidence": "disputed",
+    "identification_source": "",
+    "alternative_names": [
+      {
+        "name": "Origanum syriacum L.",
+        "source": "unverified this session - commonly proposed; note it is NOT native to Greece (absent from Dimopoulos 2013; WCVP range CYP, LBS, PAL, SAU, SIN, TUR)"
+      }
+    ],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "NE",
+    "conservation_source": "No IUCN global assessment per GBIF IUCN sync",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt": "ὕσσωπος· πόα γνώριμος, δισσή· ἡ μὲν γάρ τίς ἐστιν ὀρεινὴ ἡ δὲ κηπευτή· ἀρίστη δὲ ἡ ἐν Κιλικίᾳ γεννωμένη.",
+    "excerpt_edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), p. 35",
+    "excerpt_source_url": "https://archive.org/details/BIUSante_65865x02/page/n62/mode/1up",
+    "notes": "Hyssopus officinalis IS native in Greece per Dimopoulos 2013: NPi, SPi, NC, NE (subsp. aristatus in NC, NE), chorotype EA. WCVP (Cladistics 38:447, 2022) sinks Hyssopus into Dracocephalum: accepted name Dracocephalum officinale (IPNI 77333318-1); GBIF backbone still uses Hyssopus officinalis key 5341387 with only ~8 Greek occurrences - too few for robust SDM. 'disputed' reflects the brief; no source citation verified.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 25 ὕσσωπος p.35",
+        "url": "https://archive.org/details/BIUSante_65865x02/page/n62/mode/1up"
+      },
+      {
+        "claim": "WCVP: H. officinalis synonym of Dracocephalum officinale, native GRC",
+        "url": "https://api.gbif.org/v1/species/search?datasetKey=f382f0ce-323a-4091-bb9f-add557f3a9a2&q=Dracocephalum%20officinale"
+      },
+      {
+        "claim": "POWO URL for Dracocephalum officinale (IPNI 77333318-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77333318-1"
+      },
+      {
+        "claim": "Native in NPi, SPi, NC, NE (Dimopoulos 2013, Lamiaceae)",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "IUCN NE via GBIF",
+        "url": "https://api.gbif.org/v1/species/5341387/iucnRedListCategory"
+      }
+    ],
+    "unverified": [
+      "identification_source: Beck 2005 / Staub et al. 2016 / Raven / André not opened this session; no scholarly identification citation verified",
+      "POWO page could not be opened (Cloudflare 403); accepted name/author/family taken from WCVP via GBIF dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, POWO URL built from IPNI ID returned by ipni.org API",
+      "Flora of Greece web portal blocked by bot-check; endemism/native status taken from Dimopoulos et al. 2013 checklist PDF instead",
+      "Greek Red Data Book (Phitos et al. 2009) not consulted",
+      "Sources for both sides of the hyssop dispute not opened; identification_source empty",
+      "EMA hyssop monograph not checked",
+      "Only ~8 GBIF occurrences in Greece"
+    ]
+  },
+  {
+    "slug": "salvia-fruticosa",
+    "greek_name": "ἐλελίσφακον",
+    "greek_translit": "elelisphakon",
+    "dmm_book": "III",
+    "dmm_chapter": 33,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Salvia fruticosa Mill.",
+    "common_name_en": "Greek sage",
+    "family": "Lamiaceae",
+    "identification_confidence": null,
+    "identification_source": "",
+    "alternative_names": [],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "NE",
+    "conservation_source": "No IUCN global assessment per GBIF IUCN sync",
+    "ema_monograph": "Salviae trilobae folium - NO monograph adopted (public statement)",
+    "ema_use": "",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/salviae-trilobae-folium",
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt": "ἐλελίσφακον· οἱ δὲ ἐλαφοβόσκον, οἱ δὲ σφάγνον. θάμνος ἐστὶν ἐπιμήκης, πολύκλωνος, ῥάβδους τετραγώνους καὶ ὑπολεύκους ἔχων",
+    "excerpt_edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), p. 44",
+    "excerpt_source_url": "https://archive.org/details/BIUSante_65865x02/page/n71/mode/1up",
+    "notes": "Present in all 13 Greek floristic regions (Dimopoulos 2013), chorotype EM. EMA: HMPC did not adopt a monograph for Salviae trilobae folium; outcome = public statement.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 33 ἐλελίσφακον p.44",
+        "url": "https://archive.org/details/BIUSante_65865x02/page/n71/mode/1up"
+      },
+      {
+        "claim": "Accepted Salvia fruticosa Mill. (WCVP), S. triloba synonym",
+        "url": "https://api.gbif.org/v1/species/search?datasetKey=f382f0ce-323a-4091-bb9f-add557f3a9a2&q=Salvia%20fruticosa"
+      },
+      {
+        "claim": "POWO URL (IPNI 456249-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:456249-1"
+      },
+      {
+        "claim": "Native in all 13 regions",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "EMA public statement, no monograph",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/salviae-trilobae-folium"
+      },
+      {
+        "claim": "IUCN NE via GBIF",
+        "url": "https://api.gbif.org/v1/species/6412283/iucnRedListCategory"
+      }
+    ],
+    "unverified": [
+      "identification_source: Beck 2005 / Staub et al. 2016 / Raven / André not opened this session; no scholarly identification citation verified",
+      "POWO page could not be opened (Cloudflare 403); accepted name/author/family taken from WCVP via GBIF dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, POWO URL built from IPNI ID returned by ipni.org API",
+      "Flora of Greece web portal blocked by bot-check; endemism/native status taken from Dimopoulos et al. 2013 checklist PDF instead",
+      "Greek Red Data Book (Phitos et al. 2009) not consulted",
+      "identification_confidence null",
+      "wild harvest not checked"
+    ]
+  },
+  {
+    "slug": "thymbra-capitata",
+    "greek_name": "θύμος",
+    "greek_translit": "thymos",
+    "dmm_book": "III",
+    "dmm_chapter": 36,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Thymbra capitata (L.) Cav.",
+    "common_name_en": "Conehead thyme",
+    "family": "Lamiaceae",
+    "identification_confidence": null,
+    "identification_source": "",
+    "alternative_names": [],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "NE",
+    "conservation_source": "No IUCN global assessment per GBIF IUCN sync",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt": "θύμος· γινώσκεται ὑπὸ πάντων. θαμνίσκιον φρυγανοειδές, φυλλαρίοις στενοῖς καὶ πολλοῖς περιειλημμένον, ἔχον ἐπ᾿ ἄκρου κεφάλια ἄνθους ⟨περίπλεα⟩, πορφυρίζοντα.",
+    "excerpt_edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), p. 48 (⟨περίπλεα⟩ is Wellmann's supplement)",
+    "excerpt_source_url": "https://archive.org/details/BIUSante_65865x02/page/n75/mode/1up",
+    "notes": "Native in all 13 Greek regions (Dimopoulos 2013), chorotype Me; annotation: Coridothymus not justified as segregate genus. Note III 37 θύμβρα follows immediately (usually Satureja thymbra). Wellmann's θύμος description (purple flower heads, stony thin soils) - no identification citation verified.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 36 θύμος p.48",
+        "url": "https://archive.org/details/BIUSante_65865x02/page/n75/mode/1up"
+      },
+      {
+        "claim": "Accepted Thymbra capitata (L.) Cav. (WCVP)",
+        "url": "https://api.gbif.org/v1/species/search?datasetKey=f382f0ce-323a-4091-bb9f-add557f3a9a2&q=Thymbra%20capitata"
+      },
+      {
+        "claim": "POWO URL (IPNI 460817-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:460817-1"
+      },
+      {
+        "claim": "Native in all 13 regions",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "IUCN NE via GBIF",
+        "url": "https://api.gbif.org/v1/species/5607804/iucnRedListCategory"
+      }
+    ],
+    "unverified": [
+      "identification_source: Beck 2005 / Staub et al. 2016 / Raven / André not opened this session; no scholarly identification citation verified",
+      "POWO page could not be opened (Cloudflare 403); accepted name/author/family taken from WCVP via GBIF dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, POWO URL built from IPNI ID returned by ipni.org API",
+      "Flora of Greece web portal blocked by bot-check; endemism/native status taken from Dimopoulos et al. 2013 checklist PDF instead",
+      "Greek Red Data Book (Phitos et al. 2009) not consulted",
+      "identification_confidence null",
+      "EMA: not checked (Thymi herba covers Thymus spp., not verified for Thymbra)",
+      "wild harvest not checked"
+    ]
+  },
+  {
+    "slug": "glaucium-flavum",
+    "greek_name": "μήκων κερατῖτις",
+    "greek_translit": "mekon keratitis",
+    "dmm_book": "IV",
+    "dmm_chapter": 65,
+    "chapter_numbering": "Wellmann",
+    "accepted_name": "Glaucium flavum Crantz",
+    "common_name_en": "Yellow horned poppy",
+    "family": "Papaveraceae",
+    "identification_confidence": null,
+    "identification_source": "",
+    "alternative_names": [
+      {
+        "name": "Glaucium corniculatum (L.) Rudolph",
+        "source": "unverified; congener native in Greece (Dimopoulos 2013)"
+      }
+    ],
+    "endemic_greece": false,
+    "endemic_region": "",
+    "native_wild_in_greece": true,
+    "conservation_category": "NE",
+    "conservation_source": "No IUCN global assessment per GBIF IUCN sync",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": false,
+    "wild_harvest_source": "",
+    "excerpt": "μήκων κερατῖτις, ἣν ἔνιοι παράλιον καλοῦσιν, οἱ δὲ ἀγρίαν μήκωνα· φύλλα ἔχει λευκά, δασέα, ὅμοια φλόμῳ",
+    "excerpt_edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), p. 222",
+    "excerpt_source_url": "https://archive.org/details/BIUSante_65865x02/page/n249/mode/1up",
+    "notes": "Text: horn-shaped fruit, pale-yellow (ὠχρόν) flower, grows in coastal (παραθαλάσσιοι) rough places - consistent with G. flavum, but this is an observation, not a citation. Native in 12 of 13 Greek regions (Dimopoulos 2013), chorotype ME.",
+    "evidence": [
+      {
+        "claim": "Wellmann IV 65 μήκων κερατῖτις p.222",
+        "url": "https://archive.org/details/BIUSante_65865x02/page/n249/mode/1up"
+      },
+      {
+        "claim": "Accepted Glaucium flavum Crantz (WCVP)",
+        "url": "https://api.gbif.org/v1/species/search?datasetKey=f382f0ce-323a-4091-bb9f-add557f3a9a2&q=Glaucium%20flavum"
+      },
+      {
+        "claim": "POWO URL (IPNI 673167-1)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:673167-1"
+      },
+      {
+        "claim": "Native in Greece (Dimopoulos 2013, Papaveraceae)",
+        "url": "https://doi.org/10.3372/en.31"
+      },
+      {
+        "claim": "IUCN NE via GBIF",
+        "url": "https://api.gbif.org/v1/species/5334190/iucnRedListCategory"
+      }
+    ],
+    "unverified": [
+      "identification_source: Beck 2005 / Staub et al. 2016 / Raven / André not opened this session; no scholarly identification citation verified",
+      "POWO page could not be opened (Cloudflare 403); accepted name/author/family taken from WCVP via GBIF dataset f382f0ce-323a-4091-bb9f-add557f3a9a2, POWO URL built from IPNI ID returned by ipni.org API",
+      "Flora of Greece web portal blocked by bot-check; endemism/native status taken from Dimopoulos et al. 2013 checklist PDF instead",
+      "Greek Red Data Book (Phitos et al. 2009) not consulted",
+      "identification_confidence null",
+      "EMA not checked",
+      "wild harvest not checked"
+    ]
+  }
+]

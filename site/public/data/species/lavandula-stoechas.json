@@ -1,0 +1,123 @@
+{
+  "slug": "lavandula-stoechas",
+  "accepted_name": "Lavandula stoechas L.",
+  "common_name_en": "French / topped lavender",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 26,
+    "greek_name": "στοιχάς",
+    "greek_translit": "stoichas",
+    "excerpt": "στοιχάς· γεννᾶται μὲν ἐν ταῖς κατὰ Γαλατίαν νήσοις κατ' ἀντικρὺς Μασσαλίας, καλουμέναις Στοιχάσιν, ὅθεν καὶ τὴν ὀνομασίαν ἔσχεν·",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. II (Berlin 1906), p. 36; read off the archive.org page image (item b21459162_0002) and cross-checked against two OCR layers; ϑ printed as θ",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/n67/mode/1up"
+  },
+  "identification": {
+    "confidence": "certain",
+    "source": "Sprengel 1830, vol. 2, pp. 507-508 (Comm. III cap. XXVIII): name from the Stoechades islands off Massilia (Hyères); 'Planta, de qua sermo est, Lavandula Stoechas nobis dicitur, a Fuchsio, ni fallor, primo illustrata.' No competing candidate named. | Fraas 1845, pp. 174-175: '4. Lavandula Stoechas' = στιχάς, στοιχάς Diosc. 3,31, Plin.; modern χαμολίβανο (μαυροκέφαλο sec. Sibthorp); on xirobouna (Hymettus to 1000 ft) and damper lowlands. Osbaldeston 2000, ch. 3-31 STOICHAS: SUGGESTED Stichas, Stichas arabica [Fuchs], Stoechas purpurea [Bauhin], Lavandula stoechas. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n509/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n219/mode/1up)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": []
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 873,
+    "clean": 745,
+    "thinned": 576,
+    "public_cells": 155,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.856,
+    "auc_sd": 0.025,
+    "boyce_mean": 0.874,
+    "boyce_sd": 0.065,
+    "tss_mean": 0.598,
+    "tss_sd": 0.048,
+    "null_auc_mean": 0.487,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 44.5,
+      "min": 36.1,
+      "max": 46.5
+    },
+    "ssp585": {
+      "median": 52.5,
+      "min": 40.1,
+      "max": 60.4
+    }
+  },
+  "range_cells": {
+    "now": 591,
+    "ssp245": {
+      "median": 763.0,
+      "min": 723.0,
+      "max": 777.0
+    },
+    "ssp585": {
+      "median": 806.0,
+      "min": 741.0,
+      "max": 836.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 23.4,
+    "ssp245": {
+      "median": 23.4,
+      "min": 23.4,
+      "max": 23.5
+    },
+    "ssp585": {
+      "median": 22.8,
+      "min": 22.7,
+      "max": 22.9
+    }
+  },
+  "risk": {
+    "score": 0.284,
+    "score_lo": 0.284,
+    "score_hi": 0.284,
+    "rank": 23,
+    "rank_lo": 19,
+    "rank_hi": 26,
+    "class": 2,
+    "rank_without_disputed": 14,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.919
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 6813,
+  "cultivation_area_km2_range": {
+    "min": 5608,
+    "max": 7330
+  },
+  "caveats": []
+}

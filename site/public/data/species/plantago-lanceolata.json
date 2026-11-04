@@ -1,0 +1,146 @@
+{
+  "slug": "plantago-lanceolata",
+  "accepted_name": "Plantago lanceolata L.",
+  "common_name_en": "Ribwort plantain",
+  "family": "Plantaginaceae",
+  "dioscorides": {
+    "book": 2,
+    "chapter": 126,
+    "greek_name": "ἀρνόγλωσσον",
+    "greek_translit": "arnoglōsson",
+    "excerpt": "ἀρνόγλωσσον, οἱ δὲ ἑπτάπλευρον, οἱ δὲ πολύπλευρον· διττόν ἐστι, τὸ μὲν μικρὸν τὸ δὲ μεῖζον.",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "excerpt_url": "https://archive.org/details/b21459162_0001/page/198"
+  },
+  "identification": {
+    "confidence": "disputed",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. II cap. CLII, p. 465 (the larger arnoglosson is usually taken as Plantago major, but Sprengel prefers P. asiatica or P. altissima Jacq.; the smaller was P. lagopus for Sibthorp, P. lanceolata for the 'fathers of botany', P. maritima for Sprengel)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Plantago major L. (larger kind, majority view)",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465"
+      },
+      {
+        "name": "Plantago lagopus L. (smaller kind)",
+        "source": "Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465"
+      },
+      {
+        "name": "Plantago maritima L. (smaller kind)",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465"
+      },
+      {
+        "name": "Plantago asiatica L. / P. altissima Jacq. (larger kind)",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": true,
+    "use": null,
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/plantaginis-lanceolatae-folium",
+    "name": "Plantaginis lanceolatae folium",
+    "reference": null
+  },
+  "records": {
+    "raw": 1234,
+    "clean": 1135,
+    "thinned": 1080,
+    "public_cells": 508,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.753,
+    "auc_sd": 0.032,
+    "boyce_mean": 0.959,
+    "boyce_sd": 0.026,
+    "tss_mean": 0.406,
+    "tss_sd": 0.046,
+    "null_auc_mean": 0.508,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 69.3,
+      "min": 54.7,
+      "max": 74.5
+    },
+    "ssp585": {
+      "median": 80.1,
+      "min": 55.3,
+      "max": 90.6
+    }
+  },
+  "range_cells": {
+    "now": 872,
+    "ssp245": {
+      "median": 1300.0,
+      "min": 1198.0,
+      "max": 1354.0
+    },
+    "ssp585": {
+      "median": 1403.0,
+      "min": 1218.0,
+      "max": 1465.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 23.7,
+    "ssp245": {
+      "median": 25.2,
+      "min": 24.7,
+      "max": 25.5
+    },
+    "ssp585": {
+      "median": 25.2,
+      "min": 24.6,
+      "max": 25.8
+    }
+  },
+  "risk": {
+    "score": 0.298,
+    "score_lo": 0.298,
+    "score_hi": 0.298,
+    "rank": 12,
+    "rank_lo": 6,
+    "rank_hi": 12,
+    "class": 2,
+    "rank_without_disputed": null,
+    "top10_stability": 0.564,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.992
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Identification is disputed; results describe Plantago lanceolata L., which may not be the plant Dioscorides meant."
+  ]
+}

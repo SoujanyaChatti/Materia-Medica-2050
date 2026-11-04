@@ -207,7 +207,7 @@ for (const c of cells) {
       const mean = members.reduce((a, m) => a + scoreOf[m], 0) / members.length;
       props[`class_${s}`] = riskClass(mean);
       props[`risk_${s}`] = Math.round(mean * 100) / 100;
-      props[`sp_${s}`] = members.map((m) => indexOf.get(m)).join(',');
+      props[`sp_${s}`] = members.reduce((a, m) => a + 2 ** indexOf.get(m), 0).toString(36);
     }
     const cult = s === 'now' ? 0 : gridCult[s].get(c.key) ?? 0;
     if (cult) props[`cult_${s}`] = cult;

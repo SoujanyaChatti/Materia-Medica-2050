@@ -1,0 +1,142 @@
+{
+  "slug": "teucrium-chamaedrys",
+  "accepted_name": "Teucrium chamaedrys L.",
+  "common_name_en": "Wall germander",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 98,
+    "greek_name": "χαμαίδρυς",
+    "greek_translit": "chamaidrys",
+    "excerpt": "χαμαίρωψ ἢ χαμαίδρυς ἢ λινόδρυς· οἱ δὲ καὶ ταύτην Τεύκριον καλοῦσι διὰ τὸ σῴζειν ἐμφέρειαν ποσὴν πρὸς Τεύκριον· φύεται ἐν τραχέσι καὶ πετρώδεσι χωρίοις.",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. II (Berlin 1906), p. 110; read off the archive.org page image (item b21459162_0002) and cross-checked against two OCR layers; ϑ printed as θ",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/n141/mode/1up"
+  },
+  "identification": {
+    "confidence": "disputed",
+    "source": "Sprengel 1830, vol. 2, pp. 539-540 (Comm. III cap. CII): χαμαίδρυς named for the oak-like leaves; Tragus called it Teucrium chamaedrys, Brunfels Veronica chamaedrys (rejected by C. Gesner and Bauhin); 'accedente et Sibthorpio, subsistamus in Teucrio Chamaedry, in Graecia, ut per totam fere Europam, satis vulgari.' | Fraas 1845, p. 173 DISAGREES: χαμαίδρυς Diosc. 3,102 = Teucrium lucidum L. (Gamanderstrauch), because Dioscorides' 'in asperis et rupestribus' habitat is where T. chamaedrys never grows 'contra Sibthorp', 'Est fruticulus' cannot apply to herbaceous T. chamaedrys, and Theophrastus' 'fragrant and sweet' fits T. lucidum or T. flavum; notes the modern name χαμανδρυά is used for both. Osbaldeston 2000, ch. 3-112 CHAMAIDRUS: SUGGESTED Teucrium chamaedrys [Linnaeus]; also Teucrium botrys; Veronica teucrium / V. chamaedrys. Confidence changed to 'disputed' because Fraas names a competing candidate. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n541/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n218/mode/1up)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Veronica chamaedrys L.",
+        "source": "Brunfels, cited by Sprengel 1830, vol. 2, p. 540 (called false/spurious by Gesner and Bauhin)"
+      },
+      {
+        "name": "Teucrium lucidum L.",
+        "source": "Fraas 1845, p. 173"
+      },
+      {
+        "name": "Teucrium flavum L. (fits Theophrastus' description)",
+        "source": "Fraas 1845, p. 173"
+      },
+      {
+        "name": "Teucrium botrys; Veronica chamaedrys",
+        "source": "Osbaldeston 2000, ch. 3-112"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 636,
+    "clean": 577,
+    "thinned": 525,
+    "public_cells": 240,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.781,
+    "auc_sd": 0.006,
+    "boyce_mean": 0.885,
+    "boyce_sd": 0.056,
+    "tss_mean": 0.483,
+    "tss_sd": 0.018,
+    "null_auc_mean": 0.497,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 14.3,
+      "min": 9.1,
+      "max": 14.9
+    },
+    "ssp585": {
+      "median": 15.3,
+      "min": 14.6,
+      "max": 18.1
+    }
+  },
+  "range_cells": {
+    "now": 794,
+    "ssp245": {
+      "median": 891.0,
+      "min": 849.0,
+      "max": 899.0
+    },
+    "ssp585": {
+      "median": 899.0,
+      "min": 884.0,
+      "max": 925.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 28.5,
+    "ssp245": {
+      "median": 26.9,
+      "min": 26.4,
+      "max": 26.9
+    },
+    "ssp585": {
+      "median": 26.5,
+      "min": 26.4,
+      "max": 26.6
+    }
+  },
+  "risk": {
+    "score": 0.297,
+    "score_lo": 0.297,
+    "score_hi": 0.297,
+    "rank": 13,
+    "rank_lo": 8,
+    "rank_hi": 13,
+    "class": 2,
+    "rank_without_disputed": null,
+    "top10_stability": 0.5,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.987
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Identification is disputed; results describe Teucrium chamaedrys L., which may not be the plant Dioscorides meant."
+  ]
+}

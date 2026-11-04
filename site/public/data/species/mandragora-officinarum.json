@@ -1,1 +1,145 @@
-{"slug":"mandragora-officinarum","accepted_name":"Mandragora officinarum L.","common_name_en":"Mandrake","family":"Solanaceae","dioscorides":{"book":4,"chapter":null,"greek_name":"μανδραγόρας","greek_translit":"mandragoras","excerpt":null,"paraphrase":null,"paraphrase_ai_assisted":false,"edition":"Wellmann 1906–1914"},"identification":{"confidence":"probable","source":"[Author, year, page]","note":null,"reviewed_by":"[historian, initials]","alternatives":[]},"endemic_greece":false,"endemic_region":null,"conservation_status":{"category":"DD","source":"IUCN Red List [sample]"},"ema_monograph":null,"records":{"raw":40,"clean":11,"thinned":11,"public_cells":11,"low_confidence_model":true},"model":{"auc_mean":0.71,"auc_sd":0.12,"boyce_mean":0.42,"boyce_sd":0.08,"tss_mean":0.38,"tss_sd":0.15,"null_auc_mean":0.5,"variables":["bio1","bio12","bio5","bio15","elevation","slope"]},"range_change_pct":{"ssp245":{"median":-29,"min":-5,"max":-60},"ssp585":{"median":-38,"min":-6,"max":-78}},"range_cells":{"now":33,"ssp245":{"median":23,"min":31,"max":13},"ssp585":{"median":20,"min":31,"max":7}},"natura_share_pct":{"now":12.1,"ssp245":{"median":18.1,"min":10.1,"max":26.1},"ssp585":{"median":18.1,"min":10.1,"max":26.1}},"risk":{"score":0.276,"score_lo":0.18,"score_hi":0.4,"rank":4,"rank_lo":2,"rank_hi":6,"class":2,"rank_without_disputed":4,"top10_stability":1,"components":{"range_loss":0.29,"endemism":0,"status":0.5,"harvest":0.3},"components_ci":{"range_loss":[0.05,0.6],"harvest":[0.15,0.4]}},"cultivation_area_km2":3490,"cultivation_area_km2_range":{"min":2720,"max":4260},"caveats":["The identification is probable, not certain; results describe Mandragora officinarum, which may not be the plant Dioscorides meant.","Low-confidence model: 11 occurrence cells after cleaning (we require 30). Maps are exploratory and the rank interval is wide.","Wild and cultivated records are hard to separate in occurrence databases; some cells may reflect cultivation.","Habitat suitability is not presence. The model omits dispersal limits, soils and grazing.","Harvest pressure is estimated from accessibility (distance to roads and villages), not field surveys."]}
+{
+  "slug": "mandragora-officinarum",
+  "accepted_name": "Mandragora officinarum L.",
+  "common_name_en": "Mandrake",
+  "family": "Solanaceae",
+  "dioscorides": {
+    "book": 4,
+    "chapter": 75,
+    "greek_name": "μανδραγόρας",
+    "greek_translit": "mandragoras",
+    "excerpt": "μανδραγόρας· οἱ δὲ ἀντίμιμον, οἱ δὲ βομβόχυλον, οἱ δὲ Κιρκαίαν[, οἱ δὲ Διρκαίαν] καλοῦσιν, ἐπειδὴ δοκεῖ ἡ ῥίζα φίλτρων εἶναι ποιητική.",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), p. 233",
+    "excerpt_url": "https://archive.org/details/BIUSante_65865x02/page/n260/mode/1up"
+  },
+  "identification": {
+    "confidence": "certain",
+    "source": "Sprengel 1830, vol. 2, pp. 604-605 (Comm. IV cap. LXXVI): three kinds; the first two 'bene, ut ab αὐτόπτῃ, descripta'. Female (black, narrower leaves, sorb/pear-shaped fruit) = Mandragora autumnalis Bertol.; male (white, large beet-like leaves, larger saffron-coloured fragrant fruit) = Mandragora vernalis Bertol.; 'Utraque species et in Italia et in Graecia, speciatim circa Athenas occurrit.' Third kind (μώριον) either the same as the male or Theophrastus' plant suspected by Anguillara (with Dodonaeus) to be Belladonna. Genus certain; mapping of Bertoloni's names to M. officinarum L. s.l. is ours. | Fraas 1845, p. 167: 'At[ropa] Mandragora L., Alraunwurzel' = μανδραγόρας μέλας, ἀντίμηλον, κιρκαία etc. Diosc. 3,134 [sic], who 'mentions the 2 varieties distinguished by flowering time - vernalis and autumnalis; of the third he speaks only from hearsay'; modern name μανδραγόρας. Osbaldeston 2000, ch. 4-76: SUGGESTED Mandragora mas [Fuchs], M. fructu rotundo [Bauhin], Mandragora officinarum [Linnaeus], Atropa mandragora. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n606/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n212/mode/1up)",
+    "note": "WCVP treats Greek mandrakes as M. autumnalis; the Greek checklist and GBIF Backbone merge it into M. officinarum. Both names are pooled.",
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Mandragora autumnalis Bertol.",
+        "source": "accepted separately by WCVP (native GRC, KRI); treated as synonym of M. officinarum by Dimopoulos et al. 2013 and GBIF backbone"
+      },
+      {
+        "name": "Mandragora autumnalis Bertol. (female)",
+        "source": "Sprengel 1830, vol. 2, p. 605"
+      },
+      {
+        "name": "Mandragora vernalis Bertol. (male)",
+        "source": "Sprengel 1830, vol. 2, p. 605"
+      },
+      {
+        "name": "Atropa belladonna (third kind, μώριον)",
+        "source": "Anguillara and Dodonaeus, cited by Sprengel 1830, vol. 2, p. 605"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": {
+    "category": "LC",
+    "source": "IUCN Red List 2015 (Mandragora autumnalis; most threatened of the pooled species)"
+  },
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 317,
+    "clean": 280,
+    "thinned": 224,
+    "public_cells": 97,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.904,
+    "auc_sd": 0.019,
+    "boyce_mean": 0.46,
+    "boyce_sd": 0.298,
+    "tss_mean": 0.766,
+    "tss_sd": 0.049,
+    "null_auc_mean": 0.484,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 55.3,
+      "min": 48.8,
+      "max": 68.3
+    },
+    "ssp585": {
+      "median": 76.5,
+      "min": 57.7,
+      "max": 85.3
+    }
+  },
+  "range_cells": {
+    "now": 394,
+    "ssp245": {
+      "median": 572.0,
+      "min": 571.0,
+      "max": 611.0
+    },
+    "ssp585": {
+      "median": 642.0,
+      "min": 582.0,
+      "max": 655.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 22.6,
+    "ssp245": {
+      "median": 22.9,
+      "min": 22.0,
+      "max": 23.6
+    },
+    "ssp585": {
+      "median": 23.0,
+      "min": 22.7,
+      "max": 24.1
+    }
+  },
+  "risk": {
+    "score": 0.18,
+    "score_lo": 0.18,
+    "score_hi": 0.18,
+    "rank": 32,
+    "rank_lo": 31,
+    "rank_hi": 32,
+    "class": 1,
+    "rank_without_disputed": 23,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.0,
+      "harvest": 0.899
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 4496,
+  "cultivation_area_km2_range": {
+    "min": 3371,
+    "max": 5434
+  },
+  "caveats": [
+    "WCVP treats Greek mandrakes as M. autumnalis; the Greek checklist and GBIF Backbone merge it into M. officinarum. Both names are pooled."
+  ]
+}

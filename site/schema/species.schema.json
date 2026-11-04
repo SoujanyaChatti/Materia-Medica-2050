@@ -30,7 +30,8 @@
         "excerpt": {"type": ["string", "null"], "description": "Short public-domain Greek excerpt (Wellmann)."},
         "paraphrase": {"type": ["string", "null"], "description": "English paraphrase. AI-assisted text must be reviewed and labelled."},
         "paraphrase_ai_assisted": {"type": "boolean"},
-        "edition": {"type": "string"}
+        "edition": {"type": "string"},
+        "excerpt_url": {"type": ["string", "null"], "description": "Page scan the excerpt was read from."}
       }
     },
     "identification": {

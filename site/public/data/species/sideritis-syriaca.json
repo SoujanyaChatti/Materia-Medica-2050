@@ -1,1 +1,167 @@
-{"slug":"sideritis-syriaca","accepted_name":"Sideritis syriaca L.","common_name_en":"Greek mountain tea","family":"Lamiaceae","dioscorides":{"book":4,"chapter":null,"greek_name":"σιδηρῖτις","greek_translit":"sidēritis","excerpt":null,"paraphrase":null,"paraphrase_ai_assisted":false,"edition":"Wellmann 1906–1914"},"identification":{"confidence":"probable","source":"[Author, year, page]","note":"The description fits several Sideritis species; S. syriaca is the most frequently proposed.","reviewed_by":"[historian, initials]","alternatives":[]},"endemic_greece":false,"endemic_region":null,"conservation_status":{"category":"NT","source":"IUCN Red List [sample]"},"ema_monograph":{"exists":true,"use":"traditional use","name":"Sideritis herba","reference":"[EMA/HMPC reference, year — verify]","url":"https://www.ema.europa.eu/"},"records":{"raw":770,"clean":214,"thinned":214,"public_cells":219,"low_confidence_model":false},"model":{"auc_mean":0.86,"auc_sd":0.04,"boyce_mean":0.71,"boyce_sd":0.08,"tss_mean":0.61,"tss_sd":0.07,"null_auc_mean":0.5,"variables":["bio1","bio12","bio5","bio15","elevation","slope"]},"range_change_pct":{"ssp245":{"median":-38,"min":-22,"max":-55},"ssp585":{"median":-51,"min":-34,"max":-70}},"range_cells":{"now":526,"ssp245":{"median":326,"min":410,"max":237},"ssp585":{"median":258,"min":347,"max":158}},"natura_share_pct":{"now":18.4,"ssp245":{"median":24.4,"min":16.4,"max":32.4},"ssp585":{"median":24.4,"min":16.4,"max":32.4}},"risk":{"score":0.382,"score_lo":0.318,"score_hi":0.45,"rank":3,"rank_lo":2,"rank_hi":4,"class":2,"rank_without_disputed":3,"top10_stability":1,"components":{"range_loss":0.38,"endemism":0,"status":0.25,"harvest":0.9},"components_ci":{"range_loss":[0.22,0.55],"harvest":[0.75,1]}},"cultivation_area_km2":10810,"cultivation_area_km2_range":{"min":8430,"max":13180},"caveats":["The identification is probable, not certain; results describe Sideritis syriaca, which may not be the plant Dioscorides meant.","Wild and cultivated records are hard to separate in occurrence databases; some cells may reflect cultivation.","Habitat suitability is not presence. The model omits dispersal limits, soils and grazing.","Harvest pressure is estimated from accessibility (distance to roads and villages), not field surveys."]}
+{
+  "slug": "sideritis-syriaca",
+  "accepted_name": "Sideritis syriaca L.",
+  "common_name_en": "Cretan mountain tea / ironwort",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 4,
+    "chapter": 33,
+    "greek_name": "σιδηρῖτις",
+    "greek_translit": "sideritis",
+    "excerpt": "σιδηρῖτις, οἱ δὲ Ἡρακλείαν· πόα ἐστὶ φύλλα ἔχουσα ὅμοια πρασίῳ, ἐπιμηκέστερα δὲ πρὸς τὰ τοῦ ἐλελισφάκου ἢ δρυός",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), pp. 193-194",
+    "excerpt_url": "https://archive.org/details/BIUSante_65865x02/page/n220/mode/1up"
+  },
+  "identification": {
+    "confidence": "disputed",
+    "source": "Sprengel 1830, vol. 2, pp. 588-589 (Comm. IV cap. XXXIII, Sideritis prima): Matthiolus 'hallucinatus est' proposing Lycopus europaeus; 'Magis placet Fuchsii sententia, qui Stachyos rectae effigiem huc collocat'; Fab. Columna proposed Stachys heraclea All., Clusius Sideritis scordioides. Sprengel does NOT name Sideritis syriaca or any Sideritis as Dioscorides' plant. | Fraas 1845, p. 175: Sideritis syriaca L. is assigned NOT to σιδηρῖτις but to κέστρον Diosc. 4,1 (betony; Sibthorp put Betonica alopecurus there); Fraas notes Aegineta distinguishes the 'Greek betony' (Sid. syriaca) from κέστρον. Fraas assigns Sideritis romana / S. elegans tentatively to φλομίδες ('?'). Osbaldeston 2000, ch. 4-33 SIDERITIS: SUGGESTED Sideritis prima [Fuchs], Sideritis vulgaris hirsuta erecta [Bauhin], Betonica annua var hirsuta, Stachys recta [Linnaeus], Stachys procumbens, Stachys sideritis. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n590/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n220/mode/1up)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Sideritis raeseri Boiss. & Heldr.",
+        "source": "listed as a separate Greek mainland species in Dimopoulos et al. 2013; covered by EMA Sideritis herba"
+      },
+      {
+        "name": "Sideritis scardica Griseb.",
+        "source": "EMA Sideritis herba species list"
+      },
+      {
+        "name": "Sideritis clandestina (Bory & Chaub.) Hayek",
+        "source": "EMA Sideritis herba species list"
+      },
+      {
+        "name": "Stachys recta L.",
+        "source": "Fuchs, preferred by Sprengel 1830, vol. 2, p. 589"
+      },
+      {
+        "name": "Lycopus europaeus L.",
+        "source": "Matthiolus, rejected by Sprengel 1830, vol. 2, p. 588"
+      },
+      {
+        "name": "Stachys heraclea All.",
+        "source": "Fab. Columna, cited by Sprengel 1830, vol. 2, p. 589"
+      },
+      {
+        "name": "Sideritis scordioides L.",
+        "source": "Clusius, cited by Sprengel 1830, vol. 2, p. 589"
+      },
+      {
+        "name": "Sideritis syriaca L. = κέστρον / Greek betony (a different Dioscorides chapter, Diosc. 4,1 Sprengel numbering)",
+        "source": "Fraas 1845, p. 175"
+      },
+      {
+        "name": "Stachys recta L.",
+        "source": "Osbaldeston 2000, ch. 4-33"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": "In Greece only Kriti (subsp. syriaca, which is a Greek endemic); species also Lebanon-Syria and Turkey",
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": true,
+    "use": "traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/sideritis-herba",
+    "name": "Sideritis herba (Sideritis scardica Griseb.; S. clandestina (Bory & Chaub.) Hayek; S. raeseri Boiss. & Heldr.; S. syriaca L., herba)",
+    "reference": null
+  },
+  "records": {
+    "raw": 52,
+    "clean": 23,
+    "thinned": 22,
+    "public_cells": 12,
+    "low_confidence_model": true
+  },
+  "model": {
+    "auc_mean": 0.876,
+    "auc_sd": 0.102,
+    "boyce_mean": -0.036,
+    "boyce_sd": 0.392,
+    "tss_mean": 0.788,
+    "tss_sd": 0.08,
+    "null_auc_mean": 0.565,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": -49.8,
+      "min": -52.3,
+      "max": -32.0
+    },
+    "ssp585": {
+      "median": -63.4,
+      "min": -67.2,
+      "max": -28.3
+    }
+  },
+  "range_cells": {
+    "now": 472,
+    "ssp245": {
+      "median": 259.0,
+      "min": 257.0,
+      "max": 328.0
+    },
+    "ssp585": {
+      "median": 207.0,
+      "min": 187.0,
+      "max": 327.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 36.2,
+    "ssp245": {
+      "median": 45.2,
+      "min": 43.9,
+      "max": 48.2
+    },
+    "ssp585": {
+      "median": 49.3,
+      "min": 43.7,
+      "max": 53.5
+    }
+  },
+  "risk": {
+    "score": 0.491,
+    "score_lo": 0.42,
+    "score_hi": 0.501,
+    "rank": 4,
+    "rank_lo": 3,
+    "rank_hi": 7,
+    "class": 3,
+    "rank_without_disputed": null,
+    "top10_stability": 0.967,
+    "components": {
+      "range_loss": 0.498,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.958
+    },
+    "components_ci": {
+      "range_loss": [
+        0.32,
+        0.523
+      ]
+    }
+  },
+  "cultivation_area_km2": 272,
+  "cultivation_area_km2_range": {
+    "min": 118,
+    "max": 784
+  },
+  "caveats": [
+    "Identification is disputed; results describe Sideritis syriaca L., which may not be the plant Dioscorides meant.",
+    "Low-confidence model: 22 thinned records (we require 30) or AUC below 0.75."
+  ]
+}

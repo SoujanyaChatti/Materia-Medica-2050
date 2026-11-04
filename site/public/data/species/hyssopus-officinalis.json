@@ -1,1 +1,160 @@
-{"slug":"hyssopus-officinalis","accepted_name":"Hyssopus officinalis L.","common_name_en":"Hyssopos","family":"Lamiaceae","dioscorides":{"book":3,"chapter":null,"greek_name":"ὕσσωπος","greek_translit":"hyssōpos","excerpt":null,"paraphrase":null,"paraphrase_ai_assisted":false,"edition":"Wellmann 1906–1914"},"identification":{"confidence":"disputed","source":"[Author, year, page]","note":null,"reviewed_by":"[historian, initials]","alternatives":[{"name":"Origanum syriacum L.","source":"[Source B, year]"}]},"endemic_greece":false,"endemic_region":null,"conservation_status":{"category":"LC","source":"IUCN Red List [sample]"},"ema_monograph":null,"records":{"raw":346,"clean":96,"thinned":96,"public_cells":64,"low_confidence_model":false},"model":{"auc_mean":0.83,"auc_sd":0.05,"boyce_mean":0.69,"boyce_sd":0.08,"tss_mean":0.57,"tss_sd":0.08,"null_auc_mean":0.5,"variables":["bio1","bio12","bio5","bio15","elevation","slope"]},"range_change_pct":{"ssp245":{"median":-33,"min":-18,"max":-49},"ssp585":{"median":-43,"min":-23,"max":-64}},"range_cells":{"now":153,"ssp245":{"median":103,"min":125,"max":78},"ssp585":{"median":87,"min":118,"max":55}},"natura_share_pct":{"now":24.2,"ssp245":{"median":30.2,"min":22.2,"max":38.2},"ssp585":{"median":30.2,"min":22.2,"max":38.2}},"risk":{"score":0.192,"score_lo":0.132,"score_hi":0.256,"rank":5,"rank_lo":4,"rank_hi":7,"class":1,"rank_without_disputed":null,"top10_stability":1,"components":{"range_loss":0.33,"endemism":0,"status":0,"harvest":0.3},"components_ci":{"range_loss":[0.18,0.49],"harvest":[0.15,0.4]}},"cultivation_area_km2":10940,"cultivation_area_km2_range":{"min":8530,"max":13340},"caveats":["The identification is disputed, not certain; results describe Hyssopus officinalis, which may not be the plant Dioscorides meant.","Wild and cultivated records are hard to separate in occurrence databases; some cells may reflect cultivation.","Habitat suitability is not presence. The model omits dispersal limits, soils and grazing.","Harvest pressure is estimated from accessibility (distance to roads and villages), not field surveys."]}
+{
+  "slug": "hyssopus-officinalis",
+  "accepted_name": "Hyssopus officinalis L.",
+  "common_name_en": "Hyssop",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 25,
+    "greek_name": "ὕσσωπος",
+    "greek_translit": "hyssopos",
+    "excerpt": "ὕσσωπος· πόα γνώριμος, δισσή· ἡ μὲν γάρ τίς ἐστιν ὀρεινὴ ἡ δὲ κηπευτή· ἀρίστη δὲ ἡ ἐν Κιλικίᾳ γεννωμένη.",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), p. 35",
+    "excerpt_url": "https://archive.org/details/BIUSante_65865x02/page/n62/mode/1up"
+  },
+  "identification": {
+    "confidence": "disputed",
+    "source": "Sprengel 1830, vol. 2, pp. 506-507 (Comm. III cap. XXVII): Dioscorides gives no diagnostic indication; Sprengel conjectures Origanum aegyptiacum / O. syriacum / O. smyrnaeum and states that 'our' hyssop (H. officinalis), spontaneous in S France and Italy, is 'neque in Graecia, Syria, aut Aegypto obvii' and was given the name by medieval writers (first figured by Tragus). He does NOT identify ὕσσωπος with Hyssopus officinalis. | Fraas 1845, p. 182: ὕσσωπος Diosc. 3,27 = 'Orig. smyrnaeum vel syriacum L.'; 'Bei Mangel aller weiteren Beschreibung des Yssop im Diosc. folge ich Sprengel'; 'Es wächst hysoppus off. nicht in Griechenland, noch in Kleinasien oder Syrien!'; Thymbra spicata 'passt nicht wohl'. Also p. 174: 'Hyssopus officinalis ist eine unserer Flora ganz fremde Pflanze'. Osbaldeston 2000, ch. 3-30 USSOPOS: SUGGESTED Hyssopus hortensis [Fuchs], Hyssopus officinalis [Linnaeus], Origanum syriacum - Hyssop of the Bible [Mabberley]. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n508/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n227/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n219/mode/1up)",
+    "note": "Very few Greek records. The alternative identification, Origanum syriacum, does not grow wild in Greece, so it cannot be modelled here. COL now places H. officinalis in Dracocephalum.",
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Origanum syriacum L.",
+        "source": "unverified this session - commonly proposed; note it is NOT native to Greece (absent from Dimopoulos 2013; WCVP range CYP, LBS, PAL, SAU, SIN, TUR)"
+      },
+      {
+        "name": "Origanum syriacum / O. aegyptiacum / O. smyrnaeum",
+        "source": "Sprengel 1830, vol. 2, p. 507 (Sprengel's own conjecture)"
+      },
+      {
+        "name": "Thymbra spicata L.",
+        "source": "Sibthorp, cited and rejected by Sprengel 1830, vol. 2, p. 507"
+      },
+      {
+        "name": "Thymbra verticillata L.",
+        "source": "Dalechamp, cited by Sprengel 1830, vol. 2, p. 507"
+      },
+      {
+        "name": "Teucrium pseudhyssopus Schreb.",
+        "source": "Fabius Columna, cited by Sprengel 1830, vol. 2, p. 507"
+      },
+      {
+        "name": "Satureja graeca / S. juliana (modern Greek name ὕσσωπος)",
+        "source": "Sibthorp, cited by Sprengel 1830, vol. 2, p. 507 ('nullo modo cum Hyssopo Dioscoridis congruunt')"
+      },
+      {
+        "name": "Origanum smyrnaeum vel syriacum L.",
+        "source": "Fraas 1845, p. 182"
+      },
+      {
+        "name": "Hyssopus officinalis L. and Origanum syriacum (both listed)",
+        "source": "Osbaldeston 2000, ch. 3-30"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 21,
+    "clean": 20,
+    "thinned": 16,
+    "public_cells": 4,
+    "low_confidence_model": true
+  },
+  "model": {
+    "auc_mean": 0.631,
+    "auc_sd": 0.0,
+    "boyce_mean": -0.033,
+    "boyce_sd": 0.0,
+    "tss_mean": 0.44,
+    "tss_sd": 0.0,
+    "null_auc_mean": 0.539,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": -68.5,
+      "min": -74.4,
+      "max": -57.4
+    },
+    "ssp585": {
+      "median": -81.1,
+      "min": -85.5,
+      "max": -76.6
+    }
+  },
+  "range_cells": {
+    "now": 112,
+    "ssp245": {
+      "median": 44.0,
+      "min": 44.0,
+      "max": 61.0
+    },
+    "ssp585": {
+      "median": 37.0,
+      "min": 28.0,
+      "max": 41.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 25.9,
+    "ssp245": {
+      "median": 24.6,
+      "min": 22.7,
+      "max": 27.3
+    },
+    "ssp585": {
+      "median": 21.6,
+      "min": 19.5,
+      "max": 25.0
+    }
+  },
+  "risk": {
+    "score": 0.569,
+    "score_lo": 0.524,
+    "score_hi": 0.592,
+    "rank": 2,
+    "rank_lo": 1,
+    "rank_hi": 3,
+    "class": 3,
+    "rank_without_disputed": null,
+    "top10_stability": 0.998,
+    "components": {
+      "range_loss": 0.685,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.973
+    },
+    "components_ci": {
+      "range_loss": [
+        0.574,
+        0.744
+      ]
+    }
+  },
+  "cultivation_area_km2": 374,
+  "cultivation_area_km2_range": {
+    "min": 211,
+    "max": 650
+  },
+  "caveats": [
+    "Identification is disputed; results describe Hyssopus officinalis L., which may not be the plant Dioscorides meant.",
+    "Low-confidence model: 16 thinned records (we require 30) or AUC below 0.75.",
+    "Very few Greek records. The alternative identification, Origanum syriacum, does not grow wild in Greece, so it cannot be modelled here. COL now places H. officinalis in Dracocephalum."
+  ]
+}

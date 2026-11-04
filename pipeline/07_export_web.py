@@ -20,7 +20,7 @@ import pandas as pd  # noqa: E402
 from pipeline.lib import cleaning, config, io, risk, schema  # noqa: E402
 
 CELL_M = config.PUBLIC_CELL_KM * 1000
-ROUND = 4  # ~10 m: plenty for 10 km cells, keeps files small
+ROUND = 3  # ~100 m: plenty for 10 km cells, keeps every layer under 300 KB
 VERSION = "0.1.0"
 
 
@@ -34,7 +34,15 @@ class Grid:
         with rasterio.open(config.PROCESSED / "env" / "current.tif") as src:
             self.shape = (src.height, src.width)
             self.transform = src.transform
-            self.land = np.isfinite(src.read(1))
+            land = np.isfinite(src.read(1))
+            profile = src.profile
+        # Publish Greece only: models are fitted on the wider study box, but every layer, count and
+        # range change on the site refers to cells that touch Greece (same mask as stage 04).
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("s04", Path(__file__).with_name("04_models.py"))
+        s04 = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(s04)
+        self.land = land & s04.greece_mask(profile)
         rows, cols = np.indices(self.shape)
         lon = self.transform.c + (cols + 0.5) * self.transform.a
         lat = self.transform.f + (rows + 0.5) * self.transform.e
@@ -52,12 +60,12 @@ class Grid:
         df = pd.DataFrame({"ix": self.ix[m], "iy": self.iy[m], "v": values[m]})
         return {(a, b): v for (a, b), v in df.groupby(["ix", "iy"])["v"].mean().items()}
 
-    def polygon(self, ix: int, iy: int) -> list:
+    def polygon(self, ix: int, iy: int, nd: int = ROUND) -> list:
         x0, y0 = ix * CELL_M, iy * CELL_M
         xs = [x0, x0 + CELL_M, x0 + CELL_M, x0, x0]
         ys = [y0, y0, y0 + CELL_M, y0 + CELL_M, y0]
         lon, lat = self.inv.transform(xs, ys)
-        return [[[round(a, ROUND), round(b, ROUND)] for a, b in zip(lon, lat)]]
+        return [[[round(a, nd), round(b, nd)] for a, b in zip(lon, lat)]]
 
 
 def fc(features: list) -> dict:
@@ -66,6 +74,12 @@ def fc(features: list) -> dict:
 
 def feature(grid: Grid, cell: tuple[int, int], props: dict) -> dict:
     return {"type": "Feature", "geometry": {"type": "Polygon", "coordinates": grid.polygon(*cell)}, "properties": props}
+
+
+def merged(grid: Grid, cells, props: dict) -> dict:
+    """All cells of one class as a single MultiPolygon feature (one feature per class keeps files small)."""
+    return {"type": "Feature", "properties": props,
+            "geometry": {"type": "MultiPolygon", "coordinates": [grid.polygon(*c) for c in sorted(cells)]}}
 
 
 def read_bin(path: Path) -> np.ndarray | None:
@@ -104,6 +118,8 @@ def main() -> None:
     public_occ = cleaning.aggregate_public(occ)
 
     grid = Grid()
+    greek_cells = grid.cells(np.ones(grid.shape, dtype=bool))
+    public_occ = public_occ[[(a, b) in greek_cells for a, b in zip(public_occ["ix"], public_occ["iy"])]]
     import rasterio
 
     with rasterio.open(config.RASTERS / "natura_frac.tif") as src:
@@ -122,7 +138,7 @@ def main() -> None:
         rdir = config.RASTERS / slug
         now = grid.cells(read_bin(rdir / "current_bin.tif"))
         layers = out / "layers" / slug
-        io.write_json(layers / "range_now.geojson", fc([feature(grid, c, {"change": "present"}) for c in sorted(now)]), True)
+        io.write_json(layers / "range_now.geojson", fc([merged(grid, now, {"change": "present"})] if now else []), True)
         for c in now:
             grid_now.setdefault(c, []).append(slug)
 
@@ -132,9 +148,8 @@ def main() -> None:
             per_gcm = [b for b in per_gcm if b is not None]
             agree = np.mean(per_gcm, axis=0) > config.MODEL_AGREEMENT
             fut = grid.cells(agree)
-            feats = ([feature(grid, c, {"change": "kept"}) for c in sorted(now & fut)]
-                     + [feature(grid, c, {"change": "lost"}) for c in sorted(now - fut)]
-                     + [feature(grid, c, {"change": "gained"}) for c in sorted(fut - now)])
+            feats = [merged(grid, cs, {"change": ch}) for ch, cs in
+                     (("kept", now & fut), ("lost", now - fut), ("gained", fut - now)) if cs]
             io.write_json(layers / f"range_2050_{ssp}.geojson", fc(feats), True)
             for c in now - fut:
                 grid_loss[ssp].setdefault(c, []).append(slug)
@@ -147,7 +162,7 @@ def main() -> None:
                     grid_cult[ssp][c] = grid_cult[ssp].get(c, 0) + 1
                 if ssp == "ssp245":
                     io.write_json(layers / "cultivation.geojson",
-                                  fc([feature(grid, c, {"scenario": ssp}) for c in sorted(grid.cells(cmask))]), True)
+                                  fc([merged(grid, grid.cells(cmask), {"scenario": ssp})] if grid.cells(cmask) else []), True)
 
         po = public_occ[public_occ["species_slug"] == slug]
         io.write_json(layers / "occurrences.geojson",
@@ -161,7 +176,9 @@ def main() -> None:
         modelled = idents[(idents["slug"] == slug) & (idents["role"] == "modelled")]
         ema = None
         if sp["ema_monograph"].lower() in ("yes", "true"):
-            ema = {"exists": True, "use": sp["ema_use"] or None, "url": sp["ema_url"] or None, "name": None, "reference": None}
+            ema = {"exists": True, "use": sp["ema_use"] or None, "url": sp["ema_url"] or None,
+                   "name": (sp.get("ema_name") or "").split(" - ")[0].strip() or None,
+                   "reference": None}
         elif sp["ema_monograph"].lower() in ("no", "false"):
             ema = {"exists": False}
         low = bool(rec.get("low_confidence_model", False)) or (model is not None and model.get("auc_mean", 1) < config.AUC_ADEQUATE)
@@ -181,8 +198,9 @@ def main() -> None:
             "family": sp["family"] or None,
             "dioscorides": {"book": int(sp["dmm_book"]), "chapter": int(sp["dmm_chapter"]) if sp["dmm_chapter"] else None,
                             "greek_name": sp["greek_name"], "greek_translit": sp["greek_translit"] or None,
-                            "excerpt": None, "paraphrase": None, "paraphrase_ai_assisted": False,
-                            "edition": "Wellmann 1906–1914"},
+                            "excerpt": sp.get("excerpt") or None, "paraphrase": None, "paraphrase_ai_assisted": False,
+                            "edition": sp.get("excerpt_edition") or "Wellmann 1906–1914",
+                            "excerpt_url": sp.get("excerpt_url") or None},
             "identification": {"confidence": sp["identification_confidence"], "source": sp["identification_source"],
                                "note": modelled["notes"].iloc[0] if len(modelled) and modelled["notes"].iloc[0] else None,
                                "reviewed_by": modelled["reviewed_by"].iloc[0] if len(modelled) else None,
@@ -222,7 +240,7 @@ def main() -> None:
 
     # Greece-wide risk grid
     scores = rk["score"].to_dict()
-    feats = []
+    feats, cell_props = [], {}
     all_cells = set(grid_now) | {c for s in grid_loss.values() for c in s} | {c for s in grid_cult.values() for c in s}
     for c in sorted(all_cells):
         # Empty/zero properties are omitted to stay under 300 KB; the site reads missing as 0/''.
@@ -233,13 +251,18 @@ def main() -> None:
             if members:
                 mean = float(np.mean([scores[m] for m in members]))
                 props[f"class_{s}"] = int(risk.risk_class([mean])[0])
-                props[f"risk_{s}"] = round(mean, 2)
-                props[f"sp_{s}"] = ",".join(str(index_of[m]) for m in members)
+                # Species indices (species.json order) as a base-36 bitmask: bit i set = species i.
+                props[f"sp_{s}"] = np.base_repr(sum(1 << index_of[m] for m in members), 36).lower()
             cult_n = grid_cult.get(s, {}).get(c, 0) if s != "now" else 0
             if cult_n:
                 props[f"cult_{s}"] = cult_n
-        feats.append(feature(grid, c, props))
+        cell_props[props["id"]] = {k: v for k, v in props.items() if k != "id"}
+        feats.append({"type": "Feature", "properties": {"id": props["id"]},
+                      "geometry": {"type": "Polygon", "coordinates": grid.polygon(*c, nd=2)}})
+    # The layer itself carries only cell shapes (≈1 km precision, shared corners round identically so cells
+    # still tile); per-cell values live in greece_risk_cells.json, merged by id in the browser.
     io.write_json(out / "layers" / "greece_risk_grid.geojson", fc(feats), True)
+    io.write_json(out / "layers" / "greece_risk_cells.json", cell_props, True)
 
     # Natura 2000 drawn as the outer edges of its 10 km cells (one dashed line on the map).
     edges = []
@@ -260,7 +283,9 @@ def main() -> None:
         "build_date": dt.date.today().isoformat(),
         "gbif_doi": manifest.get("gbif", {}).get("doi"),
         "versions": {"pipeline": VERSION, "climate": f"{config.CLIMATE_SOURCE} {config.WORLDCLIM_RES}",
-                     "dem": "Copernicus GLO-90", "corine": "2018", "natura2000": "end2021"},
+                     "dem": "Copernicus GLO-90", "corine": "CLC2018 100 m", "natura2000": "end-2024",
+                     "osm": manifest.get("osm", {}).get("date", "Geofabrik Greece extract"),
+                     "iucn": "Red List API v4 (2026)"},
         "n_species": len(order),
         "scenarios": {
             "now": {"label": "Now", "title": "Current climate", "description": f"Modelled from the {config.BASELINE_PERIOD} climate baseline."},

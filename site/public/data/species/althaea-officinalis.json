@@ -1,0 +1,129 @@
+{
+  "slug": "althaea-officinalis",
+  "accepted_name": "Althaea officinalis L.",
+  "common_name_en": "Marsh mallow",
+  "family": "Malvaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 146,
+    "greek_name": "ἀλθαία",
+    "greek_translit": "althaia",
+    "excerpt": "ἀολθαία, ἣν ἔνιοι ἐβίσκον καλοῦσι, μολόχης ἐστὶν […] ἀγρίας εἶδος· ἔχει δὲ φύλλα περιφερῆ ὥσπερ κυκλάμινος, ἔγχνοα, ἄνθος ῥοδοειδές",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Wellmann (ed.) 1906, DMM III 146 (\"ἀλθαία, ἣν ἔνιοι ἐβίσκον καλοῦσι, μολόχης ἐστὶν ἀγρίας εἶδος\"); Osbaldeston 2000, ch. 3-163: \"Althaea officinalis [Linnaeus] — Marsh Mallow\".",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": []
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": true,
+    "use": "traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/althaeae-radix",
+    "name": "Althaeae radix",
+    "reference": null
+  },
+  "records": {
+    "raw": 63,
+    "clean": 55,
+    "thinned": 54,
+    "public_cells": 22,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.869,
+    "auc_sd": 0.07,
+    "boyce_mean": 0.201,
+    "boyce_sd": 0.315,
+    "tss_mean": 0.753,
+    "tss_sd": 0.135,
+    "null_auc_mean": 0.548,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": -61.6,
+      "min": -67.7,
+      "max": -55.0
+    },
+    "ssp585": {
+      "median": -72.5,
+      "min": -80.1,
+      "max": -63.0
+    }
+  },
+  "range_cells": {
+    "now": 464,
+    "ssp245": {
+      "median": 185.0,
+      "min": 156.0,
+      "max": 219.0
+    },
+    "ssp585": {
+      "median": 128.0,
+      "min": 101.0,
+      "max": 177.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 19.0,
+    "ssp245": {
+      "median": 24.9,
+      "min": 24.7,
+      "max": 25.6
+    },
+    "ssp585": {
+      "median": 25.4,
+      "min": 25.0,
+      "max": 27.7
+    }
+  },
+  "risk": {
+    "score": 0.535,
+    "score_lo": 0.509,
+    "score_hi": 0.56,
+    "rank": 3,
+    "rank_lo": 2,
+    "rank_hi": 10,
+    "class": 3,
+    "rank_without_disputed": 2,
+    "top10_stability": 0.951,
+    "components": {
+      "range_loss": 0.616,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.943
+    },
+    "components_ci": {
+      "range_loss": [
+        0.55,
+        0.677
+      ]
+    }
+  },
+  "cultivation_area_km2": 2874,
+  "cultivation_area_km2_range": {
+    "min": 2420,
+    "max": 3562
+  },
+  "caveats": [
+    "Identification is probable; results describe Althaea officinalis L., which may not be the plant Dioscorides meant."
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "slug": "marrubium-vulgare",
+  "accepted_name": "Marrubium vulgare L.",
+  "common_name_en": "White horehound",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 105,
+    "greek_name": "πράσιον",
+    "greek_translit": "prasion",
+    "excerpt": "πράσιον, οἱ δὲ φιλοφαρές· θάμνος ἐστὶν ἀπὸ μιᾶς",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/116"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Wellmann 1906, vol. II p. 116, III 105 RV: Romans call it μαρρούβιουμ (marrubium); Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CIX, p. 542 (Theophrastus' two kinds = Marrubium catariifolium Desr. and M. vulgare L.)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Marrubium catariifolium Desr. (= M. peregrinum?)",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 542 (for one of Theophrastus' two kinds)"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": true,
+    "use": "traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/marrubii-herba",
+    "name": "Marrubii herba",
+    "reference": null
+  },
+  "records": {
+    "raw": 314,
+    "clean": 261,
+    "thinned": 236,
+    "public_cells": 147,
+    "low_confidence_model": true
+  },
+  "model": {
+    "auc_mean": 0.664,
+    "auc_sd": 0.04,
+    "boyce_mean": 0.672,
+    "boyce_sd": 0.233,
+    "tss_mean": 0.304,
+    "tss_sd": 0.07,
+    "null_auc_mean": 0.514,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 191.1,
+      "min": 177.6,
+      "max": 195.5
+    },
+    "ssp585": {
+      "median": 219.2,
+      "min": 192.0,
+      "max": 221.5
+    }
+  },
+  "range_cells": {
+    "now": 839,
+    "ssp245": {
+      "median": 1638.0,
+      "min": 1607.0,
+      "max": 1653.0
+    },
+    "ssp585": {
+      "median": 1728.0,
+      "min": 1639.0,
+      "max": 1739.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 26.9,
+    "ssp245": {
+      "median": 24.6,
+      "min": 24.4,
+      "max": 24.9
+    },
+    "ssp585": {
+      "median": 24.7,
+      "min": 24.5,
+      "max": 24.9
+    }
+  },
+  "risk": {
+    "score": 0.295,
+    "score_lo": 0.295,
+    "score_hi": 0.295,
+    "rank": 17,
+    "rank_lo": 13,
+    "rank_hi": 17,
+    "class": 2,
+    "rank_without_disputed": 9,
+    "top10_stability": 0.008,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.977
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 27708,
+  "cultivation_area_km2_range": {
+    "min": 25027,
+    "max": 29040
+  },
+  "caveats": [
+    "Identification is probable; results describe Marrubium vulgare L., which may not be the plant Dioscorides meant.",
+    "Low-confidence model: 236 thinned records (we require 30) or AUC below 0.75."
+  ]
+}

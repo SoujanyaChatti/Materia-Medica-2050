@@ -1,0 +1,137 @@
+{
+  "slug": "juniperus-deltoides",
+  "accepted_name": "Juniperus deltoides R.P.Adams",
+  "common_name_en": "Prickly juniper (eastern)",
+  "family": "Cupressaceae",
+  "dioscorides": {
+    "book": 1,
+    "chapter": 75,
+    "greek_name": "ἄρκευθος",
+    "greek_translit": "arkeuthos",
+    "excerpt": "ἄρκευθος· ἠ μέν τῖς ἐστι μεγάλη ἡ δὲ μικρά. ἀμφότεραι δὲ θερμαίνουσι καὶ λεπτύνουσι· εἰσὶ δὲ καὶ οὐρητικαί",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+  },
+  "identification": {
+    "confidence": "disputed",
+    "source": "Wellmann (ed.) 1907, DMM I 75: \"ἄρκευθος· ἡ μέν τίς ἐστι μεγάλη ἡ δὲ μικρά\" (large and small kinds; RV: Ῥωμαῖοι ζουνιπέρουμ); Osbaldeston 2000 ch. 1-103 suggests Juniperus excelsa and J. communis.",
+    "note": "J. oxycedrus s.str. is absent from Greece (Dimopoulos et al. 2013; WCVP); Greek plants are J. deltoides, still filed as J. oxycedrus in many GBIF records, so both names are pooled.",
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Juniperus communis L.",
+        "source": "Osbaldeston 2000, ch. 1-103"
+      },
+      {
+        "name": "Juniperus excelsa M.Bieb.",
+        "source": "Osbaldeston 2000, ch. 1-103"
+      },
+      {
+        "name": "Juniperus macrocarpa Sm.",
+        "source": "not verified (LSJ/DGE pages blocked)"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": null,
+  "records": {
+    "raw": 386,
+    "clean": 322,
+    "thinned": 294,
+    "public_cells": 132,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.769,
+    "auc_sd": 0.032,
+    "boyce_mean": 0.235,
+    "boyce_sd": 0.324,
+    "tss_mean": 0.476,
+    "tss_sd": 0.057,
+    "null_auc_mean": 0.501,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": -22.5,
+      "min": -24.5,
+      "max": -15.8
+    },
+    "ssp585": {
+      "median": -27.2,
+      "min": -34.9,
+      "max": 5.5
+    }
+  },
+  "range_cells": {
+    "now": 805,
+    "ssp245": {
+      "median": 658.0,
+      "min": 639.0,
+      "max": 668.0
+    },
+    "ssp585": {
+      "median": 612.0,
+      "min": 595.0,
+      "max": 795.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 31.2,
+    "ssp245": {
+      "median": 33.6,
+      "min": 33.4,
+      "max": 34.4
+    },
+    "ssp585": {
+      "median": 34.3,
+      "min": 31.9,
+      "max": 34.8
+    }
+  },
+  "risk": {
+    "score": 0.384,
+    "score_lo": 0.358,
+    "score_hi": 0.392,
+    "rank": 8,
+    "rank_lo": 5,
+    "rank_hi": 9,
+    "class": 2,
+    "rank_without_disputed": null,
+    "top10_stability": 0.979,
+    "components": {
+      "range_loss": 0.225,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.972
+    },
+    "components_ci": {
+      "range_loss": [
+        0.158,
+        0.245
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Identification is disputed; results describe Juniperus deltoides R.P.Adams, which may not be the plant Dioscorides meant.",
+    "J. oxycedrus s.str. is absent from Greece (Dimopoulos et al. 2013; WCVP); Greek plants are J. deltoides, still filed as J. oxycedrus in many GBIF records, so both names are pooled."
+  ]
+}

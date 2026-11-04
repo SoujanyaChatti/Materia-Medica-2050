@@ -1,0 +1,149 @@
+{
+  "slug": "cyclamen-graecum",
+  "accepted_name": "Cyclamen graecum Link",
+  "common_name_en": "Greek cyclamen",
+  "family": "Primulaceae",
+  "dioscorides": {
+    "book": 2,
+    "chapter": 164,
+    "greek_name": "κυκλάμινος",
+    "greek_translit": "kyklaminos",
+    "excerpt": "κυκλάμινος· φύλλα ἔχει ὅμοια κισσῷ, ποικίλα δὲ κάτωθεν καὶ ἄνωθεν κηλῖσιν ὑπολεύκοις, καυλὸν δὲ τετραδάκτυλον, γυμνόν, ἐφ' οὗ ἄνθη ῥοδοειδῆ, πορφυρίζοντα",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. I (Berlin 1907), p. 228; read off the archive.org page image (item b21459162_0001; the OCR of this volume is not usable Greek); ϑ printed as θ",
+    "excerpt_url": "https://archive.org/details/b21459162_0001/page/n239/mode/1up"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Sprengel 1830, vol. 2, pp. 478-479 (Comm. II cap. CXCIII): discusses only names (sowbread etc.) and uses (Gerard on childbirth); no species is named in the text. Index V, p. 704: 'Cyclamen europaeum L. 478'. Sprengel does not distinguish C. graecum from C. hederifolium; neither name appears. Second κυκλάμινος (cap. CXCIV) he takes as Lonicera periclymenum (after C. Gesner). | Fraas 1845, p. 192: '1. Cyclamen graecum Lk., griechisches Schweinsbrod' - 'Ist die häufigste in Griechenland, nebst persicum vorkommende Art, welche gewiss das κυκλάμινος ... Diosc. 2,193 ... ist'; only 'nascitur in umbrosis' is a difficulty. Fraas rejects Billerbeck's referral of Cyclamen hederaefolium to κυκλάμινος ἑτέρα (which he, like Sprengel, takes as Lonicera periclymenum). Modern τρικλαμινός; dry hills, rocks, to 2000 ft (Argolis, Attica). Osbaldeston 2000, ch. 2-194 KUKLAMINOS: SUGGESTED Cyclamen europaeum [Linnaeus] ... and Cyclamen graecum. ANSWER: Fraas names C. graecum; no opened source names C. hederifolium for κυκλάμινος (II 164). (https://archive.org/details/BIUSante_dioscsprengelx02/page/n479/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n237/mode/1up)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Cyclamen hederifolium Aiton",
+        "source": "candidate named in the task brief; not verified from literature in this session"
+      },
+      {
+        "name": "Cyclamen europaeum L. (Linnaean sense)",
+        "source": "Sprengel 1830, vol. 2, Index V p. 704, https://archive.org/details/BIUSante_dioscsprengelx02/page/n705/mode/1up"
+      },
+      {
+        "name": "Cyclamen graecum Link",
+        "source": "Fraas 1845, p. 192"
+      },
+      {
+        "name": "Cyclamen europaeum L. and Cyclamen graecum (both listed)",
+        "source": "Osbaldeston 2000, ch. 2-194"
+      },
+      {
+        "name": "Cyclamen hederifolium - proposed by Billerbeck only for κυκλάμινος ἑτέρα (rejected)",
+        "source": "Fraas 1845, p. 192"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": {
+    "category": "LC",
+    "source": "IUCN Red List 2025"
+  },
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 995,
+    "clean": 918,
+    "thinned": 568,
+    "public_cells": 228,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.835,
+    "auc_sd": 0.026,
+    "boyce_mean": 0.859,
+    "boyce_sd": 0.057,
+    "tss_mean": 0.555,
+    "tss_sd": 0.062,
+    "null_auc_mean": 0.501,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 11.0,
+      "min": -5.2,
+      "max": 12.4
+    },
+    "ssp585": {
+      "median": 11.0,
+      "min": 5.3,
+      "max": 30.4
+    }
+  },
+  "range_cells": {
+    "now": 811,
+    "ssp245": {
+      "median": 884.0,
+      "min": 783.0,
+      "max": 916.0
+    },
+    "ssp585": {
+      "median": 939.0,
+      "min": 867.0,
+      "max": 1063.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 21.9,
+    "ssp245": {
+      "median": 22.8,
+      "min": 21.7,
+      "max": 23.0
+    },
+    "ssp585": {
+      "median": 23.3,
+      "min": 23.1,
+      "max": 24.1
+    }
+  },
+  "risk": {
+    "score": 0.192,
+    "score_lo": 0.192,
+    "score_hi": 0.212,
+    "rank": 29,
+    "rank_lo": 24,
+    "rank_hi": 29,
+    "class": 1,
+    "rank_without_disputed": 20,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.0,
+      "harvest": 0.959
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.052
+      ]
+    }
+  },
+  "cultivation_area_km2": 5807,
+  "cultivation_area_km2_range": {
+    "min": 4732,
+    "max": 7414
+  },
+  "caveats": [
+    "Identification is probable; results describe Cyclamen graecum Link, which may not be the plant Dioscorides meant."
+  ]
+}

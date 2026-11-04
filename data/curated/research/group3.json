@@ -1,0 +1,518 @@
+[
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "Malvae sylvestris flos; Malvae folium (Malva sylvestris L. / Malva neglecta Wallr.)",
+    "ema_use": "traditional",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/malvae-sylvestris-flos",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_source_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml",
+    "alternative_names": [
+      {
+        "name": "Alcea rosea / Malva rotundifolia (listed among \"suggested\")",
+        "source": "Osbaldeston 2000, ch. 2-144"
+      }
+    ],
+    "slug": "malva-sylvestris",
+    "greek_name": "μολόχη",
+    "greek_translit": "molochē",
+    "dmm_book": 2,
+    "dmm_chapter": 118,
+    "accepted_name": "Malva sylvestris L.",
+    "common_name_en": "Common mallow",
+    "family": "Malvaceae",
+    "identification_confidence": "probable",
+    "identification_source": "Wellmann (ed.) 1906, DMM II 118 (Greek text + RV synonyms: μαλάχη κηπαία, Ῥωμαῖοι μάλβα ὁρτένσε; μαλάχη ἀγρία χερσαία, μάλβα ῥούστικα); Osbaldeston 2000, On Medical Matters, ch. 2-144 (Goodyer numbering): \"Malva sylvestris [Linnaeus] — Common Mallow\".",
+    "native_wild_in_greece": true,
+    "excerpt": "μολόζη· ἐδωδιμωτέρα ἡ κηπευτὴ μᾶλλον τῆς χερσαίας, κακοστόμαχος δὲ καὶ εὐκοίλιος",
+    "notes": "Lemma in Wellmann is μολόχη; the First1KGreek digitisation has an OCR error \"μολόζη\" in the lemma (excerpt copied verbatim incl. the error). The RV synonym list uses μαλάχη. Chapter distinguishes garden (κηπευτή) and wild (χερσαία) mallow; garden mallow of antiquity may not be M. sylvestris s.str. Dimopoulos 2013 p.113: present in all 13 Greek floristic regions, native (no alien status), chorology EA. WCVP: native in Greece, Kriti, East Aegean Is. POWO treats infraspecific taxa (e.g. subsp. mauritiana) as synonyms.",
+    "evidence": [
+      {
+        "claim": "Wellmann II 118 opens with lemma μολόχη (OCR μολόζη) and RV synonyms μαλάχη κηπαία / ἀγρία",
+        "url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+      },
+      {
+        "claim": "Accepted name Malva sylvestris L., Malvaceae, native Greece/Kriti/East Aegean",
+        "url": "https://api.checklistbank.org/dataset/2232 (WCVP v16, the dataset behind POWO)"
+      },
+      {
+        "claim": "Native in all 13 floristic regions of Greece (Dimopoulos et al. 2013, p.113)",
+        "url": "https://media.e-taxonomy.eu/flora-greece/pdf/Vascular_plants_of_Greece_An_annotated_checklist_Englera_31.pdf"
+      },
+      {
+        "claim": "Osbaldeston 2000 suggests Malva sylvestris for MALACHE (ch. 2-144)",
+        "url": "https://archive.org/details/dioscorides-de-materia-medica-2000-english"
+      },
+      {
+        "claim": "POWO taxon (IPNI LSID from POWO dataset on ChecklistBank)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:561932-1"
+      },
+      {
+        "claim": "EMA herbal page: Malvae sylvestris flos; Malvae folium (Malva sylvestris L. / Malva neglecta Wallr.), public summary says \"traditional use\"",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/malvae-sylvestris-flos"
+      },
+      {
+        "claim": "EMA Malvae folium: botanical names Malva sylvestris L., Malva neglecta Wallr.; traditional use",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/malvae-folium"
+      }
+    ],
+    "unverified": [
+      "POWO website returned HTTP 403 to automated fetching; accepted name/family/Greek distribution verified instead against the POWO/WCVP datasets on ChecklistBank (dataset 2000 'PoWo' and 2232 'WCVP v16'); the POWO URL is built from the IPNI LSID returned by that dataset.",
+      "Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) blocked automated access; Greek native status taken from Dimopoulos et al. 2013 checklist PDF instead.",
+      "IUCN Red List not checked (no access in this session); conservation_category left blank.",
+      "Beck 2005 translation and Staub et al. 2016 not accessible in this session; identification relies on the Wellmann Greek text (Latin synonym glosses) plus Osbaldeston 2000 (Goodyer/Gunther numbering).",
+      "wild_harvest_flag: no source on wild harvesting in Greece was opened; left null."
+    ],
+    "powo_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:561932-1"
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "Althaeae radix",
+    "ema_use": "traditional",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/althaeae-radix",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_source_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml",
+    "alternative_names": [],
+    "slug": "althaea-officinalis",
+    "greek_name": "ἀλθαία",
+    "greek_translit": "althaia",
+    "dmm_book": 3,
+    "dmm_chapter": 146,
+    "accepted_name": "Althaea officinalis L.",
+    "common_name_en": "Marsh mallow",
+    "family": "Malvaceae",
+    "identification_confidence": "probable",
+    "identification_source": "Wellmann (ed.) 1906, DMM III 146 (\"ἀλθαία, ἣν ἔνιοι ἐβίσκον καλοῦσι, μολόχης ἐστὶν ἀγρίας εἶδος\"); Osbaldeston 2000, ch. 3-163: \"Althaea officinalis [Linnaeus] — Marsh Mallow\".",
+    "native_wild_in_greece": true,
+    "excerpt": "ἀολθαία, ἣν ἔνιοι ἐβίσκον καλοῦσι, μολόχης ἐστὶν […] ἀγρίας εἶδος· ἔχει δὲ φύλλα περιφερῆ ὥσπερ κυκλάμινος, ἔγχνοα, ἄνθος ῥοδοειδές",
+    "notes": "Digitisation has OCR \"ἀολθαία\" for ἀλθαία (copied verbatim) and the text is split by a page break/apparatus at […]. The next chapter III 147 ἀλκαία is another wild mallow — do not conflate. Dimopoulos 2013 p.113: in 12 of 13 regions (absent Kik), native, chorology EA. WCVP v16 lists Greece. EMA page lists Botanical name Althaea officinalis L., status assessment finalised, EU herbal monograph; public summary text says use is \"traditional use\". (An Althaeae folium monograph may also exist; page rate-limited.)",
+    "evidence": [
+      {
+        "claim": "Wellmann III 146 text",
+        "url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+      },
+      {
+        "claim": "Accepted Althaea officinalis L., Malvaceae; Greece in native range",
+        "url": "https://api.checklistbank.org/dataset/2232 (WCVP v16, the dataset behind POWO)"
+      },
+      {
+        "claim": "Native in Greece, 12 floristic regions (Dimopoulos et al. 2013 p.113)",
+        "url": "https://media.e-taxonomy.eu/flora-greece/pdf/Vascular_plants_of_Greece_An_annotated_checklist_Englera_31.pdf"
+      },
+      {
+        "claim": "EMA EU herbal monograph Althaeae radix, traditional use",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/althaeae-radix"
+      },
+      {
+        "claim": "POWO taxon (IPNI LSID from POWO dataset on ChecklistBank)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:558872-1"
+      }
+    ],
+    "unverified": [
+      "POWO website returned HTTP 403 to automated fetching; accepted name/family/Greek distribution verified instead against the POWO/WCVP datasets on ChecklistBank (dataset 2000 'PoWo' and 2232 'WCVP v16'); the POWO URL is built from the IPNI LSID returned by that dataset.",
+      "Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) blocked automated access; Greek native status taken from Dimopoulos et al. 2013 checklist PDF instead.",
+      "IUCN Red List not checked (no access in this session); conservation_category left blank.",
+      "Beck 2005 translation and Staub et al. 2016 not accessible in this session; identification relies on the Wellmann Greek text (Latin synonym glosses) plus Osbaldeston 2000 (Goodyer/Gunther numbering).",
+      "wild_harvest_flag: no source on wild harvesting in Greece was opened; left null."
+    ],
+    "powo_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:558872-1"
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "Rosmarini folium (botanical name Rosmarinus officinalis L.)",
+    "ema_use": "traditional",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/rosmarini-folium",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_source_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml",
+    "alternative_names": [
+      {
+        "name": "Cachrys libanotis / Seseli-type umbellifers (the other λιβανωτίδες of Wellmann III 74)",
+        "source": "Wellmann III 74; Osbaldeston 2000 ch. 3-87/3-88"
+      }
+    ],
+    "slug": "salvia-rosmarinus",
+    "greek_name": "λιβανωτίς",
+    "greek_translit": "libanōtis",
+    "dmm_book": 3,
+    "dmm_chapter": 75,
+    "accepted_name": "Salvia rosmarinus Spenn.",
+    "common_name_en": "Rosemary",
+    "family": "Lamiaceae",
+    "identification_confidence": "probable",
+    "identification_source": "Wellmann (ed.) 1906, DMM III 75: \"λιβανωτίς, ἣν Ῥωμαῖοι ῤουσμαρῖνον καλοῦσιν, ἧ καὶ οἱ στεφανοπλίκοι χρῶνται\" (the libanotis the Romans call rosmarinus, used by garland-makers); Osbaldeston 2000, ch. 3-89: \"Rosmarinus officinalis [Linnaeus]\".",
+    "native_wild_in_greece": true,
+    "excerpt": "λιβανωτίς, ἣν Ῥωμαῖοι ῤουσμαρῖνον καλοῦσιν, ἧ καὶ οἱ στεφανοπλίκοι χρῶνται· ῥάβδοι εἰσὶ λεπταί",
+    "notes": "\"Libanotis\" is ambiguous in DMM: Wellmann III 74 covers umbelliferous libanotides (one fruiting, whose fruit is called κάχρυ), while III 75 is explicitly the plant the Romans call rosmarinus — that chapter is the rosemary one. Basionym/synonym Rosmarinus officinalis L. (synonym in POWO/WCVP). Native status in Greece is partial: Dimopoulos 2013 p.108 lists it in 12 regions with comment (App. III, printed p.~294): \"Mostly naturalized from cultivation, but locally native (e.g. in IoI, see also Halácsy 1902: 491)\". WCVP: native Greece and East Aegean, introduced on Kriti. Modelling caveat: many Greek GBIF records may be cultivated/naturalised.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 75 text naming rosmarinus",
+        "url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+      },
+      {
+        "claim": "Salvia rosmarinus Spenn. accepted; Rosmarinus officinalis L. synonym; Lamiaceae; Kriti introduced",
+        "url": "https://api.checklistbank.org/dataset/2232 (WCVP v16, the dataset behind POWO)"
+      },
+      {
+        "claim": "Dimopoulos 2013: mostly naturalized from cultivation, but locally native",
+        "url": "https://media.e-taxonomy.eu/flora-greece/pdf/Vascular_plants_of_Greece_An_annotated_checklist_Englera_31.pdf"
+      },
+      {
+        "claim": "POWO taxon (IPNI LSID from POWO dataset on ChecklistBank)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:457138-1"
+      },
+      {
+        "claim": "EMA herbal page: Rosmarini folium (botanical name Rosmarinus officinalis L.), public summary says \"traditional use\"",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/rosmarini-folium"
+      }
+    ],
+    "unverified": [
+      "POWO website returned HTTP 403 to automated fetching; accepted name/family/Greek distribution verified instead against the POWO/WCVP datasets on ChecklistBank (dataset 2000 'PoWo' and 2232 'WCVP v16'); the POWO URL is built from the IPNI LSID returned by that dataset.",
+      "Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) blocked automated access; Greek native status taken from Dimopoulos et al. 2013 checklist PDF instead.",
+      "IUCN Red List not checked (no access in this session); conservation_category left blank.",
+      "Beck 2005 translation and Staub et al. 2016 not accessible in this session; identification relies on the Wellmann Greek text (Latin synonym glosses) plus Osbaldeston 2000 (Goodyer/Gunther numbering).",
+      "wild_harvest_flag: no source on wild harvesting in Greece was opened; left null."
+    ],
+    "powo_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:457138-1"
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "Mastic (Pistaciae lentisci resina)",
+    "ema_use": "",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/mastic",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_source_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml",
+    "alternative_names": [
+      {
+        "name": "Schinus molle (listed by Osbaldeston; New World species, anachronistic)",
+        "source": "Osbaldeston 2000, ch. 1-89"
+      }
+    ],
+    "slug": "pistacia-lentiscus",
+    "greek_name": "σχῖνος",
+    "greek_translit": "schinos",
+    "dmm_book": 1,
+    "dmm_chapter": 70,
+    "accepted_name": "Pistacia lentiscus L.",
+    "common_name_en": "Mastic tree, lentisk",
+    "family": "Anacardiaceae",
+    "identification_confidence": "probable",
+    "identification_source": "Wellmann (ed.) 1907, DMM I 70 (\"σχῖνος δένδρον γνώριμον, στυπτικὸν ὅλον\"); Osbaldeston 2000, ch. 1-89 lists Pistacia lentiscus among suggestions (with Mastic Tree).",
+    "native_wild_in_greece": true,
+    "excerpt": "σχῖνος δένδρον γνώριμον, στυπτικὸν ὅλον· καὶ γὰρ ὁ καρπὸς αὐτῆς καὶ τὸ φύλλον καὶ ὁ φλοιὸς τῶν κλάδων",
+    "notes": "Mastic resin (ῥητίνη σχινίνη) is treated in a following chapter. Dimopoulos 2013 p.46: native in 12 of 13 regions (absent NC), chorology Me. WCVP: native Greece, Kriti, East Aegean. The Chios mastic tree is P. lentiscus var. chia (not a separate species).",
+    "evidence": [
+      {
+        "claim": "Wellmann I 70 text",
+        "url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+      },
+      {
+        "claim": "Accepted Pistacia lentiscus L., Anacardiaceae, native Greece",
+        "url": "https://api.checklistbank.org/dataset/2232 (WCVP v16, the dataset behind POWO)"
+      },
+      {
+        "claim": "Native in Greece (Dimopoulos et al. 2013 p.46)",
+        "url": "https://media.e-taxonomy.eu/flora-greece/pdf/Vascular_plants_of_Greece_An_annotated_checklist_Englera_31.pdf"
+      },
+      {
+        "claim": "POWO taxon (IPNI LSID from POWO dataset on ChecklistBank)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:70253-1"
+      },
+      {
+        "claim": "EMA herbal page: Mastic (Pistaciae lentisci resina)",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/mastic"
+      }
+    ],
+    "unverified": [
+      "POWO website returned HTTP 403 to automated fetching; accepted name/family/Greek distribution verified instead against the POWO/WCVP datasets on ChecklistBank (dataset 2000 'PoWo' and 2232 'WCVP v16'); the POWO URL is built from the IPNI LSID returned by that dataset.",
+      "Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) blocked automated access; Greek native status taken from Dimopoulos et al. 2013 checklist PDF instead.",
+      "IUCN Red List not checked (no access in this session); conservation_category left blank.",
+      "Beck 2005 translation and Staub et al. 2016 not accessible in this session; identification relies on the Wellmann Greek text (Latin synonym glosses) plus Osbaldeston 2000 (Goodyer/Gunther numbering).",
+      "wild_harvest_flag: no source on wild harvesting in Greece was opened; left null.",
+      "Wild-harvest/Chios mastic cultivation documentation not opened.",
+      "EMA page opened (monograph exists, assessment finalised) but the use category (well-established vs traditional) was not stated in the page text I extracted; ema_use left blank."
+    ],
+    "powo_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:70253-1"
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "",
+    "ema_use": "",
+    "ema_url": "",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_source_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml",
+    "alternative_names": [
+      {
+        "name": "Juniperus communis L.",
+        "source": "Osbaldeston 2000, ch. 1-103"
+      },
+      {
+        "name": "Juniperus excelsa M.Bieb.",
+        "source": "Osbaldeston 2000, ch. 1-103"
+      },
+      {
+        "name": "Juniperus macrocarpa Sm.",
+        "source": "not verified (LSJ/DGE pages blocked)"
+      }
+    ],
+    "slug": "juniperus-oxycedrus",
+    "greek_name": "ἄρκευθος",
+    "greek_translit": "arkeuthos",
+    "dmm_book": 1,
+    "dmm_chapter": 75,
+    "accepted_name": "Juniperus oxycedrus L.",
+    "common_name_en": "Prickly juniper",
+    "family": "Cupressaceae",
+    "identification_confidence": "disputed",
+    "identification_source": "Wellmann (ed.) 1907, DMM I 75: \"ἄρκευθος· ἡ μέν τίς ἐστι μεγάλη ἡ δὲ μικρά\" (large and small kinds; RV: Ῥωμαῖοι ζουνιπέρουμ); Osbaldeston 2000 ch. 1-103 suggests Juniperus excelsa and J. communis.",
+    "native_wild_in_greece": true,
+    "excerpt": "ἄρκευθος· ἠ μέν τῖς ἐστι μεγάλη ἡ δὲ μικρά. ἀμφότεραι δὲ θερμαίνουσι καὶ λεπτύνουσι· εἰσὶ δὲ καὶ οὐρητικαί",
+    "notes": "Two kinds (large/small) are described, so the chapter likely covers more than one Juniperus species; species-level identity not settled by any source I could open. TAXONOMY WARNING: Dimopoulos 2013 (p.42 and App. III) states J. oxycedrus subsp. oxycedrus is a W Mediterranean taxon absent from Greece, replaced by J. oxycedrus subsp. deltoides (R.P.Adams) N.G.Passal.; WCVP/POWO v16 treats J. oxycedrus s.str. as W Mediterranean only (Spain to Italy, N Africa) and accepts Juniperus deltoides R.P.Adams for Greece, Kriti, E Aegean etc. GBIF backbone accepts J. oxycedrus L. (key 2684451). Recommend modelling on GBIF J. oxycedrus key (Greek records = subsp./sp. deltoides) or J. deltoides if separately keyed; J. communis is also native in Greece (Dimopoulos p.42, 9 regions, mountains) and J. macrocarpa coastal.",
+    "evidence": [
+      {
+        "claim": "Wellmann I 75 text, two kinds",
+        "url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+      },
+      {
+        "claim": "Dimopoulos 2013: J. oxycedrus in all 13 regions as subsp. deltoides; subsp. oxycedrus absent from Greece",
+        "url": "https://media.e-taxonomy.eu/flora-greece/pdf/Vascular_plants_of_Greece_An_annotated_checklist_Englera_31.pdf"
+      },
+      {
+        "claim": "WCVP v16: J. oxycedrus range W Med only; J. deltoides in Greece",
+        "url": "https://api.checklistbank.org/dataset/2232 (WCVP v16, the dataset behind POWO)"
+      },
+      {
+        "claim": "POWO taxon (IPNI LSID from POWO dataset on ChecklistBank)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262299-1"
+      }
+    ],
+    "unverified": [
+      "POWO website returned HTTP 403 to automated fetching; accepted name/family/Greek distribution verified instead against the POWO/WCVP datasets on ChecklistBank (dataset 2000 'PoWo' and 2232 'WCVP v16'); the POWO URL is built from the IPNI LSID returned by that dataset.",
+      "Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) blocked automated access; Greek native status taken from Dimopoulos et al. 2013 checklist PDF instead.",
+      "IUCN Red List not checked (no access in this session); conservation_category left blank.",
+      "Beck 2005 translation and Staub et al. 2016 not accessible in this session; identification relies on the Wellmann Greek text (Latin synonym glosses) plus Osbaldeston 2000 (Goodyer/Gunther numbering).",
+      "wild_harvest_flag: no source on wild harvesting in Greece was opened; left null.",
+      "Which juniper Beck/André identify for arkeuthos not verified.",
+      "EMA Juniperi pseudo-fructus monograph (J. communis) not verified; it would not apply to J. oxycedrus anyway."
+    ],
+    "powo_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262299-1"
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "Liquiritiae radix (G. glabra, G. inflata, G. uralensis)",
+    "ema_use": "",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/liquiritiae-radix",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_source_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml",
+    "alternative_names": [
+      {
+        "name": "Glycyrrhiza echinata L. (also native in Greece)",
+        "source": "Dimopoulos et al. 2013 p.94 lists it; no source opened links it to DMM III 5"
+      }
+    ],
+    "slug": "glycyrrhiza-glabra",
+    "greek_name": "γλυκύρριζα",
+    "greek_translit": "glykyrrhiza",
+    "dmm_book": 3,
+    "dmm_chapter": 5,
+    "accepted_name": "Glycyrrhiza glabra L.",
+    "common_name_en": "Liquorice",
+    "family": "Fabaceae",
+    "identification_confidence": "probable",
+    "identification_source": "Wellmann (ed.) 1906, DMM III 5; Osbaldeston 2000, ch. 3-7: \"Glycyrrhiza glabra [Linnaeus] — Liquorice Plant\".",
+    "native_wild_in_greece": true,
+    "excerpt": "γλυκύρριζα· οἱ δὲ Ποντικὴν ῥίζαν, οἱ δὲ γεντιανήν,",
+    "notes": "Excerpt is the opening synonym clause; following text in the digitisation is broken by apparatus. Dimopoulos 2013 p.94: native in 10 of 13 regions (not NPi, NC, NE), chorology EA; G. glandulifera Waldst. & Kit. is a synonym. WCVP: native Greece, East Aegean, Cyprus.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 5 opening",
+        "url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+      },
+      {
+        "claim": "Accepted Glycyrrhiza glabra L., Fabaceae, native Greece",
+        "url": "https://api.checklistbank.org/dataset/2232 (WCVP v16, the dataset behind POWO)"
+      },
+      {
+        "claim": "Native in Greece (Dimopoulos 2013 p.94)",
+        "url": "https://media.e-taxonomy.eu/flora-greece/pdf/Vascular_plants_of_Greece_An_annotated_checklist_Englera_31.pdf"
+      },
+      {
+        "claim": "POWO taxon (IPNI LSID from POWO dataset on ChecklistBank)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:496941-1"
+      },
+      {
+        "claim": "EMA herbal page: Liquiritiae radix (G. glabra, G. inflata, G. uralensis)",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/liquiritiae-radix"
+      }
+    ],
+    "unverified": [
+      "POWO website returned HTTP 403 to automated fetching; accepted name/family/Greek distribution verified instead against the POWO/WCVP datasets on ChecklistBank (dataset 2000 'PoWo' and 2232 'WCVP v16'); the POWO URL is built from the IPNI LSID returned by that dataset.",
+      "Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) blocked automated access; Greek native status taken from Dimopoulos et al. 2013 checklist PDF instead.",
+      "IUCN Red List not checked (no access in this session); conservation_category left blank.",
+      "Beck 2005 translation and Staub et al. 2016 not accessible in this session; identification relies on the Wellmann Greek text (Latin synonym glosses) plus Osbaldeston 2000 (Goodyer/Gunther numbering).",
+      "wild_harvest_flag: no source on wild harvesting in Greece was opened; left null.",
+      "EMA page opened (monograph exists, assessment finalised) but the use category (well-established vs traditional) was not stated in the page text I extracted; ema_use left blank."
+    ],
+    "powo_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:496941-1"
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "Sambuci flos",
+    "ema_use": "traditional",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/sambuci-flos",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_source_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml",
+    "alternative_names": [
+      {
+        "name": "Sambucus ebulus L. (the χαμαιάκτη treated in the same chapter)",
+        "source": "Wellmann IV 173 RV; Osbaldeston 2000 ch. 4-175"
+      }
+    ],
+    "slug": "sambucus-nigra",
+    "greek_name": "ἀκτῆ",
+    "greek_translit": "aktē",
+    "dmm_book": 4,
+    "dmm_chapter": 173,
+    "accepted_name": "Sambucus nigra L.",
+    "common_name_en": "Elder",
+    "family": "Viburnaceae",
+    "identification_confidence": "probable",
+    "identification_source": "Wellmann (ed.) 1906, DMM IV 173 (tree-like ἀκτῆ; RV: Ῥωμαῖοι σαμβούκουμ; second kind χαμαιάκτη = ἔβουλουμ); Osbaldeston 2000, ch. 4-174: \"Sambucus nigra [Linnaeus]\".",
+    "native_wild_in_greece": true,
+    "excerpt": "ἀκτῆ· δισσή· ἡ μὲν γάρ τίς ἐστι δενδρώδης, κλάδους καλαμοειδεῖς ἔχουσα, στρογγύλους, ὑπολεύκους, εὐμήκεις",
+    "notes": "Wellmann IV 173 covers both kinds (tree elder and dwarf elder). Family Viburnaceae per POWO/WCVP (formerly Adoxaceae/Caprifoliaceae; Dimopoulos 2013 lists under Caprifoliaceae/Adoxaceae section p.77). Dimopoulos: all 13 regions, App. III: \"Probably not native in KK (Jahn & Schönfelder 1995: 288)\". WCVP: native Greece; introduced Kriti, East Aegean, Cyprus.",
+    "evidence": [
+      {
+        "claim": "Wellmann IV 173 text and RV synonyms",
+        "url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+      },
+      {
+        "claim": "Sambucus nigra L. accepted, Viburnaceae",
+        "url": "https://api.checklistbank.org/dataset/2232 (WCVP v16, the dataset behind POWO)"
+      },
+      {
+        "claim": "Native mainland Greece; probably not native on Kriti",
+        "url": "https://media.e-taxonomy.eu/flora-greece/pdf/Vascular_plants_of_Greece_An_annotated_checklist_Englera_31.pdf"
+      },
+      {
+        "claim": "POWO taxon (IPNI LSID from POWO dataset on ChecklistBank)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30122169-2"
+      },
+      {
+        "claim": "EMA herbal page: Sambuci flos, public summary says \"traditional use\"",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/sambuci-flos"
+      }
+    ],
+    "unverified": [
+      "POWO website returned HTTP 403 to automated fetching; accepted name/family/Greek distribution verified instead against the POWO/WCVP datasets on ChecklistBank (dataset 2000 'PoWo' and 2232 'WCVP v16'); the POWO URL is built from the IPNI LSID returned by that dataset.",
+      "Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) blocked automated access; Greek native status taken from Dimopoulos et al. 2013 checklist PDF instead.",
+      "IUCN Red List not checked (no access in this session); conservation_category left blank.",
+      "Beck 2005 translation and Staub et al. 2016 not accessible in this session; identification relies on the Wellmann Greek text (Latin synonym glosses) plus Osbaldeston 2000 (Goodyer/Gunther numbering).",
+      "wild_harvest_flag: no source on wild harvesting in Greece was opened; left null."
+    ],
+    "powo_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30122169-2"
+  },
+  {
+    "chapter_numbering": "Wellmann",
+    "endemic_greece": false,
+    "endemic_region": "",
+    "conservation_category": "",
+    "conservation_source": "",
+    "ema_monograph": "Absinthii herba",
+    "ema_use": "traditional",
+    "ema_url": "https://www.ema.europa.eu/en/medicines/herbal/absinthii-herba",
+    "wild_harvest_flag": null,
+    "wild_harvest_source": "",
+    "excerpt_edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_source_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml",
+    "alternative_names": [
+      {
+        "name": "Artemisia pontica L. (Dioscorides says the best grows in Pontus/Cappadocia)",
+        "source": "not verified in any opened source; inference flagged"
+      }
+    ],
+    "slug": "artemisia-absinthium",
+    "greek_name": "ἀψίνθιον",
+    "greek_translit": "apsinthion",
+    "dmm_book": 3,
+    "dmm_chapter": 23,
+    "accepted_name": "Artemisia absinthium L.",
+    "common_name_en": "Wormwood",
+    "family": "Asteraceae",
+    "identification_confidence": "probable",
+    "identification_source": "Wellmann (ed.) 1906, DMM III 23 (\"ἀψίνθιον· γνώριμος ἡ πόα\"; RV: Ῥωμαῖοι ἀψίνθιουμ ῥούστικουμ); Osbaldeston 2000, ch. 3-26: \"Artemisia absinthium [Linnaeus] — Wormwood\".",
+    "native_wild_in_greece": true,
+    "excerpt": "ἀψίνθιον· γνώριμος ἡ πόα. ἐστι δὲ αὐτοῦ βέλτιον τὸ ἐν Πόντῳ καὶ Καππαδοκίᾳ γεννώμενον ἐν ὄρει τῳ καλουμένῳ Ταύρῳ.",
+    "notes": "Native but not widespread: Dimopoulos 2013 p.53 lists it (no alien status) in 8 of 13 regions (IoI, NPi, SPi, StE, EC, NC, NE, KK), absent from the Aegean islands and Pe; chorology ES (Euro-Siberian). WCVP: Greece and Kriti in range. Following chapters III 24-25 (Wellmann) cover sea wormwood and seriphon — do not conflate.",
+    "evidence": [
+      {
+        "claim": "Wellmann III 23 text",
+        "url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+      },
+      {
+        "claim": "Artemisia absinthium L. accepted, Asteraceae; Greece, Kriti",
+        "url": "https://api.checklistbank.org/dataset/2232 (WCVP v16, the dataset behind POWO)"
+      },
+      {
+        "claim": "Native in 8 Greek floristic regions (Dimopoulos 2013 p.53)",
+        "url": "https://media.e-taxonomy.eu/flora-greece/pdf/Vascular_plants_of_Greece_An_annotated_checklist_Englera_31.pdf"
+      },
+      {
+        "claim": "POWO taxon (IPNI LSID from POWO dataset on ChecklistBank)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:300106-2"
+      },
+      {
+        "claim": "EMA herbal page: Absinthii herba, public summary says \"traditional use\"",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/absinthii-herba"
+      }
+    ],
+    "unverified": [
+      "POWO website returned HTTP 403 to automated fetching; accepted name/family/Greek distribution verified instead against the POWO/WCVP datasets on ChecklistBank (dataset 2000 'PoWo' and 2232 'WCVP v16'); the POWO URL is built from the IPNI LSID returned by that dataset.",
+      "Flora of Greece web portal (portal.cybertaxonomy.org/flora-greece) blocked automated access; Greek native status taken from Dimopoulos et al. 2013 checklist PDF instead.",
+      "IUCN Red List not checked (no access in this session); conservation_category left blank.",
+      "Beck 2005 translation and Staub et al. 2016 not accessible in this session; identification relies on the Wellmann Greek text (Latin synonym glosses) plus Osbaldeston 2000 (Goodyer/Gunther numbering).",
+      "wild_harvest_flag: no source on wild harvesting in Greece was opened; left null."
+    ],
+    "powo_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:300106-2"
+  }
+]

@@ -1,0 +1,135 @@
+{
+  "slug": "malva-sylvestris",
+  "accepted_name": "Malva sylvestris L.",
+  "common_name_en": "Common mallow",
+  "family": "Malvaceae",
+  "dioscorides": {
+    "book": 2,
+    "chapter": 118,
+    "greek_name": "μολόχη",
+    "greek_translit": "molochē",
+    "excerpt": "μολόζη· ἐδωδιμωτέρα ἡ κηπευτὴ μᾶλλον τῆς χερσαίας, κακοστόμαχος δὲ καὶ εὐκοίλιος",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Wellmann (ed.) 1906, DMM II 118 (Greek text + RV synonyms: μαλάχη κηπαία, Ῥωμαῖοι μάλβα ὁρτένσε; μαλάχη ἀγρία χερσαία, μάλβα ῥούστικα); Osbaldeston 2000, On Medical Matters, ch. 2-144 (Goodyer numbering): \"Malva sylvestris [Linnaeus] — Common Mallow\".",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Alcea rosea / Malva rotundifolia (listed among \"suggested\")",
+        "source": "Osbaldeston 2000, ch. 2-144"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": true,
+    "use": "traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/malvae-sylvestris-flos",
+    "name": "Malvae sylvestris flos; Malvae folium (Malva sylvestris L. / Malva neglecta Wallr.)",
+    "reference": null
+  },
+  "records": {
+    "raw": 2391,
+    "clean": 2217,
+    "thinned": 1734,
+    "public_cells": 698,
+    "low_confidence_model": true
+  },
+  "model": {
+    "auc_mean": 0.668,
+    "auc_sd": 0.026,
+    "boyce_mean": 0.869,
+    "boyce_sd": 0.063,
+    "tss_mean": 0.267,
+    "tss_sd": 0.049,
+    "null_auc_mean": 0.496,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 77.2,
+      "min": 72.6,
+      "max": 78.2
+    },
+    "ssp585": {
+      "median": 81.1,
+      "min": 77.2,
+      "max": 81.4
+    }
+  },
+  "range_cells": {
+    "now": 1307,
+    "ssp245": {
+      "median": 1764.0,
+      "min": 1756.0,
+      "max": 1768.0
+    },
+    "ssp585": {
+      "median": 1773.0,
+      "min": 1764.0,
+      "max": 1774.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 22.4,
+    "ssp245": {
+      "median": 24.3,
+      "min": 24.2,
+      "max": 24.4
+    },
+    "ssp585": {
+      "median": 24.5,
+      "min": 24.3,
+      "max": 24.5
+    }
+  },
+  "risk": {
+    "score": 0.293,
+    "score_lo": 0.293,
+    "score_hi": 0.293,
+    "rank": 19,
+    "rank_lo": 15,
+    "rank_hi": 19,
+    "class": 2,
+    "rank_without_disputed": 11,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.963
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Identification is probable; results describe Malva sylvestris L., which may not be the plant Dioscorides meant.",
+    "Low-confidence model: 1734 thinned records (we require 30) or AUC below 0.75."
+  ]
+}

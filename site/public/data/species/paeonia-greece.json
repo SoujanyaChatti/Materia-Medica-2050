@@ -1,0 +1,154 @@
+{
+  "slug": "paeonia-greece",
+  "accepted_name": "Paeonia L. (wild Greek species pooled)",
+  "common_name_en": "Wild peonies of Greece",
+  "family": "Paeoniaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 140,
+    "greek_name": "γλυκυσίδη",
+    "greek_translit": "glykyside",
+    "excerpt": "γλυκυσίδη· οἱ δὲ πεντόροβον, οἱ δὲ Ἰδαίους δακτύλους, τὴν δὲ ῥίζαν παιωνίαν καλοῦσιν, ἄλλοι δὲ ἀγλαοφῶτιδα.",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), p. 149",
+    "excerpt_url": "https://archive.org/details/BIUSante_65865x02/page/n176/mode/1up"
+  },
+  "identification": {
+    "confidence": "disputed",
+    "source": "Sprengel 1830, vol. 2, pp. 561-562 (Comm. III cap. CXLVII): 'Duas Dioscorides enumerat species, marem iuglandis, et feminam smyrnii foliis. Illam habeo Paeoniam nostram officinalem, vel arietinam Anders. et peregrinam Mill., foliis subtus pubescentibus a priore distinctam: feminam vero P. corallinam Retz. Qui contrarium proferunt, haud sedulo comparasse foliorum formas videntur. Folia enim Smyrnii multo magis ad P. corallinae formam accedunt. Plures autem species et in Creta et in reliqua Graecia proveniunt.' Thus: MALE (walnut-like leaves) = P. officinalis / P. arietina Anders. / P. peregrina Mill.; FEMALE (Smyrnium-like leaves) = P. corallina Retz. Others assigned them the other way round (contrary opinion noted). Also notes γλυκυσίδη as a name reported by Theophrastus. | Fraas 1845, pp. 134-135 gives the REVERSE assignment: MALE παιωνία ἄρρην (Diosc. 3,147 'mas, foliis juglandis') = Paeonia corallina Retz. ('Daher zieht Sprengel - comment. in Dioscor. pag. 561 mit Unrecht die folgende hieher'); the commonest in Greece, on Delphi (Euboea), Parnassus, Oeta in the fir zone; FEMALE παιωνία ἡ γλυκυσίδη θήλεια = P. officinalis L., much rarer, mostly W Greece (Cyllene, Kalavryta). Osbaldeston 2000, ch. 3-157 PAIONIA ARREN, PAIONIA THELEIA: SUGGESTED Paeonia foemina [Fuchs], P. communis [Bauhin], P. officinalis var. foemina [Linnaeus]. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n562/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n179/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n180/mode/1up)",
+    "note": "Dioscorides describes a 'male' and a 'female' peony; no source ties the chapter to one species, so all wild Greek Paeonia are modelled together (P. clusii and P. parnassica are Greek endemics).",
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Paeonia mascula (L.) Mill.",
+        "source": "unverified - commonly cited for the 'male' peony; not confirmed from a source this session"
+      },
+      {
+        "name": "male peony = Paeonia officinalis / P. arietina Anders. / P. peregrina Mill.",
+        "source": "Sprengel 1830, vol. 2, p. 561"
+      },
+      {
+        "name": "female peony = Paeonia corallina Retz.",
+        "source": "Sprengel 1830, vol. 2, p. 562"
+      },
+      {
+        "name": "reverse assignment of male/female (authors not named)",
+        "source": "Sprengel 1830, vol. 2, p. 562 ('Qui contrarium proferunt...')"
+      },
+      {
+        "name": "male = Paeonia corallina Retz.; female (γλυκυσίδη) = P. officinalis L.",
+        "source": "Fraas 1845, pp. 134-135 (explicitly contradicts Sprengel)"
+      },
+      {
+        "name": "Paeonia officinalis var. foemina",
+        "source": "Osbaldeston 2000, ch. 3-157"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": {
+    "category": "EN",
+    "source": "IUCN Red List 2011 (Paeonia parnassica; most threatened of the pooled species)"
+  },
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 395,
+    "clean": 270,
+    "thinned": 163,
+    "public_cells": 52,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.822,
+    "auc_sd": 0.06,
+    "boyce_mean": 0.495,
+    "boyce_sd": 0.196,
+    "tss_mean": 0.558,
+    "tss_sd": 0.106,
+    "null_auc_mean": 0.525,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": -23.9,
+      "min": -40.6,
+      "max": -17.3
+    },
+    "ssp585": {
+      "median": -28.7,
+      "min": -52.8,
+      "max": -15.0
+    }
+  },
+  "range_cells": {
+    "now": 861,
+    "ssp245": {
+      "median": 699.0,
+      "min": 582.0,
+      "max": 728.0
+    },
+    "ssp585": {
+      "median": 664.0,
+      "min": 463.0,
+      "max": 780.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 28.8,
+    "ssp245": {
+      "median": 31.6,
+      "min": 30.2,
+      "max": 32.5
+    },
+    "ssp585": {
+      "median": 31.7,
+      "min": 31.5,
+      "max": 32.0
+    }
+  },
+  "risk": {
+    "score": 0.442,
+    "score_lo": 0.415,
+    "score_hi": 0.509,
+    "rank": 5,
+    "rank_lo": 1,
+    "rank_hi": 7,
+    "class": 3,
+    "rank_without_disputed": null,
+    "top10_stability": 1.0,
+    "components": {
+      "range_loss": 0.239,
+      "endemism": 0.0,
+      "status": 0.75,
+      "harvest": 0.981
+    },
+    "components_ci": {
+      "range_loss": [
+        0.173,
+        0.406
+      ]
+    }
+  },
+  "cultivation_area_km2": 3994,
+  "cultivation_area_km2_range": {
+    "min": 2686,
+    "max": 6121
+  },
+  "caveats": [
+    "Identification is disputed; results describe Paeonia L. (wild Greek species pooled), which may not be the plant Dioscorides meant.",
+    "Dioscorides describes a 'male' and a 'female' peony; no source ties the chapter to one species, so all wild Greek Paeonia are modelled together (P. clusii and P. parnassica are Greek endemics)."
+  ]
+}

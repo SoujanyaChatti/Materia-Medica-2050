@@ -1,0 +1,41 @@
+{
+  "weights": {
+    "range_loss": 0.4,
+    "endemism": 0.2,
+    "status": 0.2,
+    "harvest": 0.2
+  },
+  "draws": 1000,
+  "perturbation": 0.5,
+  "one_at_a_time": {
+    "components": {
+      "range_loss": {
+        "tau_median": 0.9879032258064516,
+        "tau_lo": 0.7903225806451613,
+        "tau_hi": 1.0
+      },
+      "endemism": {
+        "tau_median": 1.0,
+        "tau_lo": 0.9919354838709677,
+        "tau_hi": 1.0
+      },
+      "status": {
+        "tau_median": 0.9879032258064516,
+        "tau_lo": 0.9112903225806451,
+        "tau_hi": 1.0
+      },
+      "harvest": {
+        "tau_median": 1.0,
+        "tau_lo": 0.9919354838709677,
+        "tau_hi": 1.0
+      }
+    },
+    "top_k": 3,
+    "top_k_unchanged": {
+      "median": 0.9985,
+      "min": 0.99775,
+      "max": 0.9995
+    }
+  },
+  "top10_overlap_without_disputed": 0.5
+}

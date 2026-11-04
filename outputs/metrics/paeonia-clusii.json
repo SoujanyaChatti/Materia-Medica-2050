@@ -1,0 +1,16 @@
+{
+  "records": {
+    "raw": 132,
+    "missing_coords": 0,
+    "zero_coords": 0,
+    "invalid_coords": 0,
+    "country_centroid": 0,
+    "institution": 0,
+    "duplicate": 12,
+    "before_min_year": 24,
+    "coord_uncertainty": 11,
+    "clean": 85,
+    "thinned": 43,
+    "low_confidence_model": false
+  }
+}

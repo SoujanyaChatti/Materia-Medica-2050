@@ -1,0 +1,137 @@
+{
+  "slug": "capparis-spinosa",
+  "accepted_name": "Capparis spinosa L.",
+  "common_name_en": "caper",
+  "family": "Capparaceae",
+  "dioscorides": {
+    "book": 2,
+    "chapter": 173,
+    "greek_name": "κάππαρις",
+    "greek_translit": "kapparis",
+    "excerpt": "κάππαρις· οἱ δὲ κυνόσβατον, οἱ δὲ καπρίαν, οἱ δὲ κόρακος μῆλον, […] θάμνος ἐστὶν ἀκανθώδης, ἐπὶ γῆς γυροειδῶς ἐστρωμένος, ἀκάνθας ἀγκιστροειδεῖς ἔχων ὡς βάτος",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. I (Berlin 1907), p. 240; read off the archive.org page image (item b21459162_0001; the OCR of this volume is not usable Greek); ϑ printed as θ",
+    "excerpt_url": "https://archive.org/details/b21459162_0001/page/n251/mode/1up"
+  },
+  "identification": {
+    "confidence": "certain",
+    "source": "Sprengel 1830, vol. 2, p. 483 (Comm. II cap. CCIV): discusses names; 'Ceterum descriptio optima'; the very acrid caper from the Red Sea coast and Africa = perhaps Forsskål's Capparis redif s. oblongifolia. The species name for the main plant is given only in Index V, p. 702: 'Capparis spinosa L. 483' (and 'Capparis oblongifolia Forsk. 483'). Sprengel does not distinguish C. spinosa from C. orientalis (Linnaean C. spinosa s.l.). | Fraas 1845, p. 116: '1. Capparis spinosa L. var. ovata W., rundblättrige, gemeine Kapper' = κάππαρις Theophr., κάππαρις Diosc. 2,204 'der noch einige andere ausländische Arten anführt'; very common in plains, among stones and on rocks (C. rupestris on sea cliffs), Attica, Boeotia, Corinth, Argos; 'folia ovalia apice mucronulato - retusa'. Osbaldeston 2000, ch. 2-204 KAPPARIS: SUGGESTED Capparis spinosa. Confidence raised to 'certain' for C. spinosa L. in the broad (pre-segregate) sense; no source opened distinguishes C. spinosa s.str. from C. orientalis (Fraas' 'var. ovata' and 'C. rupestris' are not mapped to modern names here). (https://archive.org/details/BIUSante_dioscsprengelx02/page/n484/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n161/mode/1up)",
+    "note": "Greek capers are split into C. orientalis, C. sicula and C. zoharyi in the Greek checklist; GBIF keeps C. orientalis separate, so its records are pooled with C. spinosa s.l.",
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Capparis oblongifolia Forsk. (C. redif) - only for the acrid African/Red Sea caper",
+        "source": "Sprengel 1830, vol. 2, p. 483"
+      },
+      {
+        "name": "Capparis rupestris (on sea cliffs)",
+        "source": "Fraas 1845, p. 116 (mentioned as a form, not as an alternative identification)"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": {
+    "category": "LC",
+    "source": "IUCN Red List 2020 (Capparis spinosa; most threatened of the pooled species)"
+  },
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 1902,
+    "clean": 1720,
+    "thinned": 952,
+    "public_cells": 318,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.849,
+    "auc_sd": 0.019,
+    "boyce_mean": 0.953,
+    "boyce_sd": 0.033,
+    "tss_mean": 0.568,
+    "tss_sd": 0.032,
+    "null_auc_mean": 0.505,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 160.6,
+      "min": 147.2,
+      "max": 176.5
+    },
+    "ssp585": {
+      "median": 191.0,
+      "min": 183.6,
+      "max": 208.3
+    }
+  },
+  "range_cells": {
+    "now": 724,
+    "ssp245": {
+      "median": 1341.0,
+      "min": 1303.0,
+      "max": 1398.0
+    },
+    "ssp585": {
+      "median": 1448.0,
+      "min": 1404.0,
+      "max": 1484.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 20.4,
+    "ssp245": {
+      "median": 21.7,
+      "min": 21.6,
+      "max": 21.9
+    },
+    "ssp585": {
+      "median": 21.9,
+      "min": 21.4,
+      "max": 22.2
+    }
+  },
+  "risk": {
+    "score": 0.18,
+    "score_lo": 0.18,
+    "score_hi": 0.18,
+    "rank": 31,
+    "rank_lo": 30,
+    "rank_hi": 31,
+    "class": 1,
+    "rank_without_disputed": 22,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.0,
+      "harvest": 0.901
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Greek capers are split into C. orientalis, C. sicula and C. zoharyi in the Greek checklist; GBIF keeps C. orientalis separate, so its records are pooled with C. spinosa s.l."
+  ]
+}

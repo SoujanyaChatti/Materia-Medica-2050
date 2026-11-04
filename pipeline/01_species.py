@@ -26,7 +26,7 @@ def check(df: pd.DataFrame) -> list[str]:
     bad = df.loc[~df["identification_confidence"].isin(CONFIDENCE), "slug"].tolist()
     if bad:
         problems.append(f"identification_confidence must be one of {sorted(CONFIDENCE)}: {bad}")
-    todo = df.loc[df["identification_source"].fillna("").str.contains(r"\[TODO", regex=True), "slug"].tolist()
+    todo = df.loc[df["identification_source"].fillna("").str.strip().eq(""), "slug"].tolist()
     if todo:
         print(f"WARNING: {len(todo)} species still lack an identification citation: {todo}")
     if not 25 <= len(df) <= 40:
@@ -34,22 +34,54 @@ def check(df: pd.DataFrame) -> list[str]:
     return problems
 
 
-def resolve(df: pd.DataFrame) -> pd.DataFrame:
+BACKBONE = "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c"   # GBIF Backbone Taxonomy
+COL_XR = "7ddf754f-d193-4cc9-b351-99906754a03b"     # Catalogue of Life eXtended Release (GBIF default since 2026)
+
+
+def _match(name: str, checklist: str) -> dict:
     from pygbif import species as gbif_species
 
-    keys, statuses, matched = [], [], []
-    for name in df["accepted_name"]:
-        r = gbif_species.name_backbone(name=name, rank="species", kingdom="Plantae", strict=False)
-        keys.append(r.get("usageKey"))
-        statuses.append(r.get("status"))
-        matched.append(r.get("scientificName"))
+    r = gbif_species.name_backbone(scientificName=name, taxonRank="species", kingdom="Plantae", strict=False,
+                                   checklistKey=checklist)
+    u = r.get("usage") or {}
+    # A synonym match points at its accepted name; occurrence downloads index records by the accepted key.
+    acc = r.get("acceptedUsage") or u
+    return {"key": acc.get("key"), "name": acc.get("canonicalName") or acc.get("name"), "status": u.get("status"),
+            "match": (r.get("diagnostics") or {}).get("matchType")}
+
+
+def model_names(row) -> list[str]:
+    """Species whose records are pooled for this plant (model_taxa), else the accepted binomial."""
+    taxa = [t.strip() for t in str(row.get("model_taxa", "") or "").split(";") if t.strip()]
+    return taxa or [" ".join(row["accepted_name"].split()[:2])]
+
+
+def resolve(df: pd.DataFrame) -> pd.DataFrame:
+    """Resolve every modelled name in the GBIF Backbone (numeric keys) and in the Catalogue of Life
+    XR (alphanumeric keys, used by occurrence downloads since GBIF's 2026 taxonomy switch)."""
     out = df.copy()
-    out["gbif_taxon_key"] = keys
-    out["gbif_status"] = statuses
-    out["gbif_matched_name"] = matched
-    unresolved = out.loc[out["gbif_taxon_key"].isna(), "accepted_name"].tolist()
+    bb_keys, bb_status, bb_names, col_keys, col_names, unresolved = [], [], [], [], [], []
+    for _, row in df.iterrows():
+        names = model_names(row)
+        bb = [_match(n, BACKBONE) for n in names]
+        col = [_match(n, COL_XR) for n in names]
+        for n, m1, m2 in zip(names, bb, col):
+            print(f"{row['slug']}: {n} -> backbone {m1['key']} ({m1['status']}), COL {m2['key']} '{m2['name']}' [{m2['match']}]")
+            if not m1["key"] and not m2["key"]:
+                unresolved.append(n)
+        bb_keys.append(next((m["key"] for m in bb if m["key"]), None))
+        bb_status.append(bb[0]["status"])
+        bb_names.append(";".join(m["name"] for m in bb if m["name"]))
+        col_keys.append(";".join(str(m["key"]) for m in col if m["key"]))
+        col_names.append(";".join(m["name"] for m in col if m["name"]))
+    out["gbif_taxon_key"] = bb_keys
+    out["gbif_status"] = bb_status
+    out["gbif_matched_name"] = bb_names
+    out["col_key"] = col_keys
+    out["col_name"] = col_names
+    out["model_names"] = [";".join(model_names(r)) for _, r in df.iterrows()]
     if unresolved:
-        raise SystemExit(f"GBIF backbone could not resolve: {unresolved}")
+        raise SystemExit(f"GBIF could not resolve: {unresolved}")
     return out
 
 

@@ -28,8 +28,8 @@ export default function PlantMapPanel({ slug, commonName, translit, scenarios, l
       <div className="flex flex-wrap items-stretch gap-4">
         <figure className="m-0 flex flex-[1_1_260px] flex-col items-center justify-center gap-3 rounded-md border border-rule bg-sunk p-6">
           <div className="eyebrow self-start text-ochre">Then</div>
-          <HerbIllustration alt={`Line-art placeholder for a herbal illustration of ${translit}`} className="h-auto w-[72%] max-w-[230px]" />
-          <figcaption className="text-center text-[13px] text-muted">Illustration placeholder. Replace with a public-domain herbal plate and its shelfmark.</figcaption>
+          <HerbIllustration alt={`Decorative line drawing of a herb, standing in for ${translit}`} className="h-auto w-[72%] max-w-[230px]" />
+          <figcaption className="text-center text-[13px] text-muted">Decorative line drawing, not a botanical illustration of this species.</figcaption>
         </figure>
         <div className="flex min-w-0 flex-[999_1_520px] flex-col gap-2.5">
           <div className="flex flex-wrap gap-4">

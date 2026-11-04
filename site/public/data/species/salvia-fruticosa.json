@@ -1,1 +1,142 @@
-{"slug":"salvia-fruticosa","accepted_name":"Salvia fruticosa Mill.","common_name_en":"Greek sage","family":"Lamiaceae","dioscorides":{"book":3,"chapter":null,"greek_name":"ἐλελίσφακον","greek_translit":"elelisphakon","excerpt":null,"paraphrase":null,"paraphrase_ai_assisted":false,"edition":"Wellmann 1906–1914"},"identification":{"confidence":"probable","source":"[Author, year, page]","note":null,"reviewed_by":"[historian, initials]","alternatives":[]},"endemic_greece":false,"endemic_region":null,"conservation_status":{"category":"LC","source":"IUCN Red List [sample]"},"ema_monograph":{"exists":true,"use":"traditional use","name":"Salviae trilobae folium","reference":"[EMA/HMPC reference, year — verify]","url":"https://www.ema.europa.eu/"},"records":{"raw":2203,"clean":612,"thinned":612,"public_cells":225,"low_confidence_model":false},"model":{"auc_mean":0.8,"auc_sd":0.03,"boyce_mean":0.66,"boyce_sd":0.08,"tss_mean":0.52,"tss_sd":0.05,"null_auc_mean":0.5,"variables":["bio1","bio12","bio5","bio15","elevation","slope"]},"range_change_pct":{"ssp245":{"median":-12,"min":-4,"max":-23},"ssp585":{"median":-16,"min":-5,"max":-30}},"range_cells":{"now":540,"ssp245":{"median":475,"min":518,"max":416},"ssp585":{"median":454,"min":513,"max":378}},"natura_share_pct":{"now":7,"ssp245":{"median":13,"min":5,"max":21},"ssp585":{"median":13,"min":5,"max":21}},"risk":{"score":0.168,"score_lo":0.136,"score_hi":0.212,"rank":6,"rank_lo":4,"rank_hi":6,"class":1,"rank_without_disputed":5,"top10_stability":1,"components":{"range_loss":0.12,"endemism":0,"status":0,"harvest":0.6},"components_ci":{"range_loss":[0.04,0.23],"harvest":[0.45,0.7]}},"cultivation_area_km2":16040,"cultivation_area_km2_range":{"min":12510,"max":19570},"caveats":["The identification is probable, not certain; results describe Salvia fruticosa, which may not be the plant Dioscorides meant.","Wild and cultivated records are hard to separate in occurrence databases; some cells may reflect cultivation.","Habitat suitability is not presence. The model omits dispersal limits, soils and grazing.","Harvest pressure is estimated from accessibility (distance to roads and villages), not field surveys."]}
+{
+  "slug": "salvia-fruticosa",
+  "accepted_name": "Salvia fruticosa Mill.",
+  "common_name_en": "Greek sage",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 33,
+    "greek_name": "ἐλελίσφακον",
+    "greek_translit": "elelisphakon",
+    "excerpt": "ἐλελίσφακον· οἱ δὲ ἐλαφοβόσκον, οἱ δὲ σφάγνον. θάμνος ἐστὶν ἐπιμήκης, πολύκλωνος, ῥάβδους τετραγώνους καὶ ὑπολεύκους ἔχων",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), p. 44",
+    "excerpt_url": "https://archive.org/details/BIUSante_65865x02/page/n71/mode/1up"
+  },
+  "identification": {
+    "confidence": "disputed",
+    "source": "Sprengel 1830, vol. 2, p. 510 (Comm. III cap. XXXV, ἐλελίσφακον): 'Quaenam salviae species intelligatur, potest omnino ambigi. Vero tamen est haud absimile, Salviam nostram officinalem, quae in asperis omnis Graeciae locis provenit, hac appellatione comprehendi.' Sprengel names Salvia officinalis (tentatively), NOT S. fruticosa; the species is explicitly said to be open to doubt. | Fraas 1845, p. 184: '20. Salvia pomifera L., breitblättriger Salbey (triloba und baccifera sind synonym). Ist die bei weitem häufigste in Griechenland' = σφάκος Theophr., ἐλελίσφακον Diosc. 3,35; also S. calycina L. = ἐλελίσφακον Theophr.; S. officinalis 'Sehr selten!' in Greece. Fraas treats S. triloba (= S. fruticosa) as a synonym within his S. pomifera, so his identification covers S. fruticosa only in that lumped sense. Osbaldeston 2000, ch. 3-40 ELELISPHAKON: SUGGESTED Salvia maior, Salvia minor [Fuchs, Bauhin], Salvia officinalis [Linnaeus]. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n511/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n229/mode/1up)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Salvia officinalis L.",
+        "source": "Sprengel 1830, vol. 2, p. 510"
+      },
+      {
+        "name": "Salvia pomifera L. (incl. S. triloba = S. fruticosa, as synonyms)",
+        "source": "Fraas 1845, p. 184"
+      },
+      {
+        "name": "Salvia calycina L. (for Theophrastus' ἐλελίσφακον)",
+        "source": "Fraas 1845, p. 184"
+      },
+      {
+        "name": "Salvia officinalis L.",
+        "source": "Osbaldeston 2000, ch. 3-40"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 1292,
+    "clean": 1188,
+    "thinned": 869,
+    "public_cells": 291,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.855,
+    "auc_sd": 0.02,
+    "boyce_mean": 0.926,
+    "boyce_sd": 0.039,
+    "tss_mean": 0.61,
+    "tss_sd": 0.049,
+    "null_auc_mean": 0.513,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 27.9,
+      "min": 23.1,
+      "max": 46.7
+    },
+    "ssp585": {
+      "median": 81.8,
+      "min": 45.7,
+      "max": 89.3
+    }
+  },
+  "range_cells": {
+    "now": 704,
+    "ssp245": {
+      "median": 886.0,
+      "min": 872.0,
+      "max": 998.0
+    },
+    "ssp585": {
+      "median": 1210.0,
+      "min": 967.0,
+      "max": 1228.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 21.9,
+    "ssp245": {
+      "median": 24.9,
+      "min": 24.1,
+      "max": 24.9
+    },
+    "ssp585": {
+      "median": 25.9,
+      "min": 25.0,
+      "max": 26.0
+    }
+  },
+  "risk": {
+    "score": 0.287,
+    "score_lo": 0.287,
+    "score_hi": 0.287,
+    "rank": 22,
+    "rank_lo": 18,
+    "rank_hi": 24,
+    "class": 2,
+    "rank_without_disputed": null,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.933
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 3146,
+  "cultivation_area_km2_range": {
+    "min": 2181,
+    "max": 4720
+  },
+  "caveats": [
+    "Identification is disputed; results describe Salvia fruticosa Mill., which may not be the plant Dioscorides meant."
+  ]
+}

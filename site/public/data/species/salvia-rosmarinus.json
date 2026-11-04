@@ -1,0 +1,136 @@
+{
+  "slug": "salvia-rosmarinus",
+  "accepted_name": "Salvia rosmarinus Spenn.",
+  "common_name_en": "Rosemary",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 75,
+    "greek_name": "λιβανωτίς",
+    "greek_translit": "libanōtis",
+    "excerpt": "λιβανωτίς, ἣν Ῥωμαῖοι ῤουσμαρῖνον καλοῦσιν, ἧ καὶ οἱ στεφανοπλίκοι χρῶνται· ῥάβδοι εἰσὶ λεπταί",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (Weidmann, Berlin), public domain; digitised by First1KGreek (Harvard/Leipzig, CC BY-SA 4.0), urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+    "excerpt_url": "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Wellmann (ed.) 1906, DMM III 75: \"λιβανωτίς, ἣν Ῥωμαῖοι ῤουσμαρῖνον καλοῦσιν, ἧ καὶ οἱ στεφανοπλίκοι χρῶνται\" (the libanotis the Romans call rosmarinus, used by garland-makers); Osbaldeston 2000, ch. 3-89: \"Rosmarinus officinalis [Linnaeus]\".",
+    "note": "Mostly naturalised from cultivation in Greece and only locally native (Dimopoulos et al. 2013); records may include planted or escaped plants.",
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Cachrys libanotis / Seseli-type umbellifers (the other λιβανωτίδες of Wellmann III 74)",
+        "source": "Wellmann III 74; Osbaldeston 2000 ch. 3-87/3-88"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": true,
+    "use": "traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/rosmarini-folium",
+    "name": "Rosmarini folium (botanical name Rosmarinus officinalis L.)",
+    "reference": null
+  },
+  "records": {
+    "raw": 509,
+    "clean": 457,
+    "thinned": 357,
+    "public_cells": 179,
+    "low_confidence_model": true
+  },
+  "model": {
+    "auc_mean": 0.693,
+    "auc_sd": 0.031,
+    "boyce_mean": 0.477,
+    "boyce_sd": 0.294,
+    "tss_mean": 0.347,
+    "tss_sd": 0.055,
+    "null_auc_mean": 0.505,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 37.5,
+      "min": 28.6,
+      "max": 47.4
+    },
+    "ssp585": {
+      "median": 55.4,
+      "min": 42.4,
+      "max": 63.8
+    }
+  },
+  "range_cells": {
+    "now": 876,
+    "ssp245": {
+      "median": 1078.0,
+      "min": 1072.0,
+      "max": 1157.0
+    },
+    "ssp585": {
+      "median": 1184.0,
+      "min": 1099.0,
+      "max": 1245.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 22.4,
+    "ssp245": {
+      "median": 22.8,
+      "min": 21.6,
+      "max": 22.8
+    },
+    "ssp585": {
+      "median": 22.4,
+      "min": 22.4,
+      "max": 23.4
+    }
+  },
+  "risk": {
+    "score": 0.287,
+    "score_lo": 0.287,
+    "score_hi": 0.287,
+    "rank": 20,
+    "rank_lo": 16,
+    "rank_hi": 22,
+    "class": 2,
+    "rank_without_disputed": 12,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.937
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Identification is probable; results describe Salvia rosmarinus Spenn., which may not be the plant Dioscorides meant.",
+    "Low-confidence model: 357 thinned records (we require 30) or AUC below 0.75.",
+    "Mostly naturalised from cultivation in Greece and only locally native (Dimopoulos et al. 2013); records may include planted or escaped plants."
+  ]
+}

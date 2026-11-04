@@ -1,29 +1,40 @@
 # Data sources and licences
 
-**Status: every licence below was written from memory in the PRD and must be confirmed against the source's own terms before release.** Tick each row once checked and record the date and the URL of the terms you read.
+Checked on **2026-11-03** against each source's own terms page (URLs below). ✓ = terms read and confirmed. ⚠ = differs from the PRD's assumption (decision recorded). ✗ = terms page blocked automated access and **must be opened in a browser and confirmed by a person before public release**.
 
-Raw data is never committed; the pipeline downloads it into `data/raw/` and records versions and the GBIF download DOI in `data/manifest.yml`.
+Raw data is never committed. The pipeline downloads it into `data/raw/`, or reads only the Greece window straight from the provider, and records versions and the GBIF download DOI in `data/manifest.yml`.
 
-| ✓ | Need | Source | Access | Licence (verify) | Attribution string |
+| | Need | Source | Licence (as stated by the source) | Terms read | Attribution we use |
 | --- | --- | --- | --- | --- | --- |
-| [ ] | Dioscorides text | Wellmann, *Pedanii Dioscuridis Anazarbei De materia medica* (1906–1914) | Internet Archive scan | Public domain | Wellmann M. (ed.) 1906–1914. Berlin: Weidmann. |
-| [ ] | Plant identifications | Published scholarship on Dioscoridean plant names | Manual curation, cited per plant in `data/curated/identifications.csv` | Cite; do not reproduce tables | Per plant |
-| [ ] | Occurrences | GBIF | `pygbif` download API | Per record CC0 / CC BY / CC BY-NC | GBIF.org (date) GBIF Occurrence Download https://doi.org/[DOI] |
-| [ ] | Taxonomy | GBIF Backbone; Plants of the World Online | API | CC BY | GBIF Secretariat; POWO (Kew) |
-| [ ] | Climate now + 2050 | WorldClim 2.1 (default, 2.5′) or CHELSA (CMIP6) | Direct download, cropped to Greece | Free for research; cite | Fick & Hijmans 2017, Int. J. Climatol. |
-| [ ] | Endemism | Vascular Plants of Greece checklist | Paper supplement | Cite | Dimopoulos et al. 2013/2016 |
-| [ ] | Conservation status | IUCN Red List API v4 | Token | Non-commercial; cite | IUCN (year). The IUCN Red List of Threatened Species. Version [x] |
-| [ ] | Protected areas | Natura 2000 (European Environment Agency) | Shapefile / GeoPackage | Re-use with attribution | © European Environment Agency |
-| [ ] | Land cover | CORINE Land Cover 2018 (Copernicus) | Raster | Free and open | © European Union, Copernicus Land Monitoring Service, EEA |
-| [ ] | Roads, settlements | OpenStreetMap, Geofabrik Greece extract | `.pbf` | ODbL | © OpenStreetMap contributors |
-| [ ] | Elevation | Copernicus DEM GLO-90 | AWS open data tiles | Free; attribute | © DLR e.V. 2010–2014 and © Airbus Defence and Space GmbH 2014–2018, provided under COPERNICUS by the EU and ESA |
-| [ ] | Modern official use | EMA herbal monographs (HMPC) | PDFs, manual extraction | Re-use with acknowledgement | © European Medicines Agency |
-| [ ] | Basemap outline | Natural Earth 1:50m via `world-atlas` | npm package | Public domain | Made with Natural Earth |
+| ✓ | Dioscorides text | Wellmann (ed.), *Pedanii Dioscuridis Anazarbei De materia medica*, Berlin: Weidmann 1906–1914. Internet Archive scans b21459162_0001–0003 (University of Glasgow Library) | Public domain by term: Wellmann died 1933, so the EU life+70 term ended in 2003, and the work was published before 1929 in the US. The archive items themselves carry "Copyright Not Evaluated", not a PD mark. | [archive.org metadata](https://archive.org/metadata/b21459162_0001/metadata), [Wikisource: Max Wellmann](https://de.wikisource.org/wiki/Max_Wellmann) | Wellmann M. (ed.) 1906–1914. *Pedanii Dioscuridis Anazarbei De materia medica libri quinque*. 3 vols. Berlin: Weidmann. |
+| ✗ | Occurrences | GBIF occurrence download | Only this is confirmed: users who download data agree to cite the DOI ([techdocs.gbif.org](https://techdocs.gbif.org/en/data-use/citation)). The per-record CC0 / CC BY / CC BY-NC mix is **not yet confirmed** because gbif.org/terms returned 403. | gbif.org/terms, gbif.org/citation-guidelines (blocked) | GBIF.org (date) GBIF Occurrence Download https://doi.org/[DOI in data/manifest.yml] |
+| ✓ | Taxonomy | GBIF Backbone Taxonomy | CC BY 4.0 | [GBIF dataset registry](https://api.gbif.org/v1/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c) | GBIF Secretariat (2023). GBIF Backbone Taxonomy. https://doi.org/10.15468/39omei |
+| ✓ / ✗ | Accepted names | World Checklist of Vascular Plants (WCVP, Kew), shown on Plants of the World Online | WCVP dataset: CC BY 4.0. POWO website terms: not confirmed (403). We cite POWO pages as references only and take no data from its API. | [WCVP on GBIF](https://api.gbif.org/v1/dataset/f382f0ce-323a-4091-bb9f-add557f3a9a2) | Govaerts R. (2026). The World Checklist of Vascular Plants (WCVP). Royal Botanic Gardens, Kew. https://doi.org/10.15468/6h8ucr |
+| ⚠ | Climate, now and 2050 | WorldClim 2.1, 2.5′: historical 1970–2000 plus CMIP6 2041–2060 for MPI-ESM1-2-HR, MRI-ESM2-0 and IPSL-CM6A-LR × SSP2-4.5 / SSP5-8.5 | "Freely available for academic use and other non-commercial use. **Redistribution or commercial use is not allowed without prior permission.**" CMIP6 model outputs carry their own per-model licences (CC BY 4.0 or CC BY-NC-SA 4.0). | [worldclim.org/about](https://www.worldclim.org/about.html), [CMIP6 terms](https://pcmdi.llnl.gov/CMIP6/TermsOfUse/TermsOfUse6-1.html) | Fick S.E. & Hijmans R.J. 2017. WorldClim 2. *Int. J. Climatol.* 37: 4302–4315; plus the CMIP6 acknowledgement on `/methods` |
+| ✓ | Endemism | Dimopoulos et al. 2013, *Englera* 31; 2016 supplement, *Willdenowia* 46: 301–347 | Cited as facts only (endemic yes/no per species). Englera states no reuse licence, so it is treated as all rights reserved; Willdenowia is CC BY 4.0 by journal policy. The checklist itself is not redistributed. | [BGBM Englera 31](https://bgbm-web.bgbm.fu-berlin.de/en/vascular-plants-greece-annotated-checklist), [Willdenowia](https://www.bgbm.org/en/willdenowia) | Dimopoulos P. et al. 2013. Vascular plants of Greece: An annotated checklist. *Englera* 31. https://doi.org/10.3372/en.31 · Dimopoulos P. et al. 2016. Supplement. *Willdenowia* 46: 301–347. https://doi.org/10.3372/wi.46.46303 |
+| ✗ | Conservation status | IUCN Red List API v4 (token in `.env`) | **Not confirmed**: every IUCN terms page returned 403. Displaying categories publicly and committing derived values must be checked in a browser. | iucnredlist.org/terms/terms-of-use (blocked) | IUCN (2026). The IUCN Red List of Threatened Species. Version [x]. https://www.iucnredlist.org |
+| ✓ | Protected areas | EEA Natura 2000 (vector), end-2023 release | CC BY 4.0, copyright holder DG ENV. Data for general information only, not legally authentic. | [EEA catalogue](https://sdi.eea.europa.eu/catalogue/srv/api/records/91357f39-7866-41ce-b447-43905c364ec8), [EEA legal notice](https://www.eea.europa.eu/en/legal-notice) | Natura 2000 (vector) © European Environment Agency / DG ENV, CC BY 4.0, modified (rasterised to the climate grid) |
+| ✓ | Land cover | CORINE Land Cover 2018, raster 100 m (Copernicus Land Monitoring Service) | Full, open and free access, Reg. (EU) 1159/2013. Users must name the source, state modifications and imply no EU endorsement. | [CLMS data policy](https://land.copernicus.eu/en/data-policy) | Generated using European Union's Copernicus Land Monitoring Service information; https://doi.org/10.2909/960998c1-1870-4e82-8051-6485205ebbac |
+| ✓ | Roads, settlements | OpenStreetMap via Geofabrik Greece extract | ODbL 1.0. The 2 km access mask is a Derivative Database used internally and **not published**. The 10 km risk cells are a Produced Work, so §4.3 requires a notice, and §4.6 is met because the pipeline code is published. | [osm.org/copyright](https://www.openstreetmap.org/copyright), [ODbL](https://opendatacommons.org/licenses/odbl/1-0/) | Contains information from OpenStreetMap (© OpenStreetMap contributors), available under the ODbL: https://www.openstreetmap.org/copyright |
+| ✓ | Elevation | Copernicus DEM GLO-90 (AWS Open Data), read as overviews and never re-hosted | Free licence for the general public; the attribution string below is mandatory | [AWS registry](https://registry.opendata.aws/copernicus-dem/) | produced using Copernicus WorldDEM-90 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved |
+| ✓ | Modern official use | EMA / HMPC herbal monographs | © EMA. Reproduction allowed for any purpose if EMA is acknowledged; the EMA logo may not be used | [EMA legal notice](https://www.ema.europa.eu/en/about-us/legal-notice) | European Medicines Agency: <monograph title>, <URL>, accessed November 2026 |
+| ⚠ | Basemap outline | Natural Earth 1:50m, via npm `world-atlas` 2.0.2 | Natural Earth data is public domain; the `world-atlas` package is **ISC** ("Copyright 2013-2019 Michael Bostock"), so its notice must ship with bundled copies | [Natural Earth terms](https://www.naturalearthdata.com/about/terms-of-use/), [world-atlas LICENSE](https://raw.githubusercontent.com/topojson/world-atlas/master/LICENSE) | Made with Natural Earth. Outline via world-atlas (ISC, © Michael Bostock) |
+
+## Decisions on the differences (⚠)
+
+- **WorldClim: no redistribution.** No WorldClim raster, raw or cropped, is committed or served: `data/` and `outputs/rasters/` are git-ignored, and the site shows only species-model outputs aggregated to 10 km cells. The project is academic and non-commercial. WorldClim's terms don't say whether a public website showing *derived* model outputs counts as redistribution. **Open item: email info@worldclim.org to confirm before public launch.** `/methods` lists the CMIP6 models used and gives the WCRP/ESGF acknowledgement.
+- **world-atlas:** the ISC notice is reproduced on `/methods` and in this file.
+- **Wellmann:** the public-domain reasoning above replaces the earlier, wrong death date.
+
+## Must be checked by a person (✗)
+
+1. **GBIF:** open https://www.gbif.org/terms. Confirm that a download containing CC BY-NC records may be used for this non-commercial site, and copy the exact citation format.
+2. **IUCN Red List:** open https://www.iucnredlist.org/terms/terms-of-use. Confirm that showing Red List categories on a public website, and committing them in `outputs/risk.csv`, is allowed. If it is not, set `IUCN_TOKEN=` empty, and the pipeline falls back to the checklist categories in `species.csv`.
 
 ## Fallbacks (from the PRD)
 
-- No IUCN token in time → use the Greek checklist's threat categories (column `conservation_category` in `data/curated/species.csv`) and say so on `/methods`.
-- CHELSA too heavy → WorldClim 2.5′ (this is the pipeline default; set `CLIMATE_SOURCE` in `pipeline/lib/config.py`).
-- A species with < 30 clean records → keep it, flag "low-confidence model".
+- No IUCN token, or IUCN terms don't allow display: use the curated `conservation_category` in `data/curated/species.csv` and say so on `/methods`.
+- CHELSA too heavy: use WorldClim 2.5′. This is the pipeline default.
+- A species with fewer than 30 clean records is kept and flagged "low-confidence model".
 
 If a dataset's licence or access turns out to differ from this table, stop and resolve it with the team before publishing.

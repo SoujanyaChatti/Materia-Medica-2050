@@ -36,19 +36,24 @@ tests/              cleaning filters, risk maths, export schema
 | Stage | Script | Does |
 | --- | --- | --- |
 | 1 | `01_species.py` | Checks `species.csv`, resolves names on the GBIF Backbone |
-| 2 | `02_occurrences.py` | One DOI'd GBIF download; drops missing/zero coords, country centroids, institutions, duplicates, pre-1970, uncertainty > 5 km; thins to ~1 km |
-| 3 | `03_environment.py` | WorldClim 2.1 bioclim (baseline + 5 GCMs × SSP2-4.5/SSP5-8.5, 2041–2060), Copernicus DEM elevation/slope; keeps variables with \|r\| < 0.7 |
+| 2 | `02_occurrences.py` | One DOI'd GBIF download of all vascular plants in the study box (also the model background); drops missing/zero coords, country centroids, institutions, duplicates, pre-1970, uncertainty > 5 km; thins to ~1 km |
+| 3 | `03_environment.py` | WorldClim 2.1 bioclim at 2.5′ (baseline + 3 GCMs × SSP2-4.5/SSP5-8.5, 2041–2060), Copernicus DEM elevation/slope; keeps variables with \|r\| < 0.7; reads only the Greece window over HTTP |
 | 4 | `04_models.py` | MaxEnt (elapid) + random forest, target-group background, 5-fold ~25 km spatial-block CV (AUC, TSS, Boyce, null model); projects to every GCM × SSP |
 | 5 | `05_risk.py` | Range loss, endemism, status (IUCN or checklist), harvest proxy (OSM 2 km); weights 0.4/0.2/0.2/0.2; 1,000 random weightings + ±50% one-at-a-time sensitivity; with/without disputed IDs |
 | 6 | `06_cultivation.py` | Suitable in 2050 under >50% of GCMs, CORINE farmland/transitional, outside Natura 2000, ≥ 5 km from wild records |
 | 7 | `07_export_web.py` | ~10 km EPSG:3035 cells as GeoJSON (never points), species JSON, `meta.json`; validates against `site/schema/`, fails on > 300 KB layers |
 
-### Manual downloads (licence acceptance needed)
+### Inputs that are not fetched automatically
 
-Place these before `make cultivation`:
+- **CORINE Land Cover 2018**, raster 100 m (free Copernicus account): download from
+  https://land.copernicus.eu/en/products/corine-land-cover/clc2018 (Greece-only area is enough) and put the
+  `.tif` anywhere in `data/raw/corine/`. Stage 06 reads only the Greece window.
+- **Natura 2000, end-2024 release** (EEA, CC BY 4.0, public): `Natura2000_end2024.gpkg` from the EEA datashare
+  (`eea_v_3035_100_k_natura2000_p_2024_v01_r00`). We keep only the Greek sites:
+  `data/raw/natura2000/Natura2000_end2024_GR.gpkg` (446 sites).
 
-- CORINE Land Cover 2018 raster (100 m) → `data/raw/corine/U2018_CLC2018_V2020_20u1.tif` (land.copernicus.eu, free login)
-- Natura 2000 end-2021 GeoPackage → `data/raw/natura2000/Natura2000_end2021.gpkg` (EEA)
+Everything else is downloaded by the pipeline. WorldClim and the Copernicus DEM are read straight from the
+provider for the Greece window only, so no global file is ever stored.
 
 ## Website
 
@@ -56,12 +61,11 @@ Five pages: Home, Plants (sortable/filterable table or grid), Plant page (Diosco
 
 The site never computes science: it only displays `site/public/data/`. When `meta.json` has `"sample": true`, every page shows a **Sample data** banner. Deploys to GitHub Pages via `.github/workflows/site.yml` (CI also runs pytest, including schema validation).
 
-## Before submission — open items
+## Open items
 
-- Confirm every licence in `DATA_LICENSES.md`.
-- Grow `species.csv` from 8 to 25–40 plants; fill `identification_source`, Dioscorides chapters, Greek excerpts (Wellmann, public domain), EMA monograph references, conservation categories (all marked `[TODO]`/`[verify]`).
-- Replace the herb line-art placeholder only with public-domain manuscript images whose licence is confirmed.
-- Replace team names, GitHub links and citation in `site/src/pages/methods.astro` and the footer.
+- Open the IUCN Red List and GBIF terms pages in a browser and confirm public display is allowed (both blocked automated checks; see `DATA_LICENSES.md`).
+- Ask WorldClim (info@worldclim.org) whether a public site showing derived 10 km model outputs is acceptable.
+- Plants whose identification citation, EMA status or wild-harvest evidence could not be verified carry the reason in the `unverified` column of `data/curated/species.csv`.
 
 See `LIMITATIONS.md` for what the results can and cannot say.
 

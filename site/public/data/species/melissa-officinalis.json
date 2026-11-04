@@ -1,0 +1,135 @@
+{
+  "slug": "melissa-officinalis",
+  "accepted_name": "Melissa officinalis L.",
+  "common_name_en": "Lemon balm",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 104,
+    "greek_name": "μελισσόφυλλον",
+    "greek_translit": "melissophyllon",
+    "excerpt": "μελισσόφυλλον, ὃ ἔνιοι μελίτταιναν καλοῦσι διὰ τὸ ἥδεσθαι τῇ πόᾳ τὰς μελίσσας.",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/115"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CVIII, pp. 541-542 (index lists Melissa officinalis L. at p. 541; text cites Nicander, Virgil's melisphyllum and Varro's apiastrum)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Melissa altissima Sibth. (= M. officinalis subsp. altissima)",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, index p. 511 (context not read; listed only as a lead)"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": true,
+    "use": "traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/melissae-folium",
+    "name": "Melissae folium",
+    "reference": null
+  },
+  "records": {
+    "raw": 535,
+    "clean": 452,
+    "thinned": 394,
+    "public_cells": 170,
+    "low_confidence_model": true
+  },
+  "model": {
+    "auc_mean": 0.649,
+    "auc_sd": 0.026,
+    "boyce_mean": 0.53,
+    "boyce_sd": 0.368,
+    "tss_mean": 0.256,
+    "tss_sd": 0.049,
+    "null_auc_mean": 0.49,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 50.3,
+      "min": 36.1,
+      "max": 52.7
+    },
+    "ssp585": {
+      "median": 60.4,
+      "min": 55.8,
+      "max": 63.9
+    }
+  },
+  "range_cells": {
+    "now": 1063,
+    "ssp245": {
+      "median": 1406.0,
+      "min": 1251.0,
+      "max": 1443.0
+    },
+    "ssp585": {
+      "median": 1470.0,
+      "min": 1427.0,
+      "max": 1492.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 26.7,
+    "ssp245": {
+      "median": 26.2,
+      "min": 24.9,
+      "max": 26.4
+    },
+    "ssp585": {
+      "median": 25.4,
+      "min": 25.3,
+      "max": 25.9
+    }
+  },
+  "risk": {
+    "score": 0.296,
+    "score_lo": 0.296,
+    "score_hi": 0.296,
+    "rank": 14,
+    "rank_lo": 10,
+    "rank_hi": 14,
+    "class": 2,
+    "rank_without_disputed": 7,
+    "top10_stability": 0.205,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.981
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Identification is probable; results describe Melissa officinalis L., which may not be the plant Dioscorides meant.",
+    "Low-confidence model: 394 thinned records (we require 30) or AUC below 0.75."
+  ]
+}

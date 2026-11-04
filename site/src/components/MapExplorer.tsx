@@ -2,7 +2,7 @@
 // named area — the keyboard/list alternative) to list the species modelled there.
 import { useEffect, useMemo, useState } from 'react';
 import type { Meta, ScenarioKey, SpeciesSummary } from '../lib/types';
-import { dataUrl, plantHref } from '../lib/url';
+import { loadRiskGrid, plantHref } from '../lib/url';
 import { ConfidenceBadge, LowConfidenceTag, RiskTag } from './Badges';
 import { LegendItem, RiskLegend } from './MapLegend';
 import { RangeMap, type CellProps } from './RangeMap';
@@ -34,7 +34,7 @@ export default function MapExplorer({ species, scenarios, nSpecies }: { species:
   const byIndex = species; // species.json order = indices used in the grid (rank order)
 
   useEffect(() => {
-    fetch(dataUrl('layers/greece_risk_grid.geojson')).then((r) => r.json()).then((fc: GeoJSON.FeatureCollection) => {
+    loadRiskGrid().then((fc: GeoJSON.FeatureCollection) => {
       setCells(fc.features.map((f) => ({ props: f.properties as CellProps, centre: centreOf(f) })));
     }).catch(() => setCells([]));
   }, []);
@@ -62,7 +62,13 @@ export default function MapExplorer({ species, scenarios, nSpecies }: { species:
   const info = useMemo(() => {
     if (!sel) return null;
     const p = sel.cell.props;
-    const idx = (k: string) => String(p[k] ?? '').split(',').filter(Boolean).map(Number);
+    // sp_* is a base-36 bitmask over species.json indices (bit i set = species i).
+    const idx = (k: string) => {
+      const v = p[k] ? parseInt(String(p[k]), 36) : 0;
+      const out: number[] = [];
+      for (let i = 0; i < 53 && 2 ** i <= v; i++) if (Math.floor(v / 2 ** i) % 2 === 1) out.push(i);
+      return out;
+    };
     const losing = new Set(s === 'now' ? [] : idx(`sp_${s}`));
     const ids = [...new Set([...idx('sp_now'), ...losing])];
     const members = ids.map((i) => ({ sp: byIndex[i], losing: losing.has(i) })).filter((m) => m.sp);

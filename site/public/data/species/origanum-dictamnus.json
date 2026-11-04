@@ -1,1 +1,135 @@
-{"slug":"origanum-dictamnus","accepted_name":"Origanum dictamnus L.","common_name_en":"Cretan dittany","family":"Lamiaceae","dioscorides":{"book":3,"chapter":null,"greek_name":"δίκταμνον","greek_translit":"diktamnon","excerpt":null,"paraphrase":null,"paraphrase_ai_assisted":false,"edition":"Wellmann 1906–1914"},"identification":{"confidence":"certain","source":"[Author, year, page]","note":null,"reviewed_by":"[historian, initials]","alternatives":[]},"endemic_greece":true,"endemic_region":"Crete","conservation_status":{"category":"NT","source":"IUCN Red List [sample]"},"ema_monograph":{"exists":false},"records":{"raw":209,"clean":58,"thinned":58,"public_cells":22,"low_confidence_model":false},"model":{"auc_mean":0.91,"auc_sd":0.03,"boyce_mean":0.78,"boyce_sd":0.08,"tss_mean":0.7,"tss_sd":0.06,"null_auc_mean":0.5,"variables":["bio1","bio12","bio5","bio15","elevation","slope"]},"range_change_pct":{"ssp245":{"median":-44,"min":-27,"max":-63},"ssp585":{"median":-57,"min":-35,"max":-82}},"range_cells":{"now":48,"ssp245":{"median":27,"min":35,"max":18},"ssp585":{"median":21,"min":31,"max":9}},"natura_share_pct":{"now":52.1,"ssp245":{"median":58.1,"min":50.1,"max":66.1},"ssp585":{"median":58.1,"min":50.1,"max":66.1}},"risk":{"score":0.626,"score_lo":0.558,"score_hi":0.702,"rank":1,"rank_lo":1,"rank_hi":1,"class":4,"rank_without_disputed":1,"top10_stability":1,"components":{"range_loss":0.44,"endemism":1,"status":0.25,"harvest":1},"components_ci":{"range_loss":[0.27,0.63],"harvest":[0.85,1]}},"cultivation_area_km2":1190,"cultivation_area_km2_range":{"min":930,"max":1460},"caveats":["Wild and cultivated records are hard to separate in occurrence databases; some cells may reflect cultivation.","Habitat suitability is not presence. The model omits dispersal limits, soils and grazing.","Harvest pressure is estimated from accessibility (distance to roads and villages), not field surveys."]}
+{
+  "slug": "origanum-dictamnus",
+  "accepted_name": "Origanum dictamnus L.",
+  "common_name_en": "Cretan dittany",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 32,
+    "greek_name": "δίκταμνον",
+    "greek_translit": "diktamnon",
+    "excerpt": "δίκταμνον, ὃ καλοῦσί τινες γλήχωνα ἀγρίαν, οἱ δὲ βαίτιον. πόα ἐστὶ Κρητική, δριμεῖα λίαν, ὁμοία γλήχωνι",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906, Pedanii Dioscuridis Anazarbei De materia medica vol. II (libri III-IV), Berlin: Weidmann; read from page scan on archive.org (BIUSante_65865x02), pp. 41-42",
+    "excerpt_url": "https://archive.org/details/BIUSante_65865x02/page/n68/mode/1up"
+  },
+  "identification": {
+    "confidence": "certain",
+    "source": "Sprengel 1830, vol. 2, p. 510 (Comm. III cap. XXXIV): 'De dictamno Dioscoridis cretico nunquam exstitit controversia ... Est Origanum Dictamnus L., cuius iconem fere primam Dodonaeus exhibuit.' Same chapter: ψευδοδίκταμνον = Marrubium pseudodictamnus L.; third dictamnon conjectured as Thymus mastichina L. (these are the chapter's other kinds, not rivals to δίκταμνον). | Fraas 1845, Synopsis plantarum florae classicae, pp. 181-182: 'Orig. Dictamnus L., ächter Diptam' = δίκταμνος Hippocr., Theophr. 9,16, Diosc. 3,37; modern name στοματόχορτον; 'Nur auf Kreta bis jetzt.' Osbaldeston 2000, ch. 3-37 DIKTAMNON: 'SUGGESTED' list gives both Dictamnus albus / D. fraxinella (White Dittany) and Origanum dictamnus / Dictamnus creticus / Amaracus dictamnus (Dittany of Crete). (https://archive.org/details/BIUSante_dioscsprengelx02/page/n511/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n226/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n227/mode/1up ; https://archive.org/details/dioscorides-de-materia-medica-2000-english)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Dictamnus albus L. (D. fraxinella)",
+        "source": "Osbaldeston 2000, ch. 3-37 'SUGGESTED' list (editor's candidate list; no argument given)"
+      }
+    ]
+  },
+  "endemic_greece": true,
+  "endemic_region": "Kriti (KK floristic region); range-restricted",
+  "conservation_status": {
+    "category": "LC",
+    "source": "IUCN Red List 2026"
+  },
+  "ema_monograph": {
+    "exists": true,
+    "use": "traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/origani-dictamni-herba",
+    "name": "Origani dictamni herba (Origanum dictamnus L., herba)",
+    "reference": null
+  },
+  "records": {
+    "raw": 139,
+    "clean": 123,
+    "thinned": 90,
+    "public_cells": 51,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.961,
+    "auc_sd": 0.019,
+    "boyce_mean": 0.633,
+    "boyce_sd": 0.182,
+    "tss_mean": 0.886,
+    "tss_sd": 0.058,
+    "null_auc_mean": 0.494,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": -57.8,
+      "min": -80.7,
+      "max": -24.0
+    },
+    "ssp585": {
+      "median": -64.8,
+      "min": -93.4,
+      "max": -50.7
+    }
+  },
+  "range_cells": {
+    "now": 138,
+    "ssp245": {
+      "median": 88.0,
+      "min": 53.0,
+      "max": 112.0
+    },
+    "ssp585": {
+      "median": 78.0,
+      "min": 21.0,
+      "max": 97.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 24.6,
+    "ssp245": {
+      "median": 22.3,
+      "min": 17.0,
+      "max": 23.9
+    },
+    "ssp585": {
+      "median": 20.5,
+      "min": 4.8,
+      "max": 23.7
+    }
+  },
+  "risk": {
+    "score": 0.619,
+    "score_lo": 0.484,
+    "score_hi": 0.71,
+    "rank": 1,
+    "rank_lo": 1,
+    "rank_hi": 23,
+    "class": 4,
+    "rank_without_disputed": 1,
+    "top10_stability": 0.822,
+    "components": {
+      "range_loss": 0.578,
+      "endemism": 1.0,
+      "status": 0.0,
+      "harvest": 0.939
+    },
+    "components_ci": {
+      "range_loss": [
+        0.24,
+        0.807
+      ]
+    }
+  },
+  "cultivation_area_km2": 17,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 210
+  },
+  "caveats": []
+}

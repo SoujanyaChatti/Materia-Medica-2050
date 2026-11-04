@@ -1,4 +1,4 @@
-// Line-art placeholder for a herbal plate (used until a public-domain manuscript image with a
+// Decorative line drawing of a herb (our own artwork; swap for a public-domain manuscript image with a
 // confirmed licence and shelfmark is available). Stroke follows the theme.
 export function HerbIllustration({ alt, className, style }: { alt: string; className?: string; style?: React.CSSProperties }) {
   return (

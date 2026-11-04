@@ -1,0 +1,123 @@
+{
+  "slug": "ecballium-elaterium",
+  "accepted_name": "Ecballium elaterium (L.) A.Rich.",
+  "common_name_en": "squirting cucumber",
+  "family": "Cucurbitaceae",
+  "dioscorides": {
+    "book": 4,
+    "chapter": 150,
+    "greek_name": "σίκυς ἄγριος",
+    "greek_translit": "sikys agrios",
+    "excerpt": "σίκυς ἄγριος, ὃν φέρομβρόν τινες καλοῦσι, τῷ καρπῷ μόνον διαφέρει τοῦ ἡμέρου, ἐλάσσονα πολλῷ καὶ βαλάνοις ἐπιμήκεσιν ἐοικότα ἔχων",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. II (Berlin 1906), p. 292; read off the archive.org page image (item b21459162_0002) and cross-checked against two OCR layers; ϑ printed as θ",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/n323/mode/1up"
+  },
+  "identification": {
+    "confidence": "certain",
+    "source": "Sprengel 1830, vol. 2, p. 636 (Comm. IV cap. CLII, σίκυς ἄγριος): 'Est vero Momordica Elaterium, in Graecia satis vulgaris planta, cuius succus amarissimus et hodie purgante vi insignis celebratur'; describes the explosive fruit. Momordica elaterium L. = Ecballium elaterium (synonymy ours). | Fraas 1845, p. 102: '1. Ecbalium Elaterium Rich., Springgurke' = ὁ ἄγριος σίκυος Theophr. 9,15, σίκυς ἄγριος Diosc. 4,152, source of Elaterium; modern ἀγριαγγουριά; very common on poor fields of the lowlands (Attica). Osbaldeston 2000, ch. 4-154 SIKUS AGRIOS: SUGGESTED ... Ecballium elaterium, Momordica elaterium [Linnaeus]. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n637/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n147/mode/1up)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": []
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 5020,
+    "clean": 4900,
+    "thinned": 2449,
+    "public_cells": 563,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.752,
+    "auc_sd": 0.009,
+    "boyce_mean": 0.967,
+    "boyce_sd": 0.037,
+    "tss_mean": 0.393,
+    "tss_sd": 0.022,
+    "null_auc_mean": 0.495,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 63.0,
+      "min": 62.5,
+      "max": 74.4
+    },
+    "ssp585": {
+      "median": 86.4,
+      "min": 70.8,
+      "max": 90.6
+    }
+  },
+  "range_cells": {
+    "now": 900,
+    "ssp245": {
+      "median": 1155.0,
+      "min": 1146.0,
+      "max": 1198.0
+    },
+    "ssp585": {
+      "median": 1221.0,
+      "min": 1195.0,
+      "max": 1257.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 21.2,
+    "ssp245": {
+      "median": 20.9,
+      "min": 20.6,
+      "max": 21.4
+    },
+    "ssp585": {
+      "median": 21.3,
+      "min": 21.1,
+      "max": 21.6
+    }
+  },
+  "risk": {
+    "score": 0.282,
+    "score_lo": 0.282,
+    "score_hi": 0.282,
+    "rank": 25,
+    "rank_lo": 21,
+    "rank_hi": 28,
+    "class": 2,
+    "rank_without_disputed": 16,
+    "top10_stability": 0.0,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.911
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 5387,
+  "cultivation_area_km2_range": {
+    "min": 4471,
+    "max": 6105
+  },
+  "caveats": []
+}

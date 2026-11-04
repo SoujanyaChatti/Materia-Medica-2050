@@ -1,0 +1,139 @@
+{
+  "slug": "teucrium-capitatum",
+  "accepted_name": "Teucrium capitatum L.",
+  "common_name_en": "Felty germander",
+  "family": "Lamiaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 110,
+    "greek_name": "πόλιον",
+    "greek_translit": "polion",
+    "excerpt": "πόλιον· τὸ μέν ἐστιν ὀρεινόν, ὃ καὶ τεύθριον καλεῖται, οὗ καὶ ἡ χρῆσις. θαμνίον δέ ἐστι λευκόν, λεπτόφυλλον, σπιθαμιαῖον, καρποῦ πλῆρες",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann, Pedanii Dioscuridis Anazarbei De materia medica, vol. II (Berlin 1906), p. 121; read off the archive.org page image (item b21459162_0002) and cross-checked against two OCR layers; ϑ printed as θ",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/n152/mode/1up"
+  },
+  "identification": {
+    "confidence": "certain",
+    "source": "Sprengel 1830, vol. 2, p. 544 (Comm. III cap. CXIV): 'Teucrium Polium πολίου nomine intelligi, in confesso est, Matthiolo, ni fallor, id primo probante.' The second, more shrubby and less strong-smelling kind is disputed: Matthiolus Teucrium montanum (rejected), Sprengel 'Teucrium potius creticum L., s. rosmarinifolium Lam.' Note: Sprengel's 'Teucrium polium' is the broad Linnaean sense; the Greek populations are now T. capitatum L. (nomenclatural mapping is ours, not Sprengel's). 'certain' applies to the first (mountain) kind only. | Fraas 1845, p. 173: 'T. Polium L., grauer Gamander. Ist wohlriechend!' = πόλιον Hippocr., Theophr. 1,16, Diosc. 3,114; 'T. capitatum. Ist höher und riecht nicht.' = πόλιον τὸ θαμνωδέστερον καὶ ἀδρανέστερον Diosc. l.c. (i.e. Fraas names T. capitatum for Dioscorides' SECOND, shrubbier, weaker kind); both common on dry plains and hills to 3000 ft (p. 173-174). Osbaldeston 2000, ch. 3-124 POLION: SUGGESTED Teucrium polium. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n545/mode/1up ; https://archive.org/details/synopsisplantaru00fraa/page/n218/mode/1up)",
+    "note": "Greek records of 'T. polium' refer to T. capitatum (Dimopoulos et al. 2013), so both names are pooled.",
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Teucrium creticum L. (T. rosmarinifolium Lam.) - for the second kind",
+        "source": "Sprengel 1830, vol. 2, p. 544"
+      },
+      {
+        "name": "Teucrium montanum L. - for the second kind",
+        "source": "Matthiolus, cited and rejected by Sprengel 1830, vol. 2, p. 544"
+      },
+      {
+        "name": "Teucrium capitatum L. - for the second (shrubbier, weaker) kind",
+        "source": "Fraas 1845, p. 173"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": false
+  },
+  "records": {
+    "raw": 1015,
+    "clean": 737,
+    "thinned": 634,
+    "public_cells": 295,
+    "low_confidence_model": true
+  },
+  "model": {
+    "auc_mean": 0.748,
+    "auc_sd": 0.025,
+    "boyce_mean": 0.925,
+    "boyce_sd": 0.025,
+    "tss_mean": 0.388,
+    "tss_sd": 0.047,
+    "null_auc_mean": 0.475,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 96.5,
+      "min": 85.1,
+      "max": 103.1
+    },
+    "ssp585": {
+      "median": 112.6,
+      "min": 93.6,
+      "max": 121.7
+    }
+  },
+  "range_cells": {
+    "now": 965,
+    "ssp245": {
+      "median": 1442.0,
+      "min": 1411.0,
+      "max": 1492.0
+    },
+    "ssp585": {
+      "median": 1530.0,
+      "min": 1413.0,
+      "max": 1555.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 22.3,
+    "ssp245": {
+      "median": 25.0,
+      "min": 24.3,
+      "max": 25.2
+    },
+    "ssp585": {
+      "median": 25.0,
+      "min": 24.6,
+      "max": 25.5
+    }
+  },
+  "risk": {
+    "score": 0.296,
+    "score_lo": 0.296,
+    "score_hi": 0.296,
+    "rank": 15,
+    "rank_lo": 11,
+    "rank_hi": 15,
+    "class": 2,
+    "rank_without_disputed": 8,
+    "top10_stability": 0.033,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.979
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Low-confidence model: 634 thinned records (we require 30) or AUC below 0.75.",
+    "Greek records of 'T. polium' refer to T. capitatum (Dimopoulos et al. 2013), so both names are pooled."
+  ]
+}

@@ -1,0 +1,28 @@
+environment:
+  dem: Copernicus GLO-90
+  gcms:
+  - MPI-ESM1-2-HR
+  - MRI-ESM2-0
+  - IPSL-CM6A-LR
+  resolution: 2.5m
+  variables:
+  - bio1
+  - bio12
+  - bio15
+  - bio4
+  - bio2
+  - bio8
+  - elevation
+  - slope
+  worldclim: '2.1'
+gbif:
+  created: '2026-11-03T16:23:41.935+00:00'
+  doi: 10.15468/dl.4u6k8n
+  download_key: 0025078-261023074918325
+  predicate: taxonKey=7707728; bbox (18.5, 34.0, 30.5, 42.5); hasCoordinate; no geospatial
+    issue; PRESENT
+  total_records: 933943
+species:
+  n_species: 32
+  source: data/curated/species.csv
+updated: '2026-11-04T16:20:26+00:00'

@@ -1,0 +1,137 @@
+{
+  "slug": "urtica-dioica",
+  "accepted_name": "Urtica dioica L.",
+  "common_name_en": "Stinging nettle",
+  "family": "Urticaceae",
+  "dioscorides": {
+    "book": 4,
+    "chapter": 93,
+    "greek_name": "ἀκαλήφη",
+    "greek_translit": "akalēphē (syn. knidē)",
+    "excerpt": "ἀκαλήφη· οἱ δὲ κνίδην. δισσὸν εἶδος ταύτης· ἡ μὲν γάρ ἐστιν ἀγριωτέρα, τραχυτέρα καὶ πλατυτέρα καὶ μελαντέρα τοῖς φύλλοις",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/251"
+  },
+  "identification": {
+    "confidence": "probable",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. IV cap. XCII, p. 615 (the two kinds of ἀκαλήφη were recognised as Urtica urens and U. dioica by Brunfels and Tragus; Sprengel sees nothing to change)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Urtica urens L.",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 615"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": {
+    "category": "LC",
+    "source": "IUCN Red List 2016"
+  },
+  "ema_monograph": {
+    "exists": true,
+    "use": null,
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/urticae-folium",
+    "name": "Urticae folium; Urticae herba; Urticae radix",
+    "reference": null
+  },
+  "records": {
+    "raw": 583,
+    "clean": 563,
+    "thinned": 505,
+    "public_cells": 221,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.76,
+    "auc_sd": 0.02,
+    "boyce_mean": 0.875,
+    "boyce_sd": 0.135,
+    "tss_mean": 0.431,
+    "tss_sd": 0.057,
+    "null_auc_mean": 0.515,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": -29.3,
+      "min": -35.9,
+      "max": -29.1
+    },
+    "ssp585": {
+      "median": -41.0,
+      "min": -44.8,
+      "max": -33.9
+    }
+  },
+  "range_cells": {
+    "now": 894,
+    "ssp245": {
+      "median": 647.0,
+      "min": 596.0,
+      "max": 658.0
+    },
+    "ssp585": {
+      "median": 565.0,
+      "min": 543.0,
+      "max": 619.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 27.7,
+    "ssp245": {
+      "median": 32.1,
+      "min": 31.4,
+      "max": 32.6
+    },
+    "ssp585": {
+      "median": 33.3,
+      "min": 32.3,
+      "max": 33.9
+    }
+  },
+  "risk": {
+    "score": 0.314,
+    "score_lo": 0.313,
+    "score_hi": 0.34,
+    "rank": 11,
+    "rank_lo": 7,
+    "rank_hi": 26,
+    "class": 2,
+    "rank_without_disputed": 6,
+    "top10_stability": 0.269,
+    "components": {
+      "range_loss": 0.293,
+      "endemism": 0.0,
+      "status": 0.0,
+      "harvest": 0.984
+    },
+    "components_ci": {
+      "range_loss": [
+        0.291,
+        0.359
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Identification is probable; results describe Urtica dioica L., which may not be the plant Dioscorides meant."
+  ]
+}

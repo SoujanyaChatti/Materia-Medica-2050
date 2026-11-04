@@ -1,0 +1,150 @@
+{
+  "slug": "matricaria-chamomilla",
+  "accepted_name": "Matricaria chamomilla L.",
+  "common_name_en": "German chamomile",
+  "family": "Asteraceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 137,
+    "greek_name": "ἀνθεμίς",
+    "greek_translit": "anthemis (syn. chamaimēlon)",
+    "excerpt": "ἀνθεμίς· οἱ δὲ λευκάνθεμον, οἱ δὲ ἠράνθεμον, ἐπεὶ ἔαρος ἀνθεῖ, οἱ δὲ χαμαίμηλον διὰ τὴν πρὸς τὰ μῆλα ὁμοιότητα τῆς ὀσμῆς",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/145"
+  },
+  "identification": {
+    "confidence": "disputed",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CXLIV, p. 559 (anthemis = three species by ray colour; Sibthorp: Anthemis chia, A. tinctoria, A. rosea; Lobel: Matricaria chamomilla / Anthemis nobilis for the white-rayed kind) and cap. CXLV, p. 560 (Sprengel himself identifies παρθένιον, Wellmann III 138, as Matricaria chamomilla)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Anthemis chia L.",
+        "source": "Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+      },
+      {
+        "name": "Anthemis tinctoria L. (= Cota tinctoria)",
+        "source": "Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+      },
+      {
+        "name": "Anthemis rosea Sibth. & Sm.",
+        "source": "Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+      },
+      {
+        "name": "Anthemis nobilis L. (= Chamaemelum nobile)",
+        "source": "Lobel per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+      },
+      {
+        "name": "Anacyclus aureus (yellow kind)",
+        "source": "Lobel per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": true,
+    "use": "traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/matricariae-flos",
+    "name": "Matricariae flos; Matricariae aetheroleum",
+    "reference": null
+  },
+  "records": {
+    "raw": 1390,
+    "clean": 1296,
+    "thinned": 1154,
+    "public_cells": 571,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.784,
+    "auc_sd": 0.016,
+    "boyce_mean": 0.981,
+    "boyce_sd": 0.008,
+    "tss_mean": 0.457,
+    "tss_sd": 0.021,
+    "null_auc_mean": 0.496,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": 65.3,
+      "min": 60.9,
+      "max": 70.5
+    },
+    "ssp585": {
+      "median": 75.4,
+      "min": 68.7,
+      "max": 79.3
+    }
+  },
+  "range_cells": {
+    "now": 1129,
+    "ssp245": {
+      "median": 1648.0,
+      "min": 1614.0,
+      "max": 1687.0
+    },
+    "ssp585": {
+      "median": 1696.0,
+      "min": 1656.0,
+      "max": 1719.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 21.4,
+    "ssp245": {
+      "median": 23.3,
+      "min": 23.0,
+      "max": 23.6
+    },
+    "ssp585": {
+      "median": 23.6,
+      "min": 23.5,
+      "max": 23.6
+    }
+  },
+  "risk": {
+    "score": 0.296,
+    "score_lo": 0.296,
+    "score_hi": 0.296,
+    "rank": 16,
+    "rank_lo": 12,
+    "rank_hi": 16,
+    "class": 2,
+    "rank_without_disputed": null,
+    "top10_stability": 0.023,
+    "components": {
+      "range_loss": 0.0,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.978
+    },
+    "components_ci": {
+      "range_loss": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "cultivation_area_km2": 9565,
+  "cultivation_area_km2_range": {
+    "min": 8335,
+    "max": 10505
+  },
+  "caveats": [
+    "Identification is disputed; results describe Matricaria chamomilla L., which may not be the plant Dioscorides meant."
+  ]
+}

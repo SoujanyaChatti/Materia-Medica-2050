@@ -1,0 +1,138 @@
+{
+  "slug": "hypericum-perforatum",
+  "accepted_name": "Hypericum perforatum L.",
+  "common_name_en": "St John's wort",
+  "family": "Hypericaceae",
+  "dioscorides": {
+    "book": 3,
+    "chapter": 154,
+    "greek_name": "ὑπερικόν",
+    "greek_translit": "hyperikon",
+    "excerpt": "ὑπερικόν· οἱ δὲ ἀνδρόσαιμον, οἱ δὲ κόριον, οἱ δὲ χαμαίπιτυν διὰ τὸ τὴν περὶ τὸ σπέρμα ὀσμὴν ἐοικέναι ῥητίνῃ πιτυΐνῃ.",
+    "paraphrase": null,
+    "paraphrase_ai_assisted": false,
+    "edition": "Wellmann 1906-1914 (vol. I 1907, vol. II 1906), Berlin: Weidmann; transcribed by eye from the archive.org page scan (Wellmann's ϑ glyph rendered as θ; no emendation)",
+    "excerpt_url": "https://archive.org/details/b21459162_0002/page/161"
+  },
+  "identification": {
+    "confidence": "disputed",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CLXI, pp. 566-567 (finds no Hypericum matching ὑπερικόν exactly except H. barbatum Jacq.; Sibthorp's H. crispum 'less pertinent'; assigns H. perforatum to ἄσκυρον, cap. CLXII)",
+    "note": null,
+    "reviewed_by": "",
+    "alternatives": [
+      {
+        "name": "Hypericum barbatum Jacq.",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 567"
+      },
+      {
+        "name": "Hypericum crispum L. (= H. triquetrifolium Turra) (Sibthorp, as reported by Sprengel)",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 567"
+      }
+    ]
+  },
+  "endemic_greece": false,
+  "endemic_region": null,
+  "conservation_status": null,
+  "ema_monograph": {
+    "exists": true,
+    "use": "well-established; traditional",
+    "url": "https://www.ema.europa.eu/en/medicines/herbal/hyperici-herba-0",
+    "name": "Hyperici herba",
+    "reference": null
+  },
+  "records": {
+    "raw": 1019,
+    "clean": 849,
+    "thinned": 765,
+    "public_cells": 350,
+    "low_confidence_model": false
+  },
+  "model": {
+    "auc_mean": 0.772,
+    "auc_sd": 0.026,
+    "boyce_mean": 0.899,
+    "boyce_sd": 0.108,
+    "tss_mean": 0.446,
+    "tss_sd": 0.061,
+    "null_auc_mean": 0.495,
+    "variables": [
+      "bio1",
+      "bio12",
+      "bio15",
+      "bio4",
+      "bio2",
+      "bio8",
+      "elevation",
+      "slope"
+    ]
+  },
+  "range_change_pct": {
+    "ssp245": {
+      "median": -9.3,
+      "min": -9.9,
+      "max": -5.0
+    },
+    "ssp585": {
+      "median": -12.6,
+      "min": -14.0,
+      "max": -10.1
+    }
+  },
+  "range_cells": {
+    "now": 964,
+    "ssp245": {
+      "median": 914.0,
+      "min": 912.0,
+      "max": 929.0
+    },
+    "ssp585": {
+      "median": 881.0,
+      "min": 876.0,
+      "max": 901.0
+    }
+  },
+  "natura_share_pct": {
+    "now": 26.6,
+    "ssp245": {
+      "median": 28.2,
+      "min": 28.2,
+      "max": 28.3
+    },
+    "ssp585": {
+      "median": 28.4,
+      "min": 28.4,
+      "max": 28.5
+    }
+  },
+  "risk": {
+    "score": 0.335,
+    "score_lo": 0.318,
+    "score_hi": 0.337,
+    "rank": 10,
+    "rank_lo": 5,
+    "rank_hi": 11,
+    "class": 2,
+    "rank_without_disputed": null,
+    "top10_stability": 0.773,
+    "components": {
+      "range_loss": 0.093,
+      "endemism": 0.0,
+      "status": 0.5,
+      "harvest": 0.989
+    },
+    "components_ci": {
+      "range_loss": [
+        0.05,
+        0.099
+      ]
+    }
+  },
+  "cultivation_area_km2": 0,
+  "cultivation_area_km2_range": {
+    "min": 0,
+    "max": 0
+  },
+  "caveats": [
+    "Identification is disputed; results describe Hypericum perforatum L., which may not be the plant Dioscorides meant."
+  ]
+}
