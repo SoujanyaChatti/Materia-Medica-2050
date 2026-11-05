@@ -9,14 +9,17 @@ We assess which medicinal plants described in Dioscorides' *De Materia Medica* (
 ## Quick start
 
 ```bash
-# Website only, with clearly labelled SAMPLE data (no pipeline, no credentials)
-cd site && npm ci && npm run data:sample && npm run dev     # http://localhost:4321
+# Website only: the published results are committed in site/public/data
+cd site && npm ci && npm run dev                          # http://localhost:4321
 
-# Full reproduction from raw downloads
-cp .env.example .env            # GBIF account; IUCN token optional
-make env && conda activate dioscorides
+# Full reproduction from raw downloads (~25 min plus downloads)
+cp .env.example .env            # GBIF account + IUCN token
+make env && conda activate dioscorides      # or: python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt
+# put the CORINE 2018 raster in data/raw/corine/ and the Natura 2000 GeoPackage in data/raw/natura2000/ (see below)
 make all                        # data → models → risk → web export → tests → site build
 ```
+
+`npm run data:sample` overwrites `site/public/data` with clearly labelled synthetic data for design work; don't run it unless you mean to.
 
 `make help` lists every target. Each stage is idempotent and cached; `FORCE=1 make <target>` recomputes.
 

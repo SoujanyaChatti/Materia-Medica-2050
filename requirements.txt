@@ -1,0 +1,19 @@
+# Exact versions used for the published run (2026-11-04). pygbif >= 0.7 is required:
+# GBIF switched occurrence downloads to Catalogue of Life keys and stage 01 uses the new lookup API.
+pygbif==0.7.0
+elapid==1.0.4
+rasterio==1.4.4
+geopandas==1.2.0
+pyogrio==0.13.0
+shapely==2.2.0
+pyproj==3.7.2
+scikit-learn==1.9.1
+scipy==1.17.1
+numpy==2.4.6
+pandas==3.1.0
+pyarrow==26.0.1
+jsonschema==4.26.0
+python-dotenv==1.2.4
+PyYAML==6.0.3
+requests==2.34.2
+pytest
