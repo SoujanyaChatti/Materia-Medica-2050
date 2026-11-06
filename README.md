@@ -45,6 +45,7 @@ tests/              cleaning filters, risk maths, export schema
 | 5 | `05_risk.py` | Range loss, endemism, status (IUCN or checklist), harvest proxy (OSM 2 km); weights 0.4/0.2/0.2/0.2; 1,000 random weightings + ±50% one-at-a-time sensitivity; with/without disputed IDs |
 | 6 | `06_cultivation.py` | Suitable in 2050 under >50% of GCMs, CORINE farmland/transitional, outside Natura 2000, ≥ 5 km from wild records |
 | 7 | `07_export_web.py` | ~10 km EPSG:3035 cells as GeoJSON (never points), species JSON, `meta.json`; validates against `site/schema/`, fails on > 300 KB layers |
+| 8 | `08_action_layers.py` | Standard library only, reads stage-7 exports: per-cell grower index (validated against stage 7's cultivation counts, 0 mismatches) and `lineage.json`, every dated identification claim since 1530 |
 
 ### Inputs that are not fetched automatically
 
@@ -60,7 +61,17 @@ provider for the Greece window only, so no global file is ever stored.
 
 ## Website
 
-Five pages: Home, Plants (sortable/filterable table or grid), Plant page (Dioscorides card, Then/Now map with scenario toggle and layers, EMA status, risk breakdown, model quality, caveats, table fallback), Map explorer (combined-risk grid, cultivation hotspots, Natura 2000, click a cell or pick an area), Methods & limitations. Light and dark themes; design tokens in `site/src/styles/tokens.css` follow the Claude Design handoff. Every estimate prints its interval; disputed identifications carry a badge everywhere; colour is never the only cue.
+Seven pages:
+
+- **Home**: the headline finding (a split future: 11 of 32 plants lose habitat in all climate models, 21 keep or gain it), top 5 at risk, Then/Now maps.
+- **Plants**: sortable/filterable table or grid, plus the **risk weight lab**: move the four weights or pick a stakeholder preset and the ranking re-orders live, with Kendall τ against the published ranking.
+- **Plant page**: Dioscorides card, Then/Now map zoomed to the plant's range with scenario toggle and layers, EMA status, risk breakdown, model quality, suggested action, identification through time, caveats, table fallback.
+- **Map explorer**: combined-risk grid, cultivation hotspots, Natura 2000; click a cell or pick an area.
+- **Action plan** (`/act`): decision matrix (habitat change × cultivation area) sorting every plant into protect-and-cultivate, protect-only, cultivation opportunity or monitor; and a **grower finder**: pick any ~10 km cell or farming region to see which Dioscoridean plants could be cultivated there by 2050, which of them relieve shrinking wild populations, which have an EU monograph (an existing market), with a downloadable CSV grower sheet.
+- **Names through time** (`/names`): five centuries of identifications (Brunfels 1530 to modern checklists): who proposed, preferred or rejected which modern plant for each Greek name, with the source quote.
+- **Methods & limitations**.
+
+Light and dark themes; design tokens in `site/src/styles/tokens.css` follow the Claude Design handoff. Every estimate prints its interval; disputed identifications carry a badge everywhere; colour is never the only cue.
 
 The site never computes science: it only displays `site/public/data/`. When `meta.json` has `"sample": true`, every page shows a **Sample data** banner. Deploys to GitHub Pages via `.github/workflows/site.yml` (CI also runs pytest, including schema validation).
 

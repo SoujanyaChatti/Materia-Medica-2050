@@ -95,7 +95,7 @@ export default function PlantExplorer({ rows, total }: { rows: SpeciesSummary[];
 
       <div className="flex flex-wrap justify-between gap-2 text-[14px] text-muted">
         <span aria-live="polite">Showing <strong className="text-ink">{shown.length}</strong> of {total} species</span>
-        <span>Range change = 2050 moderate (SSP2-4.5). Whisker: −80% to +20%, dashed tick at 0.</span>
+        <span>Range change = 2050 moderate (SSP2-4.5). Whisker: −80% to +20%, dashed tick at 0, chevron = beyond the axis.</span>
       </div>
 
       {shown.length === 0 && (

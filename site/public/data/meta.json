@@ -45,8 +45,8 @@
   "summary": {
     "median_range_change_ssp245": {
       "median": 15.5,
-      "min": 63.6,
-      "max": -22.9
+      "min": -22.9,
+      "max": 63.6
     }
   },
   "sensitivity": {

@@ -73,3 +73,11 @@ export interface Meta {
     one_at_a_time: Partial<Record<keyof RiskComponents, { tau_median: number; tau_lo: number; tau_hi: number }>>;
   };
 }
+
+/** lineage.json (pipeline stage 08): every dated identification claim per plant. */
+export type Stance = 'cited' | 'proposed' | 'preferred' | 'rejected' | 'unverified';
+export interface LineageClaim { taxon: string; role: 'modelled' | 'alternative'; year: number; authority: string; witness: string | null; stance: Stance; source: string }
+export interface Lineage {
+  slug: string; greek_name: string; greek_translit: string; book: number; chapter: number | null;
+  accepted_name: string; common_name_en: string; confidence: Confidence; ema: boolean; n_candidates: number; claims: LineageClaim[];
+}

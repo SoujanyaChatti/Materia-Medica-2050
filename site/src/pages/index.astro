@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getMeta, getSpecies, getSpeciesList } from '../lib/data';
+import { getAllSpecies, getLineage, getMeta, getSpecies, getSpeciesList } from '../lib/data';
+import { toAction } from '../lib/action';
 import { href, plantHref } from '../lib/url';
 import { changeText, riskLabel } from '../lib/format';
 import { PlantFlags, RiskTag } from '../components/Badges';
@@ -21,6 +22,19 @@ const n = meta.n_species;
 const words = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
 const nWord = n <= 10 ? words[n] : n === 32 ? 'Thirty-two' : String(n);
 const latin = (s: string) => s.split(' ').slice(0, 2).join(' ');
+const actions = getAllSpecies().map(toAction);
+const losers = actions.filter((a) => a.allAgreeLoss);
+const nCult = actions.filter((a) => a.cultKm2 > 0).length;
+const lin = getLineage();
+const nClaims = lin.reduce((s, p) => s + p.claims.length, 0);
+const firstYear = Math.min(...lin.flatMap((p) => p.claims.map((c) => c.year)));
+const lossTop = losers.filter((a) => a.rank <= 10).length;
+const ways = [
+  { href: href('act/'), eyebrow: 'Decide', title: 'Action plan', text: `Which plants to protect, which to cultivate, and a grower finder that lists what a farmer could plant in any ~10 km cell by 2050.` },
+  { href: href('names/'), eyebrow: 'Then', title: 'Names through time', text: `${nClaims} dated identifications since ${firstYear}: who matched each Greek name to which modern plant, and where scholars still disagree.` },
+  { href: href('plants/#lab'), eyebrow: 'Test us', title: 'Risk weight lab', text: 'A ranking is a value judgement. Re-weigh climate, endemism, status and harvest, and watch the ranking move live.' },
+  { href: href('map/'), eyebrow: 'Explore', title: 'Map explorer', text: 'Combined risk on a 10 km grid, cultivation hotspots and Natura 2000; select any area to list its plants.' },
+];
 ---
 <Base title="Home" current="home">
   <section class="page grid items-center gap-12 pb-[clamp(32px,4vw,56px)] pt-[clamp(40px,6vw,88px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))]">
@@ -54,9 +68,16 @@ const latin = (s: string) => s.split(' ').slice(0, 2).join(' ');
     <dl class="page my-0 grid gap-x-8 gap-y-5 py-6 [grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))]">
       <div><dt class="text-[13px] text-muted">Species modelled</dt><dd class="m-0 text-[28px] font-semibold">{n}</dd></div>
       <div><dt class="text-[13px] text-muted">Climate futures</dt><dd class="m-0 text-[28px] font-semibold">2 <span class="text-[15px] font-normal text-muted">scenarios × {meta.gcms.length} climate models</span></dd></div>
-      {medText && <div><dt class="text-[13px] text-muted">Median range change across species, 2050 moderate</dt><dd class="m-0 text-[28px] font-semibold">{medText.med} <span class="text-[15px] font-normal text-muted">(IQR {medText.lo} to {medText.hi})</span></dd></div>}
-      <div><dt class="text-[13px] text-muted">Spatial resolution</dt><dd class="m-0 text-[28px] font-semibold">~{meta.cell_km} km <span class="text-[15px] font-normal text-muted">grid cells</span></dd></div>
+      <div><dt class="text-[13px] text-muted">Lose wild habitat by 2050</dt><dd class="m-0 text-[28px] font-semibold">{losers.length} <span class="text-[15px] font-normal text-muted">of {n} · all {meta.gcms.length} models agree</span></dd></div>
+      <div><dt class="text-[13px] text-muted">Candidate farmland by 2050</dt><dd class="m-0 text-[28px] font-semibold">{nCult} <span class="text-[15px] font-normal text-muted">plants · outside Natura 2000</span></dd></div>
+      {nClaims > 0 && <div><dt class="text-[13px] text-muted">Historical identifications</dt><dd class="m-0 text-[28px] font-semibold">{nClaims} <span class="text-[15px] font-normal text-muted">claims since {firstYear}</span></dd></div>}
     </dl>
+  </section>
+
+  <section aria-labelledby="h-split" class="page flex flex-col gap-3 pb-2 pt-12">
+    <div class="eyebrow text-ochre">The finding</div>
+    <h2 id="h-split" class="h-section mt-0">A split future, not a uniform decline</h2>
+    <p class="m-0 max-w-[820px] text-[17px]">Under moderate emissions, <strong>{losers.length} of {n}</strong> plants lose wild habitat by 2050 in every climate model we ran, while {n - losers.length} keep or gain it{medText ? ` (median change across all plants ${medText.med})` : ''}. The losers are concentrated at the top of the risk ranking ({lossTop} of the top 10), and they include plants Greece is known for: {losers.slice(0, 4).map((a) => a.name.split(' / ')[0]).join(', ')}. Averages hide this, so we report each plant, with its spread across models.</p>
   </section>
 
   <section class="page flex flex-col gap-6 pb-6 pt-14">
@@ -116,6 +137,20 @@ const latin = (s: string) => s.split(' ').slice(0, 2).join(' ');
       </figure>
     </div>
     <MapLegend items={['kept', 'lost', 'gained', 'cult']} note="Occurrences aggregated to ~10 km cells; exact locations are withheld to protect wild populations." />
+  </section>
+
+  <section aria-labelledby="h-ways" class="page flex flex-col gap-5 pb-6 pt-10">
+    <h2 id="h-ways" class="h-section">Ways in</h2>
+    <ul class="m-0 grid list-none gap-4 p-0 [grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))]">
+      {ways.map((w) => (
+        <li class="card-surface flex flex-col gap-2 p-5">
+          <div class="eyebrow text-sage">{w.eyebrow}</div>
+          <h3 class="m-0 font-serif text-[24px] font-medium">{w.title}</h3>
+          <p class="m-0 text-[15px] text-muted">{w.text}</p>
+          <a href={w.href} class="mt-auto inline-flex min-h-11 items-center font-semibold">Open {w.title.toLowerCase()} <span aria-hidden="true">&nbsp;→</span></a>
+        </li>
+      ))}
+    </ul>
   </section>
 
   <section class="page pb-18 pt-12">
