@@ -8,7 +8,7 @@ STAGES  := pipeline
 SITE    := site
 export FORCE
 
-.PHONY: help env data species occurrences environment models risk cultivation web site sample test all clean
+.PHONY: help env data species occurrences environment models risk cultivation web action site sample test all clean
 
 help:
 	@echo "make env      create the conda env from environment.yml"
@@ -16,6 +16,7 @@ help:
 	@echo "make models   species distribution models + spatially blocked CV"
 	@echo "make risk     risk score, sensitivity analysis, cultivation suitability"
 	@echo "make web      export site/public/data (validated against site/schema)"
+	@echo "make action   grower index + identification lineage for the site (stdlib only)"
 	@echo "make site     build the static website into site/dist"
 	@echo "make sample   write clearly labelled SAMPLE data for the site (no pipeline needed)"
 	@echo "make test     run pytest"
@@ -42,6 +43,11 @@ cultivation: models
 
 web: risk cultivation
 	$(PY) $(STAGES)/07_export_web.py
+	$(PY) $(STAGES)/08_action_layers.py
+
+# Stage 08 reads only stage-07 exports and curated CSVs, so it can be re-run on its own.
+action:
+	$(PY) $(STAGES)/08_action_layers.py
 
 site:
 	cd $(SITE) && npm ci && npm run build

@@ -1,0 +1,98 @@
+---
+import Base from '../layouts/Base.astro';
+import { DecisionMatrix } from '../components/DecisionMatrix';
+import GrowerFinder, { type GrowRow } from '../components/GrowerFinder';
+import { ConfidenceBadge, LowConfidenceTag, RiskTag } from '../components/Badges';
+import { getAllSpecies, getMeta } from '../lib/data';
+import { QUADRANTS, toAction, type Quadrant } from '../lib/action';
+import { signed, thousands } from '../lib/format';
+import { plantHref } from '../lib/url';
+
+const meta = getMeta();
+const all = getAllSpecies();
+const actions = all.map(toAction);
+const order: Quadrant[] = ['protect_cultivate', 'protect_only', 'opportunity', 'monitor'];
+const by = (q: Quadrant) => actions.filter((a) => a.quadrant === q).sort((a, b) => a.rank - b.rank);
+const nLoss = actions.filter((a) => a.allAgreeLoss).length;
+const nData = actions.filter((a) => a.dataFirst).length;
+const grow: GrowRow[] = all.map((s) => {
+  const a = toAction(s);
+  return {
+    slug: s.slug, name: s.common_name_en, latin: a.latin, greek: s.dioscorides.greek_name, rank: s.risk.rank, score: s.risk.score,
+    riskClass: s.risk.class ?? 1, change: a.change, allAgreeLoss: a.allAgreeLoss, ema: a.ema, emaUse: s.ema_monograph?.use ?? null,
+    emaUrl: s.ema_monograph?.url ?? null, confidence: s.identification.confidence, lowModel: a.lowModel, cultKm2: a.cultKm2,
+  };
+});
+const tone: Record<Quadrant, string> = {
+  protect_cultivate: 'border-t-ochre', protect_only: 'border-t-ochre', opportunity: 'border-t-sage', monitor: 'border-t-rule',
+};
+---
+<Base title="Action plan" current="act" description="From risk ranking to action: which Dioscoridean plants to protect, which to cultivate, and what a grower could plant where by 2050.">
+  <div class="page flex flex-col gap-14 pb-16 pt-10">
+    <div class="flex max-w-[820px] flex-col gap-2">
+      <div class="eyebrow text-ochre">From ranking to action</div>
+      <h1 class="h-display m-0 text-[clamp(34px,4vw,48px)]">Action plan</h1>
+      <p class="m-0 text-[17px] text-muted">A ranking alone does not tell anyone what to do. Here every plant is placed by two model outputs: does its wild habitat shrink by 2050, and is there farmland where it could be grown instead? That gives four actions. A grower finder then turns the cultivation zones into a list a farmer can use.</p>
+      <nav aria-label="On this page" class="flex flex-wrap gap-x-4.5 gap-y-1 pt-2 text-[15px]"><a href="#matrix">Decision matrix</a><a href="#lanes">Actions by plant</a><a href="#grow">Grower finder</a><a href="#rules">Rules and caveats</a></nav>
+    </div>
+
+    <section id="matrix" aria-labelledby="h-matrix" class="flex flex-col gap-4">
+      <div class="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h2 id="h-matrix" class="h-section">Decision matrix</h2>
+          <p class="m-0 mt-1 max-w-[760px] text-muted"><strong class="text-ink">{nLoss} of {actions.length}</strong> plants lose wild habitat by 2050 under all {meta.gcms.length} climate models; the other {actions.length - nLoss} keep or gain habitat. <strong class="text-ink">{nData}</strong> need their identification or data resolved before money is spent on them.</p>
+        </div>
+      </div>
+      <DecisionMatrix actions={actions} />
+    </section>
+
+    <section id="lanes" aria-labelledby="h-lanes" class="flex flex-col gap-4">
+      <h2 id="h-lanes" class="h-section">Actions by plant</h2>
+      <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr))]">
+        {order.map((q) => (
+          <section aria-labelledby={`h-${q}`} class:list={['card-surface flex flex-col gap-2.5 border-t-[3px] p-4.5', tone[q]]}>
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 id={`h-${q}`} class="m-0 text-[18px] font-semibold">{QUADRANTS[q].title}</h3>
+              <span class="text-[22px] font-semibold">{by(q).length}</span>
+            </div>
+            <p class="m-0 text-[14px]">{QUADRANTS[q].verb}.</p>
+            <p class="m-0 text-[12px] text-muted">Rule: {QUADRANTS[q].rule}</p>
+            <ul class="m-0 flex list-none flex-col border-t border-rule p-0">
+              {by(q).map((a) => (
+                <li class="flex flex-col gap-0.5 border-b border-rule py-2 last:border-0">
+                  <div class="flex items-baseline justify-between gap-2">
+                    <a href={plantHref(a.slug)} class="font-semibold text-ink">{a.name}</a>
+                    <RiskTag cls={a.riskClass} score={a.score} />
+                  </div>
+                  <div class="text-[13px] text-muted">No. {a.rank} · {signed(a.change)} habitat · {a.cultKm2 ? `${thousands(a.cultKm2)} km² to cultivate` : 'no cultivation zone'}{a.ema ? ' · EU monograph' : ''}</div>
+                  {a.dataFirst && <div class="flex flex-wrap gap-1.5 pt-0.5"><span class="text-[12px] font-semibold text-warn">Resolve data first:</span>{a.disputed && <ConfidenceBadge level="disputed" size="sm" />}{a.lowModel && <LowConfidenceTag />}</div>}
+                </li>
+              ))}
+              {by(q).length === 0 && <li class="py-2 text-[14px] text-muted">No plants.</li>}
+            </ul>
+          </section>
+        ))}
+      </div>
+    </section>
+
+    <section id="grow" aria-labelledby="h-growfinder" class="flex flex-col gap-3">
+      <div class="max-w-[820px]">
+        <div class="eyebrow text-sage">For growers, cooperatives and extension services</div>
+        <h2 id="h-growfinder" class="h-section mt-0.5">What could I grow here in 2050?</h2>
+        <p class="m-0 mt-1 text-muted">Pick a ~10 km cell or a farming region. The sheet lists the plants whose 2050 climate suits cultivation there, flags the ones whose wild populations are shrinking (so cultivation also takes collecting pressure off them) and the ones with an EU herbal monograph, which signals an existing regulated market.</p>
+      </div>
+      <GrowerFinder client:visible rows={grow} />
+    </section>
+
+    <section id="rules" aria-labelledby="h-rules" class="flex max-w-[860px] flex-col gap-2.5 border-t-2 border-ochre pt-5">
+      <h2 id="h-rules" class="m-0 font-serif text-[28px] font-medium">Rules and caveats</h2>
+      <ul class="m-0 flex flex-col gap-1.5 pl-5 text-[15px]">
+        <li><strong>Loses habitat</strong> means the upper end of the 3-model spread is still a loss (SSP2-4.5, 2041–2060), so all climate models agree. Under SSP5-8.5 the same {actions.filter((a) => a.allAgreeLoss).length} plants lose habitat.</li>
+        <li><strong>Cultivation zone</strong>: suitable in 2050 under more than half of the climate models, on CORINE farmland or transitional land, outside Natura 2000 and at least 5 km from wild records (pipeline stage 6). It says nothing about soil, water or economics.</li>
+        <li><strong>Resolve data first</strong>: disputed identification (we may be modelling the wrong plant) or fewer than 30 records / AUC below 0.75.</li>
+        <li>The grower finder never shows wild locations and never ranks sites for collecting. Monograph status is regulatory information, not a health claim.</li>
+        <li>Thresholds are printed here so anyone can disagree with them; every input is on the plant pages and in the repository.</li>
+      </ul>
+    </section>
+  </div>
+</Base>

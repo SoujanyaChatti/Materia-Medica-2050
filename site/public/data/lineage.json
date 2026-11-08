@@ -1,0 +1,1485 @@
+[
+ {
+  "slug": "origanum-dictamnus",
+  "greek_name": "δίκταμνον",
+  "greek_translit": "diktamnon",
+  "book": 3,
+  "chapter": 32,
+  "accepted_name": "Origanum dictamnus L.",
+  "common_name_en": "Cretan dittany",
+  "confidence": "certain",
+  "ema": true,
+  "n_candidates": 2,
+  "claims": [
+   {
+    "taxon": "Origanum dictamnus L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, p. 510 (Comm. III cap. XXXIV): 'De dictamno Dioscoridis cretico nunquam exstitit controversia ... Est Origanum Dictamnus L., cuius iconem fere primam Dodonaeus exhibuit.' Same chapter: ψευδοδίκταμνον = Marrubium pseudodictamnus L.; third dictamnon conjectured as Thymus mastichina L. (these are the chapter's other kinds, not rivals to δίκταμνον)."
+   },
+   {
+    "taxon": "Origanum dictamnus L.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, Synopsis plantarum florae classicae, pp. 181-182: 'Orig. Dictamnus L., ächter Diptam' = δίκταμνος Hippocr., Theophr. 9,16, Diosc. 3,37; modern name στοματόχορτον; 'Nur auf Kreta bis jetzt.' Osbaldeston 2000, ch. 3-37 DIKTAMNON: 'SUGGESTED' list gives both Dictamnus albus / D. fraxinella (White Dittany) and Origanum dictamnus / Dictamnus creticus / Amaracus dictamnus (Dittany of Crete)."
+   },
+   {
+    "taxon": "Dictamnus albus L. (D. fraxinella)",
+    "role": "alternative",
+    "year": 2000,
+    "authority": "Osbaldeston, De materia medica (transl.)",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Osbaldeston 2000, ch. 3-37 'SUGGESTED' list (editor's candidate list; no argument given)"
+   }
+  ]
+ },
+ {
+  "slug": "paeonia-greece",
+  "greek_name": "γλυκυσίδη",
+  "greek_translit": "glykyside",
+  "book": 3,
+  "chapter": 140,
+  "accepted_name": "Paeonia L. (wild Greek species pooled)",
+  "common_name_en": "Wild peonies of Greece",
+  "confidence": "disputed",
+  "ema": false,
+  "n_candidates": 7,
+  "claims": [
+   {
+    "taxon": "Paeonia L. (wild Greek species pooled)",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, pp. 561-562 (Comm. III cap. CXLVII): 'Duas Dioscorides enumerat species, marem iuglandis, et feminam smyrnii foliis. Illam habeo Paeoniam nostram officinalem, vel arietinam Anders. et peregrinam Mill., foliis subtus pubescentibus a priore distinctam: feminam vero P. corallinam Retz. Qui contrarium proferunt, haud sedulo comparasse foliorum formas videntur. Folia enim Smyrnii"
+   },
+   {
+    "taxon": "female peony = Paeonia corallina Retz.",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel 1830, vol. 2, p. 562"
+   },
+   {
+    "taxon": "male peony = Paeonia officinalis / P. arietina Anders. / P. peregrina Mill.",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel 1830, vol. 2, p. 561"
+   },
+   {
+    "taxon": "reverse assignment of male/female (authors not named)",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel 1830, vol. 2, p. 562 ('Qui contrarium proferunt...')"
+   },
+   {
+    "taxon": "Paeonia L. (wild Greek species pooled)",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, pp. 134-135 gives the REVERSE assignment: MALE παιωνία ἄρρην (Diosc. 3,147 'mas, foliis juglandis') = Paeonia corallina Retz. ('Daher zieht Sprengel - comment. in Dioscor. pag. 561 mit Unrecht die folgende hieher'); the commonest in Greece, on Delphi (Euboea), Parnassus, Oeta in the fir zone; FEMALE παιωνία ἡ γλυκυσίδη θήλεια = P. officinalis L., much rarer, mostly W Greece (Cyllene, K"
+   },
+   {
+    "taxon": "male = Paeonia corallina Retz.; female (γλυκυσίδη) = P. officinalis L.",
+    "role": "alternative",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Fraas 1845, pp. 134-135 (explicitly contradicts Sprengel)"
+   },
+   {
+    "taxon": "Paeonia officinalis var. foemina",
+    "role": "alternative",
+    "year": 2000,
+    "authority": "Osbaldeston, De materia medica (transl.)",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Osbaldeston 2000, ch. 3-157"
+   }
+  ]
+ },
+ {
+  "slug": "sideritis-syriaca",
+  "greek_name": "σιδηρῖτις",
+  "greek_translit": "sideritis",
+  "book": 4,
+  "chapter": 33,
+  "accepted_name": "Sideritis syriaca L.",
+  "common_name_en": "Cretan mountain tea / ironwort",
+  "confidence": "disputed",
+  "ema": true,
+  "n_candidates": 9,
+  "claims": [
+   {
+    "taxon": "Stachys recta L.",
+    "role": "alternative",
+    "year": 1542,
+    "authority": "Fuchs, De historia stirpium",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "preferred",
+    "source": "Fuchs, preferred by Sprengel 1830, vol. 2, p. 589"
+   },
+   {
+    "taxon": "Lycopus europaeus L.",
+    "role": "alternative",
+    "year": 1554,
+    "authority": "Matthiolus, Commentarii in Dioscoridem",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "rejected",
+    "source": "Matthiolus, rejected by Sprengel 1830, vol. 2, p. 588"
+   },
+   {
+    "taxon": "Stachys heraclea All.",
+    "role": "alternative",
+    "year": 1592,
+    "authority": "Fabius Columna, Phytobasanos",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Fab. Columna, cited by Sprengel 1830, vol. 2, p. 589"
+   },
+   {
+    "taxon": "Sideritis scordioides L.",
+    "role": "alternative",
+    "year": 1601,
+    "authority": "Clusius, Rariorum plantarum historia",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Clusius, cited by Sprengel 1830, vol. 2, p. 589"
+   },
+   {
+    "taxon": "Sideritis syriaca L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, pp. 588-589 (Comm. IV cap. XXXIII, Sideritis prima): Matthiolus 'hallucinatus est' proposing Lycopus europaeus; 'Magis placet Fuchsii sententia, qui Stachyos rectae effigiem huc collocat'; Fab. Columna proposed Stachys heraclea All., Clusius Sideritis scordioides. Sprengel does NOT name Sideritis syriaca or any Sideritis as Dioscorides' plant."
+   },
+   {
+    "taxon": "Sideritis syriaca L.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 175: Sideritis syriaca L. is assigned NOT to σιδηρῖτις but to κέστρον Diosc. 4,1 (betony; Sibthorp put Betonica alopecurus there); Fraas notes Aegineta distinguishes the 'Greek betony' (Sid. syriaca) from κέστρον. Fraas assigns Sideritis romana / S. elegans tentatively to φλομίδες ('?'). Osbaldeston 2000, ch. 4-33 SIDERITIS: SUGGESTED Sideritis prima [Fuchs], Sideritis vulgaris hirs"
+   },
+   {
+    "taxon": "Sideritis syriaca L. = κέστρον / Greek betony (a different Dioscorides chapter, Diosc. 4,1 Sprengel numbering)",
+    "role": "alternative",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Fraas 1845, p. 175"
+   },
+   {
+    "taxon": "Stachys recta L.",
+    "role": "alternative",
+    "year": 2000,
+    "authority": "Osbaldeston, De materia medica (transl.)",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Osbaldeston 2000, ch. 4-33"
+   },
+   {
+    "taxon": "Sideritis clandestina (Bory & Chaub.) Hayek",
+    "role": "alternative",
+    "year": 2010,
+    "authority": "EMA / HMPC herbal monograph",
+    "witness": null,
+    "stance": "proposed",
+    "source": "EMA Sideritis herba species list"
+   },
+   {
+    "taxon": "Sideritis scardica Griseb.",
+    "role": "alternative",
+    "year": 2010,
+    "authority": "EMA / HMPC herbal monograph",
+    "witness": null,
+    "stance": "proposed",
+    "source": "EMA Sideritis herba species list"
+   },
+   {
+    "taxon": "Sideritis raeseri Boiss. & Heldr.",
+    "role": "alternative",
+    "year": 2013,
+    "authority": "Dimopoulos et al., Vascular plants of Greece",
+    "witness": "EMA / HMPC herbal monograph",
+    "stance": "proposed",
+    "source": "listed as a separate Greek mainland species in Dimopoulos et al. 2013; covered by EMA Sideritis herba"
+   }
+  ]
+ },
+ {
+  "slug": "mandragora-officinarum",
+  "greek_name": "μανδραγόρας",
+  "greek_translit": "mandragoras",
+  "book": 4,
+  "chapter": 75,
+  "accepted_name": "Mandragora officinarum L.",
+  "common_name_en": "Mandrake",
+  "confidence": "certain",
+  "ema": false,
+  "n_candidates": 4,
+  "claims": [
+   {
+    "taxon": "Atropa belladonna (third kind, μώριον)",
+    "role": "alternative",
+    "year": 1561,
+    "authority": "Anguillara, Semplici",
+    "witness": "Dodonaeus, Stirpium historiae",
+    "stance": "proposed",
+    "source": "Anguillara and Dodonaeus, cited by Sprengel 1830, vol. 2, p. 605"
+   },
+   {
+    "taxon": "Mandragora autumnalis Bertol. (female)",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel 1830, vol. 2, p. 605"
+   },
+   {
+    "taxon": "Mandragora officinarum L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, pp. 604-605 (Comm. IV cap. LXXVI): three kinds; the first two 'bene, ut ab αὐτόπτῃ, descripta'. Female (black, narrower leaves, sorb/pear-shaped fruit) = Mandragora autumnalis Bertol.; male (white, large beet-like leaves, larger saffron-coloured fragrant fruit) = Mandragora vernalis Bertol.; 'Utraque species et in Italia et in Graecia, speciatim circa Athenas occurrit.' Thir"
+   },
+   {
+    "taxon": "Mandragora vernalis Bertol. (male)",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel 1830, vol. 2, p. 605"
+   },
+   {
+    "taxon": "Mandragora officinarum L.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 167: 'At[ropa] Mandragora L., Alraunwurzel' = μανδραγόρας μέλας, ἀντίμηλον, κιρκαία etc. Diosc. 3,134 [sic], who 'mentions the 2 varieties distinguished by flowering time - vernalis and autumnalis; of the third he speaks only from hearsay'; modern name μανδραγόρας. Osbaldeston 2000, ch. 4-76: SUGGESTED Mandragora mas [Fuchs], M. fructu rotundo [Bauhin], Mandragora officinarum [Linna"
+   },
+   {
+    "taxon": "Mandragora autumnalis Bertol.",
+    "role": "alternative",
+    "year": 2021,
+    "authority": "WCVP / POWO (Kew)",
+    "witness": "Dimopoulos et al., Vascular plants of Greece",
+    "stance": "preferred",
+    "source": "accepted separately by WCVP (native GRC, KRI); treated as synonym of M. officinarum by Dimopoulos et al. 2013 and GBIF backbone"
+   }
+  ]
+ },
+ {
+  "slug": "hyssopus-officinalis",
+  "greek_name": "ὕσσωπος",
+  "greek_translit": "hyssopos",
+  "book": 3,
+  "chapter": 25,
+  "accepted_name": "Hyssopus officinalis L.",
+  "common_name_en": "Hyssop",
+  "confidence": "disputed",
+  "ema": false,
+  "n_candidates": 9,
+  "claims": [
+   {
+    "taxon": "Thymbra verticillata L.",
+    "role": "alternative",
+    "year": 1586,
+    "authority": "Dalechamps, Historia generalis plantarum",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Dalechamp, cited by Sprengel 1830, vol. 2, p. 507"
+   },
+   {
+    "taxon": "Teucrium pseudhyssopus Schreb.",
+    "role": "alternative",
+    "year": 1592,
+    "authority": "Fabius Columna, Phytobasanos",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Fabius Columna, cited by Sprengel 1830, vol. 2, p. 507"
+   },
+   {
+    "taxon": "Satureja graeca / S. juliana (modern Greek name ὕσσωπος)",
+    "role": "alternative",
+    "year": 1806,
+    "authority": "Sibthorp, Flora Graeca",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Sibthorp, cited by Sprengel 1830, vol. 2, p. 507 ('nullo modo cum Hyssopo Dioscoridis congruunt')"
+   },
+   {
+    "taxon": "Thymbra spicata L.",
+    "role": "alternative",
+    "year": 1806,
+    "authority": "Sibthorp, Flora Graeca",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "rejected",
+    "source": "Sibthorp, cited and rejected by Sprengel 1830, vol. 2, p. 507"
+   },
+   {
+    "taxon": "Hyssopus officinalis L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, pp. 506-507 (Comm. III cap. XXVII): Dioscorides gives no diagnostic indication; Sprengel conjectures Origanum aegyptiacum / O. syriacum / O. smyrnaeum and states that 'our' hyssop (H. officinalis), spontaneous in S France and Italy, is 'neque in Graecia, Syria, aut Aegypto obvii' and was given the name by medieval writers (first figured by Tragus). He does NOT identify ὕσσωπ"
+   },
+   {
+    "taxon": "Origanum syriacum / O. aegyptiacum / O. smyrnaeum",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel 1830, vol. 2, p. 507 (Sprengel's own conjecture)"
+   },
+   {
+    "taxon": "Hyssopus officinalis L.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 182: ὕσσωπος Diosc. 3,27 = 'Orig. smyrnaeum vel syriacum L.'; 'Bei Mangel aller weiteren Beschreibung des Yssop im Diosc. folge ich Sprengel'; 'Es wächst hysoppus off. nicht in Griechenland, noch in Kleinasien oder Syrien!'; Thymbra spicata 'passt nicht wohl'. Also p. 174: 'Hyssopus officinalis ist eine unserer Flora ganz fremde Pflanze'. Osbaldeston 2000, ch. 3-30 USSOPOS: SUGGESTE"
+   },
+   {
+    "taxon": "Origanum smyrnaeum vel syriacum L.",
+    "role": "alternative",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Fraas 1845, p. 182"
+   },
+   {
+    "taxon": "Hyssopus officinalis L. and Origanum syriacum (both listed)",
+    "role": "alternative",
+    "year": 2000,
+    "authority": "Osbaldeston, De materia medica (transl.)",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Osbaldeston 2000, ch. 3-30"
+   },
+   {
+    "taxon": "Origanum syriacum L.",
+    "role": "alternative",
+    "year": 2013,
+    "authority": "Dimopoulos et al., Vascular plants of Greece",
+    "witness": "WCVP / POWO (Kew)",
+    "stance": "unverified",
+    "source": "unverified this session - commonly proposed; note it is NOT native to Greece (absent from Dimopoulos 2013; WCVP range CYP, LBS, PAL, SAU, SIN, TUR)"
+   }
+  ]
+ },
+ {
+  "slug": "salvia-fruticosa",
+  "greek_name": "ἐλελίσφακον",
+  "greek_translit": "elelisphakon",
+  "book": 3,
+  "chapter": 33,
+  "accepted_name": "Salvia fruticosa Mill.",
+  "common_name_en": "Greek sage",
+  "confidence": "disputed",
+  "ema": false,
+  "n_candidates": 4,
+  "claims": [
+   {
+    "taxon": "Salvia fruticosa Mill.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, p. 510 (Comm. III cap. XXXV, ἐλελίσφακον): 'Quaenam salviae species intelligatur, potest omnino ambigi. Vero tamen est haud absimile, Salviam nostram officinalem, quae in asperis omnis Graeciae locis provenit, hac appellatione comprehendi.' Sprengel names Salvia officinalis (tentatively), NOT S. fruticosa; the species is explicitly said to be open to doubt."
+   },
+   {
+    "taxon": "Salvia officinalis L.",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel 1830, vol. 2, p. 510"
+   },
+   {
+    "taxon": "Salvia calycina L. (for Theophrastus' ἐλελίσφακον)",
+    "role": "alternative",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Fraas 1845, p. 184"
+   },
+   {
+    "taxon": "Salvia fruticosa Mill.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 184: '20. Salvia pomifera L., breitblättriger Salbey (triloba und baccifera sind synonym). Ist die bei weitem häufigste in Griechenland' = σφάκος Theophr., ἐλελίσφακον Diosc. 3,35; also S. calycina L. = ἐλελίσφακον Theophr.; S. officinalis 'Sehr selten!' in Greece. Fraas treats S. triloba (= S. fruticosa) as a synonym within his S. pomifera, so his identification covers S. fruticosa"
+   },
+   {
+    "taxon": "Salvia pomifera L. (incl. S. triloba = S. fruticosa, as synonyms)",
+    "role": "alternative",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Fraas 1845, p. 184"
+   },
+   {
+    "taxon": "Salvia officinalis L.",
+    "role": "alternative",
+    "year": 2000,
+    "authority": "Osbaldeston, De materia medica (transl.)",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Osbaldeston 2000, ch. 3-40"
+   }
+  ]
+ },
+ {
+  "slug": "thymbra-capitata",
+  "greek_name": "θύμος",
+  "greek_translit": "thymos",
+  "book": 3,
+  "chapter": 36,
+  "accepted_name": "Thymbra capitata (L.) Cav.",
+  "common_name_en": "Conehead thyme",
+  "confidence": "probable",
+  "ema": false,
+  "n_candidates": 3,
+  "claims": [
+   {
+    "taxon": "Thymus vulgaris L.",
+    "role": "alternative",
+    "year": 1530,
+    "authority": "Brunfels, Herbarum vivae eicones",
+    "witness": "Tragus (Bock), New Kreütter Buch",
+    "stance": "rejected",
+    "source": "Brunfels, Tragus, Fuchs, cited (superseded) by Sprengel 1830, vol. 2, p. 511"
+   },
+   {
+    "taxon": "Thymbra capitata (L.) Cav.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, pp. 511-512 (Comm. III cap. XXXVIII): 'Thymum Dioscoridis legitimum, quem Brunfelsius, Tragus ac Fuchsius pro Thymo vulgari habuerant, Matthiolus primus in Thymo cretico Brot. (Satureia capitata L.) recognovisse videtur'; describes the plant, abundant on Hymettus. Satureia capitata L. is the basionym-era name of Thymbra capitata. 'probable' because Sprengel records the earli"
+   },
+   {
+    "taxon": "Thymbra capitata (L.) Cav.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 174: 'Sat. capitata L., Satureystrauch' = θύμος Hippocr., λευκὸς θύμος Theophr. 6,1,2, θύμος Diosc. 3,38; modern θυμάρι 'frequentiss. appellatio'; very common scrub on dry plains, hills and foothills to 2500 ft throughout. Osbaldeston 2000, ch. 3-44 THUMOS: SUGGESTED Thymus angustifolius, Thymus glaber (Wild Thyme) - a competing candidate. (https://archive.org/details/BIUSante_diosc"
+   },
+   {
+    "taxon": "Thymus angustifolius / Thymus glaber",
+    "role": "alternative",
+    "year": 2000,
+    "authority": "Osbaldeston, De materia medica (transl.)",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Osbaldeston 2000, ch. 3-44"
+   }
+  ]
+ },
+ {
+  "slug": "glaucium-flavum",
+  "greek_name": "μήκων κερατῖτις",
+  "greek_translit": "mekon keratitis",
+  "book": 4,
+  "chapter": 65,
+  "accepted_name": "Glaucium flavum Crantz",
+  "common_name_en": "Yellow horned poppy",
+  "confidence": "certain",
+  "ema": false,
+  "n_candidates": 2,
+  "claims": [
+   {
+    "taxon": "Glaucium flavum Crantz",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, p. 601 (Comm. IV cap. LXVI, μήκων κερατῖτις): 'Esse autem Glaucium luteum Scop., bene iam Tragus probavit.' Glaucium luteum Scop. is a synonym of G. flavum Crantz (synonymy is ours). No competitor named."
+   },
+   {
+    "taxon": "Glaucium flavum Crantz",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 127: 'Glaucium flavum Cr., gelber Hornmohn' = ἡ μήκων (κερατῖτις) Theophr. 9,13 and μήκων κερατῖτις Diosc. 4,66 ('folia hirsuta' fits particularly). Osbaldeston 2000, ch. 4-66: SUGGESTED Papaver corniculatum [Fuchs, Brunfels], Chelidonium glaucium [Linnaeus], Glaucium flavum, Glaucium luteum. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n602/mode/1up ; https://archive"
+   },
+   {
+    "taxon": "Glaucium corniculatum (L.) Rudolph",
+    "role": "alternative",
+    "year": 2013,
+    "authority": "Dimopoulos et al., Vascular plants of Greece",
+    "witness": null,
+    "stance": "unverified",
+    "source": "unverified; congener native in Greece (Dimopoulos 2013)"
+   }
+  ]
+ },
+ {
+  "slug": "hypericum-perforatum",
+  "greek_name": "ὑπερικόν",
+  "greek_translit": "hyperikon",
+  "book": 3,
+  "chapter": 154,
+  "accepted_name": "Hypericum perforatum L.",
+  "common_name_en": "St John's wort",
+  "confidence": "disputed",
+  "ema": true,
+  "n_candidates": 3,
+  "claims": [
+   {
+    "taxon": "Hypericum barbatum Jacq.",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 567"
+   },
+   {
+    "taxon": "Hypericum crispum L. (= H. triquetrifolium Turra) (Sibthorp, as reported by Sprengel)",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 567"
+   },
+   {
+    "taxon": "Hypericum perforatum L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CLXI, pp. 566-567 (finds no Hypericum matching ὑπερικόν exactly except H. barbatum Jacq.; Sibthorp's H. crispum 'less pertinent'; assigns H. perforatum to ἄσκυρον, cap. CLXII)"
+   }
+  ]
+ },
+ {
+  "slug": "matricaria-chamomilla",
+  "greek_name": "ἀνθεμίς",
+  "greek_translit": "anthemis (syn. chamaimēlon)",
+  "book": 3,
+  "chapter": 137,
+  "accepted_name": "Matricaria chamomilla L.",
+  "common_name_en": "German chamomile",
+  "confidence": "disputed",
+  "ema": true,
+  "n_candidates": 6,
+  "claims": [
+   {
+    "taxon": "Anacyclus aureus (yellow kind)",
+    "role": "alternative",
+    "year": 1576,
+    "authority": "Lobel, Plantarum seu stirpium historia",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Lobel per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+   },
+   {
+    "taxon": "Anthemis nobilis L. (= Chamaemelum nobile)",
+    "role": "alternative",
+    "year": 1576,
+    "authority": "Lobel, Plantarum seu stirpium historia",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Lobel per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+   },
+   {
+    "taxon": "Anthemis chia L.",
+    "role": "alternative",
+    "year": 1806,
+    "authority": "Sibthorp, Flora Graeca",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+   },
+   {
+    "taxon": "Anthemis rosea Sibth. & Sm.",
+    "role": "alternative",
+    "year": 1806,
+    "authority": "Sibthorp, Flora Graeca",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+   },
+   {
+    "taxon": "Anthemis tinctoria L. (= Cota tinctoria)",
+    "role": "alternative",
+    "year": 1806,
+    "authority": "Sibthorp, Flora Graeca",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559"
+   },
+   {
+    "taxon": "Matricaria chamomilla L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CXLIV, p. 559 (anthemis = three species by ray colour; Sibthorp: Anthemis chia, A. tinctoria, A. rosea; Lobel: Matricaria chamomilla / Anthemis nobilis for the white-rayed kind) and cap. CXLV, p. 560 (Sprenge"
+   }
+  ]
+ },
+ {
+  "slug": "melissa-officinalis",
+  "greek_name": "μελισσόφυλλον",
+  "greek_translit": "melissophyllon",
+  "book": 3,
+  "chapter": 104,
+  "accepted_name": "Melissa officinalis L.",
+  "common_name_en": "Lemon balm",
+  "confidence": "probable",
+  "ema": true,
+  "n_candidates": 2,
+  "claims": [
+   {
+    "taxon": "Melissa altissima Sibth. (= M. officinalis subsp. altissima)",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, index p. 511 (context not read; listed only as a lead)"
+   },
+   {
+    "taxon": "Melissa officinalis L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CVIII, pp. 541-542 (index lists Melissa officinalis L. at p. 541; text cites Nicander, Virgil's melisphyllum and Varro's apiastrum)"
+   }
+  ]
+ },
+ {
+  "slug": "foeniculum-vulgare",
+  "greek_name": "μάραθον",
+  "greek_translit": "marathon (MSS also marathron)",
+  "book": 3,
+  "chapter": 70,
+  "accepted_name": "Foeniculum vulgare Mill.",
+  "common_name_en": "Fennel",
+  "confidence": "certain",
+  "ema": true,
+  "n_candidates": 1,
+  "claims": [
+   {
+    "taxon": "Foeniculum vulgare Mill.",
+    "role": "modelled",
+    "year": 1906,
+    "authority": "Wellmann, De materia medica (ed.)",
+    "witness": null,
+    "stance": "cited",
+    "source": "Wellmann 1906, vol. II p. 81, III 70 RV synonym: Romans call it φενούκλουμ (feniculum); Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. LXXIV, p. 524 (fennel; index: 'Meum Foeniculum Spr.')"
+   }
+  ]
+ },
+ {
+  "slug": "urtica-dioica",
+  "greek_name": "ἀκαλήφη",
+  "greek_translit": "akalēphē (syn. knidē)",
+  "book": 4,
+  "chapter": 93,
+  "accepted_name": "Urtica dioica L.",
+  "common_name_en": "Stinging nettle",
+  "confidence": "probable",
+  "ema": true,
+  "n_candidates": 2,
+  "claims": [
+   {
+    "taxon": "Urtica dioica L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. IV cap. XCII, p. 615 (the two kinds of ἀκαλήφη were recognised as Urtica urens and U. dioica by Brunfels and Tragus; Sprengel sees nothing to change)"
+   },
+   {
+    "taxon": "Urtica urens L.",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 615"
+   }
+  ]
+ },
+ {
+  "slug": "marrubium-vulgare",
+  "greek_name": "πράσιον",
+  "greek_translit": "prasion",
+  "book": 3,
+  "chapter": 105,
+  "accepted_name": "Marrubium vulgare L.",
+  "common_name_en": "White horehound",
+  "confidence": "probable",
+  "ema": true,
+  "n_candidates": 2,
+  "claims": [
+   {
+    "taxon": "Marrubium catariifolium Desr. (= M. peregrinum?)",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 542 (for one of Theophrastus' two kinds)"
+   },
+   {
+    "taxon": "Marrubium vulgare L.",
+    "role": "modelled",
+    "year": 1906,
+    "authority": "Wellmann, De materia medica (ed.)",
+    "witness": null,
+    "stance": "cited",
+    "source": "Wellmann 1906, vol. II p. 116, III 105 RV: Romans call it μαρρούβιουμ (marrubium); Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CIX, p. 542 (Theophrastus' two kinds = Marrubium catariifolium Desr. and M. vulgare L.)"
+   }
+  ]
+ },
+ {
+  "slug": "centaurium-erythraea",
+  "greek_name": "κενταύρειον τὸ λεπτὸν ἢ μικρόν",
+  "greek_translit": "kentaureion to lepton ē mikron",
+  "book": 3,
+  "chapter": 7,
+  "accepted_name": "Centaurium erythraea Rafn",
+  "common_name_en": "Common centaury",
+  "confidence": "certain",
+  "ema": true,
+  "n_candidates": 1,
+  "claims": [
+   {
+    "taxon": "Centaurium erythraea Rafn",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. VII, pp. 494-495 ('De Centaurio minori, Erythraea scilicet Centaurio Pers., nulla exstitit unquam dubitatio'); Wellmann III 7 RV: Romans call it φεβριφούγιαμ (febrifugia)"
+   }
+  ]
+ },
+ {
+  "slug": "plantago-lanceolata",
+  "greek_name": "ἀρνόγλωσσον",
+  "greek_translit": "arnoglōsson",
+  "book": 2,
+  "chapter": 126,
+  "accepted_name": "Plantago lanceolata L.",
+  "common_name_en": "Ribwort plantain",
+  "confidence": "disputed",
+  "ema": true,
+  "n_candidates": 5,
+  "claims": [
+   {
+    "taxon": "Plantago lagopus L. (smaller kind)",
+    "role": "alternative",
+    "year": 1806,
+    "authority": "Sibthorp, Flora Graeca",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465"
+   },
+   {
+    "taxon": "Plantago asiatica L. / P. altissima Jacq. (larger kind)",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465"
+   },
+   {
+    "taxon": "Plantago lanceolata L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. II cap. CLII, p. 465 (the larger arnoglosson is usually taken as Plantago major, but Sprengel prefers P. asiatica or P. altissima Jacq.; the smaller was P. lagopus for Sibthorp, P. lanceolata for the 'fathers of botan"
+   },
+   {
+    "taxon": "Plantago major L. (larger kind, majority view)",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465"
+   },
+   {
+    "taxon": "Plantago maritima L. (smaller kind)",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465"
+   }
+  ]
+ },
+ {
+  "slug": "malva-sylvestris",
+  "greek_name": "μολόχη",
+  "greek_translit": "molochē",
+  "book": 2,
+  "chapter": 118,
+  "accepted_name": "Malva sylvestris L.",
+  "common_name_en": "Common mallow",
+  "confidence": "probable",
+  "ema": true,
+  "n_candidates": 2,
+  "claims": [
+   {
+    "taxon": "Malva sylvestris L.",
+    "role": "modelled",
+    "year": 1906,
+    "authority": "Wellmann, De materia medica (ed.)",
+    "witness": null,
+    "stance": "cited",
+    "source": "Wellmann (ed.) 1906, DMM II 118 (Greek text + RV synonyms: μαλάχη κηπαία, Ῥωμαῖοι μάλβα ὁρτένσε; μαλάχη ἀγρία χερσαία, μάλβα ῥούστικα); Osbaldeston 2000, On Medical Matters, ch. 2-144 (Goodyer numbering): \"Malva sylvestris [Linnaeus] — Common Mallow\"."
+   },
+   {
+    "taxon": "Alcea rosea / Malva rotundifolia (listed among \"suggested\")",
+    "role": "alternative",
+    "year": 2000,
+    "authority": "Osbaldeston, De materia medica (transl.)",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Osbaldeston 2000, ch. 2-144"
+   }
+  ]
+ },
+ {
+  "slug": "althaea-officinalis",
+  "greek_name": "ἀλθαία",
+  "greek_translit": "althaia",
+  "book": 3,
+  "chapter": 146,
+  "accepted_name": "Althaea officinalis L.",
+  "common_name_en": "Marsh mallow",
+  "confidence": "probable",
+  "ema": true,
+  "n_candidates": 1,
+  "claims": [
+   {
+    "taxon": "Althaea officinalis L.",
+    "role": "modelled",
+    "year": 1906,
+    "authority": "Wellmann, De materia medica (ed.)",
+    "witness": null,
+    "stance": "cited",
+    "source": "Wellmann (ed.) 1906, DMM III 146 (\"ἀλθαία, ἣν ἔνιοι ἐβίσκον καλοῦσι, μολόχης ἐστὶν ἀγρίας εἶδος\"); Osbaldeston 2000, ch. 3-163: \"Althaea officinalis [Linnaeus] — Marsh Mallow\"."
+   }
+  ]
+ },
+ {
+  "slug": "salvia-rosmarinus",
+  "greek_name": "λιβανωτίς",
+  "greek_translit": "libanōtis",
+  "book": 3,
+  "chapter": 75,
+  "accepted_name": "Salvia rosmarinus Spenn.",
+  "common_name_en": "Rosemary",
+  "confidence": "probable",
+  "ema": true,
+  "n_candidates": 2,
+  "claims": [
+   {
+    "taxon": "Cachrys libanotis / Seseli-type umbellifers (the other λιβανωτίδες of Wellmann III 74)",
+    "role": "alternative",
+    "year": 1906,
+    "authority": "Wellmann, De materia medica (ed.)",
+    "witness": "Osbaldeston, De materia medica (transl.)",
+    "stance": "proposed",
+    "source": "Wellmann III 74; Osbaldeston 2000 ch. 3-87/3-88"
+   },
+   {
+    "taxon": "Salvia rosmarinus Spenn.",
+    "role": "modelled",
+    "year": 1906,
+    "authority": "Wellmann, De materia medica (ed.)",
+    "witness": null,
+    "stance": "cited",
+    "source": "Wellmann (ed.) 1906, DMM III 75: \"λιβανωτίς, ἣν Ῥωμαῖοι ῤουσμαρῖνον καλοῦσιν, ἧ καὶ οἱ στεφανοπλίκοι χρῶνται\" (the libanotis the Romans call rosmarinus, used by garland-makers); Osbaldeston 2000, ch. 3-89: \"Rosmarinus officinalis [Linnaeus]\"."
+   }
+  ]
+ },
+ {
+  "slug": "pistacia-lentiscus",
+  "greek_name": "σχῖνος",
+  "greek_translit": "schinos",
+  "book": 1,
+  "chapter": 70,
+  "accepted_name": "Pistacia lentiscus L.",
+  "common_name_en": "Mastic tree, lentisk",
+  "confidence": "probable",
+  "ema": true,
+  "n_candidates": 2,
+  "claims": [
+   {
+    "taxon": "Pistacia lentiscus L.",
+    "role": "modelled",
+    "year": 1906,
+    "authority": "Wellmann, De materia medica (ed.)",
+    "witness": null,
+    "stance": "cited",
+    "source": "Wellmann (ed.) 1907, DMM I 70 (\"σχῖνος δένδρον γνώριμον, στυπτικὸν ὅλον\"); Osbaldeston 2000, ch. 1-89 lists Pistacia lentiscus among suggestions (with Mastic Tree)."
+   },
+   {
+    "taxon": "Schinus molle (listed by Osbaldeston; New World species, anachronistic)",
+    "role": "alternative",
+    "year": 2000,
+    "authority": "Osbaldeston, De materia medica (transl.)",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Osbaldeston 2000, ch. 1-89"
+   }
+  ]
+ },
+ {
+  "slug": "juniperus-deltoides",
+  "greek_name": "ἄρκευθος",
+  "greek_translit": "arkeuthos",
+  "book": 1,
+  "chapter": 75,
+  "accepted_name": "Juniperus deltoides R.P.Adams",
+  "common_name_en": "Prickly juniper (eastern)",
+  "confidence": "disputed",
+  "ema": false,
+  "n_candidates": 4,
+  "claims": [
+   {
+    "taxon": "Juniperus deltoides R.P.Adams",
+    "role": "modelled",
+    "year": 1906,
+    "authority": "Wellmann, De materia medica (ed.)",
+    "witness": null,
+    "stance": "cited",
+    "source": "Wellmann (ed.) 1907, DMM I 75: \"ἄρκευθος· ἡ μέν τίς ἐστι μεγάλη ἡ δὲ μικρά\" (large and small kinds; RV: Ῥωμαῖοι ζουνιπέρουμ); Osbaldeston 2000 ch. 1-103 suggests Juniperus excelsa and J. communis."
+   },
+   {
+    "taxon": "Juniperus communis L.",
+    "role": "alternative",
+    "year": 2000,
+    "authority": "Osbaldeston, De materia medica (transl.)",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Osbaldeston 2000, ch. 1-103"
+   },
+   {
+    "taxon": "Juniperus excelsa M.Bieb.",
+    "role": "alternative",
+    "year": 2000,
+    "authority": "Osbaldeston, De materia medica (transl.)",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Osbaldeston 2000, ch. 1-103"
+   }
+  ]
+ },
+ {
+  "slug": "glycyrrhiza-glabra",
+  "greek_name": "γλυκύρριζα",
+  "greek_translit": "glykyrrhiza",
+  "book": 3,
+  "chapter": 5,
+  "accepted_name": "Glycyrrhiza glabra L.",
+  "common_name_en": "Liquorice",
+  "confidence": "probable",
+  "ema": true,
+  "n_candidates": 2,
+  "claims": [
+   {
+    "taxon": "Glycyrrhiza glabra L.",
+    "role": "modelled",
+    "year": 1906,
+    "authority": "Wellmann, De materia medica (ed.)",
+    "witness": null,
+    "stance": "cited",
+    "source": "Wellmann (ed.) 1906, DMM III 5; Osbaldeston 2000, ch. 3-7: \"Glycyrrhiza glabra [Linnaeus] — Liquorice Plant\"."
+   },
+   {
+    "taxon": "Glycyrrhiza echinata L. (also native in Greece)",
+    "role": "alternative",
+    "year": 2013,
+    "authority": "Dimopoulos et al., Vascular plants of Greece",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Dimopoulos et al. 2013 p.94 lists it; no source opened links it to DMM III 5"
+   }
+  ]
+ },
+ {
+  "slug": "sambucus-nigra",
+  "greek_name": "ἀκτῆ",
+  "greek_translit": "aktē",
+  "book": 4,
+  "chapter": 173,
+  "accepted_name": "Sambucus nigra L.",
+  "common_name_en": "Elder",
+  "confidence": "probable",
+  "ema": true,
+  "n_candidates": 2,
+  "claims": [
+   {
+    "taxon": "Sambucus ebulus L. (the χαμαιάκτη treated in the same chapter)",
+    "role": "alternative",
+    "year": 1906,
+    "authority": "Wellmann, De materia medica (ed.)",
+    "witness": "Osbaldeston, De materia medica (transl.)",
+    "stance": "proposed",
+    "source": "Wellmann IV 173 RV; Osbaldeston 2000 ch. 4-175"
+   },
+   {
+    "taxon": "Sambucus nigra L.",
+    "role": "modelled",
+    "year": 1906,
+    "authority": "Wellmann, De materia medica (ed.)",
+    "witness": null,
+    "stance": "cited",
+    "source": "Wellmann (ed.) 1906, DMM IV 173 (tree-like ἀκτῆ; RV: Ῥωμαῖοι σαμβούκουμ; second kind χαμαιάκτη = ἔβουλουμ); Osbaldeston 2000, ch. 4-174: \"Sambucus nigra [Linnaeus]\"."
+   }
+  ]
+ },
+ {
+  "slug": "artemisia-absinthium",
+  "greek_name": "ἀψίνθιον",
+  "greek_translit": "apsinthion",
+  "book": 3,
+  "chapter": 23,
+  "accepted_name": "Artemisia absinthium L.",
+  "common_name_en": "Wormwood",
+  "confidence": "probable",
+  "ema": true,
+  "n_candidates": 2,
+  "claims": [
+   {
+    "taxon": "Artemisia absinthium L.",
+    "role": "modelled",
+    "year": 1906,
+    "authority": "Wellmann, De materia medica (ed.)",
+    "witness": null,
+    "stance": "cited",
+    "source": "Wellmann (ed.) 1906, DMM III 23 (\"ἀψίνθιον· γνώριμος ἡ πόα\"; RV: Ῥωμαῖοι ἀψίνθιουμ ῥούστικουμ); Osbaldeston 2000, ch. 3-26: \"Artemisia absinthium [Linnaeus] — Wormwood\"."
+   }
+  ]
+ },
+ {
+  "slug": "teucrium-capitatum",
+  "greek_name": "πόλιον",
+  "greek_translit": "polion",
+  "book": 3,
+  "chapter": 110,
+  "accepted_name": "Teucrium capitatum L.",
+  "common_name_en": "Felty germander",
+  "confidence": "certain",
+  "ema": false,
+  "n_candidates": 4,
+  "claims": [
+   {
+    "taxon": "Teucrium montanum L. - for the second kind",
+    "role": "alternative",
+    "year": 1554,
+    "authority": "Matthiolus, Commentarii in Dioscoridem",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "rejected",
+    "source": "Matthiolus, cited and rejected by Sprengel 1830, vol. 2, p. 544"
+   },
+   {
+    "taxon": "Teucrium capitatum L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, p. 544 (Comm. III cap. CXIV): 'Teucrium Polium πολίου nomine intelligi, in confesso est, Matthiolo, ni fallor, id primo probante.' The second, more shrubby and less strong-smelling kind is disputed: Matthiolus Teucrium montanum (rejected), Sprengel 'Teucrium potius creticum L., s. rosmarinifolium Lam.' Note: Sprengel's 'Teucrium polium' is the broad Linnaean sense; the Greek"
+   },
+   {
+    "taxon": "Teucrium creticum L. (T. rosmarinifolium Lam.) - for the second kind",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel 1830, vol. 2, p. 544"
+   },
+   {
+    "taxon": "Teucrium capitatum L.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 173: 'T. Polium L., grauer Gamander. Ist wohlriechend!' = πόλιον Hippocr., Theophr. 1,16, Diosc. 3,114; 'T. capitatum. Ist höher und riecht nicht.' = πόλιον τὸ θαμνωδέστερον καὶ ἀδρανέστερον Diosc. l.c. (i.e. Fraas names T. capitatum for Dioscorides' SECOND, shrubbier, weaker kind); both common on dry plains and hills to 3000 ft (p. 173-174). Osbaldeston 2000, ch. 3-124 POLION: SUGG"
+   },
+   {
+    "taxon": "Teucrium capitatum L. - for the second (shrubbier, weaker) kind",
+    "role": "alternative",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Fraas 1845, p. 173"
+   }
+  ]
+ },
+ {
+  "slug": "teucrium-chamaedrys",
+  "greek_name": "χαμαίδρυς",
+  "greek_translit": "chamaidrys",
+  "book": 3,
+  "chapter": 98,
+  "accepted_name": "Teucrium chamaedrys L.",
+  "common_name_en": "Wall germander",
+  "confidence": "disputed",
+  "ema": false,
+  "n_candidates": 5,
+  "claims": [
+   {
+    "taxon": "Veronica chamaedrys L.",
+    "role": "alternative",
+    "year": 1530,
+    "authority": "Brunfels, Herbarum vivae eicones",
+    "witness": "Sprengel, Dioscorides commentary",
+    "stance": "proposed",
+    "source": "Brunfels, cited by Sprengel 1830, vol. 2, p. 540 (called false/spurious by Gesner and Bauhin)"
+   },
+   {
+    "taxon": "Teucrium chamaedrys L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, pp. 539-540 (Comm. III cap. CII): χαμαίδρυς named for the oak-like leaves; Tragus called it Teucrium chamaedrys, Brunfels Veronica chamaedrys (rejected by C. Gesner and Bauhin); 'accedente et Sibthorpio, subsistamus in Teucrio Chamaedry, in Graecia, ut per totam fere Europam, satis vulgari.'"
+   },
+   {
+    "taxon": "Teucrium chamaedrys L.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 173 DISAGREES: χαμαίδρυς Diosc. 3,102 = Teucrium lucidum L. (Gamanderstrauch), because Dioscorides' 'in asperis et rupestribus' habitat is where T. chamaedrys never grows 'contra Sibthorp', 'Est fruticulus' cannot apply to herbaceous T. chamaedrys, and Theophrastus' 'fragrant and sweet' fits T. lucidum or T. flavum; notes the modern name χαμανδρυά is used for both. Osbaldeston 2000,"
+   },
+   {
+    "taxon": "Teucrium flavum L. (fits Theophrastus' description)",
+    "role": "alternative",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Fraas 1845, p. 173"
+   },
+   {
+    "taxon": "Teucrium lucidum L.",
+    "role": "alternative",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Fraas 1845, p. 173"
+   },
+   {
+    "taxon": "Teucrium botrys; Veronica chamaedrys",
+    "role": "alternative",
+    "year": 2000,
+    "authority": "Osbaldeston, De materia medica (transl.)",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Osbaldeston 2000, ch. 3-112"
+   }
+  ]
+ },
+ {
+  "slug": "origanum-vulgare",
+  "greek_name": "ὀρίγανος Ἡρακλεωτική",
+  "greek_translit": "origanos herakleōtikē",
+  "book": 3,
+  "chapter": 27,
+  "accepted_name": "Origanum vulgare L.",
+  "common_name_en": "Greek oregano",
+  "confidence": "probable",
+  "ema": false,
+  "n_candidates": 1,
+  "claims": [
+   {
+    "taxon": "Origanum vulgare L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, p. 508 (Comm. III cap. XXIX): ὀρίγανος Ἡρακλεωτική = 'Origanum heracleoticum' (Linnaeus' name, following Matthiolus who first recognised it); Sibthorp agrees and saw it 'in Graeciae montosis siccis haud rarum'. Sprengel names Origanum heracleoticum L., not O. vulgare subsp. hirtum; equating O. heracleoticum L. with O. vulgare subsp. hirtum is a later taxonomic synonymy NOT s"
+   },
+   {
+    "taxon": "Origanum vulgare L.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 181: '15. Origanum heracleoticum L., scharfer Organ' = ὀρίγανος ἡρακλεωτική Diosc. 3,29; Cunila gallinacea Plin.; modern ῥίγανι ('Alle Arten!'); not rare on rocky hills of E Greece (Nauplia, Astros), to 1500 ft. (Fraas assigns Orig. vulgare v. album to ἀγριορίγανος, Diosc. 3,31 - a different chapter.) Osbaldeston 2000, ch. 3-32 ORIGANOS ERAKLEOTIKE: SUGGESTED Origanum heracleoticum "
+   }
+  ]
+ },
+ {
+  "slug": "mentha-pulegium",
+  "greek_name": "γλήχων",
+  "greek_translit": "glēchōn",
+  "book": 3,
+  "chapter": 31,
+  "accepted_name": "Mentha pulegium L.",
+  "common_name_en": "pennyroyal",
+  "confidence": "certain",
+  "ema": false,
+  "n_candidates": 1,
+  "claims": [
+   {
+    "taxon": "Mentha pulegium L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, p. 510 (Comm. III cap. XXXIII): 'Pulegium est vulgaris notitiae, Mentha Pulegium, per omnem Europam temperatam vulgaris.' No competing candidate."
+   },
+   {
+    "taxon": "Mentha pulegium L.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 177: 'M. Pulegium L., stinkender Poley' = γλήχων Hippocr., γλήχων Diosc. 3,36, Plin. 20,14; modern γλυφόνι / βρομηδυόσμο; very common in damp lowlands (Attica, Argolis). Osbaldeston 2000, ch. 3-36 GLECHON: SUGGESTED Pulegium [Fuchs] ... Mentha pulegium [Linnaeus]. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n511/mode/1up ; https://archive.org/details/synopsisplantaru"
+   }
+  ]
+ },
+ {
+  "slug": "capparis-spinosa",
+  "greek_name": "κάππαρις",
+  "greek_translit": "kapparis",
+  "book": 2,
+  "chapter": 173,
+  "accepted_name": "Capparis spinosa L.",
+  "common_name_en": "caper",
+  "confidence": "certain",
+  "ema": false,
+  "n_candidates": 3,
+  "claims": [
+   {
+    "taxon": "Capparis oblongifolia Forsk. (C. redif) - only for the acrid African/Red Sea caper",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel 1830, vol. 2, p. 483"
+   },
+   {
+    "taxon": "Capparis spinosa L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, p. 483 (Comm. II cap. CCIV): discusses names; 'Ceterum descriptio optima'; the very acrid caper from the Red Sea coast and Africa = perhaps Forsskål's Capparis redif s. oblongifolia. The species name for the main plant is given only in Index V, p. 702: 'Capparis spinosa L. 483' (and 'Capparis oblongifolia Forsk. 483'). Sprengel does not distinguish C. spinosa from C. orienta"
+   },
+   {
+    "taxon": "Capparis rupestris (on sea cliffs)",
+    "role": "alternative",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Fraas 1845, p. 116 (mentioned as a form, not as an alternative identification)"
+   },
+   {
+    "taxon": "Capparis spinosa L.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 116: '1. Capparis spinosa L. var. ovata W., rundblättrige, gemeine Kapper' = κάππαρις Theophr., κάππαρις Diosc. 2,204 'der noch einige andere ausländische Arten anführt'; very common in plains, among stones and on rocks (C. rupestris on sea cliffs), Attica, Boeotia, Corinth, Argos; 'folia ovalia apice mucronulato - retusa'. Osbaldeston 2000, ch. 2-204 KAPPARIS: SUGGESTED Capparis sp"
+   }
+  ]
+ },
+ {
+  "slug": "lavandula-stoechas",
+  "greek_name": "στοιχάς",
+  "greek_translit": "stoichas",
+  "book": 3,
+  "chapter": 26,
+  "accepted_name": "Lavandula stoechas L.",
+  "common_name_en": "French / topped lavender",
+  "confidence": "certain",
+  "ema": false,
+  "n_candidates": 1,
+  "claims": [
+   {
+    "taxon": "Lavandula stoechas L.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, pp. 507-508 (Comm. III cap. XXVIII): name from the Stoechades islands off Massilia (Hyères); 'Planta, de qua sermo est, Lavandula Stoechas nobis dicitur, a Fuchsio, ni fallor, primo illustrata.' No competing candidate named."
+   },
+   {
+    "taxon": "Lavandula stoechas L.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, pp. 174-175: '4. Lavandula Stoechas' = στιχάς, στοιχάς Diosc. 3,31, Plin.; modern χαμολίβανο (μαυροκέφαλο sec. Sibthorp); on xirobouna (Hymettus to 1000 ft) and damper lowlands. Osbaldeston 2000, ch. 3-31 STOICHAS: SUGGESTED Stichas, Stichas arabica [Fuchs], Stoechas purpurea [Bauhin], Lavandula stoechas. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n509/mode/1up ; https"
+   }
+  ]
+ },
+ {
+  "slug": "ecballium-elaterium",
+  "greek_name": "σίκυς ἄγριος",
+  "greek_translit": "sikys agrios",
+  "book": 4,
+  "chapter": 150,
+  "accepted_name": "Ecballium elaterium (L.) A.Rich.",
+  "common_name_en": "squirting cucumber",
+  "confidence": "certain",
+  "ema": false,
+  "n_candidates": 1,
+  "claims": [
+   {
+    "taxon": "Ecballium elaterium (L.) A.Rich.",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, p. 636 (Comm. IV cap. CLII, σίκυς ἄγριος): 'Est vero Momordica Elaterium, in Graecia satis vulgaris planta, cuius succus amarissimus et hodie purgante vi insignis celebratur'; describes the explosive fruit. Momordica elaterium L. = Ecballium elaterium (synonymy ours)."
+   },
+   {
+    "taxon": "Ecballium elaterium (L.) A.Rich.",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 102: '1. Ecbalium Elaterium Rich., Springgurke' = ὁ ἄγριος σίκυος Theophr. 9,15, σίκυς ἄγριος Diosc. 4,152, source of Elaterium; modern ἀγριαγγουριά; very common on poor fields of the lowlands (Attica). Osbaldeston 2000, ch. 4-154 SIKUS AGRIOS: SUGGESTED ... Ecballium elaterium, Momordica elaterium [Linnaeus]. (https://archive.org/details/BIUSante_dioscsprengelx02/page/n637/mode/1up"
+   }
+  ]
+ },
+ {
+  "slug": "cyclamen-graecum",
+  "greek_name": "κυκλάμινος",
+  "greek_translit": "kyklaminos",
+  "book": 2,
+  "chapter": 164,
+  "accepted_name": "Cyclamen graecum Link",
+  "common_name_en": "Greek cyclamen",
+  "confidence": "probable",
+  "ema": false,
+  "n_candidates": 5,
+  "claims": [
+   {
+    "taxon": "Cyclamen europaeum L. (Linnaean sense)",
+    "role": "alternative",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Sprengel 1830, vol. 2, Index V p. 704, https://archive.org/details/BIUSante_dioscsprengelx02/page/n705/mode/1up"
+   },
+   {
+    "taxon": "Cyclamen graecum Link",
+    "role": "modelled",
+    "year": 1830,
+    "authority": "Sprengel, Dioscorides commentary",
+    "witness": null,
+    "stance": "cited",
+    "source": "Sprengel 1830, vol. 2, pp. 478-479 (Comm. II cap. CXCIII): discusses only names (sowbread etc.) and uses (Gerard on childbirth); no species is named in the text. Index V, p. 704: 'Cyclamen europaeum L. 478'. Sprengel does not distinguish C. graecum from C. hederifolium; neither name appears. Second κυκλάμινος (cap. CXCIV) he takes as Lonicera periclymenum (after C. Gesner)."
+   },
+   {
+    "taxon": "Cyclamen graecum Link",
+    "role": "modelled",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "cited",
+    "source": "Fraas 1845, p. 192: '1. Cyclamen graecum Lk., griechisches Schweinsbrod' - 'Ist die häufigste in Griechenland, nebst persicum vorkommende Art, welche gewiss das κυκλάμινος ... Diosc. 2,193 ... ist'; only 'nascitur in umbrosis' is a difficulty. Fraas rejects Billerbeck's referral of Cyclamen hederaefolium to κυκλάμινος ἑτέρα (which he, like Sprengel, takes as Lonicera periclymenum). Modern τρικλαμι"
+   },
+   {
+    "taxon": "Cyclamen hederifolium - proposed by Billerbeck only for κυκλάμινος ἑτέρα (rejected)",
+    "role": "alternative",
+    "year": 1845,
+    "authority": "Fraas, Synopsis plantarum florae classicae",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Fraas 1845, p. 192"
+   },
+   {
+    "taxon": "Cyclamen europaeum L. and Cyclamen graecum (both listed)",
+    "role": "alternative",
+    "year": 2000,
+    "authority": "Osbaldeston, De materia medica (transl.)",
+    "witness": null,
+    "stance": "proposed",
+    "source": "Osbaldeston 2000, ch. 2-194"
+   }
+  ]
+ }
+]

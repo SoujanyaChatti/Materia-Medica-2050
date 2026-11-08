@@ -1,8 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getMeta, getSpeciesList } from '../lib/data';
+import { getAllSpecies, getLineage, getMeta, getSpeciesList } from '../lib/data';
+import { QUADRANTS, toAction } from '../lib/action';
 import { COMPONENT_LABELS } from '../lib/format';
-import { plantHref } from '../lib/url';
+import { href, plantHref } from '../lib/url';
 import type { RiskComponents } from '../lib/types';
 
 const meta = getMeta();
@@ -15,7 +16,14 @@ const steps: ['h' | 'm', string, string][] = [
   ['m', 'Model habitat', 'MaxEnt + random-forest ensemble, target-group background'],
   ['m', 'Score risk', 'Range loss, endemism, conservation status, harvest pressure'],
   ['m', 'Find cultivation zones', 'Suitable in 2050, on farmland, outside Natura 2000, away from wild populations'],
+  ['m', 'Turn results into action', 'Decision rules, grower index per 10 km cell, identification timeline'],
 ];
+const full = getAllSpecies();
+const harvest = full.map((s) => s.risk.components.harvest);
+const hMin = Math.min(...harvest), hMax = Math.max(...harvest);
+const actions = full.map(toAction);
+const lin = getLineage();
+const nClaims = lin.reduce((n, p) => n + p.claims.length, 0);
 const v = meta.versions;
 const sources: [string, string, string, string][] = [
   ['De Materia Medica, Wellmann ed. (1906–14)', 'Greek names, book, chapter, opening words', 'Public domain (Wellmann d. 1933); First1KGreek digitisation CC BY-SA 4.0 for some excerpts', 'archive.org scans'],
@@ -42,9 +50,9 @@ const topK = meta.sensitivity.top_k_unchanged;
   <div class="page flex flex-col gap-14 pb-16 pt-10">
     <div class="flex max-w-[780px] flex-col gap-2">
       <h1 class="h-display m-0 text-[clamp(34px,4vw,48px)]">Methods and limitations</h1>
-      <p class="m-0 text-[17px] text-muted">From a 1st-century text to a 2050 habitat map in seven steps. Each step names its sources and its main uncertainty.</p>
+      <p class="m-0 text-[17px] text-muted">From a 1st-century text to a 2050 habitat map and an action plan in eight steps. Each step names its sources and its main uncertainty.</p>
       <nav aria-label="On this page" class="flex flex-wrap gap-x-4.5 gap-y-1 pt-2 text-[15px]">
-        <a href="#pipeline">Pipeline</a><a href="#sources">Data &amp; licences</a><a href="#validation">Validation</a><a href="#sensitivity">Sensitivity</a><a href="#limits">Limitations</a><a href="#reproduce">Reproduce</a><a href="#team">Team</a>
+        <a href="#pipeline">Pipeline</a><a href="#sources">Data &amp; licences</a><a href="#validation">Validation</a><a href="#sensitivity">Sensitivity</a><a href="#action">From results to action</a><a href="#limits">Limitations</a><a href="#reproduce">Reproduce</a><a href="#team">Team</a>
       </nav>
     </div>
 
@@ -129,12 +137,38 @@ const topK = meta.sensitivity.top_k_unchanged;
       </section>
     </div>
 
+    <section id="action" aria-labelledby="h-act" class="flex flex-col gap-3.5">
+      <h2 id="h-act" class="h-section">From results to action (stage 8)</h2>
+      <p class="m-0 max-w-[900px] text-[15px] text-muted"><code class="font-mono">pipeline/08_action_layers.py</code> uses only the Python standard library and reads only what stage 7 exported, so anyone can re-run it without the modelling environment (<code class="font-mono">make action</code>). It adds no new modelling.</p>
+      <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))]">
+        <div class="card-data flex flex-col gap-1.5 p-4.5">
+          <h3 class="m-0 text-[17px]">Decision rules</h3>
+          <ul class="m-0 flex flex-col gap-1 pl-4.5 text-[14px]">
+            {Object.entries(QUADRANTS).map(([k, q]) => <li><strong>{q.title}</strong> ({actions.filter((a) => a.quadrant === k).length}): {q.rule}.</li>)}
+          </ul>
+          <p class="m-0 text-[13px] text-muted">Plants with a disputed identification or a low-confidence model are marked "resolve data first" in every lane. <a href={href('act/')}>Open the action plan</a>.</p>
+        </div>
+        <div class="card-data flex flex-col gap-1.5 p-4.5">
+          <h3 class="m-0 text-[17px]">Grower index</h3>
+          <p class="m-0 text-[14px]">For every ~10 km cell, the plants whose 2050 cultivation zone covers it. Zones are unions of whole grid cells, so a cell-centre test is exact. <strong>Validated:</strong> the per-cell counts match stage 7's independent raster counts in every cell (0 mismatches). SSP2-4.5 only, as stage 7 exports zone outlines for that scenario.</p>
+        </div>
+        <div class="card-data flex flex-col gap-1.5 p-4.5">
+          <h3 class="m-0 text-[17px]">Identification timeline</h3>
+          <p class="m-0 text-[14px]">{nClaims} claims parsed from the curated identification table: who proposed, preferred or rejected each candidate, with the authority who reports it ("Matthiolus, rejected by Sprengel"). Dates are each authority's main work, approximate and used only for ordering.</p>
+        </div>
+        <div class="card-data flex flex-col gap-1.5 p-4.5">
+          <h3 class="m-0 text-[17px]">Risk weight lab</h3>
+          <p class="m-0 text-[14px]">Recomputes the stage 5 score in the browser from the exported components. With the published weights it reproduces every published score to within 0.001 and the published ranking exactly; Kendall's τ is computed the same way as above.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="limits" aria-labelledby="h-lim" class="grid gap-x-10 gap-y-4 border-t-2 border-ochre pt-5 [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">
       <h2 id="h-lim" class="h-section col-span-full">Limitations</h2>
       <div><h3 class="m-0 mb-1 text-[17px]">Identification is interpretation</h3><p class="m-0 text-muted">Matching an ancient name to a modern species is a scholarly judgement. "Disputed" plants may describe the wrong taxon entirely.</p></div>
       <div><h3 class="m-0 mb-1 text-[17px]">Suitability is not presence</h3><p class="m-0 text-muted">Correlative models assume equilibrium with climate and ignore dispersal, soils, grazing and land use. Range change assumes plants can reach every newly suitable cell in Greece, so gains are optimistic; a suitable cell in 2050 may never be colonised.</p></div>
       <div><h3 class="m-0 mb-1 text-[17px]">Sampling bias</h3><p class="m-0 text-muted">Occurrence records cluster near roads and well-known mountains. Target-group background and thinning reduce but do not remove this.</p></div>
-      <div><h3 class="m-0 mb-1 text-[17px]">Harvest pressure is a proxy</h3><p class="m-0 text-muted">Estimated from accessibility (range within 2 km of roads or villages) plus a documented wild-harvest flag, not measured collection.</p></div>
+      <div><h3 class="m-0 mb-1 text-[17px]">Harvest pressure is a proxy, and it saturates</h3><p class="m-0 text-muted">Estimated from accessibility (range within 2 km of roads or villages) plus a documented wild-harvest flag, not measured collection. In Greece's dense road network almost every range is accessible: the component spans only {hMin.toFixed(2)}–{hMax.toFixed(2)} across species, so it barely separates plants and its weight hardly moves the ranking. Measured collection data (permits, trade volumes) would fix this.</p></div>
       <div><h3 class="m-0 mb-1 text-[17px]">Coarse grid</h3><p class="m-0 text-muted">~{meta.cell_km} km cells protect rare plants from collectors but hide microrefugia such as gorges and north slopes.</p></div>
       <div><h3 class="m-0 mb-1 text-[17px]">No health claims</h3><p class="m-0 text-muted">This project maps plants. It makes no statement about the safety or effect of any plant or preparation. Results are hypotheses for conservation planning, not prescriptions.</p></div>
     </section>
@@ -148,7 +182,8 @@ make env        # conda env from environment.yml
 make data       # species list, GBIF, WorldClim, DEM
 make models     # SDMs + spatially blocked CV
 make risk       # risk score, sensitivity, cultivation
-make web        # export + JSON Schema validation
+make web        # export + JSON Schema validation + stage 8
+make action     # stage 8 only (stdlib Python, no GIS stack)
 make site       # builds the Astro site
 # or simply: make all</pre>
         <p class="m-0 text-[14px] text-muted">Fixed random seeds; GBIF download DOI and all versions recorded in <code class="font-mono">data/manifest.yml</code>. Build {meta.build_date}{meta.gbif_doi ? ` · GBIF DOI ${meta.gbif_doi}` : ''}.</p>

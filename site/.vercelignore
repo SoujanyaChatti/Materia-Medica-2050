@@ -1,0 +1,7 @@
+node_modules
+dist
+.astro
+# iCloud sync-conflict copies
+**/* 2.*
+**/* 3.*
+**/* 4.*

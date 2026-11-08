@@ -7,10 +7,10 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 // MapLibre resolves its worker relative to its own module URL, which bundling breaks; ship it explicitly.
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url';
 import type { FutureKey, ScenarioKey } from '../lib/types';
-import { dataUrl, loadRiskGrid } from '../lib/url';
+import { dataUrl, loadGrowGrid, loadRiskGrid } from '../lib/url';
 import { IconAlert, IconReset } from './icons';
 
-export type MapMode = 'range' | 'risk';
+export type MapMode = 'range' | 'risk' | 'grow';
 export interface Layers { range?: boolean; cult?: boolean; natura?: boolean; labels?: boolean; occ?: boolean; risk?: boolean }
 export type CellProps = Record<string, string | number | undefined>;
 
@@ -21,6 +21,17 @@ const PLACES: [number, number, string, string][] = [
   [21.735, 38.246, 'Πάτρα', 'Patras'], [20.853, 39.665, 'Ιωάννινα', 'Ioannina'], [22.35, 40.085, 'Όλυμπος', 'Mt Olympus'],
   [22.415, 39.639, 'Λάρισα', 'Larissa'], [28.224, 36.434, 'Ρόδος', 'Rhodes'],
 ];
+
+function boundsOf(fcs: (GeoJSON.FeatureCollection | undefined)[]): [[number, number], [number, number]] | null {
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  const walk = (c: unknown): void => {
+    if (Array.isArray(c) && typeof c[0] === 'number') {
+      const [x, y] = c as number[]; x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y);
+    } else if (Array.isArray(c)) c.forEach(walk);
+  };
+  for (const fc of fcs) for (const f of fc?.features ?? []) if (f.geometry && 'coordinates' in f.geometry) walk(f.geometry.coordinates);
+  return Number.isFinite(x0) ? [[x0, y0], [x1, y1]] : null;
+}
 
 const css = (name: string) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
@@ -45,17 +56,21 @@ function theme() {
     kept: css('--map-kept'), lost: css('--map-lost'), lostBg: css('--map-lost-bg'), gain: css('--map-gain'),
     cult: css('--map-cult'), natura: css('--map-natura'), occ: css('--map-occ'), ink: css('--ink'),
     risk: [1, 2, 3, 4, 5].map((i) => css(`--risk-${i}`)),
+    grow: [1, 2, 3, 4, 5].map((i) => css(`--grow-${i}`)),
   };
 }
 
-export function RangeMap({ mode, slug, scenario, layers, chip, ariaLabel, tableHref, selectedId, onSelectCell, focus, cooperative = true, controls = true, aspect = '600 / 520' }: {
+export function RangeMap({ mode, slug, scenario, layers, chip, ariaLabel, tableHref, selectedId, onSelectCell, focus, cooperative = true, controls = true, aspect = '600 / 520', fitData = true }: {
   mode: MapMode; slug?: string; scenario: ScenarioKey; layers: Layers; chip: string; ariaLabel: string; tableHref?: string;
   selectedId?: string | null; onSelectCell?: (p: CellProps) => void; focus?: [number, number] | null;
   cooperative?: boolean; controls?: boolean; aspect?: string;
+  /** Range mode: open zoomed to the species' current + 2050 range instead of all of Greece. */
+  fitData?: boolean;
 }) {
   const box = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MLMap | null>(null);
   const markers = useRef<Marker[]>([]);
+  const home = useRef<[[number, number], [number, number]]>(GREECE_BOUNDS);
   const selectRef = useRef(onSelectCell);
   selectRef.current = onSelectCell;
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
@@ -75,7 +90,7 @@ export function RangeMap({ mode, slug, scenario, layers, chip, ariaLabel, tableH
       ...(mode === 'range' && slug ? {
         now: `layers/${slug}/range_now.geojson`, ssp245: `layers/${slug}/range_2050_ssp245.geojson`, ssp585: `layers/${slug}/range_2050_ssp585.geojson`,
         cult: `layers/${slug}/cultivation.geojson`, occ: `layers/${slug}/occurrences.geojson`,
-      } : { grid: 'layers/greece_risk_grid.geojson' }),
+      } : mode === 'grow' ? { grow: 'layers/grower_cells.json' } : { grid: 'layers/greece_risk_grid.geojson' }),
     };
     const optional = new Set(['natura', 'neighbours']);
 
@@ -89,6 +104,8 @@ export function RangeMap({ mode, slug, scenario, layers, chip, ariaLabel, tableH
           try {
             if (k === 'grid') {
               data[k] = await loadRiskGrid();
+            } else if (k === 'grow') {
+              data[k] = await loadGrowGrid();
             } else {
               const r = await fetch(dataUrl(files[k]));
               if (!r.ok) throw new Error(`${files[k]}: ${r.status}`);
@@ -140,6 +157,15 @@ export function RangeMap({ mode, slug, scenario, layers, chip, ariaLabel, tableH
             m.addLayer({ id: 'occ', type: 'line', source: 'occ', paint: { 'line-color': t.occ, 'line-width': 1.2 } });
             m.addLayer({ id: 'cult', type: 'fill', source: 'cult', paint: { 'fill-pattern': 'hatch-cult' } });
             m.addLayer({ id: 'cult-line', type: 'line', source: 'cult', paint: { 'line-color': t.cult, 'line-width': 0.8 } });
+          } else if (mode === 'grow') {
+            const g = t.grow;
+            m.addLayer({ id: 'grow', type: 'fill', source: 'grow', filter: ['>', ['get', 'n_grow'], 0], paint: {
+              'fill-color': ['step', ['get', 'n_grow'], g[0], 2, g[1], 3, g[2], 5, g[3], 7, g[4]], 'fill-opacity': 0.95 } });
+            m.addLayer({ id: 'grow-line', type: 'line', source: 'grow', filter: ['>', ['get', 'n_grow'], 0], paint: { 'line-color': t.coast, 'line-width': 0.3 } });
+            m.addLayer({ id: 'selected', type: 'line', source: 'grow', filter: ['==', ['get', 'id'], ''], paint: { 'line-color': t.ink, 'line-width': 3 } });
+            m.on('click', 'grow', (e) => { const f = e.features?.[0]; if (f) selectRef.current?.(f.properties as CellProps); });
+            m.on('mouseenter', 'grow', () => { m.getCanvas().style.cursor = 'pointer'; });
+            m.on('mouseleave', 'grow', () => { m.getCanvas().style.cursor = ''; });
           } else {
             m.addLayer({ id: 'risk', type: 'fill', source: 'grid', paint: { 'fill-color': t.risk[0], 'fill-opacity': 0.92 } });
             m.addLayer({ id: 'cult', type: 'fill', source: 'grid', paint: { 'fill-pattern': 'hatch-cult' } });
@@ -182,6 +208,11 @@ export function RangeMap({ mode, slug, scenario, layers, chip, ariaLabel, tableH
               for (const s of FUT) { m.setPaintProperty(`${s}-kept`, 'fill-color', c.kept); m.setPaintProperty(`${s}-gained`, 'fill-color', c.gain); }
               m.setPaintProperty('occ', 'line-color', c.occ);
               m.setPaintProperty('cult-line', 'line-color', c.cult);
+            } else if (mode === 'grow') {
+              const g = c.grow;
+              m.setPaintProperty('grow', 'fill-color', ['step', ['get', 'n_grow'], g[0], 2, g[1], 3, g[2], 5, g[3], 7, g[4]]);
+              m.setPaintProperty('grow-line', 'line-color', c.coast);
+              m.setPaintProperty('selected', 'line-color', c.ink);
             } else {
               m.setPaintProperty('selected', 'line-color', c.ink);
             }
@@ -189,6 +220,14 @@ export function RangeMap({ mode, slug, scenario, layers, chip, ariaLabel, tableH
           observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
           resize = new ResizeObserver(() => m.resize());
           if (box.current) resize.observe(box.current);
+          if (mode === 'range' && fitData) {
+            const b = boundsOf([data.now, data.ssp245, data.ssp585]);
+            // Only zoom in when the range is clearly smaller than the country.
+            if (b && (b[1][0] - b[0][0] < 6.5 || b[1][1] - b[0][1] < 4.5)) {
+              home.current = b;
+              m.fitBounds(b, { padding: 36, maxZoom: 7.2, duration: 0 });
+            }
+          }
           if (!cancelled) setStatus('ready');
         });
         map.on('error', (e) => { console.error(e.error); });
@@ -218,6 +257,8 @@ export function RangeMap({ mode, slug, scenario, layers, chip, ariaLabel, tableH
       for (const s of FUT) for (const part of ['kept', 'lost', 'gained']) vis(`${s}-${part}`, !!layers.range && scenario === s);
       vis('occ', !!layers.occ);
       vis('cult', !!layers.cult); vis('cult-line', !!layers.cult);
+    } else if (mode === 'grow') {
+      m.setFilter('selected', ['==', ['get', 'id'], selectedId ?? '']);
     } else {
       const s = scenario;
       const cultKey = s === 'now' ? 'cult_ssp245' : `cult_${s}`;
@@ -239,7 +280,7 @@ export function RangeMap({ mode, slug, scenario, layers, chip, ariaLabel, tableH
   }, [focus?.[0], focus?.[1], status]);
 
   const zoom = (d: number) => mapRef.current?.zoomTo((mapRef.current?.getZoom() ?? 6) + d);
-  const reset = () => mapRef.current?.fitBounds(GREECE_BOUNDS, { padding: 8 });
+  const reset = () => mapRef.current?.fitBounds(home.current, { padding: home.current === GREECE_BOUNDS ? 8 : 36, maxZoom: 7.2 });
 
   return (
     <div className="relative w-full overflow-hidden rounded-md border border-rule" style={{ aspectRatio: aspect, background: 'var(--map-sea)' }}>

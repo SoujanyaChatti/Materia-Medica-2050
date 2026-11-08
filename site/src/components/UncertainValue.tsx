@@ -1,5 +1,6 @@
 // "Uncertainty number": a value with its interval in text, plus an optional whisker bar.
-// Whisker axis −80% → +20%; dashed tick marks 0. The text always carries the interval.
+// Whisker axis −80% → +20%; dashed tick marks 0; a chevron at either end means the value runs off the axis.
+// The text always carries the interval.
 import type { Interval } from '../lib/types';
 import { changeText, ends, wx } from '../lib/format';
 
@@ -16,6 +17,8 @@ export function Whisker({ interval, width = 120, label, fill = 'var(--data)' }: 
       <line x1={x1} y1="5" x2={x1} y2="13" stroke="var(--ink)" strokeWidth="1.5" />
       <line x1={x2} y1="5" x2={x2} y2="13" stroke="var(--ink)" strokeWidth="1.5" />
       <circle cx={xm} cy="9" r="3.5" fill={fill} stroke="var(--ink)" strokeWidth="1.8" />
+      {Math.max(a, b) > 20 && <path d="M113 4.5 L118 9 L113 13.5" fill="none" stroke="var(--ink)" strokeWidth="1.6" />}
+      {Math.min(a, b) < -80 && <path d="M7 4.5 L2 9 L7 13.5" fill="none" stroke="var(--ink)" strokeWidth="1.6" />}
     </svg>
   );
 }

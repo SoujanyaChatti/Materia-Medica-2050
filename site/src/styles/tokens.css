@@ -24,6 +24,10 @@
   --map-kept: #7A9C6A; --map-lost: #C2650A; --map-lost-bg: #FBE3C2; --map-gain: #6E5EA8;
   --map-cult: #3E5A36; --map-natura: #24507E; --map-occ: #1D231F; --map-chip: rgba(255, 253, 248, 0.9);
 
+  /* Grower finder · sequential greens: number of plants with a 2050 cultivation zone per cell */
+  --grow-1: #E3EDD8; --grow-2: #B4D09F; --grow-3: #7FAA6A; --grow-4: #4C7A3D; --grow-5: #2A4A22;
+  --on-grow-4: #FFFFFF; --on-grow-5: #FFFFFF;
+
   /* Risk breakdown segments: one hue, stepped in lightness, separated by gaps */
   --rb-range-loss: #7F2704; --rb-endemism: #C04A0B; --rb-status: #EE8A3C; --rb-harvest: #FDC895;
 
@@ -47,5 +51,7 @@
   --map-sea: #0B1310; --map-land: #17221D; --map-neighbour: #121B17; --map-coast: #3E4D45;
   --map-kept: #86A877; --map-lost: #F1A340; --map-lost-bg: #3A2A14; --map-gain: #A99BD6;
   --map-cult: #A1C192; --map-natura: #9DBEE0; --map-occ: #ECE6D7; --map-chip: rgba(15, 23, 19, 0.88);
+  --grow-1: #1E2E1C; --grow-2: #2F4A2A; --grow-3: #4E7444; --grow-4: #7EA86D; --grow-5: #B9DBA6;
+  --on-grow-4: #0F1713; --on-grow-5: #0F1713;
   color-scheme: dark;
 }

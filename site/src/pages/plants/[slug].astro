@@ -6,7 +6,9 @@ import { DioscoridesCard } from '../../components/DioscoridesCard';
 import { RiskBreakdown } from '../../components/RiskBreakdown';
 import { Whisker } from '../../components/UncertainValue';
 import { IconCertain, IconDisputed, IconNone } from '../../components/icons';
-import { getMeta, getSpecies, getSpeciesList } from '../../lib/data';
+import NameTimeline from '../../components/NameTimeline';
+import { getLineage, getMeta, getSpecies, getSpeciesList } from '../../lib/data';
+import { QUADRANTS, toAction } from '../../lib/action';
 import { STATUS_NAMES, changeText, riskClassOf, thousands } from '../../lib/format';
 import { href } from '../../lib/url';
 import type { FutureKey } from '../../lib/types';
@@ -29,6 +31,9 @@ const longName: Record<FutureKey, string> = { ssp245: '2050 · moderate (SSP2-4.
 const iv = (i?: { median: number; min: number; max: number }, unit = '') =>
   i ? `${thousands(i.median)}${unit} (${thousands(Math.min(i.min, i.max))}–${thousands(Math.max(i.min, i.max))}${unit})` : '—';
 const ema = sp.ema_monograph;
+const lineage = getLineage().filter((l) => l.slug === sp.slug);
+const act = toAction(sp);
+const q = QUADRANTS[act.quadrant];
 ---
 <Base title={sp.common_name_en} sampleNote="Every value on this page is an illustrative placeholder.">
   <div class="page flex flex-col gap-10 pb-16 pt-7">
@@ -110,7 +115,7 @@ const ema = sp.ema_monograph;
               </div>
             );
           })}
-          <p class="m-0 text-[13px] text-muted">Median and spread across {meta.gcms.length} climate models. Whisker axis −80% to +20%, dashed tick at 0.</p>
+          <p class="m-0 text-[13px] text-muted">Median and spread across {meta.gcms.length} climate models. Whisker axis −80% to +20%, dashed tick at 0; a chevron means the value runs beyond the axis.</p>
           <div class="flex flex-wrap gap-x-4 gap-y-1 border-t border-data-rule pt-1 text-[14px]">
             <span class="text-muted">Suitable cultivation area, 2050 moderate</span>
             {sp.cultivation_area_km2 !== null
@@ -149,12 +154,37 @@ const ema = sp.ema_monograph;
       </section>
     </section>
 
-    <section aria-labelledby="h-caveats" class="flex max-w-[860px] flex-col gap-2.5 border-t-2 border-ochre pt-5">
-      <h2 id="h-caveats" class="m-0 font-serif text-[28px] font-medium">Caveats</h2>
-      <ul class="m-0 flex flex-col gap-1.5 pl-5">
-        {sp.caveats.map((c) => <li>{c}</li>)}
-      </ul>
+    <section aria-labelledby="h-action" class:list={['card-surface flex flex-wrap items-center justify-between gap-4 border-l-4 px-6 py-5', act.quadrant.startsWith('protect') ? 'border-l-ochre' : act.quadrant === 'opportunity' ? 'border-l-sage' : 'border-l-rule']}>
+      <div class="flex max-w-[760px] flex-col gap-1">
+        <div class="eyebrow text-muted">Suggested action</div>
+        <h2 id="h-action" class="m-0 text-[22px] font-semibold">{q.title}</h2>
+        <p class="m-0 text-[15px]">{q.verb}.{act.dataFirst && <strong class="text-warn"> Resolve the {act.disputed ? 'identification' : 'data'} first.</strong>}</p>
+        <p class="m-0 text-[13px] text-muted">Rule: {q.rule}.</p>
+      </div>
+      <a href={href(act.cultKm2 > 0 ? 'act/#grow' : 'act/')} class="btn-secondary">{act.cultKm2 > 0 ? 'Where it could be grown' : 'See the action plan'}</a>
     </section>
+
+    {lineage.length > 0 && lineage[0].claims.length > 0 && (
+      <section aria-labelledby="h-lineage" class="flex flex-col gap-3">
+        <div class="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h2 id="h-lineage" class="h-section">Identification through time</h2>
+            <p class="m-0 mt-1 text-muted">Who has matched <span lang="grc" class="font-serif text-ochre">{sp.dioscorides.greek_name}</span> to which modern plant, from the Renaissance to today.</p>
+          </div>
+          <a href={href('names/')} class="inline-flex min-h-11 items-center font-semibold">All names through time</a>
+        </div>
+        <NameTimeline client:visible data={lineage} single />
+      </section>
+    )}
+
+    {sp.caveats.length > 0 && (
+      <section aria-labelledby="h-caveats" class="flex max-w-[860px] flex-col gap-2.5 border-t-2 border-ochre pt-5">
+        <h2 id="h-caveats" class="m-0 font-serif text-[28px] font-medium">Caveats</h2>
+        <ul class="m-0 flex flex-col gap-1.5 pl-5">
+          {sp.caveats.map((c) => <li>{c}</li>)}
+        </ul>
+      </section>
+    )}
 
     <section id="range-table" aria-labelledby="h-table" class="flex flex-col gap-2.5">
       <h2 id="h-table" class="m-0 text-[18px] font-semibold">Range data (map alternative)</h2>

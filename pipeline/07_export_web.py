@@ -297,8 +297,8 @@ def main() -> None:
         "headline_slug": order[0],
         # Median across species; min/max here are the interquartile range across species.
         "summary": {"median_range_change_ssp245": (lambda v: {"median": round(float(np.median(v)), 1),
-                                                               "min": round(float(np.percentile(v, 75)), 1),
-                                                               "max": round(float(np.percentile(v, 25)), 1)})(
+                                                               "min": round(float(np.percentile(v, 25)), 1),
+                                                               "max": round(float(np.percentile(v, 75)), 1)})(
             [row["range_change_pct"]["ssp245"]["median"] for row in summary_rows])},
         "sensitivity": {"draws": sens["draws"], "perturbation": sens["perturbation"], "one_at_a_time": oat["components"],
                         "top_k": oat["top_k"], "top_k_unchanged": {k: round(v * 100, 1) for k, v in oat["top_k_unchanged"].items()},
