@@ -4,7 +4,7 @@
 
 ### The plants that founded Western pharmacy, mapped then and now: what we stand to lose, and where to save it
 
-**[Live site](https://materia-medica-2050.vercel.app)** · **[Pitch deck (.pptx)](docs/materia-medica-2050.pptx)** · **[Methods](https://materia-medica-2050.vercel.app/methods/)** · **[Limitations](LIMITATIONS.md)** · **[Data licences](DATA_LICENSES.md)**
+**[Live site](https://materia-medica-2050.vercel.app)** · **[Pitch deck (.pptx)](docs/materia-medica-2050.pptx)** · **[Project story](docs/devpost.md)** · **[Methods](https://materia-medica-2050.vercel.app/methods/)** · **[Limitations](LIMITATIONS.md)** · **[Data licences](DATA_LICENSES.md)**
 
 EthnoHack 2026 · Track 3 · Ethnopharmacology research prototype
 
@@ -18,29 +18,17 @@ EthnoHack 2026 · Track 3 · Ethnopharmacology research prototype
 
 ---
 
-## Inspiration
+## At a glance
 
-Two thousand years ago a Greek army physician, Pedanius Dioscorides, wrote down about six hundred medicinal plants in *De Materia Medica*. The book was copied, translated and used for some fifteen hundred years. It is the root of Western pharmacy.
+| | |
+|---|---|
+| **Question** | By 2050, which of Dioscorides' medicinal plants that grow wild in Greece are we most likely to lose, and where could we grow them instead? |
+| **Scope** | 32 plants from *De Materia Medica* · all of Greece · 2041–2060 · 3 climate models × 2 emission scenarios |
+| **Answer** | Cretan dittany ranks first. 11 of 32 plants lose wild habitat under every climate model, and 5 of those have no farmland to fall back on. |
+| **Biggest caveat** | Drop the 9 plants whose ancient identification is disputed and half of the top 10 changes. The history of a name matters as much as the climate. |
+| **Output** | A ranked, uncertainty-aware list, an action plan, a grower finder and an open pipeline that rebuilds everything with `make all`. |
 
-Many of those plants still grow wild in Greece. Today they face three pressures at once:
-
-- the Mediterranean is warming faster than the global average;
-- many species are still collected from the wild;
-- their habitat is being converted.
-
-Conservation money is limited, so someone has to decide which plants come first. That decision is usually made one species at a time, without linking the plant back to its history, and without saying how uncertain the evidence is.
-
-We wanted a ranked, open and honest list that starts from the ancient text and ends with an action someone can take.
-
-## What it does
-
-For **32 Dioscoridean plants that grow wild in Greece**, Materia Medica 2050 answers three questions:
-
-1. **Which are we most likely to lose by 2050?** A risk score combines climate-driven range loss, endemism, conservation status and harvest pressure.
-2. **Where could they be grown instead?** We look for farmland that will suit each plant in 2050, outside Natura 2000 and at least 5 km from wild populations.
-3. **How sure are we?** Every number carries its range across three climate models and two emission scenarios. Every plant carries its identification confidence: *certain*, *probable* or *disputed*.
-
-### The headline: Cretan dittany (δίκταμνον)
+## Key findings
 
 <table>
 <tr>
@@ -53,13 +41,17 @@ For **32 Dioscoridean plants that grow wild in Greece**, Materia Medica 2050 ans
 </tr>
 </table>
 
-**Cretan dittany** ranks first.
-- **Identification:** certain.
-- **Endemism:** found only on Crete.
-- **Range change:** under moderate emissions (SSP2-4.5) it loses a median **58%** of its climate range by 2050, between 24% and 81% depending on the climate model. Under high emissions (SSP5-8.5) the median loss is 65%.
-- **Where it could be grown:** a single ~17 km² cell of farmland.
+1. **Cretan dittany (δίκταμνον) has nowhere to go.**
+   - Its identification is certain and it grows only on Crete.
+   - Under SSP2-4.5 it loses a median of **58%** of its climate range by 2050 (24% to 81% across climate models), and 65% under SSP5-8.5.
+   - Only **one ~17 km² cell** of farmland could grow it instead.
+2. **The future is split, not uniformly bleak.** 11 of 32 plants lose habitat under all three climate models, while the other 21 keep or gain climate space. Those gains are best-case, because they assume the plant can reach every new place.
+3. **Names move the ranking as much as climate does.** Without the 9 disputed identifications, only **half of the top 10** stays the same.
+4. **The ranking is robust to weighting.** Under 1,000 random weightings the top 10 holds **84%** of the time on average.
+5. **Harvest pressure barely separates the plants.** Greece's road network saturates the access proxy, which spans only 0.86–0.99. We show this openly rather than hide it.
 
-So dittany has almost nowhere to be grown instead, and it needs protection in the wild.
+<details>
+<summary><b>Top-10 table with ranges</b></summary>
 
 | # | Plant | Identification | Range change 2050, SSP2-4.5 (median, min to max) | Risk score (range) |
 |---|---|---|---|---|
@@ -74,29 +66,27 @@ So dittany has almost nowhere to be grown instead, and it needs protection in th
 | 9 | Greek oregano, *Origanum vulgare* | probable | −18% (−19 to −14) | **0.37** (0.35–0.38) |
 | 10 | St John's wort, *Hypericum perforatum* | disputed | −9% (−10 to −5) | **0.33** (0.32–0.34) |
 
-**Key results:**
-- **A split future.** 11 of the 32 plants lose wild habitat under all three climate models. The other 21 keep or gain climate space, but those gains are best-case, because they assume the plant can reach every new place.
-- **The names matter as much as the climate.** If we drop the 9 plants whose ancient identification is disputed, only **half of the top 10 stays the same**. We report this as a finding, not a footnote.
-- **The ranking is stable to how we weight risk.** Under 1,000 random weightings, the top 10 holds **84%** of the time on average.
+All 32 plants, with every component and interval, are in [`outputs/risk.csv`](outputs/risk.csv) and on the [Plants page](https://materia-medica-2050.vercel.app/plants/).
+</details>
 
-### Explore it on the website
+## Tour of the site
 
 <table>
 <tr>
-<td width="50%"><a href="https://materia-medica-2050.vercel.app/plants/origanum-dictamnus/"><img src="docs/images/plant.jpg" alt="Plant page for Cretan dittany"></a><br><b>A page for every plant.</b> It has Dioscorides' Greek text with a link to the page scan of the 1906 edition, plus the Then/Now map with a scenario toggle. You also get the risk breakdown, model quality, a suggested action and every number's range.</td>
+<td width="50%"><a href="https://materia-medica-2050.vercel.app/plants/origanum-dictamnus/"><img src="docs/images/plant.jpg" alt="Plant page for Cretan dittany"></a><br><b>A page for every plant.</b> It has Dioscorides' Greek text with a link to the 1906 page scan, plus the Then/Now map with a scenario toggle. You also get the risk breakdown, model quality, a suggested action and every number's range.</td>
 <td width="50%"><a href="https://materia-medica-2050.vercel.app/map/"><img src="docs/images/map.jpg" alt="Map explorer with combined risk, cultivation hotspots and Natura 2000"></a><br><b>Map explorer.</b> Combined risk, cultivation hotspots and Natura 2000 sites on a ~10 km grid. Click any area to list the plants modelled there.</td>
 </tr>
 <tr>
-<td><a href="https://materia-medica-2050.vercel.app/act/"><img src="docs/images/matrix.jpg" alt="Decision matrix: range change against 2050 cultivation area"></a><br><b>Action plan.</b> Every plant is placed by two questions: does its habitat shrink in all three climate models, and is there farmland for it in 2050? The answers give <b>6 to protect and cultivate</b>, <b>5 to protect with no farmland fallback</b>, 10 cultivation opportunities and 11 to monitor.</td>
+<td><a href="https://materia-medica-2050.vercel.app/act/"><img src="docs/images/matrix.jpg" alt="Decision matrix: range change against 2050 cultivation area"></a><br><b>Action plan.</b> Habitat change × farmland in 2050 gives <b>6 plants to protect and cultivate</b>, <b>5 to protect with no fallback</b>, 10 cultivation opportunities and 11 to monitor.</td>
 <td><a href="https://materia-medica-2050.vercel.app/act/#grow"><img src="docs/images/grower-finder.jpg" alt="Grower finder showing the Heraklion grower sheet"></a><br><b>Grower finder.</b> Pick a ~10 km cell or a farming region to see what its 2050 climate could support. It shows which of those plants are shrinking in the wild and which have an EU herbal monograph, a sign that a regulated market exists. You can download the sheet as a CSV.</td>
 </tr>
 <tr>
-<td><a href="https://materia-medica-2050.vercel.app/names/"><img src="docs/images/names.jpg" alt="Names through time: identification claims from 1530 to 2021"></a><br><b>Names through time.</b> 115 dated identification claims by 16 authorities, from 1530 to 2021: who proposed, preferred or rejected which modern plant for each Greek name.</td>
-<td><a href="https://materia-medica-2050.vercel.app/plants/#lab"><img src="docs/images/lab.jpg" alt="Risk weight lab with sliders and live re-ranking"></a><br><b>Risk weight lab.</b> Don't agree with our weights? Move them, or pick a stakeholder preset. The 32 plants re-rank live, with Kendall τ showing how far the order moved from ours.</td>
+<td><a href="https://materia-medica-2050.vercel.app/names/"><img src="docs/images/names.jpg" alt="Names through time: identification claims from 1530 to 2021"></a><br><b>Names through time.</b> 115 dated identification claims by 16 authorities, 1530–2021: who proposed, preferred or rejected which plant for each Greek name.</td>
+<td><a href="https://materia-medica-2050.vercel.app/plants/#lab"><img src="docs/images/lab.jpg" alt="Risk weight lab with sliders and live re-ranking"></a><br><b>Risk weight lab.</b> Move the weights or pick a stakeholder preset. The 32 plants re-rank live, with Kendall τ against our ranking.</td>
 </tr>
 </table>
 
-## How we built it
+## How it works
 
 ```mermaid
 flowchart LR
@@ -110,60 +100,41 @@ flowchart LR
   E --> H["06 · cultivation zones"]
   K["CORINE · Natura 2000"] --> H
   F --> X["07 · web export<br/>~10 km cells only"]
-  H --> X --> Y["08 · action layers"] --> S["Astro site<br/>Vercel"]
+  H --> X --> Y["08 · action layers"] --> S["Astro site<br/>on Vercel"]
 ```
 
-- **From text to taxa.** The plants come from Wellmann's public-domain Greek edition of Dioscorides. Each one is matched to a modern species using published scholarly identifications, and each match is tagged *certain*, *probable* or *disputed* with its source.
-- **Occurrences.** One GBIF download covers all vascular plants in the study box: 933,943 records, [doi:10.15468/dl.4u6k8n](https://doi.org/10.15468/dl.4u6k8n). It also serves as a **target-group background**, so the model learns climate rather than where botanists like to walk. We drop records with missing or zero coordinates, country centroids, institution coordinates, duplicates, records from before 1970 and uncertainty over 5 km, then thin to ~1 km.
-- **Models.** MaxEnt (elapid) and random forest are each scored with **5-fold spatially blocked cross-validation** (~25 km blocks) against a null model. Cretan dittany, for example, reaches an AUC of **0.96** against **0.49** for the null.
-- **Futures.** Three CMIP6 models (MPI-ESM1-2-HR, MRI-ESM2-0, IPSL-CM6A-LR) × two scenarios (SSP2-4.5 and SSP5-8.5), for 2041–2060. We report the median and the min to max.
-- **Risk.** The score is weighted 0.4 range loss, 0.2 endemism, 0.2 conservation status and 0.2 harvest proxy. We test it under 1,000 random weightings and ±50% one-at-a-time changes, with and without the disputed identifications.
-- **Cultivation.** A cell qualifies if it is suitable in 2050 under the majority of climate models, is CORINE farmland, lies outside Natura 2000 and is at least 5 km from wild records, so farms never compete with the wild stands they are meant to protect.
-- **Stack.**
-  - Pipeline: Python 3.11 (rasterio, scikit-learn, elapid, geopandas), seeded and cached. `make all` rebuilds everything from raw data, with tests.
-  - Website: static **Astro** with React islands, **MapLibre** and Tailwind. It reads only the pipeline's exports, validated against JSON Schemas in `site/schema/`, and is deployed on **Vercel**.
+| Step | Method | Why it matters |
+|---|---|---|
+| **Identification** | Each Greek name is matched to a modern species from published scholarship and tagged certain, probable or disputed. | The ranking is reported with and without the disputed plants. |
+| **Occurrences** | One GBIF download ([doi:10.15468/dl.4u6k8n](https://doi.org/10.15468/dl.4u6k8n)), cleaned and thinned to ~1 km. It doubles as a **target-group background**. | The models learn climate, not where botanists walk. |
+| **Models** | MaxEnt (elapid) and random forest, scored by 5-fold ~25 km spatial-block CV against a null model. | Each model is scored on regions it never saw. Dittany: AUC **0.96** vs **0.49** null. |
+| **Futures** | MPI-ESM1-2-HR, MRI-ESM2-0 and IPSL-CM6A-LR × SSP2-4.5 / SSP5-8.5, 2041–2060. | We report the median and the min to max, never a single run. |
+| **Risk** | 0.4 range loss, 0.2 endemism, 0.2 status, 0.2 harvest proxy. Tested under 1,000 random weightings and ±50% one-at-a-time changes. | Shows whether the top of the list depends on our value judgements. |
+| **Cultivation** | Suitable under the majority of GCMs, on CORINE farmland, outside Natura 2000, ≥ 5 km from wild records. | Farms never compete with the wild stands they are meant to protect. |
 
-## Challenges we ran into
-
-- **Which plant did Dioscorides mean?** A Greek name is not a species. Five centuries of scholars disagree, and 9 of our 32 identifications are disputed. Rather than hide this, we modelled the best-supported plant, flagged the rest everywhere they appear, and measured how much the dispute moves the ranking.
-- **Sampling bias.** GBIF records cluster near roads, trails and famous mountains. A random background would have taught the model where people walk, so we drew the background from the same survey effort (target-group background) and thinned it.
-- **Harvest pressure is hard to measure.** No national dataset of wild collection exists. Our proxy, the share of a plant's range within 2 km of roads or settlements, saturates in Greece's dense road network: it only spans 0.86 to 0.99. We kept it, said so, and built the weight lab so anyone can see how little it moves the ranking.
-- **Licences.** WorldClim does not allow its rasters to be redistributed, so the repository and site ship only our derived model outputs and the code to rebuild everything.
-- **Rare plants and privacy.** A precise map of an over-collected endemic is a shopping list for collectors. Everything public is aggregated to ~10 km cells, so no exact location is ever published.
-
-## Accomplishments that we're proud of
-
-- **Uncertainty on every number.** Every range change, risk score, rank and cultivation area on the site shows its interval, and every disputed identification carries a badge. Colour is never the only cue.
-- **The finding nobody expected.** Uncertainty about the *history of a name* changes the ranking as much as the climate models do.
-- **From ranking to action.** The decision matrix and grower finder turn model output into something a conservation agency, a cooperative or an extension service can use.
-- **Reproducible end to end.** One command rebuilds every result from a cited GBIF download, with tests and a schema-validated data contract between the pipeline and the site.
-- **History you can check.** Each plant links to Dioscorides' Greek text, the page scan of the 1906 edition, and who identified the plant and on what evidence.
-
-## What we learned
-
-- **The future is split, not uniformly bleak.** Across all 32 plants the median range change under SSP2-4.5 is +16% (range −23% to +64%). The losers, though, are the narrow endemics and the plants with nowhere to go: 11 lose habitat in every model.
-- **The model is only as good as the name.** Ethnopharmacology and climate science meet at taxonomy. When a name is uncertain, the rest of the analysis is too.
-- **A weak signal shown honestly beats a strong one invented.** Showing that harvest pressure barely separates the plants tells the reader exactly what better data would fix.
-- **Design is part of the science.** Hatching for loss, hollow markers for unresolved data, intervals in brackets: how a result is drawn decides whether a reader over-trusts it.
-
-## What's next for Materia Medica 2050
-
-- **Expert review** of the disputed identifications with botanists working on the Flora of Greece.
-- **Split the species we had to pool** (such as the Greek peonies) as more records become available.
-- **Test the cultivation zones** with collectors' cooperatives in Crete, with consent and shared benefit.
-- **Measured harvest data** (permits, trade volumes) to replace the access proxy.
-- **Extend to Cyprus and Anatolia**, where many of Dioscorides' plants also grow. The pipeline works for any region and any plant list.
+**Stack**
+- **Pipeline:** Python 3.11 (rasterio, scikit-learn, elapid, geopandas), seeded and cached, with pytest.
+- **Website:** Astro, React islands, MapLibre and Tailwind, deployed on Vercel.
+- **Data contract:** JSON Schemas in `site/schema/` sit between the two. The site never computes science; it only displays the pipeline's exports.
 
 ## Responsible research
 
 | Area | What we do |
 |---|---|
-| **Health claims** | None. Modern use is quoted only as the European Medicines Agency labels it; the site is marked "not medical advice". |
-| **Rare-plant privacy** | No exact coordinates are published, only ~10 km cells. |
-| **Licences** | Every source, licence and attribution is listed in [`DATA_LICENSES.md`](DATA_LICENSES.md) and on the Methods page. No WorldClim rasters are redistributed. |
+| **Health claims** | None. Modern use is quoted only as the European Medicines Agency labels it, and the site is marked "not medical advice". |
+| **Rare-plant privacy** | No exact coordinates are published, only ~10 km cells, so the site cannot become a map for collectors. |
+| **Licences** | Every source, licence and attribution is in [`DATA_LICENSES.md`](DATA_LICENSES.md). No WorldClim rasters are redistributed. |
 | **Traditional knowledge** | Our source is a published classical text. We collected no knowledge from living communities. |
 | **AI use** | AI assistants helped with code and with gathering sources. Every identification links to its source and page scan so anyone can check it. |
-| **Limits** | Correlative models, sampling bias, a harvest proxy and a coarse public grid. All nine limits are in [`LIMITATIONS.md`](LIMITATIONS.md). |
+| **Limits** | Correlative models, sampling bias, a saturated harvest proxy and a coarse public grid. All nine limits are in [`LIMITATIONS.md`](LIMITATIONS.md). |
+
+## Roadmap
+
+- [ ] Expert review of the disputed identifications with botanists working on the Flora of Greece
+- [ ] Split pooled taxa (such as the Greek peonies) as records allow
+- [ ] Test the cultivation zones with collectors' cooperatives in Crete, with consent and shared benefit
+- [ ] Replace the access proxy with measured harvest data (permits, trade volumes)
+- [ ] Extend to Cyprus and Anatolia
 
 ---
 
@@ -232,6 +203,12 @@ The pipeline downloads everything else. WorldClim and the Copernicus DEM are rea
 - Open the IUCN Red List and GBIF terms pages in a browser and confirm that public display is allowed. Both blocked automated checks; see `DATA_LICENSES.md`.
 - Ask WorldClim (info@worldclim.org) whether a public site showing derived 10 km model outputs is acceptable.
 - Plants whose identification citation, EMA status or wild-harvest evidence could not be verified carry the reason in the `unverified` column of `data/curated/species.csv`.
+
+## How to cite
+
+> Chatti, S. & DurgaPritam (2026). *Materia Medica 2050: Dioscorides' plants, then and now.* EthnoHack 2026. https://github.com/SoujanyaChatti/Materia-Medica-2050
+>
+> Occurrence data: GBIF.org (3 November 2026) GBIF Occurrence Download https://doi.org/10.15468/dl.4u6k8n
 
 ## Team
 
