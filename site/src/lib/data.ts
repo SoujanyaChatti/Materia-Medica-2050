@@ -2,7 +2,7 @@
 // (or `npm run data:sample`) wrote to public/data/.
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import type { Identification, Lineage, Meta, Species, SpeciesSummary } from './types';
+import type { PlantPhotoCredit, Identification, Lineage, Meta, Species, SpeciesSummary } from './types';
 
 const DATA = join(process.cwd(), 'public', 'data');
 const read = <T>(rel: string): T => JSON.parse(readFileSync(join(DATA, rel), 'utf8')) as T;
@@ -14,3 +14,4 @@ export const getSpecies = (slug: string): Species => read<Species>(join('species
 export const getAllSpecies = (): Species[] => getSpeciesList().map((s) => getSpecies(s.slug));
 export const getLineage = (): Lineage[] => (existsSync(join(DATA, 'lineage.json')) ? read<Lineage[]>('lineage.json') : []);
 export const getIdentification = (): Identification | null => (existsSync(join(DATA, 'identification.json')) ? read<Identification>('identification.json') : null);
+export const getPhotos = (): Record<string, PlantPhotoCredit> => (existsSync(join(DATA, 'photos.json')) ? read<Record<string, PlantPhotoCredit>>('photos.json') : {});

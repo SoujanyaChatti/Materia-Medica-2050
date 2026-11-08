@@ -27,6 +27,7 @@ const nClaims = lin.reduce((n, p) => n + p.claims.length, 0);
 const v = meta.versions;
 const sources: [string, string, string, string][] = [
   ['De Materia Medica, Wellmann ed. (1906–14)', 'Greek names, book, chapter, opening words', 'Public domain (Wellmann d. 1933); First1KGreek digitisation CC BY-SA 4.0 for some excerpts', 'archive.org scans'],
+  ['Wikimedia Commons photographs', 'One photo per plant', 'CC0, public domain, CC BY or CC BY-SA; photographer and licence shown under each photo', 'commons.wikimedia.org'],
   ['Sprengel 1830 commentary; Osbaldeston 2000', 'Ancient-to-modern taxon matches', 'Cited per plant; not redistributed', 'see each plant'],
   ['GBIF occurrence download', 'Occurrence cells', 'Cite the download DOI; per-record CC0 / CC BY / CC BY-NC', meta.gbif_doi ? `DOI ${meta.gbif_doi}` : '—'],
   ['GBIF Backbone · Catalogue of Life · WCVP (Kew)', 'Accepted names', 'CC BY 4.0', '2026'],

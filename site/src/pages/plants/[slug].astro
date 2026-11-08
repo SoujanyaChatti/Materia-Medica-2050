@@ -7,7 +7,7 @@ import { RiskBreakdown } from '../../components/RiskBreakdown';
 import { Whisker } from '../../components/UncertainValue';
 import { IconCertain, IconDisputed, IconNone } from '../../components/icons';
 import NameTimeline from '../../components/NameTimeline';
-import { getLineage, getMeta, getSpecies, getSpeciesList } from '../../lib/data';
+import { getLineage, getMeta, getPhotos, getSpecies, getSpeciesList } from '../../lib/data';
 import { QUADRANTS, toAction } from '../../lib/action';
 import { STATUS_NAMES, changeText, riskClassOf, thousands } from '../../lib/format';
 import { href } from '../../lib/url';
@@ -85,7 +85,7 @@ const q = QUADRANTS[act.quadrant];
       )}
     </div>
 
-    <PlantMapPanel client:visible slug={sp.slug} commonName={sp.common_name_en} translit={sp.dioscorides.greek_translit ?? sp.dioscorides.greek_name} scenarios={meta.scenarios} lowConfidence={low} />
+    <PlantMapPanel client:visible slug={sp.slug} commonName={sp.common_name_en} translit={sp.dioscorides.greek_translit ?? sp.dioscorides.greek_name} scenarios={meta.scenarios} lowConfidence={low} photo={getPhotos()[sp.slug] ?? null} greekName={sp.dioscorides.greek_name} />
 
     <section class="grid items-start gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))]">
       <DioscoridesCard sp={sp} />

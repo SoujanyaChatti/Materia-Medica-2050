@@ -100,3 +100,5 @@ export interface Identification {
     disputed_plants_whose_own_top10_status_can_change: string[]; held_fixed: string };
   n_species: number; top_n: number; plants: IdPlant[];
 }
+
+export interface PlantPhotoCredit { taxon: string; author: string; licence: string; licence_url: string; page: string; file: string; pooled_note?: string }

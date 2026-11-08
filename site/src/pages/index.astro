@@ -1,11 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getAllSpecies, getIdentification, getLineage, getMeta, getSpecies, getSpeciesList } from '../lib/data';
+import { getAllSpecies, getIdentification, getLineage, getMeta, getPhotos, getSpecies, getSpeciesList } from '../lib/data';
 import { toAction } from '../lib/action';
 import { href, plantHref } from '../lib/url';
 import { changeText, riskLabel } from '../lib/format';
 import { PlantFlags, RiskTag } from '../components/Badges';
-import { HerbIllustration } from '../components/HerbIllustration';
+import { PlantPhoto } from '../components/PlantPhoto';
 import { MapLegend } from '../components/MapLegend';
 import { RangeMap } from '../components/RangeMap';
 import { Whisker } from '../components/UncertainValue';
@@ -67,10 +67,12 @@ const ways = [
     </div>
     <figure class="m-0 grid grid-cols-2 overflow-hidden rounded-md border border-rule bg-data">
       <div class="flex flex-col items-center gap-2.5 border-r border-rule bg-sunk px-4 py-5">
-        <div class="eyebrow self-start text-[11px] tracking-[0.14em] text-ochre">Then</div>
-        <HerbIllustration alt="Decorative line drawing of a herb in the style of a manuscript illustration" className="h-auto w-[78%] max-w-[200px]" />
-        <div lang="grc" class="font-serif text-[24px]">{head.dioscorides.greek_name}</div>
-        <div class="text-[12px] text-muted">Book {['', 'I', 'II', 'III', 'IV', 'V'][head.dioscorides.book]} · decorative drawing</div>
+        <div class="flex items-baseline justify-between gap-2 self-stretch">
+          <div class="eyebrow text-[11px] tracking-[0.14em] text-ochre">Then</div>
+          <div class="text-[12px] text-muted">Book {['', 'I', 'II', 'III', 'IV', 'V'][head.dioscorides.book]}, ch. {head.dioscorides.chapter}</div>
+        </div>
+        <div lang="grc" class="self-stretch font-serif text-[24px] text-ochre">{head.dioscorides.greek_name}</div>
+        <PlantPhoto slug={head.slug} credit={getPhotos()[head.slug] ?? null} name={head.common_name_en} className="self-stretch" imgClass="aspect-[4/5]" />
       </div>
       <div class="flex flex-col gap-2.5 px-4 py-5">
         <div class="eyebrow text-[11px] tracking-[0.14em] text-sage">Now · 2050</div>

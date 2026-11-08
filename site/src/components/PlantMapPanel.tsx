@@ -1,14 +1,14 @@
 // Plant page "Then and now": herbal illustration beside the modelled range map, with the scenario
 // toggle, layer switches and a legend that follows the scenario.
 import { useState } from 'react';
-import type { Meta, ScenarioKey } from '../lib/types';
-import { HerbIllustration } from './HerbIllustration';
+import type { Meta, PlantPhotoCredit, ScenarioKey } from '../lib/types';
+import { PlantPhoto } from './PlantPhoto';
 import { MapLegend } from './MapLegend';
 import { RangeMap } from './RangeMap';
 import { ScenarioToggle } from './ScenarioToggle';
 
-export default function PlantMapPanel({ slug, commonName, translit, scenarios, lowConfidence }: {
-  slug: string; commonName: string; translit: string; scenarios: Meta['scenarios']; lowConfidence: boolean;
+export default function PlantMapPanel({ slug, commonName, translit, scenarios, lowConfidence, photo, greekName }: {
+  slug: string; commonName: string; translit: string; scenarios: Meta['scenarios']; lowConfidence: boolean; photo: PlantPhotoCredit | null; greekName: string;
 }) {
   const [scenario, setScenario] = useState<ScenarioKey>('ssp245');
   const [layers, setLayers] = useState({ range: true, cult: true, natura: false, labels: true, occ: false });
@@ -26,11 +26,15 @@ export default function PlantMapPanel({ slug, commonName, translit, scenarios, l
         <ScenarioToggle value={scenario} onChange={setScenario} scenarios={scenarios} />
       </div>
       <div className="flex flex-wrap items-stretch gap-4">
-        <figure className="m-0 flex flex-[1_1_260px] flex-col items-center justify-center gap-3 rounded-md border border-rule bg-sunk p-6">
-          <div className="eyebrow self-start text-ochre">Then</div>
-          <HerbIllustration alt={`Decorative line drawing of a herb, standing in for ${translit}`} className="h-auto w-[72%] max-w-[230px]" />
-          <figcaption className="text-center text-[13px] text-muted">Decorative line drawing, not a botanical illustration of this species.</figcaption>
-        </figure>
+        <div className="m-0 flex flex-[1_1_260px] flex-col gap-3 rounded-md border border-rule bg-sunk p-4">
+          <div className="flex items-baseline justify-between gap-2">
+            <div className="eyebrow text-ochre">The plant</div>
+            <div lang="grc" className="font-serif text-[20px] text-ochre" title={translit}>{greekName}</div>
+          </div>
+          {photo
+            ? <PlantPhoto slug={slug} credit={photo} name={commonName} imgClass="aspect-[4/5]" />
+            : <p className="m-0 text-[14px] text-muted">No openly licensed photo found for this plant.</p>}
+        </div>
         <div className="flex min-w-0 flex-[999_1_520px] flex-col gap-2.5">
           <div className="flex flex-wrap gap-4">
             <div className="min-w-0 flex-[999_1_380px]">
