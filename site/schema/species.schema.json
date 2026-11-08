@@ -87,6 +87,7 @@
         "null_auc_mean": {"type": "number"},
         "baseline_auc": {"type": "number", "description": "Distance-only baseline AUC on the same spatial-block folds"},
         "grade": {"enum": ["standard", "low", "data gap"]},
+        "beats_baseline": {"type": "boolean"},
         "variables": {"type": "array", "items": {"type": "string"}}
       }
     },

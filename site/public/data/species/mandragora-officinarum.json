@@ -73,7 +73,8 @@
       "slope"
     ],
     "baseline_auc": 0.918,
-    "grade": "low"
+    "grade": "low",
+    "beats_baseline": false
   },
   "range_change_pct": {
     "ssp245": {

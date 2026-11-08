@@ -1,0 +1,148 @@
+---
+import Base from '../layouts/Base.astro';
+import { getIdentification, getSpeciesList } from '../lib/data';
+import { plantHref, href } from '../lib/url';
+import type { IdCandidate, IdPlant } from '../lib/types';
+
+const data = getIdentification();
+const names = Object.fromEntries(getSpeciesList().map((s) => [s.slug, s.common_name_en]));
+const N = data?.n_species ?? 32;
+const TOP = data?.top_n ?? 10;
+const W = 760, L = 230, R = 24, ROW = 30;
+const x = (rank: number) => L + ((rank - 1) / (N - 1)) * (W - L - R);
+const pct = (v?: number | null) => (v === null || v === undefined ? '—' : `${v > 0 ? '+' : v < 0 ? '−' : ''}${Math.abs(Math.round(v))}%`);
+const iv = (i?: { median: number | null; min: number | null; max: number | null } | null, f = pct) =>
+  i && i.median !== null ? `${f(i.median)} (${f(Math.min(i.min!, i.max!))} to ${f(Math.max(i.min!, i.max!))})` : '—';
+const km = (v: number | null) => (v === null ? '—' : `${Math.round(v).toLocaleString('en-GB')} km²`);
+const kmIv = (i?: { median: number | null; min: number | null; max: number | null } | null) =>
+  i && i.median !== null ? `${km(i.median)} (${km(i.min)}–${km(i.max)})` : '—';
+const shortSource = (s: string) => s.split(' — ').slice(1).join(' — ').split(' | ')[0].slice(0, 160) || s.slice(0, 160);
+const modelled = (p: IdPlant) => p.candidates.filter((c) => c.rank !== null);
+const gaps = (p: IdPlant) => p.candidates.filter((c) => c.rank === null);
+const s = data?.summary;
+const named = (slugs: string[]) => { const a = slugs.map((k) => names[k] ?? k); return a.length < 2 ? a.join('') : `${a.slice(0, -1).join(', ')} and ${a[a.length - 1]}`; };
+type Row = { label: string; rank: number; lo: number; hi: number; kind: 'published' | IdCandidate['grade'] };
+const rows = (p: IdPlant): Row[] => [
+  { label: `${p.published.taxon.split(' ').slice(0, 2).join(' ')} (published)`, rank: p.published.rank, lo: p.published.rank_lo, hi: p.published.rank_hi, kind: 'published' },
+  ...modelled(p).map((c) => ({ label: c.query_name, rank: c.rank!, lo: c.rank_lo ?? c.rank!, hi: c.rank_hi ?? c.rank!, kind: c.grade })),
+];
+---
+<Base title="Identification" current="identification" description="How the risk ranking changes when each disputed plant is modelled as the other species scholars have proposed.">
+  <div class="page flex flex-col gap-8 pb-16 pt-10">
+    <div class="flex max-w-[860px] flex-col gap-2">
+      <div class="eyebrow text-ochre">Identification sensitivity</div>
+      <h1 class="h-display m-0 text-[clamp(34px,4vw,48px)]">What if we modelled the wrong plant?</h1>
+      <p class="m-0 text-[17px] text-muted">Nine of our 32 plants have disputed identifications: scholars since the Renaissance have matched Dioscorides' Greek name to different modern species. For each of them we modelled every competing species named in the sources we cite, with the same data, models, climate futures and cultivation rule, and re-ranked all 32 plants once per alternative. Every other plant stays as published.</p>
+    </div>
+
+    {!data ? <p class="text-muted">The identification analysis has not been exported yet.</p> : (
+      <>
+        <dl class="m-0 grid gap-x-8 gap-y-4 border-y border-rule py-5 [grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))]">
+          <div><dt class="text-[13px] text-muted">Competing species from the sources</dt><dd class="m-0 text-[28px] font-semibold">{s!.candidates}</dd></div>
+          <div><dt class="text-[13px] text-muted">Modelled · too few records</dt><dd class="m-0 text-[28px] font-semibold">{s!.modelled} <span class="text-[15px] font-normal text-muted">· {s!.data_gap}</span></dd></div>
+          <div><dt class="text-[13px] text-muted">Plants that move in or out of the top {TOP}</dt><dd class="m-0 text-[28px] font-semibold">{s!.plants_moving_in_or_out_of_top10} <span class="text-[15px] font-normal text-muted">of {N}</span></dd></div>
+          <div><dt class="text-[13px] text-muted">Disputed plants whose own top-{TOP} place can flip</dt><dd class="m-0 text-[28px] font-semibold">{s!.disputed_plants_whose_own_top10_status_can_change.length} <span class="text-[15px] font-normal text-muted">of {data.plants.length}</span></dd></div>
+        </dl>
+
+        <section aria-labelledby="h-moves" class="flex max-w-[860px] flex-col gap-2">
+          <h2 id="h-moves" class="m-0 text-[20px] font-semibold">Who moves</h2>
+          <p class="m-0 text-[15px]">
+            {s!.plants_entering_top10_under_some_alternative.length > 0
+              ? <>Under at least one alternative identification, <strong>{named(s!.plants_entering_top10_under_some_alternative)}</strong> {s!.plants_entering_top10_under_some_alternative.length === 1 ? 'enters' : 'enter'} the top {TOP}</>
+              : <>No plant enters the top {TOP} under any alternative identification</>}
+            {s!.plants_leaving_top10_under_some_alternative.length > 0
+              ? <>, and <strong>{named(s!.plants_leaving_top10_under_some_alternative)}</strong> {s!.plants_leaving_top10_under_some_alternative.length === 1 ? 'drops' : 'drop'} out.</>
+              : <>, and no published top-{TOP} plant drops out.</>}
+            {' '}Held fixed: {s!.held_fixed}. Cretan dittany's identification is certain, so it is not part of this analysis.
+          </p>
+        </section>
+
+        <div class="flex flex-wrap gap-x-5 gap-y-1 text-[13px] text-muted" aria-hidden="true">
+          <span class="inline-flex items-center gap-1.5"><svg width="14" height="14"><circle cx="7" cy="7" r="5.5" fill="var(--ink)" /></svg>Published identification</span>
+          <span class="inline-flex items-center gap-1.5"><svg width="14" height="14"><circle cx="7" cy="7" r="5.5" fill="var(--ochre)" /></svg>Alternative, standard-grade model</span>
+          <span class="inline-flex items-center gap-1.5"><svg width="14" height="14"><circle cx="7" cy="7" r="5" fill="var(--surface)" stroke="var(--ochre)" stroke-width="2" stroke-dasharray="2 2" /></svg>Alternative, low-grade model</span>
+          <span class="inline-flex items-center gap-1.5"><svg width="22" height="14"><line x1="1" x2="21" y1="7" y2="7" stroke="var(--muted)" stroke-width="2" /></svg>Rank range across 3 climate models</span>
+          <span class="inline-flex items-center gap-1.5"><svg width="16" height="14"><rect width="16" height="14" fill="var(--sage-tint)" /></svg>Top {TOP}</span>
+        </div>
+
+        <ol class="m-0 flex list-none flex-col gap-6 p-0">
+          {data.plants.map((p) => {
+            const rs = rows(p);
+            const H = 34 + rs.length * ROW;
+            return (
+              <li class="card-surface flex flex-col gap-3 p-5" id={p.slug}>
+                <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+                  <h2 class="m-0 text-[22px] font-semibold"><span lang="grc" class="font-serif text-ochre">{p.greek_name}</span> · <a href={plantHref(p.slug)}>{p.common_name_en}</a></h2>
+                  <span class="text-[15px]">Rank <strong>{p.published.rank}</strong> as published · <strong>{p.rank_min}–{p.rank_max}</strong> across identifications{p.top10_status_changes && <strong class="ml-2 rounded-full bg-ochre-tint px-2.5 py-0.5 text-[13px] text-ochre-ink">top-{TOP} place flips</strong>}</span>
+                </div>
+                <div class="overflow-x-auto">
+                  <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label={`Ranks of ${p.common_name_en} under each identification: ${rs.map((r) => `${r.label} rank ${r.rank} (${r.lo}–${r.hi})`).join('; ')}`} style="min-width:620px">
+                    <rect x={x(1) - 8} y="0" width={x(TOP) - x(1) + 16} height={H - 22} fill="var(--sage-tint)" />
+                    {[1, 5, 10, 15, 20, 25, 30, N].filter((v, i, a) => a.indexOf(v) === i).map((t) => (
+                      <g><line x1={x(t)} x2={x(t)} y1="0" y2={H - 22} stroke="var(--rule)" stroke-width="1" /><text x={x(t)} y={H - 6} text-anchor="middle" font-size="12" fill="var(--muted)">{t}</text></g>
+                    ))}
+                    {rs.map((r, i) => {
+                      const y = 18 + i * ROW;
+                      return (
+                        <g>
+                          <text x={L - 12} y={y + 4} text-anchor="end" font-size="13" fill="var(--ink)" font-style={r.kind === 'published' ? 'normal' : 'italic'} font-weight={r.kind === 'published' ? 600 : 400}>{r.label}</text>
+                          <line x1={x(Math.min(r.lo, r.hi))} x2={x(Math.max(r.lo, r.hi))} y1={y} y2={y} stroke="var(--muted)" stroke-width="2" />
+                          {r.kind === 'published' ? <circle cx={x(r.rank)} cy={y} r="6.5" fill="var(--ink)" />
+                            : r.kind === 'standard' ? <circle cx={x(r.rank)} cy={y} r="6.5" fill="var(--ochre)" />
+                            : <circle cx={x(r.rank)} cy={y} r="6" fill="var(--surface)" stroke="var(--ochre)" stroke-width="2" stroke-dasharray="2.5 2" />}
+                        </g>
+                      );
+                    })}
+                  </svg>
+                </div>
+                <p class="m-0 text-[13px] text-muted">Rank among {N} plants (1 = highest risk); shaded = top {TOP}. Lines span the rank at the low and high end of the score across 3 climate models.</p>
+                <details class="text-[14px]">
+                  <summary class="cursor-pointer font-semibold">Sources and numbers ({p.candidates.length} alternatives{gaps(p).length ? `, ${gaps(p).length} with too few records` : ''})</summary>
+                  <div class="overflow-x-auto pt-2">
+                    <table class="w-full min-w-[720px] border-collapse">
+                      <thead><tr class="border-b-2 border-ink text-left text-[13px]">
+                        <th scope="col" class="py-2 pr-3">Identification</th><th scope="col" class="py-2 pr-3">Rank (range)</th><th scope="col" class="py-2 pr-3">Risk score (range)</th>
+                        <th scope="col" class="py-2 pr-3">Range change 2050</th><th scope="col" class="py-2 pr-3">Cultivation 2050</th><th scope="col" class="py-2 pr-3">Model</th><th scope="col" class="py-2">Source</th>
+                      </tr></thead>
+                      <tbody>
+                        <tr class="border-b border-data-rule align-top">
+                          <td class="py-2 pr-3"><em>{p.published.taxon}</em> <span class="text-muted">(published)</span></td>
+                          <td class="py-2 pr-3">{p.published.rank} ({p.published.rank_lo}–{p.published.rank_hi})</td>
+                          <td class="py-2 pr-3">{p.published.score.toFixed(2)} ({p.published.score_lo.toFixed(2)}–{p.published.score_hi.toFixed(2)})</td>
+                          <td class="py-2 pr-3">{iv(p.published.range_change)}</td><td class="py-2 pr-3">{kmIv(p.published.cultivation_km2)}</td>
+                          <td class="py-2 pr-3">{p.published.grade} · AUC {p.published.auc.toFixed(2)} vs {p.published.baseline_auc.toFixed(2)} baseline</td>
+                          <td class="py-2 text-muted">{p.published.source.slice(0, 160)}…</td>
+                        </tr>
+                        {p.candidates.map((c) => (
+                          <tr class="border-b border-data-rule align-top last:border-0">
+                            <td class="py-2 pr-3"><em>{c.taxon_as_cited}</em>{c.query_name !== c.taxon_as_cited.split(' ').slice(0, 2).join(' ') && <span class="text-muted"> (modelled as {c.query_name})</span>}</td>
+                            <td class="py-2 pr-3">{c.rank !== null ? `${c.rank} (${c.rank_lo}–${c.rank_hi})` : '—'}</td>
+                            <td class="py-2 pr-3">{c.score !== null && c.score !== undefined ? `${c.score.toFixed(2)} (${c.score_lo!.toFixed(2)}–${c.score_hi!.toFixed(2)})` : '—'}</td>
+                            <td class="py-2 pr-3">{iv(c.range_change)}</td><td class="py-2 pr-3">{kmIv(c.cultivation_km2)}</td>
+                            <td class="py-2 pr-3">{c.grade === 'data gap' ? `data gap · ${c.records} records` : `${c.grade} · ${c.records} records${c.auc !== null && c.auc !== undefined ? ` · AUC ${c.auc.toFixed(2)} vs ${c.baseline_auc?.toFixed(2)} baseline` : ''}`}{c.note && c.rank === null && c.grade !== 'data gap' ? ` · ${c.note}` : ''}</td>
+                            <td class="py-2 text-muted">{shortSource(c.source)}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+              </li>
+            );
+          })}
+        </ol>
+
+        <section aria-labelledby="h-how" class="flex max-w-[860px] flex-col gap-2.5 border-t-2 border-ochre pt-5">
+          <h2 id="h-how" class="m-0 font-serif text-[28px] font-medium">How to read this</h2>
+          <ul class="m-0 flex flex-col gap-1.5 pl-5 text-[15px]">
+            <li>Candidates are the competing species named in the scholarship we cite for each plant (<code class="break-all">data/curated/identification_candidates.csv</code>); we added none of our own. Rows marked "unverified" in our sources, and identifications made for Theophrastus' plant rather than Dioscorides', were left out.</li>
+            <li>Each candidate uses the same GBIF download, cleaning, ~1 km thinning, variables, MaxEnt + random forest, spatial-block cross-validation, 3 climate models and 5 km cultivation rule as the published models.</li>
+            <li>Only the plant's range-loss and harvest-access components change; its endemism and conservation status stay those of the published identification. The rank range is the rank at the low and high end of the candidate's score across climate models, with the other 31 plants fixed.</li>
+            <li>Species with fewer than 10 records in the study area are listed as data gaps, not ranked. Several candidates (for example, <em>Origanum syriacum</em>) barely occur in Greece, which itself argues against them.</li>
+          </ul>
+          <a href={href('names/')} class="inline-flex min-h-11 w-fit items-center font-semibold">Five centuries of identifications, by authority</a>
+        </section>
+      </>
+    )}
+  </div>
+</Base>

@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getAllSpecies, getLineage, getMeta, getSpecies, getSpeciesList } from '../lib/data';
+import { getAllSpecies, getIdentification, getLineage, getMeta, getSpecies, getSpeciesList } from '../lib/data';
 import { toAction } from '../lib/action';
 import { href, plantHref } from '../lib/url';
 import { changeText, riskLabel } from '../lib/format';
@@ -29,6 +29,23 @@ const lin = getLineage();
 const nClaims = lin.reduce((s, p) => s + p.claims.length, 0);
 const firstYear = Math.min(...lin.flatMap((p) => p.claims.map((c) => c.year)));
 const lossTop = losers.filter((a) => a.rank <= 10).length;
+const idn = getIdentification();
+const nameOf = Object.fromEntries(list.map((p) => [p.slug, p.common_name_en.split(' / ')[0]]));
+const idMoves = idn?.summary.plants_moving_in_or_out_of_top10 ?? 0;
+const idIn = (idn?.summary.plants_entering_top10_under_some_alternative ?? []).map((k) => nameOf[k] ?? k);
+const idOut = (idn?.summary.plants_leaving_top10_under_some_alternative ?? []).map((k) => nameOf[k] ?? k);
+const andList = (a: string[]) => (a.length < 2 ? a.join('') : `${a.slice(0, -1).join(', ')} and ${a[a.length - 1]}`);
+const idFlip = idn?.summary.disputed_plants_whose_own_top10_status_can_change.length ?? 0;
+const nDisputed = list.filter((p) => p.identification_confidence === 'disputed').length;
+const firstAlt = (idn?.plants ?? []).flatMap((p) => p.candidates.filter((c) => c.rank === 1).map((c) => ({ plant: p.common_name_en, taxon: c.query_name, records: c.records, rank: p.published.rank })));
+const headCult = head.cultivation_area_km2;
+const headCultR = head.cultivation_area_km2_range;
+const judges = [
+  { t: 'The finding', d: 'Which plant Dioscorides meant changes the ranking.', h: '#finding' },
+  { t: 'Cretan dittany', d: 'Rank 1, its range, its single farmland cell.', h: plantHref(head.slug) },
+  { t: 'Identification', d: 'Every rival species, re-ranked with sources.', h: href('identification/') },
+  { t: 'Methods', d: 'Data, validation, baseline, limits.', h: href('methods/') },
+];
 const ways = [
   { href: href('act/'), eyebrow: 'Decide', title: 'Action plan', text: `Which plants to protect, which to cultivate, and a grower finder that lists what a farmer could plant in any ~10 km cell by 2050.` },
   { href: href('names/'), eyebrow: 'Then', title: 'Names through time', text: `${nClaims} dated identifications since ${firstYear}: who matched each Greek name to which modern plant, and where scholars still disagree.` },
@@ -74,8 +91,34 @@ const ways = [
     </dl>
   </section>
 
+  {idn && (
+    <section id="finding" aria-labelledby="h-finding" class="page flex flex-col gap-3 pb-2 pt-12">
+      <div class="eyebrow text-ochre">The finding</div>
+      <h2 id="h-finding" class="h-section mt-0">{idMoves > 0 ? `Which plant Dioscorides meant moves ${idMoves} of ${n} plants in or out of the top 10` : `Rival identifications do not move any plant in or out of the top 10`}</h2>
+      <p class="m-0 max-w-[860px] text-[17px]">{nDisputed} of our plants have disputed identifications. We modelled all {idn.summary.modelled} rival species that the cited scholarship names for them (another {idn.summary.data_gap} have too few records in Greece to model) with the same data, models and climate futures, and re-ranked all {n} plants once per alternative.{idIn.length > 0 && <> Depending on the identification, <strong>{andList(idIn)}</strong> {idIn.length === 1 ? 'enters' : 'enter'} the top 10{idOut.length > 0 && <> and <strong>{andList(idOut)}</strong> {idOut.length === 1 ? 'drops' : 'drop'} out</>}.</>} For {idFlip} of the {nDisputed} disputed plants, their own place in the top 10 depends on the identification.{firstAlt.map((a) => <> Modelled as <em>{a.taxon}</em>, {a.plant} would rank <strong>first</strong>, above dittany (published rank {a.rank}; that model rests on {a.records} records).</>)}</p>
+      <a href={href('identification/')} class="inline-flex min-h-11 w-fit items-center font-semibold">See every rival identification, with its source</a>
+    </section>
+  )}
+
+  <section aria-labelledby="h-dittany" class="page flex flex-col gap-3 pb-2 pt-10">
+    <div class="eyebrow text-sage">The headline plant</div>
+    <h2 id="h-dittany" class="h-section mt-0">{head.common_name_en} ranks first and has almost nowhere to be grown instead</h2>
+    <p class="m-0 max-w-[860px] text-[17px]">Its identification is certain, it grows only in Greece, and under moderate emissions its climate range changes by <strong>{headChange.med}</strong> by 2050 ({headChange.lo} to {headChange.hi} across {meta.gcms.length} climate models). Candidate farmland for it in 2050: <strong>{headCult !== null ? `${Math.round(headCult)} km²` : 'none'}</strong>{headCultR && <> ({Math.round(headCultR.min)}–{Math.round(headCultR.max)} km²)</>}. Its model only just beats a distance-only baseline (AUC {head.model?.auc_mean.toFixed(3)} vs {head.model?.baseline_auc?.toFixed(3)}), so treat the map as a hypothesis.</p>
+  </section>
+
+  <section aria-labelledby="h-judges" class="page pb-2 pt-8">
+    <div class="card-surface flex flex-col gap-3 border-2 border-ink p-5">
+      <h2 id="h-judges" class="m-0 text-[20px] font-semibold">For judges: a 60-second path</h2>
+      <ol class="m-0 grid list-none gap-3 p-0 [grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))]">
+        {judges.map((j, i) => (
+          <li class="flex flex-col gap-0.5"><a href={j.h} class="font-semibold">{i + 1}. {j.t}</a><span class="text-[14px] text-muted">{j.d}</span></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
   <section aria-labelledby="h-split" class="page flex flex-col gap-3 pb-2 pt-12">
-    <div class="eyebrow text-ochre">The finding</div>
+    <div class="eyebrow text-ochre">Across all 32 plants</div>
     <h2 id="h-split" class="h-section mt-0">A split future, not a uniform decline</h2>
     <p class="m-0 max-w-[820px] text-[17px]">Under moderate emissions, <strong>{losers.length} of {n}</strong> plants lose wild habitat by 2050 in every climate model we ran, while {n - losers.length} keep or gain it{medText ? ` (median change across all plants ${medText.med})` : ''}. The losers are concentrated at the top of the risk ranking ({lossTop} of the top 10), and they include plants Greece is known for: {losers.slice(0, 4).map((a) => a.name.split(' / ')[0]).join(', ')}. Averages hide this, so we report each plant, with its spread across models.</p>
   </section>

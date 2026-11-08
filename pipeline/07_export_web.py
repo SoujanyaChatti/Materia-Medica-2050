@@ -215,7 +215,9 @@ def main() -> None:
                                                  if k in model and model[k] is not None and np.isfinite(model[k])} | {"variables": model.get("variables", [])}
                      | ({"baseline_auc": round(float(metrics["baseline"]["auc_mean"]), 3)}
                         if np.isfinite((metrics.get("baseline") or {}).get("auc_mean", np.nan)) else {})
-                     | ({"grade": metrics["grade"]} if metrics.get("grade") else {}),
+                     | ({"grade": metrics["grade"]} if metrics.get("grade") else {})
+                     | ({"beats_baseline": bool(model["auc_mean"] > metrics["baseline"]["auc_mean"])}
+                        if np.isfinite((metrics.get("baseline") or {}).get("auc_mean", np.nan)) else {}),
             "range_change_pct": {s: interval(rc[s]["per_gcm"]) for s in config.SCENARIOS},
             "range_cells": range_cells, "natura_share_pct": natura_share,
             "risk": {"score": round(float(r["score"]), 3), "score_lo": round(float(r["score_lo"]), 3),

@@ -25,7 +25,8 @@ const cls = sp.risk.class ?? riskClassOf(sp.risk.score);
 const status = sp.conservation_status;
 const disputed = sp.identification.confidence === 'disputed';
 const low = sp.records.low_confidence_model;
-const adequate = !!sp.model && sp.model.auc_mean >= 0.75 && !low;
+const grade = sp.model?.grade ?? (sp.model && sp.model.auc_mean >= 0.75 && !low ? 'standard' : 'low');
+const adequate = grade === 'standard';
 const fut: FutureKey[] = ['ssp245', 'ssp585'];
 const longName: Record<FutureKey, string> = { ssp245: '2050 · moderate (SSP2-4.5)', ssp585: '2050 · high (SSP5-8.5)' };
 const iv = (i?: { median: number; min: number; max: number }, unit = '') =>
@@ -62,12 +63,12 @@ const q = QUADRANTS[act.quadrant];
       {disputed && (
         <div class="card-surface mt-2 flex flex-col gap-3 p-5">
           <div role="note" class="rounded-md bg-ochre-tint px-3.5 py-3 text-[14px] text-ochre-ink">
-            <strong>Identification disputed.</strong> Scholars propose more than one modern species. We model the most cited candidate and show the alternative for comparison.{sp.risk.rank_without_disputed === null ? ' Rankings are also reported without disputed plants on the Methods page.' : ''}
+            <strong>Identification disputed.</strong> Scholars propose more than one modern species. We model the most cited candidate and show the alternative for comparison.{sp.risk.rank_without_disputed === null ? ' Rankings are also reported without disputed plants on the Methods page.' : ''} <a href={href(`identification/#${sp.slug}`)} class="font-semibold">See how its rank changes under each alternative identification</a>.
           </div>
           <div class="grid gap-2.5 text-[14px] sm:grid-cols-2">
-            <div class="rounded-md border border-sage px-3 py-2.5"><div class="eyebrow text-sage">Modelled</div><em class="font-serif text-[18px]">{genus} {epithet}</em><div class="text-muted">{sp.identification.source}</div></div>
+            <div class="min-w-0 rounded-md border border-sage px-3 py-2.5 [overflow-wrap:anywhere]"><div class="eyebrow text-sage">Modelled</div><em class="font-serif text-[18px]">{genus} {epithet}</em><div class="text-muted">{sp.identification.source}</div></div>
             {(sp.identification.alternatives ?? []).map((a) => (
-              <div class="rounded-md border border-dashed border-muted px-3 py-2.5"><div class="eyebrow text-muted">Alternative</div><em class="font-serif text-[18px]">{a.name}</em><div class="text-muted">{a.source}</div></div>
+              <div class="min-w-0 rounded-md border border-dashed border-muted px-3 py-2.5 [overflow-wrap:anywhere]"><div class="eyebrow text-muted">Alternative</div><em class="font-serif text-[18px]">{a.name}</em><div class="text-muted">{a.source}</div></div>
             ))}
           </div>
         </div>
@@ -139,18 +140,19 @@ const q = QUADRANTS[act.quadrant];
         <div class="flex flex-wrap items-center justify-between gap-2">
           <h3 id="h-model" class="m-0 text-[18px] font-semibold">Model quality</h3>
           {sp.model && (adequate
-            ? <span class="inline-flex items-center gap-1.5 rounded-full border border-sage bg-sage-tint px-2.5 py-0.5 text-[13px] font-semibold text-sage"><IconCertain size={13} />Adequate</span>
-            : <span class="inline-flex items-center gap-1.5 rounded-full border border-warn-border px-2.5 py-0.5 text-[13px] font-semibold text-warn"><IconDisputed size={13} />Low confidence</span>)}
+            ? <span class="inline-flex items-center gap-1.5 rounded-full border border-sage bg-sage-tint px-2.5 py-0.5 text-[13px] font-semibold text-sage"><IconCertain size={13} />Standard grade</span>
+            : <span class="inline-flex items-center gap-1.5 rounded-full border border-warn-border px-2.5 py-0.5 text-[13px] font-semibold text-warn"><IconDisputed size={13} />{grade === 'data gap' ? 'Data gap' : 'Low grade'}</span>)}
         </div>
         {sp.model ? (
           <dl class="m-0 grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(140px,1fr))]">
             <div><dt class="text-[13px] text-muted">AUC (spatial block CV)</dt><dd class="m-0"><strong class="text-[24px]">{sp.model.auc_mean.toFixed(2)}</strong> <span class="text-muted">± {sp.model.auc_sd.toFixed(2)}</span></dd></div>
+            {sp.model.baseline_auc !== undefined && <div><dt class="text-[13px] text-muted">Distance-only baseline AUC</dt><dd class="m-0"><strong class="text-[24px]">{sp.model.baseline_auc.toFixed(2)}</strong> <span class="text-muted">{sp.model.beats_baseline ? 'ours is higher' : 'ours is not higher'}{sp.model.auc_mean.toFixed(2) === sp.model.baseline_auc.toFixed(2) ? ' (by < 0.005)' : ''}</span></dd></div>}
             <div><dt class="text-[13px] text-muted">Boyce index</dt><dd class="m-0"><strong class="text-[24px]">{sp.model.boyce_mean.toFixed(2)}</strong>{sp.model.boyce_sd !== undefined && <span class="text-muted"> ± {sp.model.boyce_sd.toFixed(2)}</span>}</dd></div>
             {sp.model.tss_mean !== undefined && <div><dt class="text-[13px] text-muted">TSS</dt><dd class="m-0"><strong class="text-[24px]">{sp.model.tss_mean.toFixed(2)}</strong> <span class="text-muted">± {sp.model.tss_sd?.toFixed(2)}</span></dd></div>}
             <div><dt class="text-[13px] text-muted">Occurrence records</dt><dd class="m-0"><strong class="text-[24px]">{thousands(sp.records.thinned ?? sp.records.clean)}</strong> <span class="text-muted">after cleaning (of {thousands(sp.records.raw)})</span></dd></div>
           </dl>
         ) : <p class="m-0 text-muted">No model was fitted for this species (too few usable records).</p>}
-        <p class="m-0 text-[14px] text-muted">5-fold spatial block cross-validation (~25 km blocks); ± is one standard deviation across folds.{sp.model?.null_auc_mean !== undefined && ` Null model AUC ${sp.model.null_auc_mean.toFixed(2)}.`} "Adequate" means AUC ≥ 0.75 and ≥ 30 records.</p>
+        <p class="m-0 text-[14px] text-muted">5-fold spatial block cross-validation (~25 km blocks); ± is one standard deviation across folds.{sp.model?.null_auc_mean !== undefined && ` Null model AUC ${sp.model.null_auc_mean.toFixed(2)}.`} The baseline scores each held-out point by its distance to the nearest training record, on the same folds. "Standard" grade means ≥ 30 records, AUC ≥ 0.75 and above the baseline; fewer than 10 records is a data gap; anything else is low grade.</p>
       </section>
     </section>
 

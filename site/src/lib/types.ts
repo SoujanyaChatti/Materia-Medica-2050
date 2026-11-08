@@ -17,7 +17,7 @@ export interface SpeciesSummary {
   low_confidence_model: boolean;
   risk: { score: number; score_lo?: number; score_hi?: number; rank: number; rank_lo?: number; rank_hi?: number; class: number };
   range_change_pct: Record<FutureKey, Interval>;
-  model?: { auc_mean: number; auc_sd: number; boyce_mean: number; tss_mean?: number; tss_sd?: number } | null;
+  model?: { auc_mean: number; auc_sd: number; boyce_mean: number; tss_mean?: number; tss_sd?: number; baseline_auc?: number; grade?: 'standard' | 'low' | 'data gap'; beats_baseline?: boolean } | null;
   records_clean?: number;
 }
 
@@ -41,7 +41,7 @@ export interface Species {
   conservation_status?: { category: string; source: string } | null;
   ema_monograph?: { exists: boolean; use?: string | null; name?: string | null; reference?: string | null; url?: string | null } | null;
   records: { raw: number; clean: number; thinned?: number; public_cells?: number; low_confidence_model: boolean };
-  model: { auc_mean: number; auc_sd: number; boyce_mean: number; boyce_sd?: number; tss_mean?: number; tss_sd?: number; null_auc_mean?: number; variables?: string[] } | null;
+  model: { auc_mean: number; auc_sd: number; boyce_mean: number; boyce_sd?: number; tss_mean?: number; tss_sd?: number; null_auc_mean?: number; baseline_auc?: number; grade?: 'standard' | 'low' | 'data gap'; beats_baseline?: boolean; variables?: string[] } | null;
   range_change_pct: Record<FutureKey, Interval>;
   range_cells?: { now?: number } & Partial<Record<FutureKey, Interval>>;
   natura_share_pct?: { now?: number } & Partial<Record<FutureKey, Interval>>;
@@ -80,4 +80,23 @@ export interface LineageClaim { taxon: string; role: 'modelled' | 'alternative';
 export interface Lineage {
   slug: string; greek_name: string; greek_translit: string; book: number; chapter: number | null;
   accepted_name: string; common_name_en: string; confidence: Confidence; ema: boolean; n_candidates: number; claims: LineageClaim[];
+}
+
+export interface IdInterval { median: number | null; min: number | null; max: number | null }
+export interface IdCandidate {
+  taxon_as_cited: string; query_name: string; source: string; records: number; grade: 'standard' | 'low' | 'data gap'; note?: string | null;
+  auc?: number | null; baseline_auc?: number | null; rank: number | null; rank_lo?: number | null; rank_hi?: number | null;
+  score?: number | null; score_lo?: number | null; score_hi?: number | null; range_change?: IdInterval | null; cultivation_km2?: IdInterval | null; in_top10?: boolean | null;
+}
+export interface IdPlant {
+  slug: string; common_name_en: string; greek_name: string; rank_min: number | null; rank_max: number | null; top10_status_changes: boolean;
+  published: { taxon: string; source: string; rank: number; rank_lo: number; rank_hi: number; score: number; score_lo: number; score_hi: number;
+    range_change: IdInterval; cultivation_km2: IdInterval | null; grade: string; auc: number; baseline_auc: number };
+  candidates: IdCandidate[];
+}
+export interface Identification {
+  summary: { candidates: number; modelled: number; data_gap: number; plants_entering_top10_under_some_alternative: string[];
+    plants_leaving_top10_under_some_alternative: string[]; plants_moving_in_or_out_of_top10: number;
+    disputed_plants_whose_own_top10_status_can_change: string[]; held_fixed: string };
+  n_species: number; top_n: number; plants: IdPlant[];
 }

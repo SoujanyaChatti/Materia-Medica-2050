@@ -50,7 +50,8 @@
         "slope"
       ],
       "baseline_auc": 0.959,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 123
   },
@@ -105,7 +106,8 @@
         "slope"
       ],
       "baseline_auc": 0.639,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": false
     },
     "records_clean": 20
   },
@@ -160,7 +162,8 @@
         "slope"
       ],
       "baseline_auc": 0.773,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 55
   },
@@ -215,7 +218,8 @@
         "slope"
       ],
       "baseline_auc": 0.792,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": true
     },
     "records_clean": 23
   },
@@ -270,7 +274,8 @@
         "slope"
       ],
       "baseline_auc": 0.662,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 270
   },
@@ -325,7 +330,8 @@
         "slope"
       ],
       "baseline_auc": 0.863,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": true
     },
     "records_clean": 31
   },
@@ -380,7 +386,8 @@
         "slope"
       ],
       "baseline_auc": 0.674,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": true
     },
     "records_clean": 257
   },
@@ -435,7 +442,8 @@
         "slope"
       ],
       "baseline_auc": 0.662,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 322
   },
@@ -490,7 +498,8 @@
         "slope"
       ],
       "baseline_auc": 0.759,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 365
   },
@@ -545,7 +554,8 @@
         "slope"
       ],
       "baseline_auc": 0.714,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 849
   },
@@ -600,7 +610,8 @@
         "slope"
       ],
       "baseline_auc": 0.727,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 563
   },
@@ -655,7 +666,8 @@
         "slope"
       ],
       "baseline_auc": 0.709,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 1135
   },
@@ -710,7 +722,8 @@
         "slope"
       ],
       "baseline_auc": 0.756,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 577
   },
@@ -765,7 +778,8 @@
         "slope"
       ],
       "baseline_auc": 0.599,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": true
     },
     "records_clean": 452
   },
@@ -820,7 +834,8 @@
         "slope"
       ],
       "baseline_auc": 0.75,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": false
     },
     "records_clean": 737
   },
@@ -875,7 +890,8 @@
         "slope"
       ],
       "baseline_auc": 0.708,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 1296
   },
@@ -930,7 +946,8 @@
         "slope"
       ],
       "baseline_auc": 0.656,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": true
     },
     "records_clean": 261
   },
@@ -985,7 +1002,8 @@
         "slope"
       ],
       "baseline_auc": 0.777,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 43
   },
@@ -1040,7 +1058,8 @@
         "slope"
       ],
       "baseline_auc": 0.617,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": true
     },
     "records_clean": 2217
   },
@@ -1095,7 +1114,8 @@
         "slope"
       ],
       "baseline_auc": 0.662,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": true
     },
     "records_clean": 457
   },
@@ -1150,7 +1170,8 @@
         "slope"
       ],
       "baseline_auc": 0.654,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": true
     },
     "records_clean": 971
   },
@@ -1205,7 +1226,8 @@
         "slope"
       ],
       "baseline_auc": 0.78,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 1188
   },
@@ -1260,7 +1282,8 @@
         "slope"
       ],
       "baseline_auc": 0.854,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 745
   },
@@ -1315,7 +1338,8 @@
         "slope"
       ],
       "baseline_auc": 0.777,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 1859
   },
@@ -1370,7 +1394,8 @@
         "slope"
       ],
       "baseline_auc": 0.688,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 4900
   },
@@ -1425,7 +1450,8 @@
         "slope"
       ],
       "baseline_auc": 0.769,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 2967
   },
@@ -1480,7 +1506,8 @@
         "slope"
       ],
       "baseline_auc": 0.705,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": true
     },
     "records_clean": 532
   },
@@ -1535,7 +1562,8 @@
         "slope"
       ],
       "baseline_auc": 0.61,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": true
     },
     "records_clean": 298
   },
@@ -1590,7 +1618,8 @@
         "slope"
       ],
       "baseline_auc": 0.809,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 918
   },
@@ -1645,7 +1674,8 @@
         "slope"
       ],
       "baseline_auc": 0.755,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 5537
   },
@@ -1700,7 +1730,8 @@
         "slope"
       ],
       "baseline_auc": 0.764,
-      "grade": "standard"
+      "grade": "standard",
+      "beats_baseline": true
     },
     "records_clean": 1720
   },
@@ -1755,7 +1786,8 @@
         "slope"
       ],
       "baseline_auc": 0.918,
-      "grade": "low"
+      "grade": "low",
+      "beats_baseline": false
     },
     "records_clean": 280
   }
