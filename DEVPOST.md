@@ -83,7 +83,23 @@ Every number carries its range across climate models.
 - **Measured harvest data**, such as permits and trade volumes, to replace the road-access proxy.
 - **Extending the work to Cyprus and Anatolia**, and to other historical plant lists; the pipeline works for any region.
 
-**Limitations:**
+**Data sources and attribution** (full terms in `DATA_LICENSES.md` in the repository):
+- **Occurrences:** GBIF.org (3 November 2026) GBIF Occurrence Download, https://doi.org/10.15468/dl.4u6k8n
+- **Climate:** WorldClim 2.1 and CMIP6 (Fick & Hijmans 2017). No WorldClim rasters are redistributed.
+- **Elevation:** Copernicus DEM GLO-90; produced using Copernicus WorldDEM-90 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved
+- **Land cover:** CORINE Land Cover 2018, Copernicus Land Monitoring Service (EEA).
+- **Protected areas:** Natura 2000, European Environment Agency (CC BY 4.0).
+- **Roads and settlements:** © OpenStreetMap contributors (ODbL), via Geofabrik.
+- **Conservation status:** IUCN Red List of Threatened Species; Dimopoulos et al. 2013, Vascular plants of Greece checklist.
+- **Modern use:** European Medicines Agency herbal monographs (EMA/HMPC).
+- **Text:** Wellmann (ed.), *De materia medica*, 1906–1914 (public domain).
+- **Identifications:** Sprengel 1830, Fraas 1845, Osbaldeston 2000 and others, cited for each plant.
+- **Photos:** Wikimedia Commons, CC0, public domain, CC BY or CC BY-SA, with the photographer and licence credited under every photo.
+- **Basemap:** Natural Earth (public domain).
+
+**Team:** Soujanya Chatti and DurgaPritam.
+
+**Limitations and assumptions:**
 - Range gains assume unlimited dispersal.
 - 2.5′ climate cells are coarse.
 - Five plants are modelled as pooled species groups.
