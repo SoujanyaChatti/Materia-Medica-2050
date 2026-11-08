@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dioscorides-plants.local/schema/identification.schema.json",
+  "title": "identification.json — how each disputed plant's rank changes under the competing identifications named in the cited scholarship",
+  "type": "object",
+  "required": [
+    "summary",
+    "n_species",
+    "top_n",
+    "plants"
+  ],
+  "$defs": {
+    "interval": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "median",
+        "min",
+        "max"
+      ],
+      "properties": {
+        "median": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "min": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "max": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "required": [
+        "taxon_as_cited",
+        "query_name",
+        "source",
+        "records",
+        "grade",
+        "rank"
+      ],
+      "properties": {
+        "taxon_as_cited": {
+          "type": "string"
+        },
+        "query_name": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "records": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "grade": {
+          "enum": [
+            "standard",
+            "low",
+            "data gap"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "auc": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "baseline_auc": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "rank": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "rank_lo": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "rank_hi": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "score_lo": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "score_hi": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "range_change": {
+          "$ref": "#/$defs/interval"
+        },
+        "cultivation_km2": {
+          "$ref": "#/$defs/interval"
+        },
+        "in_top10": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    }
+  },
+  "properties": {
+    "summary": {
+      "type": "object",
+      "required": [
+        "candidates",
+        "modelled",
+        "data_gap",
+        "plants_moving_in_or_out_of_top10"
+      ]
+    },
+    "n_species": {
+      "type": "integer"
+    },
+    "top_n": {
+      "type": "integer"
+    },
+    "plants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "slug",
+          "common_name_en",
+          "greek_name",
+          "published",
+          "candidates"
+        ],
+        "properties": {
+          "published": {
+            "type": "object",
+            "required": [
+              "taxon",
+              "rank",
+              "score",
+              "score_lo",
+              "score_hi",
+              "range_change",
+              "grade"
+            ]
+          },
+          "candidates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/candidate"
+            }
+          }
+        }
+      }
+    }
+  }
+}

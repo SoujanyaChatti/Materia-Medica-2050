@@ -212,7 +212,10 @@ def main() -> None:
                         "public_cells": int(len(po)), "low_confidence_model": low},
             "model": None if model is None else {k: round(float(model[k]), 3) for k in
                                                  ("auc_mean", "auc_sd", "boyce_mean", "boyce_sd", "tss_mean", "tss_sd", "null_auc_mean")
-                                                 if k in model and model[k] is not None and np.isfinite(model[k])} | {"variables": model.get("variables", [])},
+                                                 if k in model and model[k] is not None and np.isfinite(model[k])} | {"variables": model.get("variables", [])}
+                     | ({"baseline_auc": round(float(metrics["baseline"]["auc_mean"]), 3)}
+                        if np.isfinite((metrics.get("baseline") or {}).get("auc_mean", np.nan)) else {})
+                     | ({"grade": metrics["grade"]} if metrics.get("grade") else {}),
             "range_change_pct": {s: interval(rc[s]["per_gcm"]) for s in config.SCENARIOS},
             "range_cells": range_cells, "natura_share_pct": natura_share,
             "risk": {"score": round(float(r["score"]), 3), "score_lo": round(float(r["score_lo"]), 3),

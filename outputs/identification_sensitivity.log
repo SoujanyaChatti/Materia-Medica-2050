@@ -1,0 +1,95 @@
+paeonia-greece__paeonia-officinalis: COL 4BYC9 'Paeonia officinalis' [EXACT], backbone 'Paeonia officinalis' (ACCEPTED)
+paeonia-greece__paeonia-arietina: COL 9KZS2 'Paeonia mascula arietina' [EXACT], backbone 'Paeonia mascula arietina' (SYNONYM)
+paeonia-greece__paeonia-peregrina: COL 4BYCL 'Paeonia peregrina' [EXACT], backbone 'Paeonia peregrina' (ACCEPTED)
+paeonia-greece__paeonia-corallina: COL 5K557 'Paeonia mascula mascula' [EXACT], backbone 'Paeonia mascula mascula' (SYNONYM)
+sideritis-syriaca__stachys-recta: COL 4ZFVT 'Stachys recta' [EXACT], backbone 'Stachys recta' (ACCEPTED)
+sideritis-syriaca__lycopus-europaeus: COL 3WN59 'Lycopus europaeus' [EXACT], backbone 'Lycopus europaeus' (ACCEPTED)
+sideritis-syriaca__stachys-heraclea: COL 4ZFLH 'Stachys heraclea' [EXACT], backbone 'Stachys heraclea' (ACCEPTED)
+sideritis-syriaca__sideritis-scordioides: COL 4X8Y4 'Sideritis hyssopifolia' [EXACT], backbone 'Sideritis scordioides' (ACCEPTED)
+hyssopus-officinalis__origanum-syriacum: COL 74VBB 'Origanum syriacum' [EXACT], backbone 'Origanum syriacum' (ACCEPTED)
+hyssopus-officinalis__origanum-aegyptiacum: COL 5K2MM 'Origanum syriacum syriacum' [EXACT], backbone 'Origanum syriacum syriacum' (SYNONYM)
+hyssopus-officinalis__origanum-smyrnaeum: COL 8VZXX 'Origanum' [HIGHERRANK], backbone 'Origanum' (ACCEPTED)
+hyssopus-officinalis__thymbra-spicata: COL 7BXSP 'Thymbra spicata' [EXACT], backbone 'Thymbra spicata' (ACCEPTED)
+hyssopus-officinalis__thymbra-verticillata: COL 5LJDG 'Thymbra spicata spicata' [EXACT], backbone 'Thymbra spicata spicata' (SYNONYM)
+hyssopus-officinalis__teucrium-pseudhyssopus: COL 5LGXY 'Teucrium polium polium' [VARIANT], backbone 'Teucrium polium polium' (SYNONYM)
+hyssopus-officinalis__satureja-graeca: COL 5JP7H 'Micromeria graeca graeca' [EXACT], backbone 'Micromeria graeca' (SYNONYM)
+hyssopus-officinalis__satureja-juliana: COL 42YYD 'Micromeria juliana' [EXACT], backbone 'Satureja juliana' (ACCEPTED)
+salvia-fruticosa__salvia-officinalis: COL 6XH46 'Salvia officinalis' [EXACT], backbone 'Salvia officinalis' (ACCEPTED)
+salvia-fruticosa__salvia-pomifera: COL 79GRC 'Salvia pomifera' [EXACT], backbone 'Salvia pomifera' (ACCEPTED)
+hypericum-perforatum__hypericum-barbatum: COL 3NPCD 'Hypericum barbatum' [EXACT], backbone 'Hypericum barbatum' (ACCEPTED)
+hypericum-perforatum__hypericum-triquetrifolium: COL 6N2HJ 'Hypericum triquetrifolium' [EXACT], backbone 'Hypericum triquetrifolium' (ACCEPTED)
+matricaria-chamomilla__anthemis-chia: COL 67C55 'Anthemis chia' [EXACT], backbone 'Anthemis chia' (ACCEPTED)
+matricaria-chamomilla__cota-tinctoria: COL YWZP 'Cota tinctoria' [EXACT], backbone 'Cota tinctoria' (ACCEPTED)
+matricaria-chamomilla__anthemis-rosea: COL 67BJD 'Anthemis rosea' [EXACT], backbone 'Anthemis rosea' (ACCEPTED)
+matricaria-chamomilla__chamaemelum-nobile: COL TKFW 'Chamaemelum nobile' [EXACT], backbone 'Chamaemelum nobile' (ACCEPTED)
+matricaria-chamomilla__anacyclus-aureus: COL J6T 'Asteroideae' [HIGHERRANK], backbone 'Asteraceae' (ACCEPTED)
+plantago-lanceolata__plantago-major: COL 4JLPC 'Plantago major' [EXACT], backbone 'Plantago major' (ACCEPTED)
+plantago-lanceolata__plantago-lagopus: COL 4JLMB 'Plantago lagopus' [EXACT], backbone 'Plantago lagopus' (ACCEPTED)
+plantago-lanceolata__plantago-maritima: COL 4JLPN 'Plantago maritima' [EXACT], backbone 'Plantago maritima' (ACCEPTED)
+plantago-lanceolata__plantago-asiatica: COL 6VNZC 'Plantago asiatica' [EXACT], backbone 'Plantago asiatica' (ACCEPTED)
+plantago-lanceolata__plantago-altissima: COL 4JL8Z 'Plantago altissima' [EXACT], backbone 'Plantago altissima' (ACCEPTED)
+juniperus-deltoides__juniperus-communis: COL 6NGH4 'Juniperus communis' [EXACT], backbone 'Juniperus communis' (ACCEPTED)
+juniperus-deltoides__juniperus-excelsa: COL 6NGHR 'Juniperus excelsa' [EXACT], backbone 'Juniperus excelsa' (ACCEPTED)
+teucrium-chamaedrys__veronica-chamaedrys: COL 5B6L3 'Veronica chamaedrys' [EXACT], backbone 'Veronica chamaedrys' (ACCEPTED)
+teucrium-chamaedrys__teucrium-lucidum: COL 55XL2 'Teucrium lucidum' [EXACT], backbone 'Teucrium lucidum' (ACCEPTED)
+teucrium-chamaedrys__teucrium-botrys: COL 55XCP 'Teucrium botrys' [EXACT], backbone 'Teucrium botrys' (ACCEPTED)
+GBIF rows: 933943 (61s)
+shared layers ready (67s)
+paeonia-greece__paeonia-officinalis: data gap (5 records)
+paeonia-greece__paeonia-arietina: data gap (1 records)
+paeonia-greece__paeonia-peregrina (10s, 55 presences): AUC 0.86 vs baseline 0.83, change -81%, grade standard
+paeonia-greece__paeonia-corallina: data gap (7 records)
+sideritis-syriaca__stachys-recta (11s, 88 presences): AUC 0.77 vs baseline 0.85, change -7%, grade low
+sideritis-syriaca__lycopus-europaeus (14s, 122 presences): AUC 0.75 vs baseline 0.66, change -3%, grade low
+sideritis-syriaca__stachys-heraclea: data gap (0 records)
+sideritis-syriaca__sideritis-scordioides: data gap (0 records)
+hyssopus-officinalis__origanum-syriacum: data gap (0 records)
+hyssopus-officinalis__origanum-aegyptiacum: data gap (0 records)
+hyssopus-officinalis__origanum-smyrnaeum (11s, 16 presences): AUC 0.65 vs baseline 0.60, change -50%, grade low
+hyssopus-officinalis__thymbra-spicata (15s, 21 presences): AUC 0.74 vs baseline 0.77, change 11%, grade low
+hyssopus-officinalis__thymbra-verticillata: data gap (1 records)
+hyssopus-officinalis__teucrium-pseudhyssopus: data gap (1 records)
+hyssopus-officinalis__satureja-graeca (24s, 150 presences): AUC 0.84 vs baseline 0.85, change -38%, grade low
+hyssopus-officinalis__satureja-juliana (42s, 412 presences): AUC 0.84 vs baseline 0.79, change 110%, grade standard
+salvia-fruticosa__salvia-officinalis (18s, 161 presences): AUC 0.76 vs baseline 0.79, change 92%, grade low
+salvia-fruticosa__salvia-pomifera (18s, 105 presences): AUC 0.85 vs baseline 0.92, change 8%, grade low
+hypericum-perforatum__hypericum-barbatum (11s, 75 presences): AUC 0.95 vs baseline 0.91, change -2%, grade standard
+hypericum-perforatum__hypericum-triquetrifolium (27s, 501 presences): AUC 0.81 vs baseline 0.76, change 28%, grade standard
+matricaria-chamomilla__anthemis-chia (25s, 349 presences): AUC 0.81 vs baseline 0.80, change 40%, grade standard
+matricaria-chamomilla__cota-tinctoria (18s, 363 presences): AUC 0.82 vs baseline 0.75, change 35%, grade standard
+matricaria-chamomilla__anthemis-rosea: data gap (8 records)
+matricaria-chamomilla__chamaemelum-nobile: data gap (3 records)
+matricaria-chamomilla__anacyclus-aureus (15s, 75 presences): AUC 0.88 vs baseline 0.84, change 229%, grade standard
+plantago-lanceolata__plantago-major (48s, 629 presences): AUC 0.68 vs baseline 0.67, change 89%, grade low
+plantago-lanceolata__plantago-lagopus (117s, 1015 presences): AUC 0.79 vs baseline 0.73, change 65%, grade standard
+plantago-lanceolata__plantago-maritima: data gap (8 records)
+plantago-lanceolata__plantago-asiatica: data gap (0 records)
+plantago-lanceolata__plantago-altissima: data gap (9 records)
+juniperus-deltoides__juniperus-communis (21s, 247 presences): AUC 0.87 vs baseline 0.82, change 39%, grade standard
+juniperus-deltoides__juniperus-excelsa (27s, 55 presences): AUC 0.77 vs baseline 0.68, change 17%, grade standard
+teucrium-chamaedrys__veronica-chamaedrys (50s, 536 presences): AUC 0.82 vs baseline 0.77, change -4%, grade standard
+teucrium-chamaedrys__teucrium-lucidum: data gap (0 records)
+teucrium-chamaedrys__teucrium-botrys: data gap (1 records)
+{
+ "candidates": 35,
+ "modelled": 19,
+ "data_gap": 16,
+ "plants_entering_top10_under_some_alternative": [
+  "urtica-dioica"
+ ],
+ "plants_leaving_top10_under_some_alternative": [
+  "hypericum-perforatum",
+  "hyssopus-officinalis",
+  "juniperus-deltoides",
+  "sideritis-syriaca"
+ ],
+ "plants_moving_in_or_out_of_top10": 5,
+ "disputed_plants_whose_own_top10_status_can_change": [
+  "hypericum-perforatum",
+  "hyssopus-officinalis",
+  "juniperus-deltoides",
+  "sideritis-syriaca"
+ ],
+ "held_fixed": "endemism and conservation status of the published identification; all other 31 plants",
+ "runtime_s": 591
+}

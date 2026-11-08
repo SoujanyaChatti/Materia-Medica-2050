@@ -48,7 +48,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.959,
+      "grade": "standard"
     },
     "records_clean": 123
   },
@@ -101,7 +103,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.639,
+      "grade": "low"
     },
     "records_clean": 20
   },
@@ -154,7 +158,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.773,
+      "grade": "standard"
     },
     "records_clean": 55
   },
@@ -207,7 +213,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.792,
+      "grade": "low"
     },
     "records_clean": 23
   },
@@ -260,7 +268,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.662,
+      "grade": "standard"
     },
     "records_clean": 270
   },
@@ -313,7 +323,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.863,
+      "grade": "low"
     },
     "records_clean": 31
   },
@@ -366,7 +378,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.674,
+      "grade": "low"
     },
     "records_clean": 257
   },
@@ -419,7 +433,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.662,
+      "grade": "standard"
     },
     "records_clean": 322
   },
@@ -472,7 +488,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.759,
+      "grade": "standard"
     },
     "records_clean": 365
   },
@@ -525,7 +543,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.714,
+      "grade": "standard"
     },
     "records_clean": 849
   },
@@ -578,7 +598,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.727,
+      "grade": "standard"
     },
     "records_clean": 563
   },
@@ -631,7 +653,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.709,
+      "grade": "standard"
     },
     "records_clean": 1135
   },
@@ -684,7 +708,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.756,
+      "grade": "standard"
     },
     "records_clean": 577
   },
@@ -737,7 +763,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.599,
+      "grade": "low"
     },
     "records_clean": 452
   },
@@ -790,7 +818,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.75,
+      "grade": "low"
     },
     "records_clean": 737
   },
@@ -843,7 +873,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.708,
+      "grade": "standard"
     },
     "records_clean": 1296
   },
@@ -896,7 +928,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.656,
+      "grade": "low"
     },
     "records_clean": 261
   },
@@ -949,7 +983,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.777,
+      "grade": "standard"
     },
     "records_clean": 43
   },
@@ -1002,7 +1038,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.617,
+      "grade": "low"
     },
     "records_clean": 2217
   },
@@ -1055,7 +1093,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.662,
+      "grade": "low"
     },
     "records_clean": 457
   },
@@ -1108,7 +1148,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.654,
+      "grade": "low"
     },
     "records_clean": 971
   },
@@ -1161,7 +1203,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.78,
+      "grade": "standard"
     },
     "records_clean": 1188
   },
@@ -1214,7 +1258,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.854,
+      "grade": "standard"
     },
     "records_clean": 745
   },
@@ -1267,7 +1313,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.777,
+      "grade": "standard"
     },
     "records_clean": 1859
   },
@@ -1320,7 +1368,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.688,
+      "grade": "standard"
     },
     "records_clean": 4900
   },
@@ -1373,7 +1423,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.769,
+      "grade": "standard"
     },
     "records_clean": 2967
   },
@@ -1426,7 +1478,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.705,
+      "grade": "low"
     },
     "records_clean": 532
   },
@@ -1479,7 +1533,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.61,
+      "grade": "low"
     },
     "records_clean": 298
   },
@@ -1532,7 +1588,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.809,
+      "grade": "standard"
     },
     "records_clean": 918
   },
@@ -1585,7 +1643,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.755,
+      "grade": "standard"
     },
     "records_clean": 5537
   },
@@ -1638,7 +1698,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.764,
+      "grade": "standard"
     },
     "records_clean": 1720
   },
@@ -1691,7 +1753,9 @@
         "bio8",
         "elevation",
         "slope"
-      ]
+      ],
+      "baseline_auc": 0.918,
+      "grade": "low"
     },
     "records_clean": 280
   }

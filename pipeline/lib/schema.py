@@ -13,6 +13,7 @@ SCHEMAS = {
     "species_list": "species-list.schema.json",
     "meta": "meta.schema.json",
     "feature_collection": "feature-collection.schema.json",
+    "identification": "identification.schema.json",
 }
 
 
@@ -64,6 +65,6 @@ def validate_export(data_dir: Path = config.SITE_DATA) -> list[str]:
     for f in (grid, cells):
         if f.exists() and f.stat().st_size > 300_000:
             problems.append(f"{f.relative_to(data_dir)}: {f.stat().st_size} bytes exceeds 300 KB")
-    if False:
-        problems.append(f"layers/greece_risk_grid.geojson: {grid.stat().st_size} bytes exceeds 300 KB")
+    if (data_dir / "identification.json").exists():
+        check("identification", data_dir / "identification.json")
     return problems

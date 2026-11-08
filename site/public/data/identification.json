@@ -1,0 +1,1142 @@
+{
+  "summary": {
+    "candidates": 35,
+    "modelled": 19,
+    "data_gap": 16,
+    "plants_entering_top10_under_some_alternative": [
+      "urtica-dioica"
+    ],
+    "plants_leaving_top10_under_some_alternative": [
+      "hypericum-perforatum",
+      "hyssopus-officinalis",
+      "juniperus-deltoides",
+      "sideritis-syriaca"
+    ],
+    "plants_moving_in_or_out_of_top10": 5,
+    "disputed_plants_whose_own_top10_status_can_change": [
+      "hypericum-perforatum",
+      "hyssopus-officinalis",
+      "juniperus-deltoides",
+      "sideritis-syriaca"
+    ],
+    "held_fixed": "endemism and conservation status of the published identification; all other 31 plants"
+  },
+  "n_species": 32,
+  "top_n": 10,
+  "plants": [
+    {
+      "slug": "hyssopus-officinalis",
+      "common_name_en": "Hyssop",
+      "greek_name": "ὕσσωπος",
+      "published": {
+        "taxon": "Hyssopus officinalis L.",
+        "source": "Sprengel 1830, vol. 2, pp. 506-507 (Comm. III cap. XXVII): Dioscorides gives no diagnostic indication; Sprengel conjectures Origanum aegyptiacum / O. syriacum / O. smyrnaeum and states that 'our' hyssop (H. officinalis), spontaneous in S France and Italy, is 'neque in Graecia, Syria, aut Aegypto obvii' and was given the name by medieval writers (first figured by Tragus). He does NOT identify ὕσσωπ",
+        "rank": 2,
+        "rank_lo": 2,
+        "rank_hi": 3,
+        "score": 0.569,
+        "score_lo": 0.524,
+        "score_hi": 0.592,
+        "range_change": {
+          "median": -68.5,
+          "min": -74.4,
+          "max": -57.4
+        },
+        "cultivation_km2": {
+          "median": 374.0,
+          "min": 211.0,
+          "max": 650.0
+        },
+        "grade": "low",
+        "auc": 0.631,
+        "baseline_auc": 0.639
+      },
+      "candidates": [
+        {
+          "taxon_as_cited": "Origanum syriacum L.",
+          "query_name": "Origanum syriacum",
+          "source": "Origanum syriacum / O. aegyptiacum / O. smyrnaeum — Sprengel 1830, vol. 2, p. 507 (Sprengel's own conjecture)",
+          "records": 0,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        },
+        {
+          "taxon_as_cited": "Origanum aegyptiacum L.",
+          "query_name": "Origanum aegyptiacum",
+          "source": "Origanum syriacum / O. aegyptiacum / O. smyrnaeum — Sprengel 1830, vol. 2, p. 507 (Sprengel's own conjecture)",
+          "records": 0,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        },
+        {
+          "taxon_as_cited": "Origanum smyrnaeum L.",
+          "query_name": "Origanum smyrnaeum",
+          "source": "Origanum syriacum / O. aegyptiacum / O. smyrnaeum — Sprengel 1830, vol. 2, p. 507 (Sprengel's own conjecture) | Origanum smyrnaeum vel syriacum L. — Fraas 1845, p. 182",
+          "records": 16,
+          "grade": "low",
+          "note": null,
+          "auc": 0.655,
+          "baseline_auc": 0.601,
+          "rank": 3,
+          "rank_lo": 3,
+          "rank_hi": 4,
+          "score": 0.496,
+          "score_lo": 0.458,
+          "score_hi": 0.496,
+          "range_change": {
+            "median": -49.9,
+            "min": -49.9,
+            "max": -40.4
+          },
+          "cultivation_km2": {
+            "median": 2730.0,
+            "min": 2416.0,
+            "max": 3909.0
+          },
+          "in_top10": true
+        },
+        {
+          "taxon_as_cited": "Thymbra spicata L.",
+          "query_name": "Thymbra spicata",
+          "source": "Thymbra spicata L. — Sibthorp, cited and rejected by Sprengel 1830, vol. 2, p. 507",
+          "records": 23,
+          "grade": "low",
+          "note": null,
+          "auc": 0.744,
+          "baseline_auc": 0.77,
+          "rank": 19,
+          "rank_lo": 19,
+          "rank_hi": 19,
+          "score": 0.289,
+          "score_lo": 0.289,
+          "score_hi": 0.289,
+          "range_change": {
+            "median": 11.2,
+            "min": 5.1,
+            "max": 27.9
+          },
+          "cultivation_km2": {
+            "median": 3320.0,
+            "min": 2312.0,
+            "max": 3911.0
+          },
+          "in_top10": false
+        },
+        {
+          "taxon_as_cited": "Thymbra verticillata L.",
+          "query_name": "Thymbra verticillata",
+          "source": "Thymbra verticillata L. — Dalechamp, cited by Sprengel 1830, vol. 2, p. 507",
+          "records": 1,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        },
+        {
+          "taxon_as_cited": "Teucrium pseudhyssopus Schreb.",
+          "query_name": "Teucrium pseudhyssopus",
+          "source": "Teucrium pseudhyssopus Schreb. — Fabius Columna, cited by Sprengel 1830, vol. 2, p. 507",
+          "records": 1,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        },
+        {
+          "taxon_as_cited": "Satureja graeca L.",
+          "query_name": "Satureja graeca",
+          "source": "Satureja graeca / S. juliana (modern Greek name ὕσσωπος) — Sibthorp, cited by Sprengel 1830, vol. 2, p. 507 ('nullo modo cum Hyssopo Dioscoridis congruunt')",
+          "records": 158,
+          "grade": "low",
+          "note": null,
+          "auc": 0.843,
+          "baseline_auc": 0.853,
+          "rank": 4,
+          "rank_lo": 4,
+          "rank_hi": 5,
+          "score": 0.447,
+          "score_lo": 0.419,
+          "score_hi": 0.464,
+          "range_change": {
+            "median": -38.2,
+            "min": -42.3,
+            "max": -31.2
+          },
+          "cultivation_km2": {
+            "median": 2618.0,
+            "min": 2168.0,
+            "max": 3978.0
+          },
+          "in_top10": true
+        },
+        {
+          "taxon_as_cited": "Satureja juliana L.",
+          "query_name": "Satureja juliana",
+          "source": "Satureja graeca / S. juliana (modern Greek name ὕσσωπος) — Sibthorp, cited by Sprengel 1830, vol. 2, p. 507 ('nullo modo cum Hyssopo Dioscoridis congruunt')",
+          "records": 423,
+          "grade": "standard",
+          "note": null,
+          "auc": 0.843,
+          "baseline_auc": 0.791,
+          "rank": 11,
+          "rank_lo": 11,
+          "rank_hi": 11,
+          "score": 0.298,
+          "score_lo": 0.298,
+          "score_hi": 0.298,
+          "range_change": {
+            "median": 110.4,
+            "min": 96.1,
+            "max": 110.6
+          },
+          "cultivation_km2": {
+            "median": 22756.0,
+            "min": 19242.0,
+            "max": 24885.0
+          },
+          "in_top10": false
+        }
+      ],
+      "rank_min": 2,
+      "rank_max": 19,
+      "top10_status_changes": true
+    },
+    {
+      "slug": "sideritis-syriaca",
+      "common_name_en": "Cretan mountain tea / ironwort",
+      "greek_name": "σιδηρῖτις",
+      "published": {
+        "taxon": "Sideritis syriaca L.",
+        "source": "Sprengel 1830, vol. 2, pp. 588-589 (Comm. IV cap. XXXIII, Sideritis prima): Matthiolus 'hallucinatus est' proposing Lycopus europaeus; 'Magis placet Fuchsii sententia, qui Stachyos rectae effigiem huc collocat'; Fab. Columna proposed Stachys heraclea All., Clusius Sideritis scordioides. Sprengel does NOT name Sideritis syriaca or any Sideritis as Dioscorides' plant. | Fraas 1845, p. 175: Sideritis",
+        "rank": 4,
+        "rank_lo": 4,
+        "rank_hi": 5,
+        "score": 0.491,
+        "score_lo": 0.42,
+        "score_hi": 0.501,
+        "range_change": {
+          "median": -49.8,
+          "min": -52.3,
+          "max": -32.0
+        },
+        "cultivation_km2": {
+          "median": 272.0,
+          "min": 118.0,
+          "max": 784.0
+        },
+        "grade": "low",
+        "auc": 0.876,
+        "baseline_auc": 0.792
+      },
+      "candidates": [
+        {
+          "taxon_as_cited": "Stachys recta L.",
+          "query_name": "Stachys recta",
+          "source": "Stachys recta L. — Fuchs, preferred by Sprengel 1830, vol. 2, p. 589 | Stachys recta L. — Osbaldeston 2000, ch. 4-33",
+          "records": 109,
+          "grade": "low",
+          "note": null,
+          "auc": 0.765,
+          "baseline_auc": 0.847,
+          "rank": 10,
+          "rank_lo": 10,
+          "rank_hi": 10,
+          "score": 0.326,
+          "score_lo": 0.323,
+          "score_hi": 0.326,
+          "range_change": {
+            "median": -7.2,
+            "min": -7.2,
+            "max": -6.3
+          },
+          "cultivation_km2": {
+            "median": 12793.0,
+            "min": 11183.0,
+            "max": 14733.0
+          },
+          "in_top10": true
+        },
+        {
+          "taxon_as_cited": "Lycopus europaeus L.",
+          "query_name": "Lycopus europaeus",
+          "source": "Lycopus europaeus L. — Matthiolus, rejected by Sprengel 1830, vol. 2, p. 588",
+          "records": 146,
+          "grade": "low",
+          "note": null,
+          "auc": 0.748,
+          "baseline_auc": 0.663,
+          "rank": 11,
+          "rank_lo": 11,
+          "rank_hi": 17,
+          "score": 0.307,
+          "score_lo": 0.295,
+          "score_hi": 0.308,
+          "range_change": {
+            "median": -3.0,
+            "min": -3.3,
+            "max": 13.1
+          },
+          "cultivation_km2": {
+            "median": 16017.0,
+            "min": 14557.0,
+            "max": 18035.0
+          },
+          "in_top10": false
+        },
+        {
+          "taxon_as_cited": "Stachys heraclea All.",
+          "query_name": "Stachys heraclea",
+          "source": "Stachys heraclea All. — Fab. Columna, cited by Sprengel 1830, vol. 2, p. 589",
+          "records": 0,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        },
+        {
+          "taxon_as_cited": "Sideritis scordioides L.",
+          "query_name": "Sideritis scordioides",
+          "source": "Sideritis scordioides L. — Clusius, cited by Sprengel 1830, vol. 2, p. 589",
+          "records": 0,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        }
+      ],
+      "rank_min": 4,
+      "rank_max": 11,
+      "top10_status_changes": true
+    },
+    {
+      "slug": "paeonia-greece",
+      "common_name_en": "Wild peonies of Greece",
+      "greek_name": "γλυκυσίδη",
+      "published": {
+        "taxon": "Paeonia L. (wild Greek species pooled)",
+        "source": "Sprengel 1830, vol. 2, pp. 561-562 (Comm. III cap. CXLVII): 'Duas Dioscorides enumerat species, marem iuglandis, et feminam smyrnii foliis. Illam habeo Paeoniam nostram officinalem, vel arietinam Anders. et peregrinam Mill., foliis subtus pubescentibus a priore distinctam: feminam vero P. corallinam Retz. Qui contrarium proferunt, haud sedulo comparasse foliorum formas videntur. Folia enim Smyrnii",
+        "rank": 5,
+        "rank_lo": 4,
+        "rank_hi": 5,
+        "score": 0.442,
+        "score_lo": 0.415,
+        "score_hi": 0.509,
+        "range_change": {
+          "median": -23.9,
+          "min": -40.6,
+          "max": -17.3
+        },
+        "cultivation_km2": {
+          "median": 3994.0,
+          "min": 2686.0,
+          "max": 6121.0
+        },
+        "grade": "standard",
+        "auc": 0.822,
+        "baseline_auc": 0.662
+      },
+      "candidates": [
+        {
+          "taxon_as_cited": "Paeonia officinalis L.",
+          "query_name": "Paeonia officinalis",
+          "source": "male peony = Paeonia officinalis / P. arietina Anders. / P. peregrina Mill. — Sprengel 1830, vol. 2, p. 561 | male = Paeonia corallina Retz.; female (γλυκυσίδη) = P. officinalis L. — Fraas 1845, pp. 134-135 (explicitly contradicts Sprengel) | Paeonia officinalis var. foemina — Osbaldeston 2000, ch. 3-157",
+          "records": 5,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        },
+        {
+          "taxon_as_cited": "Paeonia arietina Anders.",
+          "query_name": "Paeonia arietina",
+          "source": "male peony = Paeonia officinalis / P. arietina Anders. / P. peregrina Mill. — Sprengel 1830, vol. 2, p. 561",
+          "records": 1,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        },
+        {
+          "taxon_as_cited": "Paeonia peregrina Mill.",
+          "query_name": "Paeonia peregrina",
+          "source": "male peony = Paeonia officinalis / P. arietina Anders. / P. peregrina Mill. — Sprengel 1830, vol. 2, p. 561",
+          "records": 69,
+          "grade": "standard",
+          "note": null,
+          "auc": 0.855,
+          "baseline_auc": 0.828,
+          "rank": 1,
+          "rank_lo": 1,
+          "rank_hi": 1,
+          "score": 0.673,
+          "score_lo": 0.641,
+          "score_hi": 0.713,
+          "range_change": {
+            "median": -81.5,
+            "min": -91.4,
+            "max": -73.4
+          },
+          "cultivation_km2": {
+            "median": 305.0,
+            "min": 96.0,
+            "max": 1274.0
+          },
+          "in_top10": true
+        },
+        {
+          "taxon_as_cited": "Paeonia corallina Retz.",
+          "query_name": "Paeonia corallina",
+          "source": "female peony = Paeonia corallina Retz. — Sprengel 1830, vol. 2, p. 562 | male = Paeonia corallina Retz.; female (γλυκυσίδη) = P. officinalis L. — Fraas 1845, pp. 134-135 (explicitly contradicts Sprengel)",
+          "records": 7,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        }
+      ],
+      "rank_min": 1,
+      "rank_max": 5,
+      "top10_status_changes": false
+    },
+    {
+      "slug": "juniperus-deltoides",
+      "common_name_en": "Prickly juniper (eastern)",
+      "greek_name": "ἄρκευθος",
+      "published": {
+        "taxon": "Juniperus deltoides R.P.Adams",
+        "source": "Wellmann (ed.) 1907, DMM I 75: \"ἄρκευθος· ἡ μέν τίς ἐστι μεγάλη ἡ δὲ μικρά\" (large and small kinds; RV: Ῥωμαῖοι ζουνιπέρουμ); Osbaldeston 2000 ch. 1-103 suggests Juniperus excelsa and J. communis.",
+        "rank": 8,
+        "rank_lo": 7,
+        "rank_hi": 9,
+        "score": 0.384,
+        "score_lo": 0.358,
+        "score_hi": 0.392,
+        "range_change": {
+          "median": -22.5,
+          "min": -24.5,
+          "max": -15.8
+        },
+        "cultivation_km2": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "grade": "standard",
+        "auc": 0.769,
+        "baseline_auc": 0.662
+      },
+      "candidates": [
+        {
+          "taxon_as_cited": "Juniperus communis L.",
+          "query_name": "Juniperus communis",
+          "source": "Juniperus communis L. — Osbaldeston 2000, ch. 1-103",
+          "records": 308,
+          "grade": "standard",
+          "note": null,
+          "auc": 0.87,
+          "baseline_auc": 0.815,
+          "rank": 14,
+          "rank_lo": 14,
+          "rank_hi": 14,
+          "score": 0.296,
+          "score_lo": 0.296,
+          "score_hi": 0.296,
+          "range_change": {
+            "median": 38.7,
+            "min": 23.0,
+            "max": 43.3
+          },
+          "cultivation_km2": {
+            "median": 7905.0,
+            "min": 5375.0,
+            "max": 9847.0
+          },
+          "in_top10": false
+        },
+        {
+          "taxon_as_cited": "Juniperus excelsa M.Bieb.",
+          "query_name": "Juniperus excelsa",
+          "source": "Juniperus excelsa M.Bieb. — Osbaldeston 2000, ch. 1-103",
+          "records": 61,
+          "grade": "standard",
+          "note": null,
+          "auc": 0.769,
+          "baseline_auc": 0.68,
+          "rank": 17,
+          "rank_lo": 17,
+          "rank_hi": 17,
+          "score": 0.295,
+          "score_lo": 0.295,
+          "score_hi": 0.295,
+          "range_change": {
+            "median": 16.7,
+            "min": 11.9,
+            "max": 17.6
+          },
+          "cultivation_km2": {
+            "median": 8916.0,
+            "min": 6577.0,
+            "max": 12430.0
+          },
+          "in_top10": false
+        }
+      ],
+      "rank_min": 8,
+      "rank_max": 17,
+      "top10_status_changes": true
+    },
+    {
+      "slug": "hypericum-perforatum",
+      "common_name_en": "St John's wort",
+      "greek_name": "ὑπερικόν",
+      "published": {
+        "taxon": "Hypericum perforatum L.",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CLXI, pp. 566-567 (finds no Hypericum matching ὑπερικόν exactly except H. barbatum Jacq.; Sibthorp's H. crispum 'less pertinent'; assigns H. perforatum to ἄσκυρον, cap. CLXII)",
+        "rank": 10,
+        "rank_lo": 10,
+        "rank_hi": 10,
+        "score": 0.335,
+        "score_lo": 0.318,
+        "score_hi": 0.337,
+        "range_change": {
+          "median": -9.3,
+          "min": -9.9,
+          "max": -5.0
+        },
+        "cultivation_km2": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "grade": "standard",
+        "auc": 0.772,
+        "baseline_auc": 0.714
+      },
+      "candidates": [
+        {
+          "taxon_as_cited": "Hypericum barbatum Jacq.",
+          "query_name": "Hypericum barbatum",
+          "source": "Hypericum barbatum Jacq. — Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 567",
+          "records": 79,
+          "grade": "standard",
+          "note": null,
+          "auc": 0.946,
+          "baseline_auc": 0.907,
+          "rank": 11,
+          "rank_lo": 11,
+          "rank_hi": 17,
+          "score": 0.303,
+          "score_lo": 0.295,
+          "score_hi": 0.306,
+          "range_change": {
+            "median": -2.3,
+            "min": -2.9,
+            "max": -0.2
+          },
+          "cultivation_km2": {
+            "median": 455.0,
+            "min": 213.0,
+            "max": 635.0
+          },
+          "in_top10": false
+        },
+        {
+          "taxon_as_cited": "Hypericum crispum L. (= H. triquetrifolium Turra)",
+          "query_name": "Hypericum triquetrifolium",
+          "source": "Hypericum crispum L. (= H. triquetrifolium Turra) (Sibthorp, as reported by Sprengel) — Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 567",
+          "records": 507,
+          "grade": "standard",
+          "note": null,
+          "auc": 0.807,
+          "baseline_auc": 0.762,
+          "rank": 22,
+          "rank_lo": 22,
+          "rank_hi": 22,
+          "score": 0.287,
+          "score_lo": 0.287,
+          "score_hi": 0.287,
+          "range_change": {
+            "median": 28.2,
+            "min": 23.9,
+            "max": 34.4
+          },
+          "cultivation_km2": {
+            "median": 7741.0,
+            "min": 6149.0,
+            "max": 9044.0
+          },
+          "in_top10": false
+        }
+      ],
+      "rank_min": 10,
+      "rank_max": 22,
+      "top10_status_changes": true
+    },
+    {
+      "slug": "plantago-lanceolata",
+      "common_name_en": "Ribwort plantain",
+      "greek_name": "ἀρνόγλωσσον",
+      "published": {
+        "taxon": "Plantago lanceolata L.",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. II cap. CLII, p. 465 (the larger arnoglosson is usually taken as Plantago major, but Sprengel prefers P. asiatica or P. altissima Jacq.; the smaller was P. lagopus for Sibthorp, P. lanceolata for the 'fathers of botan",
+        "rank": 12,
+        "rank_lo": 12,
+        "rank_hi": 12,
+        "score": 0.298,
+        "score_lo": 0.298,
+        "score_hi": 0.298,
+        "range_change": {
+          "median": 69.3,
+          "min": 54.7,
+          "max": 74.5
+        },
+        "cultivation_km2": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "grade": "standard",
+        "auc": 0.753,
+        "baseline_auc": 0.709
+      },
+      "candidates": [
+        {
+          "taxon_as_cited": "Plantago major L.",
+          "query_name": "Plantago major",
+          "source": "Plantago major L. (larger kind, majority view) — Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465",
+          "records": 714,
+          "grade": "low",
+          "note": null,
+          "auc": 0.68,
+          "baseline_auc": 0.669,
+          "rank": 17,
+          "rank_lo": 17,
+          "rank_hi": 17,
+          "score": 0.295,
+          "score_lo": 0.295,
+          "score_hi": 0.295,
+          "range_change": {
+            "median": 88.7,
+            "min": 67.6,
+            "max": 91.3
+          },
+          "cultivation_km2": {
+            "median": 25568.0,
+            "min": 22515.0,
+            "max": 26423.0
+          },
+          "in_top10": false
+        },
+        {
+          "taxon_as_cited": "Plantago lagopus L.",
+          "query_name": "Plantago lagopus",
+          "source": "Plantago lagopus L. (smaller kind) — Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465",
+          "records": 1028,
+          "grade": "standard",
+          "note": null,
+          "auc": 0.787,
+          "baseline_auc": 0.727,
+          "rank": 19,
+          "rank_lo": 19,
+          "rank_hi": 19,
+          "score": 0.292,
+          "score_lo": 0.292,
+          "score_hi": 0.292,
+          "range_change": {
+            "median": 65.3,
+            "min": 62.1,
+            "max": 69.0
+          },
+          "cultivation_km2": {
+            "median": 12945.0,
+            "min": 12076.0,
+            "max": 13606.0
+          },
+          "in_top10": false
+        },
+        {
+          "taxon_as_cited": "Plantago maritima L.",
+          "query_name": "Plantago maritima",
+          "source": "Plantago maritima L. (smaller kind) — Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465",
+          "records": 8,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        },
+        {
+          "taxon_as_cited": "Plantago asiatica L.",
+          "query_name": "Plantago asiatica",
+          "source": "Plantago asiatica L. / P. altissima Jacq. (larger kind) — Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465",
+          "records": 0,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        },
+        {
+          "taxon_as_cited": "Plantago altissima Jacq.",
+          "query_name": "Plantago altissima",
+          "source": "Plantago asiatica L. / P. altissima Jacq. (larger kind) — Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 465",
+          "records": 9,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        }
+      ],
+      "rank_min": 12,
+      "rank_max": 19,
+      "top10_status_changes": false
+    },
+    {
+      "slug": "teucrium-chamaedrys",
+      "common_name_en": "Wall germander",
+      "greek_name": "χαμαίδρυς",
+      "published": {
+        "taxon": "Teucrium chamaedrys L.",
+        "source": "Sprengel 1830, vol. 2, pp. 539-540 (Comm. III cap. CII): χαμαίδρυς named for the oak-like leaves; Tragus called it Teucrium chamaedrys, Brunfels Veronica chamaedrys (rejected by C. Gesner and Bauhin); 'accedente et Sibthorpio, subsistamus in Teucrio Chamaedry, in Graecia, ut per totam fere Europam, satis vulgari.' | Fraas 1845, p. 173 DISAGREES: χαμαίδρυς Diosc. 3,102 = Teucrium lucidum L. (Gamand",
+        "rank": 13,
+        "rank_lo": 13,
+        "rank_hi": 13,
+        "score": 0.297,
+        "score_lo": 0.297,
+        "score_hi": 0.297,
+        "range_change": {
+          "median": 14.3,
+          "min": 9.1,
+          "max": 14.9
+        },
+        "cultivation_km2": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "grade": "standard",
+        "auc": 0.781,
+        "baseline_auc": 0.756
+      },
+      "candidates": [
+        {
+          "taxon_as_cited": "Veronica chamaedrys L.",
+          "query_name": "Veronica chamaedrys",
+          "source": "Veronica chamaedrys L. — Brunfels, cited by Sprengel 1830, vol. 2, p. 540 (called false/spurious by Gesner and Bauhin)",
+          "records": 590,
+          "grade": "standard",
+          "note": null,
+          "auc": 0.822,
+          "baseline_auc": 0.77,
+          "rank": 12,
+          "rank_lo": 11,
+          "rank_hi": 12,
+          "score": 0.313,
+          "score_lo": 0.305,
+          "score_hi": 0.323,
+          "range_change": {
+            "median": -4.0,
+            "min": -6.6,
+            "max": -2.0
+          },
+          "cultivation_km2": {
+            "median": 3888.0,
+            "min": 3227.0,
+            "max": 4481.0
+          },
+          "in_top10": false
+        },
+        {
+          "taxon_as_cited": "Teucrium lucidum L.",
+          "query_name": "Teucrium lucidum",
+          "source": "Teucrium lucidum L. — Fraas 1845, p. 173",
+          "records": 0,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        },
+        {
+          "taxon_as_cited": "Teucrium botrys L.",
+          "query_name": "Teucrium botrys",
+          "source": "Teucrium botrys; Veronica chamaedrys — Osbaldeston 2000, ch. 3-112",
+          "records": 1,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        }
+      ],
+      "rank_min": 12,
+      "rank_max": 13,
+      "top10_status_changes": false
+    },
+    {
+      "slug": "matricaria-chamomilla",
+      "common_name_en": "German chamomile",
+      "greek_name": "ἀνθεμίς",
+      "published": {
+        "taxon": "Matricaria chamomilla L.",
+        "source": "Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, Comm. lib. III cap. CXLIV, p. 559 (anthemis = three species by ray colour; Sibthorp: Anthemis chia, A. tinctoria, A. rosea; Lobel: Matricaria chamomilla / Anthemis nobilis for the white-rayed kind) and cap. CXLV, p. 560 (Sprenge",
+        "rank": 16,
+        "rank_lo": 16,
+        "rank_hi": 16,
+        "score": 0.296,
+        "score_lo": 0.296,
+        "score_hi": 0.296,
+        "range_change": {
+          "median": 65.3,
+          "min": 60.9,
+          "max": 70.5
+        },
+        "cultivation_km2": {
+          "median": 9565.0,
+          "min": 8335.0,
+          "max": 10505.0
+        },
+        "grade": "standard",
+        "auc": 0.784,
+        "baseline_auc": 0.708
+      },
+      "candidates": [
+        {
+          "taxon_as_cited": "Anthemis chia L.",
+          "query_name": "Anthemis chia",
+          "source": "Anthemis chia L. — Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559",
+          "records": 349,
+          "grade": "standard",
+          "note": null,
+          "auc": 0.814,
+          "baseline_auc": 0.798,
+          "rank": 18,
+          "rank_lo": 18,
+          "rank_hi": 18,
+          "score": 0.294,
+          "score_lo": 0.294,
+          "score_hi": 0.294,
+          "range_change": {
+            "median": 39.6,
+            "min": 36.3,
+            "max": 45.0
+          },
+          "cultivation_km2": {
+            "median": 11826.0,
+            "min": 9913.0,
+            "max": 12627.0
+          },
+          "in_top10": false
+        },
+        {
+          "taxon_as_cited": "Anthemis tinctoria L. (= Cota tinctoria)",
+          "query_name": "Cota tinctoria",
+          "source": "Anthemis tinctoria L. (= Cota tinctoria) — Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559",
+          "records": 396,
+          "grade": "standard",
+          "note": null,
+          "auc": 0.819,
+          "baseline_auc": 0.749,
+          "rank": 13,
+          "rank_lo": 13,
+          "rank_hi": 13,
+          "score": 0.298,
+          "score_lo": 0.298,
+          "score_hi": 0.298,
+          "range_change": {
+            "median": 35.1,
+            "min": 25.9,
+            "max": 44.8
+          },
+          "cultivation_km2": {
+            "median": 7240.0,
+            "min": 5367.0,
+            "max": 9003.0
+          },
+          "in_top10": false
+        },
+        {
+          "taxon_as_cited": "Anthemis rosea Sibth. & Sm.",
+          "query_name": "Anthemis rosea",
+          "source": "Anthemis rosea Sibth. & Sm. — Sibthorp per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559",
+          "records": 8,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        },
+        {
+          "taxon_as_cited": "Anthemis nobilis L. (= Chamaemelum nobile)",
+          "query_name": "Chamaemelum nobile",
+          "source": "Anthemis nobilis L. (= Chamaemelum nobile) — Lobel per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559",
+          "records": 3,
+          "grade": "data gap",
+          "note": "fewer than 10 thinned GBIF records in the study box",
+          "auc": null,
+          "baseline_auc": null,
+          "rank": null,
+          "rank_lo": null,
+          "rank_hi": null,
+          "score": null,
+          "score_lo": null,
+          "score_hi": null,
+          "range_change": null,
+          "cultivation_km2": null,
+          "in_top10": null
+        },
+        {
+          "taxon_as_cited": "Anacyclus aureus",
+          "query_name": "Anacyclus aureus",
+          "source": "Anacyclus aureus (yellow kind) — Lobel per Sprengel, K. 1830. Pedanii Dioscoridis Anazarbei De materia medica libri quinque, tomus secundus (Commentarius in Dioscoridem), Medicorum Graecorum Opera vol. 26, Leipzig, p. 559",
+          "records": 77,
+          "grade": "standard",
+          "note": null,
+          "auc": 0.877,
+          "baseline_auc": 0.838,
+          "rank": 25,
+          "rank_lo": 25,
+          "rank_hi": 25,
+          "score": 0.281,
+          "score_lo": 0.281,
+          "score_hi": 0.281,
+          "range_change": {
+            "median": 229.4,
+            "min": 171.6,
+            "max": 239.5
+          },
+          "cultivation_km2": {
+            "median": 16851.0,
+            "min": 11679.0,
+            "max": 19015.0
+          },
+          "in_top10": false
+        }
+      ],
+      "rank_min": 13,
+      "rank_max": 25,
+      "top10_status_changes": false
+    },
+    {
+      "slug": "salvia-fruticosa",
+      "common_name_en": "Greek sage",
+      "greek_name": "ἐλελίσφακον",
+      "published": {
+        "taxon": "Salvia fruticosa Mill.",
+        "source": "Sprengel 1830, vol. 2, p. 510 (Comm. III cap. XXXV, ἐλελίσφακον): 'Quaenam salviae species intelligatur, potest omnino ambigi. Vero tamen est haud absimile, Salviam nostram officinalem, quae in asperis omnis Graeciae locis provenit, hac appellatione comprehendi.' Sprengel names Salvia officinalis (tentatively), NOT S. fruticosa; the species is explicitly said to be open to doubt. | Fraas 1845, p. ",
+        "rank": 22,
+        "rank_lo": 22,
+        "rank_hi": 22,
+        "score": 0.287,
+        "score_lo": 0.287,
+        "score_hi": 0.287,
+        "range_change": {
+          "median": 27.9,
+          "min": 23.1,
+          "max": 46.7
+        },
+        "cultivation_km2": {
+          "median": 3146.0,
+          "min": 2181.0,
+          "max": 4720.0
+        },
+        "grade": "standard",
+        "auc": 0.855,
+        "baseline_auc": 0.78
+      },
+      "candidates": [
+        {
+          "taxon_as_cited": "Salvia officinalis L.",
+          "query_name": "Salvia officinalis",
+          "source": "Salvia officinalis L. — Sprengel 1830, vol. 2, p. 510 | Salvia officinalis L. — Osbaldeston 2000, ch. 3-40",
+          "records": 232,
+          "grade": "low",
+          "note": null,
+          "auc": 0.764,
+          "baseline_auc": 0.787,
+          "rank": 15,
+          "rank_lo": 15,
+          "rank_hi": 15,
+          "score": 0.296,
+          "score_lo": 0.296,
+          "score_hi": 0.296,
+          "range_change": {
+            "median": 92.4,
+            "min": 87.1,
+            "max": 98.1
+          },
+          "cultivation_km2": {
+            "median": 29371.0,
+            "min": 25770.0,
+            "max": 30817.0
+          },
+          "in_top10": false
+        },
+        {
+          "taxon_as_cited": "Salvia pomifera L.",
+          "query_name": "Salvia pomifera",
+          "source": "Salvia pomifera L. (incl. S. triloba = S. fruticosa, as synonyms) — Fraas 1845, p. 184",
+          "records": 106,
+          "grade": "low",
+          "note": null,
+          "auc": 0.852,
+          "baseline_auc": 0.915,
+          "rank": 20,
+          "rank_lo": 11,
+          "rank_hi": 20,
+          "score": 0.289,
+          "score_lo": 0.289,
+          "score_hi": 0.325,
+          "range_change": {
+            "median": 8.4,
+            "min": -9.0,
+            "max": 10.2
+          },
+          "cultivation_km2": {
+            "median": 9933.0,
+            "min": 7311.0,
+            "max": 12934.0
+          },
+          "in_top10": false
+        }
+      ],
+      "rank_min": 15,
+      "rank_max": 22,
+      "top10_status_changes": false
+    }
+  ]
+}

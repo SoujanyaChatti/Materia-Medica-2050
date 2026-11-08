@@ -65,5 +65,12 @@
         85.32477947072975
       ]
     }
-  }
+  },
+  "baseline": {
+    "auc_mean": 0.9176542824847095,
+    "auc_sd": 0.023522447051984828,
+    "folds_used": 5,
+    "method": "inverse distance to nearest training record, same spatial-block folds"
+  },
+  "grade": "low"
 }

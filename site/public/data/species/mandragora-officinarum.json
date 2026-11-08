@@ -71,7 +71,9 @@
       "bio8",
       "elevation",
       "slope"
-    ]
+    ],
+    "baseline_auc": 0.918,
+    "grade": "low"
   },
   "range_change_pct": {
     "ssp245": {

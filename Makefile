@@ -8,7 +8,7 @@ STAGES  := pipeline
 SITE    := site
 export FORCE
 
-.PHONY: help env data species occurrences environment models risk cultivation web action site sample test all clean
+.PHONY: help env data species occurrences environment models risk cultivation web action identification grades site sample test all clean
 
 help:
 	@echo "make env      create the conda env from environment.yml"
@@ -17,6 +17,7 @@ help:
 	@echo "make risk     risk score, sensitivity analysis, cultivation suitability"
 	@echo "make web      export site/public/data (validated against site/schema)"
 	@echo "make action   grower index + identification lineage for the site (stdlib only)"
+	@echo "make grades   rival identifications (stage 09), distance baseline + model grades (10), site export (11)"
 	@echo "make site     build the static website into site/dist"
 	@echo "make sample   write clearly labelled SAMPLE data for the site (no pipeline needed)"
 	@echo "make test     run pytest"
@@ -45,6 +46,16 @@ web: risk cultivation
 	$(PY) $(STAGES)/07_export_web.py
 	$(PY) $(STAGES)/08_action_layers.py
 
+# Stage 09 models every rival identification of the disputed plants (~10 min); 10 grades all models
+# against a distance-only baseline; 11 exports the result for the site.
+identification: risk cultivation
+	$(PY) $(STAGES)/09_identification_sensitivity.py
+grades: identification
+	$(PY) $(STAGES)/10_model_grades.py
+	$(PY) $(STAGES)/07_export_web.py
+	$(PY) $(STAGES)/08_action_layers.py
+	$(PY) $(STAGES)/11_export_identification.py
+
 # Stage 08 reads only stage-07 exports and curated CSVs, so it can be re-run on its own.
 action:
 	$(PY) $(STAGES)/08_action_layers.py
@@ -58,7 +69,7 @@ sample:
 test:
 	$(PY) -m pytest -q
 
-all: web test site
+all: web grades test site
 
 clean:
 	rm -rf data/processed/* outputs/metrics/*.json outputs/rasters outputs/models

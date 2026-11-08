@@ -1,0 +1,68 @@
+model,kind,plant,records_thinned,auc,auc_sd,baseline_auc,null_auc,beats_baseline,grade
+althaea-officinalis,published,althaea-officinalis,54,0.869428885079528,0.07011385293963023,0.7725371723799717,0.5481207817098388,True,standard
+artemisia-absinthium,published,artemisia-absinthium,41,0.7772772104355514,0.1283137590413115,0.7766948614550794,0.49350951459110187,True,standard
+capparis-spinosa,published,capparis-spinosa,952,0.8491561733435532,0.01923140204819055,0.7636565983335414,0.504976134111614,True,standard
+centaurium-erythraea,published,centaurium-erythraea,492,0.7115046397825056,0.04836335757554907,0.7048185184517302,0.5008435095677778,True,low
+cyclamen-graecum,published,cyclamen-graecum,568,0.8354260989210797,0.026370344779996877,0.8090194782349673,0.5010239432018684,True,standard
+ecballium-elaterium,published,ecballium-elaterium,2449,0.7520994736160803,0.009236125401459632,0.6878460978756559,0.4953378488035988,True,standard
+foeniculum-vulgare,published,foeniculum-vulgare,819,0.729447143373285,0.021622455763738006,0.6542475128221416,0.4946972529894554,True,low
+glaucium-flavum,published,glaucium-flavum,1306,0.8726118995328556,0.020706879839221624,0.7686408301697362,0.5049986194564531,True,standard
+glycyrrhiza-glabra,published,glycyrrhiza-glabra,29,0.9394999702853696,0.03917043845246713,0.8626437667402247,0.5462807495443974,True,low
+hypericum-perforatum,published,hypericum-perforatum,765,0.7716084113418578,0.026053541782811513,0.713640806061451,0.4954911827089227,True,standard
+hyssopus-officinalis,published,hyssopus-officinalis,16,0.6313048245614035,0.0,0.6387061403508771,0.5386513157894737,False,low
+juniperus-deltoides,published,juniperus-deltoides,294,0.7687854428487821,0.03159924902761216,0.6624867009773754,0.5012084258023439,True,standard
+lavandula-stoechas,published,lavandula-stoechas,576,0.8559955029375239,0.025302840311089494,0.85430283873882,0.487389341786616,True,standard
+malva-sylvestris,published,malva-sylvestris,1734,0.6683993827243032,0.026092958515404805,0.617122120042532,0.49630797720006364,True,low
+mandragora-officinarum,published,mandragora-officinarum,224,0.904044101885713,0.018734435746696844,0.9176542824847095,0.4836737316792782,False,low
+marrubium-vulgare,published,marrubium-vulgare,236,0.6641103671746895,0.04038636069382907,0.6558105463731657,0.5142851231952585,True,low
+matricaria-chamomilla,published,matricaria-chamomilla,1154,0.7835691645271128,0.01644711455506138,0.7076950876604633,0.4961042460291628,True,standard
+melissa-officinalis,published,melissa-officinalis,394,0.6494114306430044,0.02608329034866717,0.5988462936200649,0.4902495267289467,True,low
+mentha-pulegium,published,mentha-pulegium,266,0.6726645766223253,0.04806332838766996,0.6102037732868847,0.49126310620195535,True,low
+origanum-dictamnus,published,origanum-dictamnus,90,0.9609765563803977,0.01941393036920217,0.9585063947876833,0.4940873333594066,True,standard
+origanum-vulgare,published,origanum-vulgare,350,0.7611842539112265,0.05041349122594849,0.7590659125740326,0.5117927748513178,True,standard
+paeonia-greece,published,paeonia-greece,163,0.8218221548400203,0.060061353312716524,0.661589676636774,0.5253798925136923,True,standard
+pistacia-lentiscus,published,pistacia-lentiscus,3202,0.8333996072445199,0.009616646378170631,0.7545411842861708,0.4989556993636911,True,standard
+plantago-lanceolata,published,plantago-lanceolata,1080,0.7530737088072849,0.031619790909717595,0.7092604928350238,0.5077112967757016,True,standard
+salvia-fruticosa,published,salvia-fruticosa,869,0.8554037562666117,0.0195248232094216,0.7798152236041173,0.5132927561975432,True,standard
+salvia-rosmarinus,published,salvia-rosmarinus,357,0.6932989582392006,0.030708772719026462,0.6615491346227846,0.5051300622881467,True,low
+sambucus-nigra,published,sambucus-nigra,213,0.7336749448187598,0.01824662577864603,0.6738545435065245,0.4700955483984176,True,low
+sideritis-syriaca,published,sideritis-syriaca,22,0.8757929380236273,0.10222240421890726,0.7922670750551359,0.5654169505485416,True,low
+teucrium-capitatum,published,teucrium-capitatum,634,0.748273075549797,0.02518570655813497,0.750051358860442,0.47470437320609393,False,low
+teucrium-chamaedrys,published,teucrium-chamaedrys,525,0.7812161406555772,0.0059274388436700584,0.7555351498900306,0.4968810120921211,True,standard
+thymbra-capitata,published,thymbra-capitata,1291,0.847516483645836,0.0222596787792128,0.7772970159978334,0.5038894348998484,True,standard
+urtica-dioica,published,urtica-dioica,505,0.7604654835983446,0.020210678161769257,0.7269979573541534,0.5150343827105937,True,standard
+paeonia-greece as Paeonia officinalis,candidate identification,paeonia-greece,5,,,,,False,data gap
+paeonia-greece as Paeonia arietina,candidate identification,paeonia-greece,1,,,,,False,data gap
+paeonia-greece as Paeonia peregrina,candidate identification,paeonia-greece,69,0.8553214914247163,0.07450762543838985,0.8279332325466461,0.47502779565416287,True,standard
+paeonia-greece as Paeonia corallina,candidate identification,paeonia-greece,7,,,,,False,data gap
+sideritis-syriaca as Stachys recta,candidate identification,sideritis-syriaca,109,0.7651373909408169,0.04378066057039816,0.84694029614854,0.4737818092525221,False,low
+sideritis-syriaca as Lycopus europaeus,candidate identification,sideritis-syriaca,146,0.7477845442375096,0.04981918404227171,0.662919235162001,0.470208476269656,True,low
+sideritis-syriaca as Stachys heraclea,candidate identification,sideritis-syriaca,0,,,,,False,data gap
+sideritis-syriaca as Sideritis scordioides,candidate identification,sideritis-syriaca,0,,,,,False,data gap
+hyssopus-officinalis as Origanum syriacum,candidate identification,hyssopus-officinalis,0,,,,,False,data gap
+hyssopus-officinalis as Origanum aegyptiacum,candidate identification,hyssopus-officinalis,0,,,,,False,data gap
+hyssopus-officinalis as Origanum smyrnaeum,candidate identification,hyssopus-officinalis,16,0.6548994672185915,0.08371048726389993,0.6010370716609728,0.5558933047378151,True,low
+hyssopus-officinalis as Thymbra spicata,candidate identification,hyssopus-officinalis,23,0.7442520934421432,0.073370599574263,0.7700022708204285,0.4705665891868331,False,low
+hyssopus-officinalis as Thymbra verticillata,candidate identification,hyssopus-officinalis,1,,,,,False,data gap
+hyssopus-officinalis as Teucrium pseudhyssopus,candidate identification,hyssopus-officinalis,1,,,,,False,data gap
+hyssopus-officinalis as Satureja graeca,candidate identification,hyssopus-officinalis,158,0.842568914657118,0.03521357700387714,0.852642308041235,0.49653708824862236,False,low
+hyssopus-officinalis as Satureja juliana,candidate identification,hyssopus-officinalis,423,0.8432087243372279,0.017502142239474605,0.7911603742407994,0.5071388853594799,True,standard
+salvia-fruticosa as Salvia officinalis,candidate identification,salvia-fruticosa,232,0.7640013205583216,0.0424015478288587,0.7873907610332985,0.48626008568157675,False,low
+salvia-fruticosa as Salvia pomifera,candidate identification,salvia-fruticosa,106,0.8517030616257234,0.03166348254675296,0.9153079615396462,0.5225368683199102,False,low
+hypericum-perforatum as Hypericum barbatum,candidate identification,hypericum-perforatum,79,0.945819580434524,0.027210945689090875,0.9071954135079341,0.4791506790082639,True,standard
+hypericum-perforatum as Hypericum triquetrifolium,candidate identification,hypericum-perforatum,507,0.8068083628218249,0.014381034352046585,0.762334245795312,0.5221940247826197,True,standard
+matricaria-chamomilla as Anthemis chia,candidate identification,matricaria-chamomilla,349,0.813614365272071,0.034023065823797854,0.7976816169750347,0.49327250894477037,True,standard
+matricaria-chamomilla as Cota tinctoria,candidate identification,matricaria-chamomilla,396,0.8189031254319925,0.016937965916915577,0.7492916517106466,0.4949065679875944,True,standard
+matricaria-chamomilla as Anthemis rosea,candidate identification,matricaria-chamomilla,8,,,,,False,data gap
+matricaria-chamomilla as Chamaemelum nobile,candidate identification,matricaria-chamomilla,3,,,,,False,data gap
+matricaria-chamomilla as Anacyclus aureus,candidate identification,matricaria-chamomilla,77,0.8773758604897948,0.04509049764257323,0.8375889896308827,0.47057561744156534,True,standard
+plantago-lanceolata as Plantago major,candidate identification,plantago-lanceolata,714,0.6799573975612517,0.029949845557854595,0.6690139472781667,0.48922374192000184,True,low
+plantago-lanceolata as Plantago lagopus,candidate identification,plantago-lanceolata,1028,0.7867480086966286,0.023072978250600836,0.726509372198051,0.5044758898264503,True,standard
+plantago-lanceolata as Plantago maritima,candidate identification,plantago-lanceolata,8,,,,,False,data gap
+plantago-lanceolata as Plantago asiatica,candidate identification,plantago-lanceolata,0,,,,,False,data gap
+plantago-lanceolata as Plantago altissima,candidate identification,plantago-lanceolata,9,,,,,False,data gap
+juniperus-deltoides as Juniperus communis,candidate identification,juniperus-deltoides,308,0.8698254525567297,0.04471776938095785,0.8153296740507721,0.5301040758768556,True,standard
+juniperus-deltoides as Juniperus excelsa,candidate identification,juniperus-deltoides,61,0.7693386178964812,0.08850122015487738,0.6796069879103707,0.47610117666814145,True,standard
+teucrium-chamaedrys as Veronica chamaedrys,candidate identification,teucrium-chamaedrys,590,0.8215723918588095,0.020752281908322324,0.769569751099439,0.49620191773324374,True,standard
+teucrium-chamaedrys as Teucrium lucidum,candidate identification,teucrium-chamaedrys,0,,,,,False,data gap
+teucrium-chamaedrys as Teucrium botrys,candidate identification,teucrium-chamaedrys,1,,,,,False,data gap

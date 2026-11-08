@@ -75,3 +75,37 @@ def boyce_index(presence_scores, background_scores, n_windows: int = 101, window
         return float("nan")
     from scipy.stats import spearmanr  # local import keeps the module light for tests
     return float(spearmanr(centres[ok], pe[ok]).statistic)
+
+
+def distance_baseline_auc(y, lon, lat, folds) -> dict:
+    """Distance-only baseline under the same spatial-block CV as the models.
+
+    For each held-out fold, a test point's suitability is the inverse of its distance to the nearest
+    training presence (equal-area metres, EPSG:3035). Presences vs background, AUC per fold.
+    """
+    from pyproj import Transformer
+    from scipy.spatial import cKDTree
+
+    y = np.asarray(y, dtype=int)
+    x, yy = Transformer.from_crs("EPSG:4326", "EPSG:3035", always_xy=True).transform(np.asarray(lon), np.asarray(lat))
+    pts = np.c_[x, yy]
+    aucs = []
+    for k in np.unique(folds):
+        test, train_pres = folds == k, (folds != k) & (y == 1)
+        if y[test].sum() < 2 or (y[test] == 0).sum() < 2 or train_pres.sum() < 5:
+            continue
+        d, _ = cKDTree(pts[train_pres]).query(pts[test])
+        aucs.append(auc(y[test], 1.0 / (1.0 + d)))
+    return {"auc_mean": float(np.mean(aucs)) if aucs else float("nan"),
+            "auc_sd": float(np.std(aucs)) if aucs else float("nan"), "folds_used": len(aucs),
+            "method": "inverse distance to nearest training record, same spatial-block folds"}
+
+
+def model_grade(n_records: int, auc_mean: float, baseline_auc: float, min_reliable: int = 30,
+                auc_adequate: float = 0.75) -> str:
+    """'data gap' (<10 records), 'standard' (>=30 records, AUC >= 0.75 and beats the distance baseline), else 'low'."""
+    if n_records < 10:
+        return "data gap"
+    ok = (n_records >= min_reliable and np.isfinite(auc_mean) and auc_mean >= auc_adequate
+          and (not np.isfinite(baseline_auc) or auc_mean > baseline_auc))
+    return "standard" if ok else "low"

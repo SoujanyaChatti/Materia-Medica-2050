@@ -81,3 +81,20 @@ def test_validation_metrics():
     assert tss == pytest.approx(1.0)
     folds = validation.spatial_blocks(np.r_[np.full(10, 22.0), np.full(10, 25.0)], np.full(20, 38.0), 25, 5, 0)
     assert len(set(folds[:10])) == 1 and len(set(folds[10:])) == 1  # a block stays in one fold
+
+
+def test_distance_baseline_and_grade():
+    import numpy as np
+    from pipeline.lib import validation
+    rng = np.random.default_rng(0)
+    # presences clustered in one corner, background everywhere: distance baseline should beat chance
+    lon = np.r_[rng.uniform(21, 22, 200), rng.uniform(20, 28, 2000)]
+    lat = np.r_[rng.uniform(37, 38, 200), rng.uniform(35, 41, 2000)]
+    y = np.r_[np.ones(200), np.zeros(2000)].astype(int)
+    folds = validation.spatial_blocks(lon, lat, 25, 5, 1)
+    r = validation.distance_baseline_auc(y, lon, lat, folds)
+    assert r["folds_used"] >= 3 and r["auc_mean"] > 0.7
+    assert validation.model_grade(5, 0.9, 0.5) == "data gap"
+    assert validation.model_grade(40, 0.9, 0.8) == "standard"
+    assert validation.model_grade(40, 0.9, 0.95) == "low"
+    assert validation.model_grade(20, 0.9, 0.5) == "low"

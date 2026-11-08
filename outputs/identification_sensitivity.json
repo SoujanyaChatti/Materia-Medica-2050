@@ -1,0 +1,115 @@
+{
+  "candidates": 35,
+  "modelled": 19,
+  "data_gap": 16,
+  "plants_entering_top10_under_some_alternative": [
+    "urtica-dioica"
+  ],
+  "plants_leaving_top10_under_some_alternative": [
+    "hypericum-perforatum",
+    "hyssopus-officinalis",
+    "juniperus-deltoides",
+    "sideritis-syriaca"
+  ],
+  "plants_moving_in_or_out_of_top10": 5,
+  "disputed_plants_whose_own_top10_status_can_change": [
+    "hypericum-perforatum",
+    "hyssopus-officinalis",
+    "juniperus-deltoides",
+    "sideritis-syriaca"
+  ],
+  "per_plant": {
+    "hypericum-perforatum": {
+      "published_rank": 10,
+      "published_in_top10": true,
+      "candidates": 2,
+      "modelled": 2,
+      "data_gap": 0,
+      "rank_min": 10,
+      "rank_max": 22,
+      "top10_status_changes": true
+    },
+    "hyssopus-officinalis": {
+      "published_rank": 2,
+      "published_in_top10": true,
+      "candidates": 8,
+      "modelled": 4,
+      "data_gap": 4,
+      "rank_min": 2,
+      "rank_max": 19,
+      "top10_status_changes": true
+    },
+    "juniperus-deltoides": {
+      "published_rank": 8,
+      "published_in_top10": true,
+      "candidates": 2,
+      "modelled": 2,
+      "data_gap": 0,
+      "rank_min": 8,
+      "rank_max": 17,
+      "top10_status_changes": true
+    },
+    "matricaria-chamomilla": {
+      "published_rank": 16,
+      "published_in_top10": false,
+      "candidates": 5,
+      "modelled": 3,
+      "data_gap": 2,
+      "rank_min": 13,
+      "rank_max": 25,
+      "top10_status_changes": false
+    },
+    "paeonia-greece": {
+      "published_rank": 5,
+      "published_in_top10": true,
+      "candidates": 4,
+      "modelled": 1,
+      "data_gap": 3,
+      "rank_min": 1,
+      "rank_max": 5,
+      "top10_status_changes": false
+    },
+    "plantago-lanceolata": {
+      "published_rank": 12,
+      "published_in_top10": false,
+      "candidates": 5,
+      "modelled": 2,
+      "data_gap": 3,
+      "rank_min": 12,
+      "rank_max": 19,
+      "top10_status_changes": false
+    },
+    "salvia-fruticosa": {
+      "published_rank": 22,
+      "published_in_top10": false,
+      "candidates": 2,
+      "modelled": 2,
+      "data_gap": 0,
+      "rank_min": 15,
+      "rank_max": 22,
+      "top10_status_changes": false
+    },
+    "sideritis-syriaca": {
+      "published_rank": 4,
+      "published_in_top10": true,
+      "candidates": 4,
+      "modelled": 2,
+      "data_gap": 2,
+      "rank_min": 4,
+      "rank_max": 11,
+      "top10_status_changes": true
+    },
+    "teucrium-chamaedrys": {
+      "published_rank": 13,
+      "published_in_top10": false,
+      "candidates": 3,
+      "modelled": 1,
+      "data_gap": 2,
+      "rank_min": 12,
+      "rank_max": 13,
+      "top10_status_changes": false
+    }
+  },
+  "held_fixed": "endemism and conservation status of the published identification; all other 31 plants",
+  "runtime_s": 591
+}
